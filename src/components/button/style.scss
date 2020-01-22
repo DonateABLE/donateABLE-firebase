@@ -1,0 +1,49 @@
+@import '../../variables';
+
+.button {
+    border: none;
+    font-size: inherit;
+    padding: 2px 10px;
+
+    &.light {
+        background-color: $light-blue;
+        color: $white;
+    }
+
+    &.dark {
+        background-color: $dark-blue;
+        color: $white;
+    }
+
+    &.white {
+        background-color: $white;
+        color: $light-blue;
+    }
+
+    &.small {
+        padding: 2px 10px;
+    }
+
+    &.medium {
+        padding: 10px 30px;
+    }
+
+    &.large {
+        padding: 10px 30px;
+        font-size: 1.5em;
+    }
+
+    &:hover {
+        &.light {
+            background-color: darken($light-blue, 10);
+        }
+
+        &.dark {
+            background-color: darken($dark-blue, 10);
+        }
+
+        &.white {
+            background-color: darken($white, 10);
+        }
+    }
+}

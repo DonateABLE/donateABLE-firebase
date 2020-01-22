@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.header {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 150px 3fr 2fr;
+    align-items: center;
+
+    height: 150px;
+
+    background-color: $light-blue;
+    color: $white;
+
+    .logo {
+        width: 100%;
+    }
+
+    .makeDonation {
+        width: 100%;
+    }
+
+    .info {
+        .name {
+            margin: 0;
+        }
+
+        .tagLine {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.social {
+    background-color: $dark-blue;
+    color: $white;
+}

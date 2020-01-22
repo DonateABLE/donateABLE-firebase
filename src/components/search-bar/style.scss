@@ -1,0 +1,77 @@
+@import '../../variables';
+
+.searchBar {
+    background-color: $dark-blue;
+    color: $white;
+
+    .bar {
+        display: flex;
+        flex-direction: row-reverse;
+        text-transform: uppercase;
+        border-bottom: solid $white 2px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        .label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .popup {
+        display: none;
+
+        &.show {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label {
+            display: block;
+            border-bottom: solid $white 1px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            margin-bottom: 9px;
+        }
+
+        .input {
+            padding: 6px 15px;
+            border: none;
+
+            &::placeholder {
+                color: $dark-blue;
+            }
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+            grid-gap: 15px;
+
+            .category {
+                display: flex;
+                align-items: center;
+
+                .iconCircle {
+                    background-color: $light-blue;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    position: relative;
+
+                    .icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .title {
+                    padding-left: 1ch;
+                }
+            }
+        }
+    }
+}
