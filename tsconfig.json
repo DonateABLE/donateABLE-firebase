@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "target": "es2019",
+        "baseUrl": "./",
+        "jsx": "react",
+        "jsxFactory": "createElement",
+        "experimentalDecorators": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "paths": {
+            "*": [
+                "src/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+    ]
+}
