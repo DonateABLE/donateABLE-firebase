@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --watch --display=minimal",
-    "dev": "webpack-dev-server",
+    "emulate": "firebase emulators:start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,12 +36,12 @@
     "tslint-react": "^4.1.0",
     "typescript": "^3.7.3",
     "webpack": "^4.41.3",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "decko": "^1.2.0",
+    "firebase-tools": "^7.12.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2"

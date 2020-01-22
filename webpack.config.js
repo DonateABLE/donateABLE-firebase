@@ -84,11 +84,6 @@ module.exports = (env, argv) => {
                 filename: (devMode ? '[name].css' : '[name].[hash].css'),
                 chunkFilename: (devMode ? '[id].css' : '[id].[hash].css'),
             }),
-        ],
-        devServer: {
-            port: 3000,
-            index: 'index.html',
-            historyApiFallback: true,
-        }
+        ]
     }
 }
