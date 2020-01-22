@@ -1,5 +1,6 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
+import { openInfoModal } from 'components/modal'
 import { charities } from 'data'
 import { Component, createElement, ReactNode } from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom'
