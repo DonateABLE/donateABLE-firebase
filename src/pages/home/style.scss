@@ -1,0 +1,123 @@
+@import '../../variables';
+
+
+.heading {
+    text-align: center;
+    color: $dark-blue;
+    text-transform: uppercase;
+
+    .light {
+        color: $light-blue;
+    }
+}
+
+.top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 10px;
+
+    &::after {
+        content: "";
+        background-image: url(https://donateable.ca/img/donateABLE-background1.png);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .buttons {
+        width: 200px;
+        display: inline-block;
+
+
+        button {
+            width: 100%;
+            margin-top: 2px;
+        }
+    }
+}
+
+.charities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+
+
+    .charity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 1px 1px 5px rgba(#000, 0.3);
+
+        margin: 0 15px;
+
+        text-transform: uppercase;
+        color: $white;
+
+        .logo {
+            width: 50%;
+        }
+
+        .name {
+            color: $light-blue;
+            font-weight: bold;
+        }
+
+        .type {
+            color: $dark-blue;
+        }
+
+        .currentlyDonating,
+        .donatorsToDate,
+        .social,
+        .donate {
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .currentlyDonating {
+            background-color: $light-blue;
+        }
+
+        .donatorsToDate {
+            background-color: $dark-blue;
+        }
+
+        .social {
+            background-color: $light-blue;
+            width: calc(100% + 10px);
+            box-shadow: 1px 1px 5px rgba(#000, 0.3);
+
+            .icon {
+                padding: 0 5px;
+                background: none;
+                border: none;
+                color: $white;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            width: 100%;
+
+            .donate {
+                background-color: $dark-blue;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+        }
+    }
+}
