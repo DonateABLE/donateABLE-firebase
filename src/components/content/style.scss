@@ -18,4 +18,9 @@ $padding: 8px;
 .fullWidth {
     margin: 0 calc(-1 * (50vw - #{$bp-lg-min / 2 - $padding}));
     padding: 0 calc(50vw - #{$bp-lg-min / 2 - $padding});
+
+    @media screen and (max-width: $bp-lg-min) {
+        margin: 0 #{-$padding};
+        padding: 0 $padding;
+    }
 }
