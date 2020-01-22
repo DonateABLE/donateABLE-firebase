@@ -20,11 +20,19 @@
     }
 
     .popup {
-        display: none;
+        max-height: 0px;
+        transition: max-height .25s ease-in-out, padding .25s ease-in-out;        
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
 
         &.show {
-            display: flex;
-            flex-direction: column;
+            max-height: 100vh;
+            padding-top: 8px;
+            padding-bottom: 8px;
         }
 
         .label {
