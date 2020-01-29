@@ -6,13 +6,22 @@ interface Props {
     className?: string
     color?: 'light' | 'dark' | 'white'
     size?: 'small' | 'medium' | 'large'
+    onClick?: () => void
+    fullWidth?: boolean
 }
 
-const Button: FunctionComponent<Props> = ({ color = 'light', size = 'small', className, children }) => (
+const Button: FunctionComponent<Props> = props => (
     <button
-        className={classNames(styles.button, styles[color], styles[size], className)}
+        className={classNames(
+            styles.button,
+            styles[props.color ?? 'light'],
+            styles[props.size ?? 'small'],
+            props.className,
+            { [styles.fullWidth]: props.fullWidth },
+        )}
+        onClick={props.onClick}
     >
-        {children}
+        {props.children}
     </button>
 )
 

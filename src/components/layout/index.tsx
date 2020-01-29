@@ -1,3 +1,4 @@
+import { ModalController } from 'components/modal'
 import { bind } from 'decko'
 import About from 'pages/about'
 import Charity from 'pages/charity'
@@ -81,6 +82,9 @@ export default class Layout extends Component<{}, State> {
                     />
                 </footer>
             </div>
+            <Switch>
+                <Route path='/' component={ModalController} />
+            </Switch>
         </Router>
     }
 

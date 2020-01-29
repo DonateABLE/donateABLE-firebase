@@ -5,6 +5,8 @@
 body {
     margin: 0;
 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .layout {
@@ -15,9 +17,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
 
     .menu {
 
