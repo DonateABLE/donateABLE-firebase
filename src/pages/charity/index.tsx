@@ -2,8 +2,9 @@ import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
 import { openInfoModal } from 'components/modal'
 import { charities } from 'data'
-import { Component, createElement, ReactNode } from 'react'
-import { RouteComponentProps, useParams } from 'react-router-dom'
+import { bind } from 'decko'
+import { Component, createElement, Fragment, ReactNode } from 'react'
+import { Link, RouteComponentProps } from 'react-router-dom'
 import styles from './style.scss'
 
 export default class Charity extends Component<RouteComponentProps<{ name: string }>> {
@@ -37,6 +38,21 @@ export default class Charity extends Component<RouteComponentProps<{ name: strin
                 facebook
             </FullWidth>
             test
+            <Button onClick={this.openHelpModal}>?</Button>
         </Content>
+    }
+
+    @bind
+    private openHelpModal(): void {
+        openInfoModal(
+            'Donation Request Not Starting',
+            <Fragment>
+                Be sure to check that donateABLE is whitelisted on any
+                adblockers and that your antivirus programs are not blocking our
+                page. To learn hot to do this please visit our
+                <Link to='/faq'>Frequently Asked Questions</Link> page.
+                <Button>Continue</Button>
+            </Fragment>,
+        )
     }
 }
