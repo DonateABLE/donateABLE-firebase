@@ -24,7 +24,10 @@ export default class Charity extends Model {
     public tagline: string = ''
 
     @Model.field()
-    public socialFeed: string = ''
+    public facebookUrl: string = ''
+
+    @Model.field()
+    public twitterUrl: string = ''
 
     @Model.field()
     public websiteUrl: string = ''
@@ -45,11 +48,38 @@ export default class Charity extends Model {
     public donatorsToDate: number = 0
 
     @Model.field()
-    public type: { name: string, icon: SolidIconName } = { name: '', icon: 'question-circle' }
+    public typeName: string = ''
+
+    @Model.field()
+    public typeIcon: SolidIconName = 'question-circle'
 
     @Model.field()
     public registeredBusinessName: string = ''
 
     @Model.field()
     public businessNumber: string = ''
+
+    @Model.field()
+    public address: string = ''
+
+    @Model.field()
+    public cityProvince: string = ''
+
+    @Model.field()
+    public postalCode: string = ''
+
+    @Model.field()
+    public phone: string = ''
+
+    @Model.field()
+    public email: string = ''
+
+    @Model.field()
+    public fax: string = ''
+
+    @Model.field()
+    public officeHourDays: string = ''
+
+    @Model.field()
+    public officeHourHours: string = ''
 }
