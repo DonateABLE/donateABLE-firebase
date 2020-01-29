@@ -1,0 +1,27 @@
+[
+ {
+   "id": 1,
+   "name": "facebook",
+   "faLink": "fab fa-facebook-f"
+ },
+ {
+   "id": 2,
+   "name": "twitter",
+   "faLink": "fab fa-twitter"
+ },
+ {
+   "id": 3,
+   "name": "instagram",
+   "faLink": "fab fa-instagram"
+ },
+ {
+   "id": 4,
+   "name": "email",
+   "faLink": "fas fa-envelope"
+ },
+ {
+   "id": 5,
+   "name": "website",
+   "faLink": "fas fa-globe"
+ }
+]

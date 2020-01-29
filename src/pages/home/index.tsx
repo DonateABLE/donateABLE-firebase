@@ -2,12 +2,34 @@ import Button from 'components/button'
 import Content from 'components/content'
 import Layout from 'components/layout'
 import SearchBar from 'components/search-bar'
-import { charities } from 'data'
+import Charity from 'orm/charity'
 import { Component, createElement, Fragment, ReactNode } from 'react'
-import Charity from './charity'
+import CharityBox from './charity'
 import styles from './style.scss'
 
-export default class Home extends Component {
+interface State {
+    charities: Charity[]
+}
+
+export default class Home extends Component<{}, State> {
+    private charityUnsubscribe?: () => void
+
+    constructor(props: {}) {
+        super(props)
+
+        this.state = {
+            charities: [],
+        }
+    }
+
+    public componentDidMount(): void {
+        this.charityUnsubscribe = Charity.builder().subscribe(c => this.setState({ charities: c }))
+    }
+
+    public componentWillUnmount(): void {
+        this.charityUnsubscribe?.()
+    }
+
     public render(): ReactNode {
         return <Fragment>
             <div className={styles.top}>
@@ -30,7 +52,7 @@ export default class Home extends Component {
                     Everyone can contribute
                 </h2>
                 <div className={styles.charities}>
-                    {charities.map((c, i) => <Charity key={c.name + i} charity={c} />)}
+                    {this.state.charities.map((c, i) => <CharityBox key={c.shortName + i} charity={c} />)}
                 </div>
             </Content>
         </Fragment>

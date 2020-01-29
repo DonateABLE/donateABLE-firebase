@@ -1,0 +1,50 @@
+[
+ {
+   "id": 1,
+   "shortName": "VSW",
+   "longName": "Victim Services Wellington",
+   "logo": "Victim-Services.png",
+   "shortDesc": "VSW create opportunities to heal, foster hope, and promote a safer and healthier community to every victim of crime or tragic circumstances.",
+   "longDesc": "Anyone can be a victim. It is in times of trauma that victims need compassion, support, and assistance most. Whether an accident has occurred, a crime committed, or a loss suffered. Victim Services Wellinton (VSW) is available 24 hours a day, 7 days a week, all year round to support victims.\n\n                A non-profit organization, established in 1997, VSW has partnerships with Guelph Police Services and the Ontario Provinicial Police to deliver support to victims of crime in our area. Volunteers are available on scene to help victims and their families through difficult events and refer them to appropriate community groups and organizations.\n\n                VSW volunteers are trained extensively to help meet the short-term needs of victims. They are backed with widespread knowledge and experience in communication, crisis interpresence to what can be highly emotional, stressful, and overwhelming circumstances.",
+   "tagline": "Community. Connection. Crisis Support.",
+   "socialFeed": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.vswguelph.on.ca%2F&tabs=timeline&width=350&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975",
+   "websiteUrl": "http://www.vswguelph.on.ca/",
+   "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/victim-services-wellington/",
+   "siteKey": "a9aee989bdb191b8709922e7f52933a97f054cf19696ef2872ce27d7ed323109",
+   "created_at": null,
+   "updated_at": null,
+   "comingSoon": 0
+ },
+ {
+   "id": 3,
+   "shortName": "",
+   "longName": "donateABLE",
+   "logo": "donateable-charity.png",
+   "shortDesc": "donateABLE allows anyone with a computer to make a difference by donating unused computer CPU and turning it into real monetary value.",
+   "longDesc": "DonateABLE is a website project developed and managed by Synergenics. This solution will take small amounts of computational power donated from individuals and pool it together into a larger resource to generate real monetary value for your charity. This website is going to allow anyone with a computer to make a difference no matter what their financial situation is, by donating unused computer time.\n\nDonateABLE will take unused CPU power from the donators computer to help mine digital currency and donate to charities as a real monetary value. Dealing in the world of technology, we have identified a special and unique opportunity to help generate revenue for charities without any actual cash outlay from those who wish to help. ",
+   "tagline": "Support Local Charities in Guelph Without Opening your Wallet.",
+   "socialFeed": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FdonateABLE%2F&tabs=timeline&width=400&height=420&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975",
+   "websiteUrl": "https://donateable.ca/",
+   "canadaHelpsUrl": "",
+   "siteKey": "8f0a9d558ac5ed43ae2c6ea7ecd945860300f6b01433df955ee4b3f9dbc9fb31",
+   "created_at": null,
+   "updated_at": null,
+   "comingSoon": 0
+ },
+ {
+   "id": 4,
+   "shortName": "GHS",
+   "longName": "Guelph Humane Society",
+   "logo": "ghs.png",
+   "shortDesc": "GHS provides hope, care and compassion to the over 3,000 animals that enter their care each year, that need more than just a temporary home.",
+   "longDesc": "The Guelph Humane Society envisions a world where all animals are treated humanely, with respect and compassion. Our mission is to advocate for all animals, and in particular those animals whose lives we can influence, through care, education, community support, protection, and leadership. To achieve those goals, we provide animal sheltering, pet rehoming, adoption services, veterinary care, pet identification, a progressive spay/neuter program, and return of lost pets. We actively participate in innovative programs like Cat Healthy, Capacity for Care and Cats & Birds. We also provide care and assistance with sick, orphaned and injured wildlife.\n\nAs an affiliate of the Ontario Society for the Prevention of Cruelty to Animals (OSPCA), we employ OSPCA Agents to investigate allegations of cruelty or neglect in Guelph and Wellington County under provincial and federal animal cruelty legislation, and enforce those laws when necessary.\n\nThe Guelph Humane Society also boasts strong education programs that impact thousands of children and youth annually. Through weekly school visits in Guelph and Wellington County, children have the opportunity to participate in welfare and animal safety-based curriculum delivered by our Humane Educator. We also offer a weekday Junior Humane Club, a March Break Camp and summer camp programs.\n\nThe Guelph Humane Society is contracted by the City of Guelph, the Township of Centre Wellington and the Township of Guelph-Eramosa to provide animal services. Our staff enforce animal related by-laws, help stray domestic animals, respond to citizens with animal concerns, and provide emergency response to stray animals or animals (including wildlife) that are sick or injured.",
+   "tagline": "",
+   "socialFeed": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGuelphHumaneSociety%2F&tabs=timeline&width=400&height=420&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975",
+   "websiteUrl": "https://guelphhumane.ca/",
+   "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/the-guelph-humane-society/",
+   "siteKey": "0e7708e6df0272ab5396419b204ee44142ee2263b9e2ed13b3abbea8d39b14f4",
+   "created_at": null,
+   "updated_at": null,
+   "comingSoon": 1
+ }
+]

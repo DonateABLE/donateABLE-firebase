@@ -203,4 +203,3 @@ export class QueryBuilder<T extends Model> {
         return this.query.isEqual(q.query)
     }
 }
-

@@ -1,7 +1,7 @@
 import Content from 'components/content'
 import Icon from 'components/icon'
-import { charityTypes } from 'data'
 import { bind } from 'decko'
+import CharityType from 'orm/charity-type'
 import { Component, createElement, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
 import { classNames, clickedOn } from 'utils'
@@ -9,16 +9,28 @@ import styles from './style.scss'
 
 interface State {
     open: boolean
+    charityTypes: CharityType[]
 }
 
 export default class SearchBar extends Component<{}, State> {
     private popup: HTMLElement | null = null
+    private charityTypeCancel?: () => void
 
     constructor(props: {}) {
         super(props)
         this.state = {
             open: false,
+            charityTypes: [],
         }
+    }
+
+    public componentDidMount(): void {
+        this.charityTypeCancel = CharityType.builder()
+            .subscribe(cts => this.setState({ charityTypes: cts }))
+    }
+
+    public componentWillUnmount(): void {
+        this.charityTypeCancel?.()
     }
 
     public render(): ReactNode {
@@ -45,7 +57,7 @@ export default class SearchBar extends Component<{}, State> {
                 <input className={styles.input} id='search' type='text' placeholder='Type Charity Name Here...' />
                 <h3 className={styles.label} >Search by charity type</h3>
                 <div className={styles.categories}>
-                    {charityTypes.map(t => (
+                    {this.state.charityTypes.map(t => (
                         <div key={t.name} className={styles.category}>
                             <div className={styles.iconCircle}>
                                 <Icon className={styles.icon} name={t.icon} />

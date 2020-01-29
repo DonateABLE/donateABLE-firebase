@@ -1,0 +1,7386 @@
+[
+ {
+   "id": 1,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 15:44:16",
+   "updated_at": "2019-04-17 15:44:16"
+ },
+ {
+   "id": 2,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 15:44:37",
+   "updated_at": "2019-04-17 15:44:37"
+ },
+ {
+   "id": 3,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 15:44:51",
+   "updated_at": "2019-04-17 15:44:51"
+ },
+ {
+   "id": 4,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 15:45:27",
+   "updated_at": "2019-04-17 15:45:27"
+ },
+ {
+   "id": 5,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 15:45:34",
+   "updated_at": "2019-04-17 15:45:34"
+ },
+ {
+   "id": 6,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 15:45:39",
+   "updated_at": "2019-04-17 15:45:39"
+ },
+ {
+   "id": 7,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 17:25:37",
+   "updated_at": "2019-04-17 17:25:37"
+ },
+ {
+   "id": 8,
+   "charityId": 3,
+   "totalHashes": 161478,
+   "totalTime": 5620,
+   "created_at": "2019-04-17 18:34:02",
+   "updated_at": "2019-04-17 21:01:08"
+ },
+ {
+   "id": 9,
+   "charityId": 3,
+   "totalHashes": 761052,
+   "totalTime": 117760,
+   "created_at": "2019-04-17 18:37:36",
+   "updated_at": "2019-04-18 20:50:30"
+ },
+ {
+   "id": 10,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 18:46:19",
+   "updated_at": "2019-04-17 18:46:19"
+ },
+ {
+   "id": 11,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 18:55:11",
+   "updated_at": "2019-04-17 18:55:11"
+ },
+ {
+   "id": 12,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 18:57:21",
+   "updated_at": "2019-04-17 18:57:21"
+ },
+ {
+   "id": 13,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 19:23:06",
+   "updated_at": "2019-04-17 19:23:06"
+ },
+ {
+   "id": 14,
+   "charityId": 3,
+   "totalHashes": 9082969,
+   "totalTime": 58370100,
+   "created_at": "2019-04-17 19:23:12",
+   "updated_at": "2019-05-15 07:30:38"
+ },
+ {
+   "id": 15,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-17 20:19:48",
+   "updated_at": "2019-04-17 20:19:48"
+ },
+ {
+   "id": 16,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 00:01:31",
+   "updated_at": "2019-04-18 00:01:31"
+ },
+ {
+   "id": 17,
+   "charityId": 3,
+   "totalHashes": 16297048,
+   "totalTime": 40096560,
+   "created_at": "2019-04-18 00:01:58",
+   "updated_at": "2019-05-09 14:07:45"
+ },
+ {
+   "id": 18,
+   "charityId": 3,
+   "totalHashes": 3583,
+   "totalTime": 640,
+   "created_at": "2019-04-18 00:04:03",
+   "updated_at": "2019-04-18 00:14:51"
+ },
+ {
+   "id": 19,
+   "charityId": 3,
+   "totalHashes": 144,
+   "totalTime": 30,
+   "created_at": "2019-04-18 00:15:22",
+   "updated_at": "2019-04-18 00:15:58"
+ },
+ {
+   "id": 20,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 12:33:49",
+   "updated_at": "2019-04-18 12:33:49"
+ },
+ {
+   "id": 21,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 12:34:05",
+   "updated_at": "2019-04-18 12:34:05"
+ },
+ {
+   "id": 22,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 15:22:02",
+   "updated_at": "2019-04-18 15:22:02"
+ },
+ {
+   "id": 23,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 17:17:14",
+   "updated_at": "2019-04-18 17:17:14"
+ },
+ {
+   "id": 24,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 18:10:10",
+   "updated_at": "2019-04-18 18:10:10"
+ },
+ {
+   "id": 25,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 18:55:55",
+   "updated_at": "2019-04-18 18:55:55"
+ },
+ {
+   "id": 26,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-18 19:09:16",
+   "updated_at": "2019-04-18 19:09:16"
+ },
+ {
+   "id": 27,
+   "charityId": 3,
+   "totalHashes": 25954978,
+   "totalTime": 50301890,
+   "created_at": "2019-04-18 20:50:30",
+   "updated_at": "2019-05-13 13:33:20"
+ },
+ {
+   "id": 28,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-19 23:06:46",
+   "updated_at": "2019-04-19 23:06:46"
+ },
+ {
+   "id": 29,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-19 23:06:46",
+   "updated_at": "2019-04-19 23:06:46"
+ },
+ {
+   "id": 30,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-20 23:13:52",
+   "updated_at": "2019-04-20 23:13:52"
+ },
+ {
+   "id": 31,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-20 23:13:56",
+   "updated_at": "2019-04-20 23:13:56"
+ },
+ {
+   "id": 32,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-20 23:13:58",
+   "updated_at": "2019-04-20 23:13:58"
+ },
+ {
+   "id": 33,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-22 20:20:05",
+   "updated_at": "2019-04-22 20:20:05"
+ },
+ {
+   "id": 34,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-23 13:36:54",
+   "updated_at": "2019-04-23 13:36:54"
+ },
+ {
+   "id": 35,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 699040,
+   "created_at": "2019-04-23 13:37:06",
+   "updated_at": "2019-11-04 22:53:30"
+ },
+ {
+   "id": 36,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-23 13:37:20",
+   "updated_at": "2019-04-23 13:37:20"
+ },
+ {
+   "id": 37,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-23 13:38:35",
+   "updated_at": "2019-04-23 13:38:35"
+ },
+ {
+   "id": 38,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-23 20:39:49",
+   "updated_at": "2019-04-23 20:39:49"
+ },
+ {
+   "id": 39,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 01:08:33",
+   "updated_at": "2019-04-24 01:08:33"
+ },
+ {
+   "id": 40,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 01:09:48",
+   "updated_at": "2019-04-24 01:09:48"
+ },
+ {
+   "id": 41,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 01:13:17",
+   "updated_at": "2019-04-24 01:13:17"
+ },
+ {
+   "id": 42,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 01:15:40",
+   "updated_at": "2019-04-24 01:15:40"
+ },
+ {
+   "id": 43,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 01:19:23",
+   "updated_at": "2019-04-24 01:19:23"
+ },
+ {
+   "id": 44,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 01:38:36",
+   "updated_at": "2019-04-24 01:38:36"
+ },
+ {
+   "id": 45,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:36:57",
+   "updated_at": "2019-04-24 13:36:57"
+ },
+ {
+   "id": 46,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:52:52",
+   "updated_at": "2019-04-24 13:52:52"
+ },
+ {
+   "id": 47,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:54:09",
+   "updated_at": "2019-04-24 13:54:09"
+ },
+ {
+   "id": 48,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:54:21",
+   "updated_at": "2019-04-24 13:54:21"
+ },
+ {
+   "id": 49,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:54:53",
+   "updated_at": "2019-04-24 13:54:53"
+ },
+ {
+   "id": 50,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:55:14",
+   "updated_at": "2019-04-24 13:55:14"
+ },
+ {
+   "id": 51,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:55:19",
+   "updated_at": "2019-04-24 13:55:19"
+ },
+ {
+   "id": 52,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:56:10",
+   "updated_at": "2019-04-24 13:56:10"
+ },
+ {
+   "id": 53,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:59:11",
+   "updated_at": "2019-04-24 13:59:11"
+ },
+ {
+   "id": 54,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:59:16",
+   "updated_at": "2019-04-24 13:59:16"
+ },
+ {
+   "id": 55,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 13:59:23",
+   "updated_at": "2019-04-24 13:59:23"
+ },
+ {
+   "id": 56,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-24 14:06:56",
+   "updated_at": "2019-04-24 14:06:56"
+ },
+ {
+   "id": 57,
+   "charityId": 3,
+   "totalHashes": 61,
+   "totalTime": 10,
+   "created_at": "2019-04-24 14:07:27",
+   "updated_at": "2019-04-24 14:07:49"
+ },
+ {
+   "id": 58,
+   "charityId": 3,
+   "totalHashes": 40,
+   "totalTime": 10,
+   "created_at": "2019-04-26 15:37:05",
+   "updated_at": "2019-04-26 15:37:21"
+ },
+ {
+   "id": 59,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:28:16",
+   "updated_at": "2019-04-26 16:28:16"
+ },
+ {
+   "id": 60,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:28:26",
+   "updated_at": "2019-04-26 16:28:26"
+ },
+ {
+   "id": 61,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:28:35",
+   "updated_at": "2019-04-26 16:28:35"
+ },
+ {
+   "id": 62,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:28:38",
+   "updated_at": "2019-04-26 16:28:38"
+ },
+ {
+   "id": 63,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:28:40",
+   "updated_at": "2019-04-26 16:28:40"
+ },
+ {
+   "id": 64,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:28:41",
+   "updated_at": "2019-04-26 16:28:41"
+ },
+ {
+   "id": 65,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 16:29:02",
+   "updated_at": "2019-04-26 16:29:02"
+ },
+ {
+   "id": 66,
+   "charityId": 1,
+   "totalHashes": 109,
+   "totalTime": 20,
+   "created_at": "2019-04-26 16:29:13",
+   "updated_at": "2019-04-26 16:29:39"
+ },
+ {
+   "id": 67,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 17:04:51",
+   "updated_at": "2019-04-26 17:04:51"
+ },
+ {
+   "id": 68,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-26 17:05:04",
+   "updated_at": "2019-04-26 17:05:04"
+ },
+ {
+   "id": 69,
+   "charityId": 3,
+   "totalHashes": 5526525,
+   "totalTime": 3467900,
+   "created_at": "2019-04-26 20:42:45",
+   "updated_at": "2019-05-03 10:32:15"
+ },
+ {
+   "id": 70,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-29 13:22:38",
+   "updated_at": "2019-04-29 13:22:38"
+ },
+ {
+   "id": 71,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-29 13:22:38",
+   "updated_at": "2019-04-29 13:22:38"
+ },
+ {
+   "id": 72,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-30 02:30:06",
+   "updated_at": "2019-04-30 02:30:06"
+ },
+ {
+   "id": 73,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-30 02:30:08",
+   "updated_at": "2019-04-30 02:30:08"
+ },
+ {
+   "id": 74,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-30 13:58:10",
+   "updated_at": "2019-04-30 13:58:10"
+ },
+ {
+   "id": 75,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-30 14:18:44",
+   "updated_at": "2019-04-30 14:18:44"
+ },
+ {
+   "id": 76,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-30 14:19:08",
+   "updated_at": "2019-04-30 14:19:08"
+ },
+ {
+   "id": 77,
+   "charityId": 3,
+   "totalHashes": 1942,
+   "totalTime": 420,
+   "created_at": "2019-04-30 14:19:29",
+   "updated_at": "2019-04-30 14:26:37"
+ },
+ {
+   "id": 78,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-04-30 14:40:16",
+   "updated_at": "2019-04-30 14:40:16"
+ },
+ {
+   "id": 79,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-01 17:46:39",
+   "updated_at": "2019-05-01 17:46:39"
+ },
+ {
+   "id": 80,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-01 17:47:04",
+   "updated_at": "2019-05-01 17:47:04"
+ },
+ {
+   "id": 81,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:06:15",
+   "updated_at": "2019-05-03 20:06:15"
+ },
+ {
+   "id": 82,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:06:33",
+   "updated_at": "2019-05-03 20:06:33"
+ },
+ {
+   "id": 83,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:06:35",
+   "updated_at": "2019-05-03 20:06:35"
+ },
+ {
+   "id": 84,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:07:21",
+   "updated_at": "2019-05-03 20:07:21"
+ },
+ {
+   "id": 85,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:07:39",
+   "updated_at": "2019-05-03 20:07:39"
+ },
+ {
+   "id": 86,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:12:04",
+   "updated_at": "2019-05-03 20:12:04"
+ },
+ {
+   "id": 87,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:12:12",
+   "updated_at": "2019-05-03 20:12:12"
+ },
+ {
+   "id": 88,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:12:19",
+   "updated_at": "2019-05-03 20:12:19"
+ },
+ {
+   "id": 89,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:13:43",
+   "updated_at": "2019-05-03 20:13:43"
+ },
+ {
+   "id": 90,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:14:50",
+   "updated_at": "2019-05-03 20:14:50"
+ },
+ {
+   "id": 91,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:38:53",
+   "updated_at": "2019-05-03 20:38:53"
+ },
+ {
+   "id": 92,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-03 20:39:34",
+   "updated_at": "2019-05-03 20:39:34"
+ },
+ {
+   "id": 93,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-06 07:33:36",
+   "updated_at": "2019-05-06 07:33:36"
+ },
+ {
+   "id": 94,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-06 07:33:37",
+   "updated_at": "2019-05-06 07:33:37"
+ },
+ {
+   "id": 95,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:17:54",
+   "updated_at": "2019-05-07 15:17:54"
+ },
+ {
+   "id": 96,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:18:36",
+   "updated_at": "2019-05-07 15:18:36"
+ },
+ {
+   "id": 97,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:18:37",
+   "updated_at": "2019-05-07 15:18:37"
+ },
+ {
+   "id": 98,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:19:06",
+   "updated_at": "2019-05-07 15:19:06"
+ },
+ {
+   "id": 99,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:19:16",
+   "updated_at": "2019-05-07 15:19:16"
+ },
+ {
+   "id": 100,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:39:01",
+   "updated_at": "2019-05-07 15:39:01"
+ },
+ {
+   "id": 101,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:39:05",
+   "updated_at": "2019-05-07 15:39:05"
+ },
+ {
+   "id": 102,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:43:24",
+   "updated_at": "2019-05-07 15:43:24"
+ },
+ {
+   "id": 103,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 15:48:41",
+   "updated_at": "2019-05-07 15:48:41"
+ },
+ {
+   "id": 104,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:07:59",
+   "updated_at": "2019-05-07 16:07:59"
+ },
+ {
+   "id": 105,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:08:05",
+   "updated_at": "2019-05-07 16:08:05"
+ },
+ {
+   "id": 106,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:08:19",
+   "updated_at": "2019-05-07 16:08:19"
+ },
+ {
+   "id": 107,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:10:47",
+   "updated_at": "2019-05-07 16:10:47"
+ },
+ {
+   "id": 108,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:15:37",
+   "updated_at": "2019-05-07 16:15:37"
+ },
+ {
+   "id": 109,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:15:41",
+   "updated_at": "2019-05-07 16:15:41"
+ },
+ {
+   "id": 110,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:16:16",
+   "updated_at": "2019-05-07 16:16:16"
+ },
+ {
+   "id": 111,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:16:50",
+   "updated_at": "2019-05-07 16:16:50"
+ },
+ {
+   "id": 112,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:16:57",
+   "updated_at": "2019-05-07 16:16:57"
+ },
+ {
+   "id": 113,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:17:03",
+   "updated_at": "2019-05-07 16:17:03"
+ },
+ {
+   "id": 114,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:39:32",
+   "updated_at": "2019-05-07 16:39:32"
+ },
+ {
+   "id": 115,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:39:35",
+   "updated_at": "2019-05-07 16:39:35"
+ },
+ {
+   "id": 116,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:39:40",
+   "updated_at": "2019-05-07 16:39:40"
+ },
+ {
+   "id": 117,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:40:11",
+   "updated_at": "2019-05-07 16:40:11"
+ },
+ {
+   "id": 118,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:42:08",
+   "updated_at": "2019-05-07 16:42:08"
+ },
+ {
+   "id": 119,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-07 16:42:12",
+   "updated_at": "2019-05-07 16:42:12"
+ },
+ {
+   "id": 120,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 03:27:56",
+   "updated_at": "2019-05-08 03:27:56"
+ },
+ {
+   "id": 121,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 03:28:03",
+   "updated_at": "2019-05-08 03:28:03"
+ },
+ {
+   "id": 122,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 14:49:16",
+   "updated_at": "2019-05-08 14:49:16"
+ },
+ {
+   "id": 123,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 19:47:21",
+   "updated_at": "2019-05-08 19:47:21"
+ },
+ {
+   "id": 124,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 19:47:53",
+   "updated_at": "2019-05-08 19:47:53"
+ },
+ {
+   "id": 125,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:46:18",
+   "updated_at": "2019-05-08 20:46:18"
+ },
+ {
+   "id": 126,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:46:29",
+   "updated_at": "2019-05-08 20:46:29"
+ },
+ {
+   "id": 127,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:46:31",
+   "updated_at": "2019-05-08 20:46:31"
+ },
+ {
+   "id": 128,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:46:41",
+   "updated_at": "2019-05-08 20:46:41"
+ },
+ {
+   "id": 129,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:46:49",
+   "updated_at": "2019-05-08 20:46:49"
+ },
+ {
+   "id": 130,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:47:48",
+   "updated_at": "2019-05-08 20:47:48"
+ },
+ {
+   "id": 131,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:47:55",
+   "updated_at": "2019-05-08 20:47:55"
+ },
+ {
+   "id": 132,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:48:10",
+   "updated_at": "2019-05-08 20:48:10"
+ },
+ {
+   "id": 133,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:53:12",
+   "updated_at": "2019-05-08 20:53:12"
+ },
+ {
+   "id": 134,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:53:14",
+   "updated_at": "2019-05-08 20:53:14"
+ },
+ {
+   "id": 135,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:53:26",
+   "updated_at": "2019-05-08 20:53:26"
+ },
+ {
+   "id": 136,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:53:42",
+   "updated_at": "2019-05-08 20:53:42"
+ },
+ {
+   "id": 137,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 20:57:19",
+   "updated_at": "2019-05-08 20:57:19"
+ },
+ {
+   "id": 138,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:01:49",
+   "updated_at": "2019-05-08 21:01:49"
+ },
+ {
+   "id": 139,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:01:54",
+   "updated_at": "2019-05-08 21:01:54"
+ },
+ {
+   "id": 140,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:02:09",
+   "updated_at": "2019-05-08 21:02:09"
+ },
+ {
+   "id": 141,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:02:17",
+   "updated_at": "2019-05-08 21:02:17"
+ },
+ {
+   "id": 142,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:02:37",
+   "updated_at": "2019-05-08 21:02:37"
+ },
+ {
+   "id": 143,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:14:52",
+   "updated_at": "2019-05-08 21:14:52"
+ },
+ {
+   "id": 144,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:14:57",
+   "updated_at": "2019-05-08 21:14:57"
+ },
+ {
+   "id": 145,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:14:57",
+   "updated_at": "2019-05-08 21:14:57"
+ },
+ {
+   "id": 146,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:14:57",
+   "updated_at": "2019-05-08 21:14:57"
+ },
+ {
+   "id": 147,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:14:57",
+   "updated_at": "2019-05-08 21:14:57"
+ },
+ {
+   "id": 148,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-08 21:15:16",
+   "updated_at": "2019-05-08 21:15:16"
+ },
+ {
+   "id": 149,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-09 14:07:45",
+   "updated_at": "2019-05-09 14:07:45"
+ },
+ {
+   "id": 150,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-09 14:08:19",
+   "updated_at": "2019-05-09 14:08:19"
+ },
+ {
+   "id": 151,
+   "charityId": 3,
+   "totalHashes": 22735773,
+   "totalTime": 10772600,
+   "created_at": "2019-05-09 14:09:03",
+   "updated_at": "2019-05-17 15:58:39"
+ },
+ {
+   "id": 152,
+   "charityId": 3,
+   "totalHashes": 34087,
+   "totalTime": 14210,
+   "created_at": "2019-05-09 15:29:51",
+   "updated_at": "2019-05-09 19:27:10"
+ },
+ {
+   "id": 153,
+   "charityId": 3,
+   "totalHashes": 35731,
+   "totalTime": 40490,
+   "created_at": "2019-05-09 15:41:08",
+   "updated_at": "2019-05-09 19:58:16"
+ },
+ {
+   "id": 154,
+   "charityId": 3,
+   "totalHashes": 36486,
+   "totalTime": 70070,
+   "created_at": "2019-05-09 15:51:33",
+   "updated_at": "2019-05-09 20:23:15"
+ },
+ {
+   "id": 155,
+   "charityId": 3,
+   "totalHashes": 39566,
+   "totalTime": 15870,
+   "created_at": "2019-05-09 16:05:02",
+   "updated_at": "2019-05-09 20:29:59"
+ },
+ {
+   "id": 156,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-09 19:36:23",
+   "updated_at": "2019-05-09 19:36:23"
+ },
+ {
+   "id": 157,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-09 19:36:44",
+   "updated_at": "2019-05-09 19:37:14"
+ },
+ {
+   "id": 158,
+   "charityId": 3,
+   "totalHashes": 458216,
+   "totalTime": 21194480,
+   "created_at": "2019-05-09 19:37:42",
+   "updated_at": "2019-05-14 14:35:39"
+ },
+ {
+   "id": 159,
+   "charityId": 3,
+   "totalHashes": 372944,
+   "totalTime": 33623180,
+   "created_at": "2019-05-09 20:04:03",
+   "updated_at": "2019-05-14 18:29:28"
+ },
+ {
+   "id": 160,
+   "charityId": 3,
+   "totalHashes": 349095,
+   "totalTime": 24488410,
+   "created_at": "2019-05-09 20:28:22",
+   "updated_at": "2019-05-14 18:28:43"
+ },
+ {
+   "id": 161,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-09 20:34:48",
+   "updated_at": "2019-05-09 20:34:48"
+ },
+ {
+   "id": 162,
+   "charityId": 3,
+   "totalHashes": 532944,
+   "totalTime": 11506340,
+   "created_at": "2019-05-09 20:35:55",
+   "updated_at": "2019-05-14 18:29:29"
+ },
+ {
+   "id": 163,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-09 20:46:39",
+   "updated_at": "2019-05-09 20:47:25"
+ },
+ {
+   "id": 164,
+   "charityId": 3,
+   "totalHashes": 9741,
+   "totalTime": 1930,
+   "created_at": "2019-05-09 20:47:53",
+   "updated_at": "2019-05-09 21:20:14"
+ },
+ {
+   "id": 165,
+   "charityId": 3,
+   "totalHashes": 2748061,
+   "totalTime": 632330,
+   "created_at": "2019-05-09 21:27:20",
+   "updated_at": "2019-05-13 13:17:06"
+ },
+ {
+   "id": 166,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-12 22:27:36",
+   "updated_at": "2019-05-12 22:27:36"
+ },
+ {
+   "id": 167,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 03:28:32",
+   "updated_at": "2019-05-13 03:28:32"
+ },
+ {
+   "id": 168,
+   "charityId": 3,
+   "totalHashes": 9229468,
+   "totalTime": 578840,
+   "created_at": "2019-05-13 13:55:38",
+   "updated_at": "2019-05-16 19:46:39"
+ },
+ {
+   "id": 169,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 16:27:46",
+   "updated_at": "2019-05-13 16:27:46"
+ },
+ {
+   "id": 170,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 16:33:22",
+   "updated_at": "2019-05-13 16:33:22"
+ },
+ {
+   "id": 171,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 18:46:35",
+   "updated_at": "2019-05-13 18:46:35"
+ },
+ {
+   "id": 172,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 18:47:10",
+   "updated_at": "2019-05-13 18:47:10"
+ },
+ {
+   "id": 173,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 18:47:10",
+   "updated_at": "2019-05-13 18:47:10"
+ },
+ {
+   "id": 174,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 18:47:11",
+   "updated_at": "2019-05-13 18:47:11"
+ },
+ {
+   "id": 175,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 18:47:11",
+   "updated_at": "2019-05-13 18:47:11"
+ },
+ {
+   "id": 176,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:12:05",
+   "updated_at": "2019-05-13 19:12:05"
+ },
+ {
+   "id": 177,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:12:30",
+   "updated_at": "2019-05-13 19:12:30"
+ },
+ {
+   "id": 178,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:14:10",
+   "updated_at": "2019-05-13 19:14:10"
+ },
+ {
+   "id": 179,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:14:18",
+   "updated_at": "2019-05-13 19:14:18"
+ },
+ {
+   "id": 180,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:16:25",
+   "updated_at": "2019-05-13 19:16:25"
+ },
+ {
+   "id": 181,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:28:14",
+   "updated_at": "2019-05-13 19:28:14"
+ },
+ {
+   "id": 182,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:31:10",
+   "updated_at": "2019-05-13 19:31:10"
+ },
+ {
+   "id": 183,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:31:12",
+   "updated_at": "2019-05-13 19:31:12"
+ },
+ {
+   "id": 184,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:31:15",
+   "updated_at": "2019-05-13 19:31:15"
+ },
+ {
+   "id": 185,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:31:17",
+   "updated_at": "2019-05-13 19:31:17"
+ },
+ {
+   "id": 186,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:31:21",
+   "updated_at": "2019-05-13 19:31:21"
+ },
+ {
+   "id": 187,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:31:24",
+   "updated_at": "2019-05-13 19:31:24"
+ },
+ {
+   "id": 188,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:37:00",
+   "updated_at": "2019-05-13 19:37:00"
+ },
+ {
+   "id": 189,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:37:12",
+   "updated_at": "2019-05-13 19:37:12"
+ },
+ {
+   "id": 190,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:48:44",
+   "updated_at": "2019-05-13 19:48:44"
+ },
+ {
+   "id": 191,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:53:56",
+   "updated_at": "2019-05-13 19:53:56"
+ },
+ {
+   "id": 192,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 19:57:26",
+   "updated_at": "2019-05-13 19:57:26"
+ },
+ {
+   "id": 193,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-13 20:04:30",
+   "updated_at": "2019-05-13 20:04:30"
+ },
+ {
+   "id": 194,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 13:55:44",
+   "updated_at": "2019-05-14 13:55:44"
+ },
+ {
+   "id": 195,
+   "charityId": 3,
+   "totalHashes": 207,
+   "totalTime": 40,
+   "created_at": "2019-05-14 14:00:30",
+   "updated_at": "2019-05-14 14:01:15"
+ },
+ {
+   "id": 196,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:17:46",
+   "updated_at": "2019-05-14 14:17:46"
+ },
+ {
+   "id": 197,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:20:22",
+   "updated_at": "2019-05-14 14:20:22"
+ },
+ {
+   "id": 198,
+   "charityId": 1,
+   "totalHashes": 20736,
+   "totalTime": 2100,
+   "created_at": "2019-05-14 14:34:25",
+   "updated_at": "2019-05-14 14:52:30"
+ },
+ {
+   "id": 199,
+   "charityId": 3,
+   "totalHashes": 16905,
+   "totalTime": 51420,
+   "created_at": "2019-05-14 14:36:32",
+   "updated_at": "2019-05-14 18:29:27"
+ },
+ {
+   "id": 200,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:41:48",
+   "updated_at": "2019-05-14 14:41:48"
+ },
+ {
+   "id": 201,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:42:30",
+   "updated_at": "2019-05-14 14:42:30"
+ },
+ {
+   "id": 202,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:48:21",
+   "updated_at": "2019-05-14 14:48:21"
+ },
+ {
+   "id": 203,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:49:14",
+   "updated_at": "2019-05-14 14:49:14"
+ },
+ {
+   "id": 204,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:50:28",
+   "updated_at": "2019-05-14 14:50:28"
+ },
+ {
+   "id": 205,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:51:46",
+   "updated_at": "2019-05-14 14:51:46"
+ },
+ {
+   "id": 206,
+   "charityId": 1,
+   "totalHashes": 158519,
+   "totalTime": 19740,
+   "created_at": "2019-05-14 14:54:55",
+   "updated_at": "2019-05-14 16:59:33"
+ },
+ {
+   "id": 207,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 14:55:04",
+   "updated_at": "2019-05-14 14:55:04"
+ },
+ {
+   "id": 208,
+   "charityId": 3,
+   "totalHashes": 12655833,
+   "totalTime": 9392720,
+   "created_at": "2019-05-14 15:49:20",
+   "updated_at": "2019-05-21 19:12:17"
+ },
+ {
+   "id": 209,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:47:44",
+   "updated_at": "2019-05-14 16:47:44"
+ },
+ {
+   "id": 210,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:51:04",
+   "updated_at": "2019-05-14 16:51:04"
+ },
+ {
+   "id": 211,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:51:30",
+   "updated_at": "2019-05-14 16:51:30"
+ },
+ {
+   "id": 212,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:51:30",
+   "updated_at": "2019-05-14 16:51:30"
+ },
+ {
+   "id": 213,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:51:31",
+   "updated_at": "2019-05-14 16:51:31"
+ },
+ {
+   "id": 214,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:51:31",
+   "updated_at": "2019-05-14 16:51:31"
+ },
+ {
+   "id": 215,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 16:53:47",
+   "updated_at": "2019-05-14 16:53:47"
+ },
+ {
+   "id": 216,
+   "charityId": 3,
+   "totalHashes": 12139000,
+   "totalTime": 11519590,
+   "created_at": "2019-05-14 18:06:47",
+   "updated_at": "2019-05-22 18:30:49"
+ },
+ {
+   "id": 217,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 18:15:04",
+   "updated_at": "2019-05-14 18:15:04"
+ },
+ {
+   "id": 218,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-14 19:04:52",
+   "updated_at": "2019-05-14 19:06:14"
+ },
+ {
+   "id": 219,
+   "charityId": 3,
+   "totalHashes": 416,
+   "totalTime": 995500,
+   "created_at": "2019-05-14 19:06:23",
+   "updated_at": "2019-05-15 13:45:07"
+ },
+ {
+   "id": 220,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 20,
+   "created_at": "2019-05-14 19:08:19",
+   "updated_at": "2019-05-14 19:09:49"
+ },
+ {
+   "id": 221,
+   "charityId": 3,
+   "totalHashes": 289614,
+   "totalTime": 109110,
+   "created_at": "2019-05-14 19:09:49",
+   "updated_at": "2019-05-15 13:22:08"
+ },
+ {
+   "id": 222,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 19:18:40",
+   "updated_at": "2019-05-14 19:18:40"
+ },
+ {
+   "id": 223,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 19:35:14",
+   "updated_at": "2019-05-14 19:35:14"
+ },
+ {
+   "id": 224,
+   "charityId": 3,
+   "totalHashes": 638179,
+   "totalTime": 30070,
+   "created_at": "2019-05-14 19:35:30",
+   "updated_at": "2019-05-15 03:56:54"
+ },
+ {
+   "id": 225,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-14 20:18:26",
+   "updated_at": "2019-05-14 20:18:26"
+ },
+ {
+   "id": 226,
+   "charityId": 3,
+   "totalHashes": 4972,
+   "totalTime": 1310,
+   "created_at": "2019-05-15 13:22:21",
+   "updated_at": "2019-05-15 13:44:40"
+ },
+ {
+   "id": 227,
+   "charityId": 3,
+   "totalHashes": 20947572,
+   "totalTime": 96448660,
+   "created_at": "2019-05-15 13:26:48",
+   "updated_at": "2019-05-28 00:04:57"
+ },
+ {
+   "id": 228,
+   "charityId": 3,
+   "totalHashes": 17068,
+   "totalTime": 4740,
+   "created_at": "2019-05-15 13:48:59",
+   "updated_at": "2019-05-15 15:08:20"
+ },
+ {
+   "id": 229,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-15 16:00:15",
+   "updated_at": "2019-05-15 16:00:15"
+ },
+ {
+   "id": 230,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-15 17:02:17",
+   "updated_at": "2019-05-15 17:02:17"
+ },
+ {
+   "id": 231,
+   "charityId": 3,
+   "totalHashes": 1147224,
+   "totalTime": 2199530,
+   "created_at": "2019-05-16 13:39:56",
+   "updated_at": "2019-05-18 03:54:11"
+ },
+ {
+   "id": 232,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-16 19:46:50",
+   "updated_at": "2019-05-16 19:46:50"
+ },
+ {
+   "id": 233,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-16 19:56:02",
+   "updated_at": "2019-05-16 19:56:36"
+ },
+ {
+   "id": 234,
+   "charityId": 3,
+   "totalHashes": 36986328,
+   "totalTime": 55548380,
+   "created_at": "2019-05-16 19:57:10",
+   "updated_at": "2019-05-30 14:39:43"
+ },
+ {
+   "id": 235,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-16 19:58:57",
+   "updated_at": "2019-05-16 19:58:57"
+ },
+ {
+   "id": 236,
+   "charityId": 3,
+   "totalHashes": 11319920,
+   "totalTime": 14093620,
+   "created_at": "2019-05-17 15:52:49",
+   "updated_at": "2019-05-22 12:57:06"
+ },
+ {
+   "id": 237,
+   "charityId": 3,
+   "totalHashes": 15578642,
+   "totalTime": 23671870,
+   "created_at": "2019-05-17 15:54:11",
+   "updated_at": "2019-05-24 15:48:38"
+ },
+ {
+   "id": 238,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 15:57:14",
+   "updated_at": "2019-05-17 15:57:14"
+ },
+ {
+   "id": 239,
+   "charityId": 3,
+   "totalHashes": 17482494,
+   "totalTime": 14244390,
+   "created_at": "2019-05-17 15:58:44",
+   "updated_at": "2019-05-23 19:55:24"
+ },
+ {
+   "id": 240,
+   "charityId": 3,
+   "totalHashes": 4027017,
+   "totalTime": 15606010,
+   "created_at": "2019-05-17 15:59:58",
+   "updated_at": "2019-05-22 14:15:31"
+ },
+ {
+   "id": 241,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 16:07:33",
+   "updated_at": "2019-05-17 16:07:33"
+ },
+ {
+   "id": 242,
+   "charityId": 3,
+   "totalHashes": 63071694,
+   "totalTime": 85105810,
+   "created_at": "2019-05-17 16:08:06",
+   "updated_at": "2019-05-30 14:49:43"
+ },
+ {
+   "id": 243,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 16:10:01",
+   "updated_at": "2019-05-17 16:10:01"
+ },
+ {
+   "id": 244,
+   "charityId": 3,
+   "totalHashes": 14155436,
+   "totalTime": 52901160,
+   "created_at": "2019-05-17 16:10:36",
+   "updated_at": "2019-05-30 19:17:52"
+ },
+ {
+   "id": 245,
+   "charityId": 3,
+   "totalHashes": 30074287,
+   "totalTime": 199849780,
+   "created_at": "2019-05-17 16:14:58",
+   "updated_at": "2019-06-09 10:51:07"
+ },
+ {
+   "id": 246,
+   "charityId": 3,
+   "totalHashes": 7150450,
+   "totalTime": 14435910,
+   "created_at": "2019-05-17 16:21:29",
+   "updated_at": "2019-05-22 14:38:38"
+ },
+ {
+   "id": 247,
+   "charityId": 3,
+   "totalHashes": 13683128,
+   "totalTime": 195001300,
+   "created_at": "2019-05-17 16:22:31",
+   "updated_at": "2019-06-19 18:26:59"
+ },
+ {
+   "id": 248,
+   "charityId": 3,
+   "totalHashes": 7778675,
+   "totalTime": 94878350,
+   "created_at": "2019-05-17 16:23:37",
+   "updated_at": "2019-05-30 14:35:16"
+ },
+ {
+   "id": 249,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-17 16:35:30",
+   "updated_at": "2019-05-17 16:36:06"
+ },
+ {
+   "id": 250,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 16:36:13",
+   "updated_at": "2019-05-17 16:36:13"
+ },
+ {
+   "id": 251,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 16:37:29",
+   "updated_at": "2019-05-17 16:37:29"
+ },
+ {
+   "id": 252,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 50,
+   "created_at": "2019-05-17 16:38:33",
+   "updated_at": "2019-05-17 16:39:38"
+ },
+ {
+   "id": 253,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-17 16:39:42",
+   "updated_at": "2019-05-17 16:40:22"
+ },
+ {
+   "id": 254,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 20:30:14",
+   "updated_at": "2019-05-17 20:30:14"
+ },
+ {
+   "id": 255,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-17 20:30:41",
+   "updated_at": "2019-05-17 20:30:41"
+ },
+ {
+   "id": 256,
+   "charityId": 3,
+   "totalHashes": 2558981,
+   "totalTime": 8785600,
+   "created_at": "2019-05-17 20:31:37",
+   "updated_at": "2019-05-21 13:14:43"
+ },
+ {
+   "id": 257,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-19 00:32:47",
+   "updated_at": "2019-05-19 00:32:47"
+ },
+ {
+   "id": 258,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-19 04:59:24",
+   "updated_at": "2019-05-19 04:59:24"
+ },
+ {
+   "id": 259,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-20 10:41:06",
+   "updated_at": "2019-05-20 10:41:06"
+ },
+ {
+   "id": 260,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-21 21:01:52",
+   "updated_at": "2019-05-21 21:01:52"
+ },
+ {
+   "id": 261,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-22 00:36:59",
+   "updated_at": "2019-05-22 00:36:59"
+ },
+ {
+   "id": 262,
+   "charityId": 3,
+   "totalHashes": 6345,
+   "totalTime": 1150,
+   "created_at": "2019-05-22 17:22:24",
+   "updated_at": "2019-05-22 17:41:50"
+ },
+ {
+   "id": 263,
+   "charityId": 3,
+   "totalHashes": 16334979,
+   "totalTime": 12945770,
+   "created_at": "2019-05-22 20:42:48",
+   "updated_at": "2019-05-29 17:13:25"
+ },
+ {
+   "id": 264,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 07:42:14",
+   "updated_at": "2019-05-23 07:42:14"
+ },
+ {
+   "id": 265,
+   "charityId": 1,
+   "totalHashes": 3797,
+   "totalTime": 490,
+   "created_at": "2019-05-23 14:42:56",
+   "updated_at": "2019-05-23 14:51:41"
+ },
+ {
+   "id": 266,
+   "charityId": 1,
+   "totalHashes": 106535,
+   "totalTime": 17230,
+   "created_at": "2019-05-23 15:22:14",
+   "updated_at": "2019-05-23 20:10:56"
+ },
+ {
+   "id": 267,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 16:15:05",
+   "updated_at": "2019-05-23 16:15:05"
+ },
+ {
+   "id": 268,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 17:02:10",
+   "updated_at": "2019-05-23 17:02:10"
+ },
+ {
+   "id": 269,
+   "charityId": 1,
+   "totalHashes": 2447,
+   "totalTime": 470,
+   "created_at": "2019-05-23 17:04:54",
+   "updated_at": "2019-05-23 17:13:33"
+ },
+ {
+   "id": 270,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 17:41:07",
+   "updated_at": "2019-05-23 17:41:07"
+ },
+ {
+   "id": 271,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 17:41:21",
+   "updated_at": "2019-05-23 17:41:21"
+ },
+ {
+   "id": 272,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 17:57:07",
+   "updated_at": "2019-05-23 17:57:07"
+ },
+ {
+   "id": 273,
+   "charityId": 1,
+   "totalHashes": 1141,
+   "totalTime": 240,
+   "created_at": "2019-05-23 19:14:03",
+   "updated_at": "2019-05-23 19:18:09"
+ },
+ {
+   "id": 274,
+   "charityId": 1,
+   "totalHashes": 9636,
+   "totalTime": 2200,
+   "created_at": "2019-05-23 19:18:13",
+   "updated_at": "2019-05-23 19:55:02"
+ },
+ {
+   "id": 275,
+   "charityId": 1,
+   "totalHashes": 2539515,
+   "totalTime": 286240,
+   "created_at": "2019-05-23 19:55:35",
+   "updated_at": "2019-05-24 17:20:35"
+ },
+ {
+   "id": 276,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-23 20:11:04",
+   "updated_at": "2019-05-23 20:11:04"
+ },
+ {
+   "id": 277,
+   "charityId": 3,
+   "totalHashes": 67660,
+   "totalTime": 1880,
+   "created_at": "2019-05-23 21:40:23",
+   "updated_at": "2019-05-23 22:11:53"
+ },
+ {
+   "id": 278,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-24 06:52:30",
+   "updated_at": "2019-05-24 06:52:30"
+ },
+ {
+   "id": 279,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-24 08:09:45",
+   "updated_at": "2019-05-24 08:09:45"
+ },
+ {
+   "id": 280,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-24 13:59:09",
+   "updated_at": "2019-05-24 13:59:09"
+ },
+ {
+   "id": 281,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-24 15:21:05",
+   "updated_at": "2019-05-24 15:21:05"
+ },
+ {
+   "id": 282,
+   "charityId": 3,
+   "totalHashes": 13978930,
+   "totalTime": 7385990,
+   "created_at": "2019-05-24 17:20:47",
+   "updated_at": "2019-05-29 14:08:20"
+ },
+ {
+   "id": 283,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-24 17:29:09",
+   "updated_at": "2019-05-24 17:29:09"
+ },
+ {
+   "id": 284,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-24 19:15:59",
+   "updated_at": "2019-05-24 19:15:59"
+ },
+ {
+   "id": 285,
+   "charityId": 1,
+   "totalHashes": 10460861,
+   "totalTime": 8044030,
+   "created_at": "2019-05-24 20:48:12",
+   "updated_at": "2019-05-29 13:11:39"
+ },
+ {
+   "id": 286,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-26 05:39:10",
+   "updated_at": "2019-05-26 05:39:10"
+ },
+ {
+   "id": 287,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-26 08:36:34",
+   "updated_at": "2019-05-26 08:36:34"
+ },
+ {
+   "id": 288,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-26 10:19:13",
+   "updated_at": "2019-05-26 10:19:13"
+ },
+ {
+   "id": 289,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-27 09:52:50",
+   "updated_at": "2019-05-27 09:52:50"
+ },
+ {
+   "id": 290,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-27 09:59:45",
+   "updated_at": "2019-05-27 09:59:45"
+ },
+ {
+   "id": 291,
+   "charityId": 3,
+   "totalHashes": 3645064,
+   "totalTime": 2892040,
+   "created_at": "2019-05-27 17:16:26",
+   "updated_at": "2019-05-30 15:17:50"
+ },
+ {
+   "id": 292,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-27 17:48:02",
+   "updated_at": "2019-05-27 17:48:02"
+ },
+ {
+   "id": 293,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-27 19:26:23",
+   "updated_at": "2019-05-27 19:26:23"
+ },
+ {
+   "id": 294,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-28 08:03:35",
+   "updated_at": "2019-05-28 08:03:35"
+ },
+ {
+   "id": 295,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-28 08:03:36",
+   "updated_at": "2019-05-28 08:03:36"
+ },
+ {
+   "id": 296,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-28 09:08:19",
+   "updated_at": "2019-05-28 09:08:19"
+ },
+ {
+   "id": 297,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-28 17:46:55",
+   "updated_at": "2019-05-28 17:46:55"
+ },
+ {
+   "id": 298,
+   "charityId": 1,
+   "totalHashes": 132332,
+   "totalTime": 7450,
+   "created_at": "2019-05-29 14:08:34",
+   "updated_at": "2019-05-29 15:11:00"
+ },
+ {
+   "id": 299,
+   "charityId": 3,
+   "totalHashes": 169254,
+   "totalTime": 9240,
+   "created_at": "2019-05-29 15:11:18",
+   "updated_at": "2019-05-29 16:34:35"
+ },
+ {
+   "id": 300,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-29 16:34:39",
+   "updated_at": "2019-05-29 16:34:39"
+ },
+ {
+   "id": 301,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-29 16:35:01",
+   "updated_at": "2019-05-29 16:35:01"
+ },
+ {
+   "id": 302,
+   "charityId": 3,
+   "totalHashes": 3413867,
+   "totalTime": 593600,
+   "created_at": "2019-05-29 16:35:09",
+   "updated_at": "2019-05-30 20:55:19"
+ },
+ {
+   "id": 303,
+   "charityId": 3,
+   "totalHashes": 81,
+   "totalTime": 20,
+   "created_at": "2019-05-29 17:01:48",
+   "updated_at": "2019-05-29 17:02:16"
+ },
+ {
+   "id": 304,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-29 17:13:25",
+   "updated_at": "2019-05-29 17:13:25"
+ },
+ {
+   "id": 305,
+   "charityId": 3,
+   "totalHashes": 2611389,
+   "totalTime": 795060,
+   "created_at": "2019-05-29 17:13:43",
+   "updated_at": "2019-05-30 20:00:07"
+ },
+ {
+   "id": 306,
+   "charityId": 3,
+   "totalHashes": 281379,
+   "totalTime": 10600,
+   "created_at": "2019-05-29 17:15:20",
+   "updated_at": "2019-05-29 21:09:41"
+ },
+ {
+   "id": 307,
+   "charityId": 3,
+   "totalHashes": 52884205,
+   "totalTime": 169416870,
+   "created_at": "2019-05-29 21:10:04",
+   "updated_at": "2019-06-21 20:36:32"
+ },
+ {
+   "id": 308,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-30 00:22:37",
+   "updated_at": "2019-05-30 00:22:37"
+ },
+ {
+   "id": 309,
+   "charityId": 3,
+   "totalHashes": 10508912,
+   "totalTime": 126386120,
+   "created_at": "2019-05-30 14:35:09",
+   "updated_at": "2019-06-19 17:29:09"
+ },
+ {
+   "id": 310,
+   "charityId": 3,
+   "totalHashes": 36567602,
+   "totalTime": 83116560,
+   "created_at": "2019-05-30 14:37:46",
+   "updated_at": "2019-06-19 18:55:03"
+ },
+ {
+   "id": 311,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-30 14:39:47",
+   "updated_at": "2019-05-30 14:39:47"
+ },
+ {
+   "id": 312,
+   "charityId": 3,
+   "totalHashes": 740966,
+   "totalTime": 52000,
+   "created_at": "2019-05-30 14:40:15",
+   "updated_at": "2019-05-30 21:13:22"
+ },
+ {
+   "id": 313,
+   "charityId": 3,
+   "totalHashes": 5251150,
+   "totalTime": 535590,
+   "created_at": "2019-05-30 14:49:49",
+   "updated_at": "2019-05-31 14:22:41"
+ },
+ {
+   "id": 314,
+   "charityId": 3,
+   "totalHashes": 345122,
+   "totalTime": 41040,
+   "created_at": "2019-05-30 15:17:54",
+   "updated_at": "2019-05-30 21:39:42"
+ },
+ {
+   "id": 315,
+   "charityId": 3,
+   "totalHashes": 701,
+   "totalTime": 130,
+   "created_at": "2019-05-30 16:48:11",
+   "updated_at": "2019-05-30 16:49:28"
+ },
+ {
+   "id": 316,
+   "charityId": 3,
+   "totalHashes": 34233338,
+   "totalTime": 284456630,
+   "created_at": "2019-05-30 16:50:16",
+   "updated_at": "2019-08-13 12:06:45"
+ },
+ {
+   "id": 317,
+   "charityId": 3,
+   "totalHashes": 1007744,
+   "totalTime": 481030,
+   "created_at": "2019-05-30 19:17:51",
+   "updated_at": "2019-05-31 16:27:59"
+ },
+ {
+   "id": 318,
+   "charityId": 3,
+   "totalHashes": 8927228,
+   "totalTime": 9786530,
+   "created_at": "2019-05-30 20:00:07",
+   "updated_at": "2019-06-03 18:40:55"
+ },
+ {
+   "id": 319,
+   "charityId": 3,
+   "totalHashes": 26119310,
+   "totalTime": 169366350,
+   "created_at": "2019-05-30 20:38:33",
+   "updated_at": "2019-06-21 14:45:06"
+ },
+ {
+   "id": 320,
+   "charityId": 3,
+   "totalHashes": 2689988,
+   "totalTime": 1148760,
+   "created_at": "2019-05-30 21:10:38",
+   "updated_at": "2019-05-31 19:59:55"
+ },
+ {
+   "id": 321,
+   "charityId": 3,
+   "totalHashes": 2504606,
+   "totalTime": 330050,
+   "created_at": "2019-05-30 21:18:01",
+   "updated_at": "2019-05-31 19:29:22"
+ },
+ {
+   "id": 322,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-30 21:39:46",
+   "updated_at": "2019-05-30 21:39:46"
+ },
+ {
+   "id": 323,
+   "charityId": 3,
+   "totalHashes": 6590280,
+   "totalTime": 11516430,
+   "created_at": "2019-05-30 21:40:08",
+   "updated_at": "2019-06-05 10:20:27"
+ },
+ {
+   "id": 324,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-31 00:13:23",
+   "updated_at": "2019-05-31 00:13:23"
+ },
+ {
+   "id": 325,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-31 14:30:05",
+   "updated_at": "2019-05-31 14:30:05"
+ },
+ {
+   "id": 326,
+   "charityId": 3,
+   "totalHashes": 52060533,
+   "totalTime": 51271090,
+   "created_at": "2019-05-31 14:30:25",
+   "updated_at": "2019-06-10 19:43:44"
+ },
+ {
+   "id": 327,
+   "charityId": 3,
+   "totalHashes": 18307666,
+   "totalTime": 16272400,
+   "created_at": "2019-05-31 14:45:29",
+   "updated_at": "2019-06-06 22:06:10"
+ },
+ {
+   "id": 328,
+   "charityId": 3,
+   "totalHashes": 52382537,
+   "totalTime": 558515480,
+   "created_at": "2019-05-31 16:33:55",
+   "updated_at": "2019-07-09 20:18:20"
+ },
+ {
+   "id": 329,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 63910,
+   "created_at": "2019-05-31 17:06:17",
+   "updated_at": "2019-05-31 19:24:20"
+ },
+ {
+   "id": 330,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 70,
+   "created_at": "2019-05-31 19:24:20",
+   "updated_at": "2019-05-31 19:25:38"
+ },
+ {
+   "id": 331,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-05-31 19:25:49",
+   "updated_at": "2019-05-31 19:26:07"
+ },
+ {
+   "id": 332,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-31 19:26:17",
+   "updated_at": "2019-05-31 19:26:17"
+ },
+ {
+   "id": 333,
+   "charityId": 3,
+   "totalHashes": 22060,
+   "totalTime": 1740,
+   "created_at": "2019-05-31 19:27:19",
+   "updated_at": "2019-05-31 19:56:28"
+ },
+ {
+   "id": 334,
+   "charityId": 3,
+   "totalHashes": 15579764,
+   "totalTime": 13115600,
+   "created_at": "2019-05-31 19:31:48",
+   "updated_at": "2019-06-06 15:33:49"
+ },
+ {
+   "id": 335,
+   "charityId": 3,
+   "totalHashes": 8635276,
+   "totalTime": 2459210,
+   "created_at": "2019-05-31 20:01:39",
+   "updated_at": "2019-06-03 19:32:03"
+ },
+ {
+   "id": 336,
+   "charityId": 3,
+   "totalHashes": 1884366,
+   "totalTime": 2423230,
+   "created_at": "2019-05-31 21:30:15",
+   "updated_at": "2019-06-03 13:11:10"
+ },
+ {
+   "id": 337,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-05-31 21:54:14",
+   "updated_at": "2019-05-31 21:54:14"
+ },
+ {
+   "id": 338,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-01 10:57:09",
+   "updated_at": "2019-06-01 10:57:09"
+ },
+ {
+   "id": 339,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-02 06:05:41",
+   "updated_at": "2019-06-02 06:05:41"
+ },
+ {
+   "id": 340,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-02 09:25:57",
+   "updated_at": "2019-06-02 09:25:57"
+ },
+ {
+   "id": 341,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-02 11:58:50",
+   "updated_at": "2019-06-02 11:58:50"
+ },
+ {
+   "id": 342,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-02 14:52:40",
+   "updated_at": "2019-06-02 14:52:40"
+ },
+ {
+   "id": 343,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-03 00:44:08",
+   "updated_at": "2019-06-03 00:44:08"
+ },
+ {
+   "id": 344,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-03 18:40:59",
+   "updated_at": "2019-06-03 18:40:59"
+ },
+ {
+   "id": 345,
+   "charityId": 3,
+   "totalHashes": 4311944,
+   "totalTime": 1796500,
+   "created_at": "2019-06-03 18:41:20",
+   "updated_at": "2019-06-05 15:38:48"
+ },
+ {
+   "id": 346,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-03 19:32:12",
+   "updated_at": "2019-06-03 19:32:12"
+ },
+ {
+   "id": 347,
+   "charityId": 1,
+   "totalHashes": 4890997,
+   "totalTime": 2094640,
+   "created_at": "2019-06-03 19:32:39",
+   "updated_at": "2019-06-05 13:56:53"
+ },
+ {
+   "id": 348,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-03 20:54:44",
+   "updated_at": "2019-06-03 20:54:44"
+ },
+ {
+   "id": 349,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-03 20:55:26",
+   "updated_at": "2019-06-03 20:55:26"
+ },
+ {
+   "id": 350,
+   "charityId": 3,
+   "totalHashes": 811923,
+   "totalTime": 1043690,
+   "created_at": "2019-06-03 21:23:14",
+   "updated_at": "2019-06-05 13:53:09"
+ },
+ {
+   "id": 351,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 11:04:05",
+   "updated_at": "2019-06-05 11:04:05"
+ },
+ {
+   "id": 352,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 12:42:57",
+   "updated_at": "2019-06-05 12:42:57"
+ },
+ {
+   "id": 353,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 12:43:21",
+   "updated_at": "2019-06-05 12:43:21"
+ },
+ {
+   "id": 354,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 13:30:41",
+   "updated_at": "2019-06-05 13:30:41"
+ },
+ {
+   "id": 355,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 13:31:13",
+   "updated_at": "2019-06-05 13:31:13"
+ },
+ {
+   "id": 356,
+   "charityId": 3,
+   "totalHashes": 21022747,
+   "totalTime": 22039390,
+   "created_at": "2019-06-05 13:58:33",
+   "updated_at": "2019-06-12 15:54:14"
+ },
+ {
+   "id": 357,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 13:59:15",
+   "updated_at": "2019-06-05 13:59:15"
+ },
+ {
+   "id": 358,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 13:59:48",
+   "updated_at": "2019-06-05 13:59:48"
+ },
+ {
+   "id": 359,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 14:00:47",
+   "updated_at": "2019-06-05 14:00:47"
+ },
+ {
+   "id": 360,
+   "charityId": 4,
+   "totalHashes": 2381352766,
+   "totalTime": 1682474210,
+   "created_at": "2019-06-05 14:01:16",
+   "updated_at": "2019-07-16 03:03:43"
+ },
+ {
+   "id": 361,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 20:05:51",
+   "updated_at": "2019-06-05 20:05:51"
+ },
+ {
+   "id": 362,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 21:12:02",
+   "updated_at": "2019-06-05 21:12:02"
+ },
+ {
+   "id": 363,
+   "charityId": 3,
+   "totalHashes": 21079,
+   "totalTime": 1250,
+   "created_at": "2019-06-05 21:12:20",
+   "updated_at": "2019-06-05 21:33:18"
+ },
+ {
+   "id": 364,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-05 21:23:30",
+   "updated_at": "2019-06-05 21:23:30"
+ },
+ {
+   "id": 365,
+   "charityId": 3,
+   "totalHashes": 64362371,
+   "totalTime": 235617120,
+   "created_at": "2019-06-06 20:45:05",
+   "updated_at": "2019-07-02 13:50:55"
+ },
+ {
+   "id": 366,
+   "charityId": 3,
+   "totalHashes": 10954835,
+   "totalTime": 24807400,
+   "created_at": "2019-06-07 13:58:35",
+   "updated_at": "2019-06-16 12:28:47"
+ },
+ {
+   "id": 367,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-07 14:51:36",
+   "updated_at": "2019-06-07 14:51:36"
+ },
+ {
+   "id": 368,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-08 08:49:56",
+   "updated_at": "2019-06-08 08:49:56"
+ },
+ {
+   "id": 369,
+   "charityId": 1,
+   "totalHashes": 1682185,
+   "totalTime": 2851100,
+   "created_at": "2019-06-09 19:30:51",
+   "updated_at": "2019-06-12 07:22:36"
+ },
+ {
+   "id": 370,
+   "charityId": 3,
+   "totalHashes": 48418918,
+   "totalTime": 118344410,
+   "created_at": "2019-06-10 01:57:32",
+   "updated_at": "2019-06-28 13:04:22"
+ },
+ {
+   "id": 371,
+   "charityId": 3,
+   "totalHashes": 83142398,
+   "totalTime": 99944220,
+   "created_at": "2019-06-10 19:43:51",
+   "updated_at": "2019-06-26 19:17:32"
+ },
+ {
+   "id": 372,
+   "charityId": 3,
+   "totalHashes": 14119248,
+   "totalTime": 16150970,
+   "created_at": "2019-06-10 19:46:48",
+   "updated_at": "2019-06-17 10:41:40"
+ },
+ {
+   "id": 373,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-10 20:11:40",
+   "updated_at": "2019-06-10 20:11:40"
+ },
+ {
+   "id": 374,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-11 13:06:57",
+   "updated_at": "2019-06-11 13:06:57"
+ },
+ {
+   "id": 375,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-11 19:13:05",
+   "updated_at": "2019-06-11 19:13:05"
+ },
+ {
+   "id": 376,
+   "charityId": 3,
+   "totalHashes": 2534709,
+   "totalTime": 259060,
+   "created_at": "2019-06-11 19:36:12",
+   "updated_at": "2019-06-12 15:18:07"
+ },
+ {
+   "id": 377,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-12 13:12:44",
+   "updated_at": "2019-06-12 13:12:44"
+ },
+ {
+   "id": 378,
+   "charityId": 1,
+   "totalHashes": 169686,
+   "totalTime": 34480,
+   "created_at": "2019-06-12 14:31:27",
+   "updated_at": "2019-06-12 19:20:15"
+ },
+ {
+   "id": 379,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-12 15:20:44",
+   "updated_at": "2019-06-12 15:20:44"
+ },
+ {
+   "id": 380,
+   "charityId": 1,
+   "totalHashes": 120779,
+   "totalTime": 3380,
+   "created_at": "2019-06-12 15:54:24",
+   "updated_at": "2019-06-12 16:50:51"
+ },
+ {
+   "id": 381,
+   "charityId": 1,
+   "totalHashes": 466871,
+   "totalTime": 259230,
+   "created_at": "2019-06-12 19:40:09",
+   "updated_at": "2019-06-13 12:33:07"
+ },
+ {
+   "id": 382,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-13 11:15:41",
+   "updated_at": "2019-06-13 11:15:41"
+ },
+ {
+   "id": 383,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-13 13:13:35",
+   "updated_at": "2019-06-13 13:13:35"
+ },
+ {
+   "id": 384,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-13 17:35:45",
+   "updated_at": "2019-06-13 17:35:45"
+ },
+ {
+   "id": 385,
+   "charityId": 3,
+   "totalHashes": 110,
+   "totalTime": 50,
+   "created_at": "2019-06-13 22:55:37",
+   "updated_at": "2019-06-13 22:56:43"
+ },
+ {
+   "id": 386,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 13:12:33",
+   "updated_at": "2019-06-14 13:12:33"
+ },
+ {
+   "id": 387,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 14:05:12",
+   "updated_at": "2019-06-14 14:05:12"
+ },
+ {
+   "id": 388,
+   "charityId": 3,
+   "totalHashes": 15020701,
+   "totalTime": 158814910,
+   "created_at": "2019-06-14 14:05:43",
+   "updated_at": "2019-07-05 18:50:42"
+ },
+ {
+   "id": 389,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 18:09:06",
+   "updated_at": "2019-06-14 18:09:06"
+ },
+ {
+   "id": 390,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 18:10:36",
+   "updated_at": "2019-06-14 18:10:36"
+ },
+ {
+   "id": 391,
+   "charityId": 3,
+   "totalHashes": 418890,
+   "totalTime": 323960,
+   "created_at": "2019-06-14 18:42:34",
+   "updated_at": "2019-06-15 07:22:47"
+ },
+ {
+   "id": 392,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 20:23:46",
+   "updated_at": "2019-06-14 20:23:46"
+ },
+ {
+   "id": 393,
+   "charityId": 1,
+   "totalHashes": 2314135,
+   "totalTime": 361780,
+   "created_at": "2019-06-14 20:27:22",
+   "updated_at": "2019-06-15 18:28:07"
+ },
+ {
+   "id": 394,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 20:31:52",
+   "updated_at": "2019-06-14 20:31:52"
+ },
+ {
+   "id": 395,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 70,
+   "created_at": "2019-06-14 20:34:30",
+   "updated_at": "2019-06-14 20:35:50"
+ },
+ {
+   "id": 396,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-14 20:36:30",
+   "updated_at": "2019-06-14 20:36:30"
+ },
+ {
+   "id": 397,
+   "charityId": 1,
+   "totalHashes": 926980,
+   "totalTime": 90920,
+   "created_at": "2019-06-18 01:42:33",
+   "updated_at": "2019-06-18 12:56:25"
+ },
+ {
+   "id": 398,
+   "charityId": 1,
+   "totalHashes": 411437,
+   "totalTime": 236060,
+   "created_at": "2019-06-18 21:27:10",
+   "updated_at": "2019-06-19 13:39:28"
+ },
+ {
+   "id": 399,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-19 09:38:41",
+   "updated_at": "2019-06-19 09:38:41"
+ },
+ {
+   "id": 400,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-19 14:55:23",
+   "updated_at": "2019-06-19 14:55:23"
+ },
+ {
+   "id": 401,
+   "charityId": 3,
+   "totalHashes": 16851404,
+   "totalTime": 20000090,
+   "created_at": "2019-06-19 15:39:46",
+   "updated_at": "2019-06-27 11:05:31"
+ },
+ {
+   "id": 402,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-20 00:49:05",
+   "updated_at": "2019-06-20 00:49:05"
+ },
+ {
+   "id": 403,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-20 14:24:26",
+   "updated_at": "2019-06-20 14:24:26"
+ },
+ {
+   "id": 404,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-20 14:32:46",
+   "updated_at": "2019-06-20 14:32:46"
+ },
+ {
+   "id": 405,
+   "charityId": 1,
+   "totalHashes": 504719,
+   "totalTime": 171890,
+   "created_at": "2019-06-20 21:21:55",
+   "updated_at": "2019-06-21 12:29:12"
+ },
+ {
+   "id": 406,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-21 11:26:42",
+   "updated_at": "2019-06-21 11:26:42"
+ },
+ {
+   "id": 407,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-21 11:26:47",
+   "updated_at": "2019-06-21 11:26:47"
+ },
+ {
+   "id": 408,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-21 19:31:40",
+   "updated_at": "2019-06-21 19:31:40"
+ },
+ {
+   "id": 409,
+   "charityId": 1,
+   "totalHashes": 1784004,
+   "totalTime": 3825720,
+   "created_at": "2019-06-21 19:31:58",
+   "updated_at": "2019-06-24 12:35:11"
+ },
+ {
+   "id": 410,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-21 19:32:12",
+   "updated_at": "2019-06-21 19:32:12"
+ },
+ {
+   "id": 411,
+   "charityId": 1,
+   "totalHashes": 3206656,
+   "totalTime": 8973940,
+   "created_at": "2019-06-21 19:32:58",
+   "updated_at": "2019-06-26 12:38:03"
+ },
+ {
+   "id": 412,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-21 19:34:31",
+   "updated_at": "2019-06-21 19:34:31"
+ },
+ {
+   "id": 413,
+   "charityId": 1,
+   "totalHashes": 1829238,
+   "totalTime": 218330,
+   "created_at": "2019-06-21 19:58:38",
+   "updated_at": "2019-06-22 15:05:38"
+ },
+ {
+   "id": 414,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-06-21 20:16:55",
+   "updated_at": "2019-06-21 20:17:14"
+ },
+ {
+   "id": 415,
+   "charityId": 3,
+   "totalHashes": 8983,
+   "totalTime": 430,
+   "created_at": "2019-06-21 20:26:00",
+   "updated_at": "2019-06-21 20:33:25"
+ },
+ {
+   "id": 416,
+   "charityId": 3,
+   "totalHashes": 40406081,
+   "totalTime": 134267450,
+   "created_at": "2019-06-21 20:36:38",
+   "updated_at": "2019-07-09 20:02:43"
+ },
+ {
+   "id": 417,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-24 16:06:07",
+   "updated_at": "2019-06-24 16:06:07"
+ },
+ {
+   "id": 418,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-24 16:06:10",
+   "updated_at": "2019-06-24 16:06:10"
+ },
+ {
+   "id": 419,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-25 09:01:20",
+   "updated_at": "2019-06-25 09:01:20"
+ },
+ {
+   "id": 420,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-25 09:01:22",
+   "updated_at": "2019-06-25 09:01:22"
+ },
+ {
+   "id": 421,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-25 12:03:48",
+   "updated_at": "2019-06-25 12:03:48"
+ },
+ {
+   "id": 422,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-25 12:03:53",
+   "updated_at": "2019-06-25 12:03:53"
+ },
+ {
+   "id": 423,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-26 00:56:48",
+   "updated_at": "2019-06-26 00:56:48"
+ },
+ {
+   "id": 424,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-26 00:56:51",
+   "updated_at": "2019-06-26 00:56:51"
+ },
+ {
+   "id": 425,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-26 02:00:08",
+   "updated_at": "2019-06-26 02:00:08"
+ },
+ {
+   "id": 426,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-26 02:45:31",
+   "updated_at": "2019-06-26 02:45:31"
+ },
+ {
+   "id": 427,
+   "charityId": 1,
+   "totalHashes": 4112856,
+   "totalTime": 13924980,
+   "created_at": "2019-06-26 12:38:23",
+   "updated_at": "2019-07-02 15:34:18"
+ },
+ {
+   "id": 428,
+   "charityId": 3,
+   "totalHashes": 7961,
+   "totalTime": 810,
+   "created_at": "2019-06-26 15:52:54",
+   "updated_at": "2019-06-26 16:06:40"
+ },
+ {
+   "id": 429,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-26 16:04:02",
+   "updated_at": "2019-06-26 16:04:02"
+ },
+ {
+   "id": 430,
+   "charityId": 3,
+   "totalHashes": 62342743,
+   "totalTime": 75401360,
+   "created_at": "2019-06-26 19:17:54",
+   "updated_at": "2019-07-09 20:13:58"
+ },
+ {
+   "id": 431,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-27 16:12:29",
+   "updated_at": "2019-06-27 16:12:29"
+ },
+ {
+   "id": 432,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-27 17:38:57",
+   "updated_at": "2019-06-27 17:38:57"
+ },
+ {
+   "id": 433,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-27 18:24:56",
+   "updated_at": "2019-06-27 18:24:56"
+ },
+ {
+   "id": 434,
+   "charityId": 3,
+   "totalHashes": 28644419,
+   "totalTime": 35106810,
+   "created_at": "2019-06-28 13:49:23",
+   "updated_at": "2019-07-08 22:42:09"
+ },
+ {
+   "id": 435,
+   "charityId": 3,
+   "totalHashes": 7031812,
+   "totalTime": 16553570,
+   "created_at": "2019-06-28 15:28:48",
+   "updated_at": "2019-07-05 06:09:54"
+ },
+ {
+   "id": 436,
+   "charityId": 3,
+   "totalHashes": 14927399,
+   "totalTime": 52368070,
+   "created_at": "2019-06-28 15:32:49",
+   "updated_at": "2019-07-09 20:07:56"
+ },
+ {
+   "id": 437,
+   "charityId": 3,
+   "totalHashes": 13724458,
+   "totalTime": 14921730,
+   "created_at": "2019-06-28 15:40:41",
+   "updated_at": "2019-07-04 18:08:20"
+ },
+ {
+   "id": 438,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-30 13:27:26",
+   "updated_at": "2019-06-30 13:27:26"
+ },
+ {
+   "id": 439,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-30 18:32:10",
+   "updated_at": "2019-06-30 18:32:10"
+ },
+ {
+   "id": 440,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-06-30 21:24:52",
+   "updated_at": "2019-06-30 21:24:52"
+ },
+ {
+   "id": 441,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-01 07:13:36",
+   "updated_at": "2019-07-01 07:13:36"
+ },
+ {
+   "id": 442,
+   "charityId": 1,
+   "totalHashes": 4682830,
+   "totalTime": 26017220,
+   "created_at": "2019-07-02 15:34:22",
+   "updated_at": "2019-07-10 07:19:47"
+ },
+ {
+   "id": 443,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-03 02:36:45",
+   "updated_at": "2019-07-03 02:36:45"
+ },
+ {
+   "id": 444,
+   "charityId": 3,
+   "totalHashes": 35707,
+   "totalTime": 2210,
+   "created_at": "2019-07-03 02:37:34",
+   "updated_at": "2019-07-03 03:14:29"
+ },
+ {
+   "id": 445,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-04 18:43:09",
+   "updated_at": "2019-07-04 18:43:09"
+ },
+ {
+   "id": 446,
+   "charityId": 1,
+   "totalHashes": 13859954,
+   "totalTime": 14252890,
+   "created_at": "2019-07-04 18:44:43",
+   "updated_at": "2019-07-09 19:57:14"
+ },
+ {
+   "id": 447,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 10:38:46",
+   "updated_at": "2019-07-05 10:38:46"
+ },
+ {
+   "id": 448,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 16:24:42",
+   "updated_at": "2019-07-05 16:24:42"
+ },
+ {
+   "id": 449,
+   "charityId": 3,
+   "totalHashes": 9297780,
+   "totalTime": 6475650,
+   "created_at": "2019-07-05 16:25:15",
+   "updated_at": "2019-07-09 20:08:57"
+ },
+ {
+   "id": 450,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 17:08:07",
+   "updated_at": "2019-07-05 17:08:07"
+ },
+ {
+   "id": 451,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 17:08:20",
+   "updated_at": "2019-07-05 17:08:20"
+ },
+ {
+   "id": 452,
+   "charityId": 3,
+   "totalHashes": 8683146,
+   "totalTime": 19177580,
+   "created_at": "2019-07-05 17:08:54",
+   "updated_at": "2019-07-09 20:01:44"
+ },
+ {
+   "id": 453,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 18:28:39",
+   "updated_at": "2019-07-05 18:28:39"
+ },
+ {
+   "id": 454,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 18:29:01",
+   "updated_at": "2019-07-05 18:29:01"
+ },
+ {
+   "id": 455,
+   "charityId": 3,
+   "totalHashes": 13060129,
+   "totalTime": 8663880,
+   "created_at": "2019-07-05 18:29:32",
+   "updated_at": "2019-07-09 19:59:07"
+ },
+ {
+   "id": 456,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 18:44:41",
+   "updated_at": "2019-07-05 18:44:41"
+ },
+ {
+   "id": 457,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 18:50:43",
+   "updated_at": "2019-07-05 18:50:43"
+ },
+ {
+   "id": 458,
+   "charityId": 3,
+   "totalHashes": 3065166,
+   "totalTime": 8836930,
+   "created_at": "2019-07-05 18:51:22",
+   "updated_at": "2019-07-09 20:17:00"
+ },
+ {
+   "id": 459,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-05 22:14:06",
+   "updated_at": "2019-07-05 22:14:06"
+ },
+ {
+   "id": 460,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-06 02:23:31",
+   "updated_at": "2019-07-06 02:23:31"
+ },
+ {
+   "id": 461,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-06 21:38:26",
+   "updated_at": "2019-07-06 21:38:26"
+ },
+ {
+   "id": 462,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-07 05:55:25",
+   "updated_at": "2019-07-07 05:55:25"
+ },
+ {
+   "id": 463,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-08 11:32:34",
+   "updated_at": "2019-07-08 11:32:34"
+ },
+ {
+   "id": 464,
+   "charityId": 3,
+   "totalHashes": 1044375,
+   "totalTime": 1313070,
+   "created_at": "2019-07-08 14:59:26",
+   "updated_at": "2019-07-09 20:00:03"
+ },
+ {
+   "id": 465,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-08 18:26:25",
+   "updated_at": "2019-07-08 18:26:25"
+ },
+ {
+   "id": 466,
+   "charityId": 3,
+   "totalHashes": 1191537,
+   "totalTime": 1112910,
+   "created_at": "2019-07-08 23:13:20",
+   "updated_at": "2019-07-09 20:04:27"
+ },
+ {
+   "id": 467,
+   "charityId": 1,
+   "totalHashes": 3986694,
+   "totalTime": 1175430,
+   "created_at": "2019-07-09 19:57:19",
+   "updated_at": "2019-07-11 04:37:05"
+ },
+ {
+   "id": 468,
+   "charityId": 3,
+   "totalHashes": 33910218,
+   "totalTime": 35049640,
+   "created_at": "2019-07-09 19:59:15",
+   "updated_at": "2019-07-20 14:05:17"
+ },
+ {
+   "id": 469,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:00:06",
+   "updated_at": "2019-07-09 20:00:06"
+ },
+ {
+   "id": 470,
+   "charityId": 3,
+   "totalHashes": 55732139,
+   "totalTime": 853670030,
+   "created_at": "2019-07-09 20:00:29",
+   "updated_at": "2019-08-27 14:44:59"
+ },
+ {
+   "id": 471,
+   "charityId": 3,
+   "totalHashes": 106529530,
+   "totalTime": 754403570,
+   "created_at": "2019-07-09 20:01:47",
+   "updated_at": "2019-08-23 14:11:12"
+ },
+ {
+   "id": 472,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:02:46",
+   "updated_at": "2019-07-09 20:02:46"
+ },
+ {
+   "id": 473,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:03:00",
+   "updated_at": "2019-07-09 20:03:00"
+ },
+ {
+   "id": 474,
+   "charityId": 3,
+   "totalHashes": 112866126,
+   "totalTime": 1020325600,
+   "created_at": "2019-07-09 20:03:27",
+   "updated_at": "2019-08-26 14:49:22"
+ },
+ {
+   "id": 475,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:04:31",
+   "updated_at": "2019-07-09 20:04:31"
+ },
+ {
+   "id": 476,
+   "charityId": 3,
+   "totalHashes": 108765603,
+   "totalTime": 696535810,
+   "created_at": "2019-07-09 20:05:02",
+   "updated_at": "2019-08-21 13:56:56"
+ },
+ {
+   "id": 477,
+   "charityId": 3,
+   "totalHashes": 2952135,
+   "totalTime": 1109970,
+   "created_at": "2019-07-09 20:08:01",
+   "updated_at": "2019-07-11 14:18:35"
+ },
+ {
+   "id": 478,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:09:01",
+   "updated_at": "2019-07-09 20:09:01"
+ },
+ {
+   "id": 479,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:09:13",
+   "updated_at": "2019-07-09 20:09:13"
+ },
+ {
+   "id": 480,
+   "charityId": 3,
+   "totalHashes": 64653216,
+   "totalTime": 386873660,
+   "created_at": "2019-07-09 20:09:34",
+   "updated_at": "2019-08-08 06:35:53"
+ },
+ {
+   "id": 481,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:14:01",
+   "updated_at": "2019-07-09 20:14:01"
+ },
+ {
+   "id": 482,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:14:46",
+   "updated_at": "2019-07-09 20:14:46"
+ },
+ {
+   "id": 483,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:15:02",
+   "updated_at": "2019-07-09 20:15:02"
+ },
+ {
+   "id": 484,
+   "charityId": 3,
+   "totalHashes": 174002441,
+   "totalTime": 568181100,
+   "created_at": "2019-07-09 20:15:35",
+   "updated_at": "2019-08-14 06:57:51"
+ },
+ {
+   "id": 485,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:17:02",
+   "updated_at": "2019-07-09 20:17:02"
+ },
+ {
+   "id": 486,
+   "charityId": 3,
+   "totalHashes": 9768928,
+   "totalTime": 78861380,
+   "created_at": "2019-07-09 20:17:19",
+   "updated_at": "2019-07-23 15:46:20"
+ },
+ {
+   "id": 487,
+   "charityId": 3,
+   "totalHashes": 38231977,
+   "totalTime": 542358260,
+   "created_at": "2019-07-09 20:18:21",
+   "updated_at": "2019-08-14 14:54:48"
+ },
+ {
+   "id": 488,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-07-09 20:24:14",
+   "updated_at": "2019-07-09 20:25:30"
+ },
+ {
+   "id": 489,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:25:36",
+   "updated_at": "2019-07-09 20:25:36"
+ },
+ {
+   "id": 490,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-07-09 20:25:57",
+   "updated_at": "2019-07-09 20:26:13"
+ },
+ {
+   "id": 491,
+   "charityId": 3,
+   "totalHashes": 29307798,
+   "totalTime": 25505420,
+   "created_at": "2019-07-09 20:26:21",
+   "updated_at": "2019-07-19 02:34:51"
+ },
+ {
+   "id": 492,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:28:54",
+   "updated_at": "2019-07-09 20:28:54"
+ },
+ {
+   "id": 493,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-09 20:29:05",
+   "updated_at": "2019-07-09 20:29:05"
+ },
+ {
+   "id": 494,
+   "charityId": 1,
+   "totalHashes": 600129,
+   "totalTime": 271150,
+   "created_at": "2019-07-09 21:30:41",
+   "updated_at": "2019-07-10 16:42:35"
+ },
+ {
+   "id": 495,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-10 14:13:13",
+   "updated_at": "2019-07-10 14:13:13"
+ },
+ {
+   "id": 496,
+   "charityId": 3,
+   "totalHashes": 118,
+   "totalTime": 120,
+   "created_at": "2019-07-10 16:00:47",
+   "updated_at": "2019-07-10 16:02:25"
+ },
+ {
+   "id": 497,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-10 17:05:06",
+   "updated_at": "2019-07-10 17:05:06"
+ },
+ {
+   "id": 498,
+   "charityId": 3,
+   "totalHashes": 99051540,
+   "totalTime": 1693800070,
+   "created_at": "2019-07-11 14:16:23",
+   "updated_at": "2019-09-16 16:46:15"
+ },
+ {
+   "id": 499,
+   "charityId": 3,
+   "totalHashes": 38954318,
+   "totalTime": 283270980,
+   "created_at": "2019-07-11 14:19:13",
+   "updated_at": "2019-08-08 12:47:56"
+ },
+ {
+   "id": 500,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-12 22:24:35",
+   "updated_at": "2019-07-12 22:24:35"
+ },
+ {
+   "id": 501,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-12 23:28:33",
+   "updated_at": "2019-07-12 23:28:33"
+ },
+ {
+   "id": 502,
+   "charityId": 3,
+   "totalHashes": 1984,
+   "totalTime": 330,
+   "created_at": "2019-07-13 03:19:08",
+   "updated_at": "2019-07-13 03:24:48"
+ },
+ {
+   "id": 503,
+   "charityId": 1,
+   "totalHashes": 478577,
+   "totalTime": 135520,
+   "created_at": "2019-07-15 21:28:50",
+   "updated_at": "2019-07-16 12:34:55"
+ },
+ {
+   "id": 504,
+   "charityId": 1,
+   "totalHashes": 500263,
+   "totalTime": 340060,
+   "created_at": "2019-07-16 21:27:58",
+   "updated_at": "2019-07-17 12:59:31"
+ },
+ {
+   "id": 505,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-16 21:29:27",
+   "updated_at": "2019-07-16 21:29:27"
+ },
+ {
+   "id": 506,
+   "charityId": 1,
+   "totalHashes": 7843140,
+   "totalTime": 294379100,
+   "created_at": "2019-07-16 21:30:04",
+   "updated_at": "2019-08-14 07:35:51"
+ },
+ {
+   "id": 507,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-16 21:30:54",
+   "updated_at": "2019-07-16 21:30:54"
+ },
+ {
+   "id": 508,
+   "charityId": 1,
+   "totalHashes": 18924949,
+   "totalTime": 261680720,
+   "created_at": "2019-07-16 21:31:18",
+   "updated_at": "2019-08-14 07:19:23"
+ },
+ {
+   "id": 509,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-17 05:06:27",
+   "updated_at": "2019-07-17 05:06:27"
+ },
+ {
+   "id": 510,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-17 12:13:22",
+   "updated_at": "2019-07-17 12:13:22"
+ },
+ {
+   "id": 511,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-18 12:45:38",
+   "updated_at": "2019-07-18 12:45:38"
+ },
+ {
+   "id": 512,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-18 16:51:58",
+   "updated_at": "2019-07-18 16:51:58"
+ },
+ {
+   "id": 513,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-18 17:25:50",
+   "updated_at": "2019-07-18 17:25:50"
+ },
+ {
+   "id": 514,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-18 18:12:45",
+   "updated_at": "2019-07-18 18:12:45"
+ },
+ {
+   "id": 515,
+   "charityId": 4,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-19 09:26:52",
+   "updated_at": "2019-07-19 09:26:52"
+ },
+ {
+   "id": 516,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-19 13:11:47",
+   "updated_at": "2019-07-19 13:11:47"
+ },
+ {
+   "id": 517,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-19 13:17:37",
+   "updated_at": "2019-07-19 13:17:37"
+ },
+ {
+   "id": 518,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-19 15:25:55",
+   "updated_at": "2019-07-19 15:25:55"
+ },
+ {
+   "id": 519,
+   "charityId": 3,
+   "totalHashes": 102,
+   "totalTime": 5490,
+   "created_at": "2019-07-19 15:46:02",
+   "updated_at": "2019-07-19 15:57:19"
+ },
+ {
+   "id": 520,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-19 18:31:31",
+   "updated_at": "2019-07-19 18:31:31"
+ },
+ {
+   "id": 521,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-19 18:40:12",
+   "updated_at": "2019-07-19 18:40:12"
+ },
+ {
+   "id": 522,
+   "charityId": 1,
+   "totalHashes": 1647209,
+   "totalTime": 3132690,
+   "created_at": "2019-07-19 21:28:42",
+   "updated_at": "2019-07-22 12:33:23"
+ },
+ {
+   "id": 523,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-22 14:27:29",
+   "updated_at": "2019-07-22 14:27:29"
+ },
+ {
+   "id": 524,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-22 18:49:54",
+   "updated_at": "2019-07-22 18:49:54"
+ },
+ {
+   "id": 525,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 30,
+   "created_at": "2019-07-22 18:52:03",
+   "updated_at": "2019-07-22 18:52:50"
+ },
+ {
+   "id": 526,
+   "charityId": 3,
+   "totalHashes": 3343,
+   "totalTime": 14540,
+   "created_at": "2019-07-22 18:54:13",
+   "updated_at": "2019-07-22 19:26:06"
+ },
+ {
+   "id": 527,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-23 15:21:33",
+   "updated_at": "2019-07-23 15:21:33"
+ },
+ {
+   "id": 528,
+   "charityId": 3,
+   "totalHashes": 15006611,
+   "totalTime": 126353670,
+   "created_at": "2019-07-23 15:49:11",
+   "updated_at": "2019-08-12 06:34:07"
+ },
+ {
+   "id": 529,
+   "charityId": 1,
+   "totalHashes": 408004,
+   "totalTime": 125870,
+   "created_at": "2019-07-23 20:43:59",
+   "updated_at": "2019-07-24 12:24:54"
+ },
+ {
+   "id": 530,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-24 08:38:52",
+   "updated_at": "2019-07-24 08:38:52"
+ },
+ {
+   "id": 531,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-24 08:38:56",
+   "updated_at": "2019-07-24 08:38:56"
+ },
+ {
+   "id": 532,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-24 11:03:28",
+   "updated_at": "2019-07-24 11:03:28"
+ },
+ {
+   "id": 533,
+   "charityId": 1,
+   "totalHashes": 493508,
+   "totalTime": 327010,
+   "created_at": "2019-07-24 21:26:55",
+   "updated_at": "2019-07-25 12:30:53"
+ },
+ {
+   "id": 534,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-25 04:25:03",
+   "updated_at": "2019-07-25 04:25:03"
+ },
+ {
+   "id": 535,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-25 16:37:23",
+   "updated_at": "2019-07-25 16:37:23"
+ },
+ {
+   "id": 536,
+   "charityId": 1,
+   "totalHashes": 83155608,
+   "totalTime": 313341230,
+   "created_at": "2019-07-25 16:37:33",
+   "updated_at": "2019-08-23 17:05:34"
+ },
+ {
+   "id": 537,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-25 18:35:14",
+   "updated_at": "2019-07-25 18:35:14"
+ },
+ {
+   "id": 538,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-26 04:48:04",
+   "updated_at": "2019-07-26 04:48:04"
+ },
+ {
+   "id": 539,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-26 16:49:23",
+   "updated_at": "2019-07-26 16:49:23"
+ },
+ {
+   "id": 540,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-26 16:49:24",
+   "updated_at": "2019-07-26 16:49:24"
+ },
+ {
+   "id": 541,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-27 01:46:08",
+   "updated_at": "2019-07-27 01:46:08"
+ },
+ {
+   "id": 542,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-27 01:46:14",
+   "updated_at": "2019-07-27 01:46:14"
+ },
+ {
+   "id": 543,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-28 17:18:32",
+   "updated_at": "2019-07-28 17:18:32"
+ },
+ {
+   "id": 544,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-29 11:30:21",
+   "updated_at": "2019-07-29 11:30:21"
+ },
+ {
+   "id": 545,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-30 03:47:25",
+   "updated_at": "2019-07-30 03:47:25"
+ },
+ {
+   "id": 546,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-30 03:47:27",
+   "updated_at": "2019-07-30 03:47:27"
+ },
+ {
+   "id": 547,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-30 17:51:41",
+   "updated_at": "2019-07-30 17:51:41"
+ },
+ {
+   "id": 548,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-30 17:51:41",
+   "updated_at": "2019-07-30 17:51:41"
+ },
+ {
+   "id": 549,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-30 23:24:21",
+   "updated_at": "2019-07-30 23:24:21"
+ },
+ {
+   "id": 550,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-31 02:51:53",
+   "updated_at": "2019-07-31 02:51:53"
+ },
+ {
+   "id": 551,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-31 15:53:37",
+   "updated_at": "2019-07-31 15:53:37"
+ },
+ {
+   "id": 552,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-07-31 23:03:29",
+   "updated_at": "2019-07-31 23:03:29"
+ },
+ {
+   "id": 553,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-02 06:32:58",
+   "updated_at": "2019-08-02 06:32:58"
+ },
+ {
+   "id": 554,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-02 08:42:21",
+   "updated_at": "2019-08-02 08:42:21"
+ },
+ {
+   "id": 555,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-02 08:42:23",
+   "updated_at": "2019-08-02 08:42:23"
+ },
+ {
+   "id": 556,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-03 23:56:45",
+   "updated_at": "2019-08-03 23:56:45"
+ },
+ {
+   "id": 557,
+   "charityId": 3,
+   "totalHashes": 40,
+   "totalTime": 10,
+   "created_at": "2019-08-03 23:57:20",
+   "updated_at": "2019-08-03 23:57:45"
+ },
+ {
+   "id": 558,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-04 11:35:17",
+   "updated_at": "2019-08-04 11:35:17"
+ },
+ {
+   "id": 559,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-04 23:35:28",
+   "updated_at": "2019-08-04 23:35:28"
+ },
+ {
+   "id": 560,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-04 23:35:33",
+   "updated_at": "2019-08-04 23:35:33"
+ },
+ {
+   "id": 561,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-06 14:57:49",
+   "updated_at": "2019-08-06 14:57:49"
+ },
+ {
+   "id": 562,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-06 14:57:51",
+   "updated_at": "2019-08-06 14:57:51"
+ },
+ {
+   "id": 563,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-06 19:10:41",
+   "updated_at": "2019-08-06 19:10:41"
+ },
+ {
+   "id": 564,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-08 16:39:01",
+   "updated_at": "2019-08-08 16:39:01"
+ },
+ {
+   "id": 565,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-08 16:54:16",
+   "updated_at": "2019-08-08 16:54:16"
+ },
+ {
+   "id": 566,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-09 08:10:52",
+   "updated_at": "2019-08-09 08:10:52"
+ },
+ {
+   "id": 567,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-09 08:11:06",
+   "updated_at": "2019-08-09 08:11:06"
+ },
+ {
+   "id": 568,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-13 08:54:36",
+   "updated_at": "2019-08-13 08:54:36"
+ },
+ {
+   "id": 569,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-14 01:24:14",
+   "updated_at": "2019-08-14 01:24:14"
+ },
+ {
+   "id": 570,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-14 05:42:25",
+   "updated_at": "2019-08-14 05:42:25"
+ },
+ {
+   "id": 571,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-14 05:42:28",
+   "updated_at": "2019-08-14 05:42:28"
+ },
+ {
+   "id": 572,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-14 12:08:50",
+   "updated_at": "2019-08-14 12:08:50"
+ },
+ {
+   "id": 573,
+   "charityId": 1,
+   "totalHashes": 344611,
+   "totalTime": 1494760,
+   "created_at": "2019-08-14 12:49:55",
+   "updated_at": "2019-08-15 22:15:49"
+ },
+ {
+   "id": 574,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-15 04:21:54",
+   "updated_at": "2019-08-15 04:21:54"
+ },
+ {
+   "id": 575,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-15 18:44:52",
+   "updated_at": "2019-08-15 18:44:52"
+ },
+ {
+   "id": 576,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-15 18:44:54",
+   "updated_at": "2019-08-15 18:44:54"
+ },
+ {
+   "id": 577,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-16 19:09:08",
+   "updated_at": "2019-08-16 19:09:08"
+ },
+ {
+   "id": 578,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-16 23:17:52",
+   "updated_at": "2019-08-16 23:17:52"
+ },
+ {
+   "id": 579,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-17 04:52:23",
+   "updated_at": "2019-08-17 04:52:23"
+ },
+ {
+   "id": 580,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-17 04:52:25",
+   "updated_at": "2019-08-17 04:52:25"
+ },
+ {
+   "id": 581,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-18 17:42:00",
+   "updated_at": "2019-08-18 17:42:00"
+ },
+ {
+   "id": 582,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-18 17:42:02",
+   "updated_at": "2019-08-18 17:42:02"
+ },
+ {
+   "id": 583,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-19 14:10:52",
+   "updated_at": "2019-08-19 14:10:52"
+ },
+ {
+   "id": 584,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 05:06:42",
+   "updated_at": "2019-08-20 05:06:42"
+ },
+ {
+   "id": 585,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 05:06:45",
+   "updated_at": "2019-08-20 05:06:45"
+ },
+ {
+   "id": 586,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 14:11:33",
+   "updated_at": "2019-08-20 14:11:33"
+ },
+ {
+   "id": 587,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 14:11:36",
+   "updated_at": "2019-08-20 14:11:36"
+ },
+ {
+   "id": 588,
+   "charityId": 3,
+   "totalHashes": 26180723,
+   "totalTime": 53812890,
+   "created_at": "2019-08-20 16:05:41",
+   "updated_at": "2019-09-10 14:07:53"
+ },
+ {
+   "id": 589,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 16:37:48",
+   "updated_at": "2019-08-20 16:37:48"
+ },
+ {
+   "id": 590,
+   "charityId": 3,
+   "totalHashes": 66017763,
+   "totalTime": 77948090,
+   "created_at": "2019-08-20 16:38:08",
+   "updated_at": "2019-09-10 14:29:07"
+ },
+ {
+   "id": 591,
+   "charityId": 3,
+   "totalHashes": 4821128,
+   "totalTime": 2519670,
+   "created_at": "2019-08-20 16:41:11",
+   "updated_at": "2019-08-23 19:59:40"
+ },
+ {
+   "id": 592,
+   "charityId": 3,
+   "totalHashes": 144143425,
+   "totalTime": 133464690,
+   "created_at": "2019-08-20 17:24:15",
+   "updated_at": "2019-09-19 13:58:22"
+ },
+ {
+   "id": 593,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 19:14:15",
+   "updated_at": "2019-08-20 19:14:15"
+ },
+ {
+   "id": 594,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-20 19:17:45",
+   "updated_at": "2019-08-20 19:17:45"
+ },
+ {
+   "id": 595,
+   "charityId": 3,
+   "totalHashes": 467523,
+   "totalTime": 683380,
+   "created_at": "2019-08-20 19:18:15",
+   "updated_at": "2019-08-21 14:02:11"
+ },
+ {
+   "id": 596,
+   "charityId": 1,
+   "totalHashes": 5559240,
+   "totalTime": 4675360,
+   "created_at": "2019-08-20 21:30:18",
+   "updated_at": "2019-08-26 12:28:01"
+ },
+ {
+   "id": 597,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-21 00:10:39",
+   "updated_at": "2019-08-21 00:10:39"
+ },
+ {
+   "id": 598,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-21 13:36:57",
+   "updated_at": "2019-08-21 13:36:57"
+ },
+ {
+   "id": 599,
+   "charityId": 3,
+   "totalHashes": 5662629,
+   "totalTime": 658290,
+   "created_at": "2019-08-21 13:57:00",
+   "updated_at": "2019-08-23 13:53:57"
+ },
+ {
+   "id": 600,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-22 01:57:21",
+   "updated_at": "2019-08-22 01:57:21"
+ },
+ {
+   "id": 601,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-22 01:57:24",
+   "updated_at": "2019-08-22 01:57:24"
+ },
+ {
+   "id": 602,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-22 08:34:45",
+   "updated_at": "2019-08-22 08:34:45"
+ },
+ {
+   "id": 603,
+   "charityId": 1,
+   "totalHashes": 28,
+   "totalTime": 40,
+   "created_at": "2019-08-22 21:33:01",
+   "updated_at": "2019-08-22 21:48:18"
+ },
+ {
+   "id": 604,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-23 06:50:11",
+   "updated_at": "2019-08-23 06:50:11"
+ },
+ {
+   "id": 605,
+   "charityId": 3,
+   "totalHashes": 3616,
+   "totalTime": 2710,
+   "created_at": "2019-08-23 13:35:59",
+   "updated_at": "2019-08-23 13:52:05"
+ },
+ {
+   "id": 606,
+   "charityId": 3,
+   "totalHashes": 1067062,
+   "totalTime": 32260,
+   "created_at": "2019-08-23 13:54:02",
+   "updated_at": "2019-08-23 22:51:50"
+ },
+ {
+   "id": 607,
+   "charityId": 3,
+   "totalHashes": 8132203,
+   "totalTime": 1480420,
+   "created_at": "2019-08-23 14:11:18",
+   "updated_at": "2019-08-26 14:48:13"
+ },
+ {
+   "id": 608,
+   "charityId": 1,
+   "totalHashes": 5589287,
+   "totalTime": 358950,
+   "created_at": "2019-08-23 17:05:39",
+   "updated_at": "2019-08-25 17:22:35"
+ },
+ {
+   "id": 609,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 01:45:34",
+   "updated_at": "2019-08-24 01:45:34"
+ },
+ {
+   "id": 610,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 09:01:26",
+   "updated_at": "2019-08-24 09:01:26"
+ },
+ {
+   "id": 611,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 10:06:31",
+   "updated_at": "2019-08-24 10:06:31"
+ },
+ {
+   "id": 612,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 10:06:32",
+   "updated_at": "2019-08-24 10:06:32"
+ },
+ {
+   "id": 613,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 14:41:27",
+   "updated_at": "2019-08-24 14:41:27"
+ },
+ {
+   "id": 614,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 20:47:26",
+   "updated_at": "2019-08-24 20:47:26"
+ },
+ {
+   "id": 615,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 21:37:19",
+   "updated_at": "2019-08-24 21:37:19"
+ },
+ {
+   "id": 616,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-24 21:40:28",
+   "updated_at": "2019-08-24 21:40:28"
+ },
+ {
+   "id": 617,
+   "charityId": 1,
+   "totalHashes": 10933185,
+   "totalTime": 4050490,
+   "created_at": "2019-08-26 13:56:52",
+   "updated_at": "2019-08-30 12:14:41"
+ },
+ {
+   "id": 618,
+   "charityId": 1,
+   "totalHashes": 31390715,
+   "totalTime": 52789590,
+   "created_at": "2019-08-26 14:48:22",
+   "updated_at": "2019-09-10 16:12:10"
+ },
+ {
+   "id": 619,
+   "charityId": 1,
+   "totalHashes": 54136905,
+   "totalTime": 96136890,
+   "created_at": "2019-08-26 14:49:37",
+   "updated_at": "2019-09-16 16:39:07"
+ },
+ {
+   "id": 620,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-27 01:12:30",
+   "updated_at": "2019-08-27 01:12:30"
+ },
+ {
+   "id": 621,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-27 01:13:37",
+   "updated_at": "2019-08-27 01:13:37"
+ },
+ {
+   "id": 622,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-27 10:43:58",
+   "updated_at": "2019-08-27 10:43:58"
+ },
+ {
+   "id": 623,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-27 14:11:55",
+   "updated_at": "2019-08-27 14:11:55"
+ },
+ {
+   "id": 624,
+   "charityId": 1,
+   "totalHashes": 52899619,
+   "totalTime": 344413220,
+   "created_at": "2019-08-27 14:45:07",
+   "updated_at": "2019-10-10 15:00:15"
+ },
+ {
+   "id": 625,
+   "charityId": 3,
+   "totalHashes": 40,
+   "totalTime": 10,
+   "created_at": "2019-08-27 14:54:39",
+   "updated_at": "2019-08-27 14:54:53"
+ },
+ {
+   "id": 626,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-28 14:29:07",
+   "updated_at": "2019-08-28 14:29:07"
+ },
+ {
+   "id": 627,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-30 09:37:18",
+   "updated_at": "2019-08-30 09:37:18"
+ },
+ {
+   "id": 628,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-30 14:46:55",
+   "updated_at": "2019-08-30 14:46:55"
+ },
+ {
+   "id": 629,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-08-31 07:53:17",
+   "updated_at": "2019-08-31 07:53:17"
+ },
+ {
+   "id": 630,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-02 00:09:57",
+   "updated_at": "2019-09-02 00:09:57"
+ },
+ {
+   "id": 631,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-02 21:57:11",
+   "updated_at": "2019-09-02 21:57:11"
+ },
+ {
+   "id": 632,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-03 01:34:24",
+   "updated_at": "2019-09-03 01:34:24"
+ },
+ {
+   "id": 633,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-03 01:34:26",
+   "updated_at": "2019-09-03 01:34:26"
+ },
+ {
+   "id": 634,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-05 16:32:11",
+   "updated_at": "2019-09-05 16:32:11"
+ },
+ {
+   "id": 635,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-05 16:32:13",
+   "updated_at": "2019-09-05 16:32:13"
+ },
+ {
+   "id": 636,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-05 19:54:55",
+   "updated_at": "2019-09-05 19:54:55"
+ },
+ {
+   "id": 637,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-05 21:40:01",
+   "updated_at": "2019-09-05 21:40:01"
+ },
+ {
+   "id": 638,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-06 14:48:49",
+   "updated_at": "2019-09-06 14:48:49"
+ },
+ {
+   "id": 639,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-06 14:48:52",
+   "updated_at": "2019-09-06 14:48:52"
+ },
+ {
+   "id": 640,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-07 13:01:17",
+   "updated_at": "2019-09-07 13:01:17"
+ },
+ {
+   "id": 641,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-07 13:01:20",
+   "updated_at": "2019-09-07 13:01:20"
+ },
+ {
+   "id": 642,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-08 03:08:07",
+   "updated_at": "2019-09-08 03:08:07"
+ },
+ {
+   "id": 643,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-09 04:52:15",
+   "updated_at": "2019-09-09 04:52:15"
+ },
+ {
+   "id": 644,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-09 10:33:21",
+   "updated_at": "2019-09-09 10:33:21"
+ },
+ {
+   "id": 645,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-09 10:33:28",
+   "updated_at": "2019-09-09 10:33:28"
+ },
+ {
+   "id": 646,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-09 12:49:01",
+   "updated_at": "2019-09-09 12:49:01"
+ },
+ {
+   "id": 647,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-09 18:15:50",
+   "updated_at": "2019-09-09 18:15:50"
+ },
+ {
+   "id": 648,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-09 20:19:08",
+   "updated_at": "2019-09-09 20:19:08"
+ },
+ {
+   "id": 649,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-10 08:41:35",
+   "updated_at": "2019-09-10 08:41:35"
+ },
+ {
+   "id": 650,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-10 08:41:37",
+   "updated_at": "2019-09-10 08:41:37"
+ },
+ {
+   "id": 651,
+   "charityId": 3,
+   "totalHashes": 1373553,
+   "totalTime": 225370,
+   "created_at": "2019-09-10 14:08:00",
+   "updated_at": "2019-09-11 12:00:58"
+ },
+ {
+   "id": 652,
+   "charityId": 3,
+   "totalHashes": 4876089,
+   "totalTime": 7258900,
+   "created_at": "2019-09-10 14:27:20",
+   "updated_at": "2019-09-16 16:48:40"
+ },
+ {
+   "id": 653,
+   "charityId": 3,
+   "totalHashes": 20600775,
+   "totalTime": 6519720,
+   "created_at": "2019-09-10 14:29:18",
+   "updated_at": "2019-09-16 16:54:30"
+ },
+ {
+   "id": 654,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-10 16:32:33",
+   "updated_at": "2019-09-10 16:32:33"
+ },
+ {
+   "id": 655,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 01:24:13",
+   "updated_at": "2019-09-11 01:24:13"
+ },
+ {
+   "id": 656,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 01:24:14",
+   "updated_at": "2019-09-11 01:24:14"
+ },
+ {
+   "id": 657,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:16:59",
+   "updated_at": "2019-09-11 15:16:59"
+ },
+ {
+   "id": 658,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:19:14",
+   "updated_at": "2019-09-11 15:19:14"
+ },
+ {
+   "id": 659,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:19:45",
+   "updated_at": "2019-09-11 15:19:45"
+ },
+ {
+   "id": 660,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:19:56",
+   "updated_at": "2019-09-11 15:19:56"
+ },
+ {
+   "id": 661,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:24:14",
+   "updated_at": "2019-09-11 15:24:14"
+ },
+ {
+   "id": 662,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:24:31",
+   "updated_at": "2019-09-11 15:24:31"
+ },
+ {
+   "id": 663,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:26:41",
+   "updated_at": "2019-09-11 15:26:41"
+ },
+ {
+   "id": 664,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 15:26:56",
+   "updated_at": "2019-09-11 15:26:56"
+ },
+ {
+   "id": 665,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 16:31:42",
+   "updated_at": "2019-09-11 16:31:42"
+ },
+ {
+   "id": 666,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-11 20:29:37",
+   "updated_at": "2019-09-11 20:29:37"
+ },
+ {
+   "id": 667,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:54:45",
+   "updated_at": "2019-09-12 10:54:45"
+ },
+ {
+   "id": 668,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:54:47",
+   "updated_at": "2019-09-12 10:54:47"
+ },
+ {
+   "id": 669,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:56:14",
+   "updated_at": "2019-09-12 10:56:14"
+ },
+ {
+   "id": 670,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:59:20",
+   "updated_at": "2019-09-12 10:59:20"
+ },
+ {
+   "id": 671,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:59:21",
+   "updated_at": "2019-09-12 10:59:21"
+ },
+ {
+   "id": 672,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:59:22",
+   "updated_at": "2019-09-12 10:59:22"
+ },
+ {
+   "id": 673,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:59:22",
+   "updated_at": "2019-09-12 10:59:22"
+ },
+ {
+   "id": 674,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:59:23",
+   "updated_at": "2019-09-12 10:59:23"
+ },
+ {
+   "id": 675,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 10:59:23",
+   "updated_at": "2019-09-12 10:59:23"
+ },
+ {
+   "id": 676,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 11:42:51",
+   "updated_at": "2019-09-12 11:42:51"
+ },
+ {
+   "id": 677,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 11:42:54",
+   "updated_at": "2019-09-12 11:42:54"
+ },
+ {
+   "id": 678,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 11:42:56",
+   "updated_at": "2019-09-12 11:42:56"
+ },
+ {
+   "id": 679,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 11:42:56",
+   "updated_at": "2019-09-12 11:42:56"
+ },
+ {
+   "id": 680,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:04",
+   "updated_at": "2019-09-12 12:02:04"
+ },
+ {
+   "id": 681,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:05",
+   "updated_at": "2019-09-12 12:02:05"
+ },
+ {
+   "id": 682,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:06",
+   "updated_at": "2019-09-12 12:02:06"
+ },
+ {
+   "id": 683,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:07",
+   "updated_at": "2019-09-12 12:02:07"
+ },
+ {
+   "id": 684,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:08",
+   "updated_at": "2019-09-12 12:02:08"
+ },
+ {
+   "id": 685,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:09",
+   "updated_at": "2019-09-12 12:02:09"
+ },
+ {
+   "id": 686,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:10",
+   "updated_at": "2019-09-12 12:02:10"
+ },
+ {
+   "id": 687,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:02:10",
+   "updated_at": "2019-09-12 12:02:10"
+ },
+ {
+   "id": 688,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:08:08",
+   "updated_at": "2019-09-12 12:08:08"
+ },
+ {
+   "id": 689,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 12:08:08",
+   "updated_at": "2019-09-12 12:08:08"
+ },
+ {
+   "id": 690,
+   "charityId": 3,
+   "totalHashes": 318,
+   "totalTime": 60,
+   "created_at": "2019-09-12 13:48:37",
+   "updated_at": "2019-09-12 13:49:45"
+ },
+ {
+   "id": 691,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 18:03:42",
+   "updated_at": "2019-09-12 18:03:42"
+ },
+ {
+   "id": 692,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 18:03:44",
+   "updated_at": "2019-09-12 18:03:44"
+ },
+ {
+   "id": 693,
+   "charityId": 1,
+   "totalHashes": 1562310,
+   "totalTime": 106860,
+   "created_at": "2019-09-12 21:35:48",
+   "updated_at": "2019-09-13 14:20:15"
+ },
+ {
+   "id": 694,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-12 21:59:55",
+   "updated_at": "2019-09-12 21:59:55"
+ },
+ {
+   "id": 695,
+   "charityId": 1,
+   "totalHashes": 3684192,
+   "totalTime": 336410,
+   "created_at": "2019-09-13 14:25:11",
+   "updated_at": "2019-09-14 21:32:48"
+ },
+ {
+   "id": 696,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-13 14:43:48",
+   "updated_at": "2019-09-13 14:43:48"
+ },
+ {
+   "id": 697,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-13 14:46:21",
+   "updated_at": "2019-09-13 14:46:21"
+ },
+ {
+   "id": 698,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-13 18:34:49",
+   "updated_at": "2019-09-13 18:34:49"
+ },
+ {
+   "id": 699,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-13 18:34:51",
+   "updated_at": "2019-09-13 18:34:51"
+ },
+ {
+   "id": 700,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 02:36:54",
+   "updated_at": "2019-09-14 02:36:54"
+ },
+ {
+   "id": 701,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 02:37:03",
+   "updated_at": "2019-09-14 02:37:03"
+ },
+ {
+   "id": 702,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 04:49:27",
+   "updated_at": "2019-09-14 04:49:27"
+ },
+ {
+   "id": 703,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 04:49:31",
+   "updated_at": "2019-09-14 04:49:31"
+ },
+ {
+   "id": 704,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:14:39",
+   "updated_at": "2019-09-14 09:14:39"
+ },
+ {
+   "id": 705,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:14:39",
+   "updated_at": "2019-09-14 09:14:39"
+ },
+ {
+   "id": 706,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:15:46",
+   "updated_at": "2019-09-14 09:15:46"
+ },
+ {
+   "id": 707,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:15:48",
+   "updated_at": "2019-09-14 09:15:48"
+ },
+ {
+   "id": 708,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:20",
+   "updated_at": "2019-09-14 09:46:20"
+ },
+ {
+   "id": 709,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:20",
+   "updated_at": "2019-09-14 09:46:20"
+ },
+ {
+   "id": 710,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:20",
+   "updated_at": "2019-09-14 09:46:20"
+ },
+ {
+   "id": 711,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:20",
+   "updated_at": "2019-09-14 09:46:20"
+ },
+ {
+   "id": 712,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:28",
+   "updated_at": "2019-09-14 09:46:28"
+ },
+ {
+   "id": 713,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:28",
+   "updated_at": "2019-09-14 09:46:28"
+ },
+ {
+   "id": 714,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:28",
+   "updated_at": "2019-09-14 09:46:28"
+ },
+ {
+   "id": 715,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 09:46:28",
+   "updated_at": "2019-09-14 09:46:28"
+ },
+ {
+   "id": 716,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 13:43:22",
+   "updated_at": "2019-09-14 13:43:22"
+ },
+ {
+   "id": 717,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 13:43:22",
+   "updated_at": "2019-09-14 13:43:22"
+ },
+ {
+   "id": 718,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-14 13:46:26",
+   "updated_at": "2019-09-14 13:46:26"
+ },
+ {
+   "id": 719,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-15 02:35:50",
+   "updated_at": "2019-09-15 02:35:50"
+ },
+ {
+   "id": 720,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-15 22:47:47",
+   "updated_at": "2019-09-15 22:47:47"
+ },
+ {
+   "id": 721,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-15 22:47:49",
+   "updated_at": "2019-09-15 22:47:49"
+ },
+ {
+   "id": 722,
+   "charityId": 1,
+   "totalHashes": 24271427,
+   "totalTime": 22793700,
+   "created_at": "2019-09-16 16:36:32",
+   "updated_at": "2019-09-27 10:40:30"
+ },
+ {
+   "id": 723,
+   "charityId": 1,
+   "totalHashes": 93366523,
+   "totalTime": 268348180,
+   "created_at": "2019-09-16 16:39:09",
+   "updated_at": "2019-10-24 19:35:23"
+ },
+ {
+   "id": 724,
+   "charityId": 1,
+   "totalHashes": 78986136,
+   "totalTime": 440005430,
+   "created_at": "2019-09-16 16:46:26",
+   "updated_at": "2019-11-01 18:27:42"
+ },
+ {
+   "id": 725,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-16 16:48:47",
+   "updated_at": "2019-09-16 16:48:47"
+ },
+ {
+   "id": 726,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-16 16:49:23",
+   "updated_at": "2019-09-16 16:49:23"
+ },
+ {
+   "id": 727,
+   "charityId": 1,
+   "totalHashes": 27405930,
+   "totalTime": 228830250,
+   "created_at": "2019-09-16 16:52:22",
+   "updated_at": "2019-10-21 22:05:54"
+ },
+ {
+   "id": 728,
+   "charityId": 1,
+   "totalHashes": 1543937,
+   "totalTime": 76130,
+   "created_at": "2019-09-16 16:54:38",
+   "updated_at": "2019-09-17 04:06:41"
+ },
+ {
+   "id": 729,
+   "charityId": 1,
+   "totalHashes": 43475787,
+   "totalTime": 169096060,
+   "created_at": "2019-09-16 16:58:01",
+   "updated_at": "2019-10-15 17:02:01"
+ },
+ {
+   "id": 730,
+   "charityId": 1,
+   "totalHashes": 366577,
+   "totalTime": 12150,
+   "created_at": "2019-09-16 17:04:47",
+   "updated_at": "2019-09-16 20:28:14"
+ },
+ {
+   "id": 731,
+   "charityId": 1,
+   "totalHashes": 4447408,
+   "totalTime": 654660,
+   "created_at": "2019-09-16 17:57:15",
+   "updated_at": "2019-09-18 14:06:12"
+ },
+ {
+   "id": 732,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-16 22:58:19",
+   "updated_at": "2019-09-16 22:58:19"
+ },
+ {
+   "id": 733,
+   "charityId": 1,
+   "totalHashes": 2606680,
+   "totalTime": 200970,
+   "created_at": "2019-09-17 01:21:40",
+   "updated_at": "2019-09-17 23:47:10"
+ },
+ {
+   "id": 734,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-17 04:20:37",
+   "updated_at": "2019-09-17 04:20:37"
+ },
+ {
+   "id": 735,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-17 15:04:48",
+   "updated_at": "2019-09-17 15:04:48"
+ },
+ {
+   "id": 736,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-18 07:33:30",
+   "updated_at": "2019-09-18 07:33:30"
+ },
+ {
+   "id": 737,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-18 07:33:31",
+   "updated_at": "2019-09-18 07:33:31"
+ },
+ {
+   "id": 738,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-18 20:48:12",
+   "updated_at": "2019-09-18 20:48:12"
+ },
+ {
+   "id": 739,
+   "charityId": 1,
+   "totalHashes": 693269,
+   "totalTime": 267580,
+   "created_at": "2019-09-18 21:17:42",
+   "updated_at": "2019-09-19 17:31:54"
+ },
+ {
+   "id": 740,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-19 09:09:25",
+   "updated_at": "2019-09-19 09:09:25"
+ },
+ {
+   "id": 741,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-19 13:58:34",
+   "updated_at": "2019-09-19 13:58:34"
+ },
+ {
+   "id": 742,
+   "charityId": 1,
+   "totalHashes": 330971561,
+   "totalTime": 1391666970,
+   "created_at": "2019-09-19 13:58:53",
+   "updated_at": "2019-11-29 13:33:15"
+ },
+ {
+   "id": 743,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-19 17:35:47",
+   "updated_at": "2019-09-19 17:35:47"
+ },
+ {
+   "id": 744,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-19 21:39:25",
+   "updated_at": "2019-09-19 21:39:25"
+ },
+ {
+   "id": 745,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-21 06:45:46",
+   "updated_at": "2019-09-21 06:45:46"
+ },
+ {
+   "id": 746,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-23 19:08:12",
+   "updated_at": "2019-09-23 19:08:12"
+ },
+ {
+   "id": 747,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-24 18:08:27",
+   "updated_at": "2019-09-24 18:08:27"
+ },
+ {
+   "id": 748,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-24 18:10:22",
+   "updated_at": "2019-09-24 18:10:22"
+ },
+ {
+   "id": 749,
+   "charityId": 1,
+   "totalHashes": 10570332,
+   "totalTime": 17048960,
+   "created_at": "2019-09-24 18:15:43",
+   "updated_at": "2019-10-03 12:26:15"
+ },
+ {
+   "id": 750,
+   "charityId": 1,
+   "totalHashes": 32703607,
+   "totalTime": 18919330,
+   "created_at": "2019-09-24 18:40:24",
+   "updated_at": "2019-10-06 16:34:27"
+ },
+ {
+   "id": 751,
+   "charityId": 1,
+   "totalHashes": 95583642,
+   "totalTime": 199111650,
+   "created_at": "2019-09-24 18:47:45",
+   "updated_at": "2019-10-24 18:16:37"
+ },
+ {
+   "id": 752,
+   "charityId": 3,
+   "totalHashes": 41,
+   "totalTime": 10,
+   "created_at": "2019-09-24 21:08:36",
+   "updated_at": "2019-09-24 21:08:53"
+ },
+ {
+   "id": 753,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-26 07:45:53",
+   "updated_at": "2019-09-26 07:45:53"
+ },
+ {
+   "id": 754,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-26 18:38:27",
+   "updated_at": "2019-09-26 18:38:27"
+ },
+ {
+   "id": 755,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-26 20:46:16",
+   "updated_at": "2019-09-26 20:46:16"
+ },
+ {
+   "id": 756,
+   "charityId": 1,
+   "totalHashes": 24633065,
+   "totalTime": 24589700,
+   "created_at": "2019-09-27 15:01:00",
+   "updated_at": "2019-10-08 16:11:47"
+ },
+ {
+   "id": 757,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-28 07:47:42",
+   "updated_at": "2019-09-28 07:47:42"
+ },
+ {
+   "id": 758,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-09-30 10:09:50",
+   "updated_at": "2019-09-30 10:09:50"
+ },
+ {
+   "id": 759,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-01 13:32:03",
+   "updated_at": "2019-10-01 13:32:03"
+ },
+ {
+   "id": 760,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-01 21:11:27",
+   "updated_at": "2019-10-01 21:11:27"
+ },
+ {
+   "id": 761,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-02 06:16:26",
+   "updated_at": "2019-10-02 06:16:26"
+ },
+ {
+   "id": 762,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-02 08:13:45",
+   "updated_at": "2019-10-02 08:13:45"
+ },
+ {
+   "id": 763,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-02 16:55:21",
+   "updated_at": "2019-10-02 16:55:21"
+ },
+ {
+   "id": 764,
+   "charityId": 1,
+   "totalHashes": 27435664,
+   "totalTime": 35815360,
+   "created_at": "2019-10-03 16:18:01",
+   "updated_at": "2019-10-16 16:43:23"
+ },
+ {
+   "id": 765,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-03 17:53:15",
+   "updated_at": "2019-10-03 17:53:15"
+ },
+ {
+   "id": 766,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-04 23:49:07",
+   "updated_at": "2019-10-04 23:49:07"
+ },
+ {
+   "id": 767,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-05 16:49:34",
+   "updated_at": "2019-10-05 16:49:34"
+ },
+ {
+   "id": 768,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-07 12:29:13",
+   "updated_at": "2019-10-07 12:29:13"
+ },
+ {
+   "id": 769,
+   "charityId": 1,
+   "totalHashes": 928395,
+   "totalTime": 28590,
+   "created_at": "2019-10-07 13:15:23",
+   "updated_at": "2019-10-07 21:12:01"
+ },
+ {
+   "id": 770,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-07 15:06:32",
+   "updated_at": "2019-10-07 15:06:32"
+ },
+ {
+   "id": 771,
+   "charityId": 1,
+   "totalHashes": 2231378,
+   "totalTime": 553510,
+   "created_at": "2019-10-10 21:52:44",
+   "updated_at": "2019-10-11 22:50:25"
+ },
+ {
+   "id": 772,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-11 06:58:46",
+   "updated_at": "2019-10-11 06:58:46"
+ },
+ {
+   "id": 773,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-13 03:04:31",
+   "updated_at": "2019-10-13 03:04:31"
+ },
+ {
+   "id": 774,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-15 01:00:26",
+   "updated_at": "2019-10-15 01:00:26"
+ },
+ {
+   "id": 775,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-15 02:24:39",
+   "updated_at": "2019-10-15 02:24:39"
+ },
+ {
+   "id": 776,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-15 02:24:43",
+   "updated_at": "2019-10-15 02:24:43"
+ },
+ {
+   "id": 777,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-15 02:59:53",
+   "updated_at": "2019-10-15 02:59:53"
+ },
+ {
+   "id": 778,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-15 16:01:23",
+   "updated_at": "2019-10-15 16:01:23"
+ },
+ {
+   "id": 779,
+   "charityId": 1,
+   "totalHashes": 67255523,
+   "totalTime": 218917890,
+   "created_at": "2019-10-16 16:43:27",
+   "updated_at": "2019-11-14 17:13:57"
+ },
+ {
+   "id": 780,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-16 19:46:44",
+   "updated_at": "2019-10-16 19:46:44"
+ },
+ {
+   "id": 781,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-17 07:36:46",
+   "updated_at": "2019-10-17 07:36:46"
+ },
+ {
+   "id": 782,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-17 07:36:48",
+   "updated_at": "2019-10-17 07:36:48"
+ },
+ {
+   "id": 783,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-22 11:06:14",
+   "updated_at": "2019-10-22 11:06:14"
+ },
+ {
+   "id": 784,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-23 05:24:44",
+   "updated_at": "2019-10-23 05:24:44"
+ },
+ {
+   "id": 785,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-27 05:43:32",
+   "updated_at": "2019-10-27 05:43:32"
+ },
+ {
+   "id": 786,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-27 06:04:04",
+   "updated_at": "2019-10-27 06:04:04"
+ },
+ {
+   "id": 787,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-31 14:20:40",
+   "updated_at": "2019-10-31 14:20:40"
+ },
+ {
+   "id": 788,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-31 14:20:41",
+   "updated_at": "2019-10-31 14:20:41"
+ },
+ {
+   "id": 789,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-10-31 22:52:33",
+   "updated_at": "2019-10-31 22:52:33"
+ },
+ {
+   "id": 790,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-01 17:56:16",
+   "updated_at": "2019-11-01 17:56:16"
+ },
+ {
+   "id": 791,
+   "charityId": 1,
+   "totalHashes": 21811852,
+   "totalTime": 159492500,
+   "created_at": "2019-11-05 14:26:27",
+   "updated_at": "2019-11-29 09:53:16"
+ },
+ {
+   "id": 792,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-06 19:41:14",
+   "updated_at": "2019-11-06 19:41:14"
+ },
+ {
+   "id": 793,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-06 19:53:22",
+   "updated_at": "2019-11-06 19:53:22"
+ },
+ {
+   "id": 794,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-06 20:57:16",
+   "updated_at": "2019-11-06 20:57:16"
+ },
+ {
+   "id": 795,
+   "charityId": 1,
+   "totalHashes": 42,
+   "totalTime": 40,
+   "created_at": "2019-11-06 20:57:44",
+   "updated_at": "2019-11-06 20:58:12"
+ },
+ {
+   "id": 796,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-07 11:14:32",
+   "updated_at": "2019-11-07 11:14:32"
+ },
+ {
+   "id": 797,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-08 01:37:28",
+   "updated_at": "2019-11-08 01:37:28"
+ },
+ {
+   "id": 798,
+   "charityId": 1,
+   "totalHashes": 28296026,
+   "totalTime": 343111930,
+   "created_at": "2019-11-08 14:17:24",
+   "updated_at": "2019-11-29 08:54:19"
+ },
+ {
+   "id": 799,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-08 18:46:05",
+   "updated_at": "2019-11-08 18:46:05"
+ },
+ {
+   "id": 800,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-08 21:29:39",
+   "updated_at": "2019-11-08 21:29:39"
+ },
+ {
+   "id": 801,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-08 22:12:52",
+   "updated_at": "2019-11-08 22:12:52"
+ },
+ {
+   "id": 802,
+   "charityId": 1,
+   "totalHashes": 477,
+   "totalTime": 20,
+   "created_at": "2019-11-08 22:13:30",
+   "updated_at": "2019-11-08 22:14:01"
+ },
+ {
+   "id": 803,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-12 16:13:48",
+   "updated_at": "2019-11-12 16:13:48"
+ },
+ {
+   "id": 804,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-13 03:02:31",
+   "updated_at": "2019-11-13 03:02:31"
+ },
+ {
+   "id": 805,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-13 03:02:32",
+   "updated_at": "2019-11-13 03:02:32"
+ },
+ {
+   "id": 806,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-13 10:50:47",
+   "updated_at": "2019-11-13 10:50:47"
+ },
+ {
+   "id": 807,
+   "charityId": 3,
+   "totalHashes": 49522,
+   "totalTime": 29440,
+   "created_at": "2019-11-14 19:15:24",
+   "updated_at": "2019-11-14 20:20:30"
+ },
+ {
+   "id": 808,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-17 11:35:40",
+   "updated_at": "2019-11-17 11:35:40"
+ },
+ {
+   "id": 809,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-18 08:28:21",
+   "updated_at": "2019-11-18 08:28:21"
+ },
+ {
+   "id": 810,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-18 14:56:29",
+   "updated_at": "2019-11-18 14:56:29"
+ },
+ {
+   "id": 811,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-19 03:37:08",
+   "updated_at": "2019-11-19 03:37:08"
+ },
+ {
+   "id": 812,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-20 19:49:32",
+   "updated_at": "2019-11-20 19:49:32"
+ },
+ {
+   "id": 813,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-20 19:50:07",
+   "updated_at": "2019-11-20 19:50:07"
+ },
+ {
+   "id": 814,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-21 01:45:57",
+   "updated_at": "2019-11-21 01:45:57"
+ },
+ {
+   "id": 815,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-25 05:00:28",
+   "updated_at": "2019-11-25 05:00:28"
+ },
+ {
+   "id": 816,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-26 12:38:47",
+   "updated_at": "2019-11-26 12:38:47"
+ },
+ {
+   "id": 817,
+   "charityId": 1,
+   "totalHashes": 32,
+   "totalTime": 10,
+   "created_at": "2019-11-26 14:57:58",
+   "updated_at": "2019-11-26 14:58:14"
+ },
+ {
+   "id": 818,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-26 23:58:33",
+   "updated_at": "2019-11-26 23:58:33"
+ },
+ {
+   "id": 819,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-28 12:54:24",
+   "updated_at": "2019-11-28 12:54:24"
+ },
+ {
+   "id": 820,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-11-28 22:09:36",
+   "updated_at": "2019-11-28 22:09:36"
+ },
+ {
+   "id": 821,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 02:21:19",
+   "updated_at": "2019-12-02 02:21:19"
+ },
+ {
+   "id": 822,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 02:21:33",
+   "updated_at": "2019-12-02 02:21:33"
+ },
+ {
+   "id": 823,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 12:11:03",
+   "updated_at": "2019-12-02 12:11:03"
+ },
+ {
+   "id": 824,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 18:51:42",
+   "updated_at": "2019-12-02 18:51:42"
+ },
+ {
+   "id": 825,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 19:41:37",
+   "updated_at": "2019-12-02 19:41:37"
+ },
+ {
+   "id": 826,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 19:56:54",
+   "updated_at": "2019-12-02 19:56:54"
+ },
+ {
+   "id": 827,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 21:31:55",
+   "updated_at": "2019-12-02 21:31:55"
+ },
+ {
+   "id": 828,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-02 22:54:08",
+   "updated_at": "2019-12-02 22:54:08"
+ },
+ {
+   "id": 829,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 02:24:02",
+   "updated_at": "2019-12-03 02:24:02"
+ },
+ {
+   "id": 830,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 02:24:14",
+   "updated_at": "2019-12-03 02:24:14"
+ },
+ {
+   "id": 831,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 05:21:09",
+   "updated_at": "2019-12-03 05:21:09"
+ },
+ {
+   "id": 832,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 05:21:13",
+   "updated_at": "2019-12-03 05:21:13"
+ },
+ {
+   "id": 833,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 14:03:38",
+   "updated_at": "2019-12-03 14:03:38"
+ },
+ {
+   "id": 834,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 14:26:05",
+   "updated_at": "2019-12-03 14:26:05"
+ },
+ {
+   "id": 835,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 14:27:44",
+   "updated_at": "2019-12-03 14:27:44"
+ },
+ {
+   "id": 836,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 17:31:29",
+   "updated_at": "2019-12-03 17:31:29"
+ },
+ {
+   "id": 837,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 17:31:58",
+   "updated_at": "2019-12-03 17:31:58"
+ },
+ {
+   "id": 838,
+   "charityId": 3,
+   "totalHashes": 5191,
+   "totalTime": 140,
+   "created_at": "2019-12-03 17:32:26",
+   "updated_at": "2019-12-03 17:34:53"
+ },
+ {
+   "id": 839,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-03 21:18:30",
+   "updated_at": "2019-12-03 21:18:30"
+ },
+ {
+   "id": 840,
+   "charityId": 3,
+   "totalHashes": 263518286,
+   "totalTime": 166532910,
+   "created_at": "2019-12-04 14:44:45",
+   "updated_at": "2019-12-17 22:19:18"
+ },
+ {
+   "id": 841,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-04 14:50:04",
+   "updated_at": "2019-12-04 14:50:04"
+ },
+ {
+   "id": 842,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-04 14:53:13",
+   "updated_at": "2019-12-04 14:53:13"
+ },
+ {
+   "id": 843,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 10,
+   "created_at": "2019-12-04 14:55:27",
+   "updated_at": "2019-12-04 14:56:03"
+ },
+ {
+   "id": 844,
+   "charityId": 3,
+   "totalHashes": 134262830,
+   "totalTime": 112234100,
+   "created_at": "2019-12-04 14:56:18",
+   "updated_at": "2019-12-16 18:53:53"
+ },
+ {
+   "id": 845,
+   "charityId": 3,
+   "totalHashes": 875,
+   "totalTime": 20,
+   "created_at": "2019-12-04 14:56:40",
+   "updated_at": "2019-12-04 14:57:23"
+ },
+ {
+   "id": 846,
+   "charityId": 3,
+   "totalHashes": 10618281,
+   "totalTime": 206450,
+   "created_at": "2019-12-04 15:04:38",
+   "updated_at": "2019-12-04 23:59:07"
+ },
+ {
+   "id": 847,
+   "charityId": 3,
+   "totalHashes": 85149078,
+   "totalTime": 136648710,
+   "created_at": "2019-12-04 15:07:05",
+   "updated_at": "2019-12-18 03:35:46"
+ },
+ {
+   "id": 848,
+   "charityId": 3,
+   "totalHashes": 3443323,
+   "totalTime": 27060,
+   "created_at": "2019-12-04 15:10:41",
+   "updated_at": "2019-12-04 17:43:35"
+ },
+ {
+   "id": 849,
+   "charityId": 3,
+   "totalHashes": 171233283,
+   "totalTime": 111761090,
+   "created_at": "2019-12-04 15:14:37",
+   "updated_at": "2019-12-16 12:05:28"
+ },
+ {
+   "id": 850,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-05 14:21:10",
+   "updated_at": "2019-12-05 14:21:10"
+ },
+ {
+   "id": 851,
+   "charityId": 3,
+   "totalHashes": 144654369,
+   "totalTime": 323176110,
+   "created_at": "2019-12-05 14:21:43",
+   "updated_at": "2019-12-23 15:47:45"
+ },
+ {
+   "id": 852,
+   "charityId": 3,
+   "totalHashes": 92501860,
+   "totalTime": 283411520,
+   "created_at": "2019-12-05 14:25:35",
+   "updated_at": "2019-12-23 19:48:27"
+ },
+ {
+   "id": 853,
+   "charityId": 3,
+   "totalHashes": 230356760,
+   "totalTime": 345666230,
+   "created_at": "2019-12-05 14:29:24",
+   "updated_at": "2019-12-23 15:15:14"
+ },
+ {
+   "id": 854,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-05 14:31:11",
+   "updated_at": "2019-12-05 14:31:11"
+ },
+ {
+   "id": 855,
+   "charityId": 3,
+   "totalHashes": 144951957,
+   "totalTime": 203213290,
+   "created_at": "2019-12-05 14:31:17",
+   "updated_at": "2019-12-19 01:08:18"
+ },
+ {
+   "id": 856,
+   "charityId": 3,
+   "totalHashes": 284273135,
+   "totalTime": 128707440,
+   "created_at": "2019-12-05 14:34:39",
+   "updated_at": "2019-12-16 21:07:54"
+ },
+ {
+   "id": 857,
+   "charityId": 3,
+   "totalHashes": 805788,
+   "totalTime": 6650,
+   "created_at": "2019-12-05 14:39:40",
+   "updated_at": "2019-12-05 15:36:01"
+ },
+ {
+   "id": 858,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-07 14:33:44",
+   "updated_at": "2019-12-07 14:33:44"
+ },
+ {
+   "id": 859,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-09 15:15:02",
+   "updated_at": "2019-12-09 15:15:02"
+ },
+ {
+   "id": 860,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-09 16:39:43",
+   "updated_at": "2019-12-09 16:39:43"
+ },
+ {
+   "id": 861,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-10 02:48:28",
+   "updated_at": "2019-12-10 02:48:28"
+ },
+ {
+   "id": 862,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-10 04:25:04",
+   "updated_at": "2019-12-10 04:25:04"
+ },
+ {
+   "id": 863,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-10 20:01:19",
+   "updated_at": "2019-12-10 20:01:19"
+ },
+ {
+   "id": 864,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-11 03:56:07",
+   "updated_at": "2019-12-11 03:56:07"
+ },
+ {
+   "id": 865,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-11 03:56:08",
+   "updated_at": "2019-12-11 03:56:08"
+ },
+ {
+   "id": 866,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-12 23:27:40",
+   "updated_at": "2019-12-12 23:27:40"
+ },
+ {
+   "id": 867,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-13 16:33:25",
+   "updated_at": "2019-12-13 16:33:25"
+ },
+ {
+   "id": 868,
+   "charityId": 3,
+   "totalHashes": 78415321,
+   "totalTime": 45849040,
+   "created_at": "2019-12-16 18:54:14",
+   "updated_at": "2019-12-23 15:04:52"
+ },
+ {
+   "id": 869,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-16 19:32:16",
+   "updated_at": "2019-12-16 19:32:16"
+ },
+ {
+   "id": 870,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-16 20:31:14",
+   "updated_at": "2019-12-16 20:31:14"
+ },
+ {
+   "id": 871,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-17 06:29:51",
+   "updated_at": "2019-12-17 06:29:51"
+ },
+ {
+   "id": 872,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-18 02:35:13",
+   "updated_at": "2019-12-18 02:35:13"
+ },
+ {
+   "id": 873,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-18 05:10:14",
+   "updated_at": "2019-12-18 05:10:14"
+ },
+ {
+   "id": 874,
+   "charityId": 3,
+   "totalHashes": 22860489,
+   "totalTime": 6220100,
+   "created_at": "2019-12-18 17:03:36",
+   "updated_at": "2019-12-22 04:39:30"
+ },
+ {
+   "id": 875,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-18 22:14:31",
+   "updated_at": "2019-12-18 22:14:31"
+ },
+ {
+   "id": 876,
+   "charityId": 3,
+   "totalHashes": 56274441,
+   "totalTime": 15385840,
+   "created_at": "2019-12-19 01:09:17",
+   "updated_at": "2019-12-24 02:21:28"
+ },
+ {
+   "id": 877,
+   "charityId": 3,
+   "totalHashes": 72185452,
+   "totalTime": 12628280,
+   "created_at": "2019-12-19 16:04:55",
+   "updated_at": "2019-12-23 15:47:46"
+ },
+ {
+   "id": 878,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-20 13:42:16",
+   "updated_at": "2019-12-20 13:42:16"
+ },
+ {
+   "id": 879,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-21 12:04:51",
+   "updated_at": "2019-12-21 12:04:51"
+ },
+ {
+   "id": 880,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-21 15:07:56",
+   "updated_at": "2019-12-21 15:07:56"
+ },
+ {
+   "id": 881,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-23 10:31:44",
+   "updated_at": "2019-12-23 10:31:44"
+ },
+ {
+   "id": 882,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-23 16:09:22",
+   "updated_at": "2019-12-23 16:09:22"
+ },
+ {
+   "id": 883,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-23 16:10:19",
+   "updated_at": "2019-12-23 16:10:19"
+ },
+ {
+   "id": 884,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-23 21:24:22",
+   "updated_at": "2019-12-23 21:24:22"
+ },
+ {
+   "id": 885,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-26 04:31:43",
+   "updated_at": "2019-12-26 04:31:43"
+ },
+ {
+   "id": 886,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-26 08:11:48",
+   "updated_at": "2019-12-26 08:11:48"
+ },
+ {
+   "id": 887,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-26 17:00:56",
+   "updated_at": "2019-12-26 17:00:56"
+ },
+ {
+   "id": 888,
+   "charityId": 3,
+   "totalHashes": 293073458,
+   "totalTime": 178276760,
+   "created_at": "2019-12-27 15:00:22",
+   "updated_at": "2020-01-22 15:51:55"
+ },
+ {
+   "id": 889,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-30 13:41:03",
+   "updated_at": "2019-12-30 13:41:03"
+ },
+ {
+   "id": 890,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-30 14:33:34",
+   "updated_at": "2019-12-30 14:33:34"
+ },
+ {
+   "id": 891,
+   "charityId": 3,
+   "totalHashes": 15785533,
+   "totalTime": 278050,
+   "created_at": "2019-12-30 16:27:46",
+   "updated_at": "2019-12-31 12:00:50"
+ },
+ {
+   "id": 892,
+   "charityId": 3,
+   "totalHashes": 263710989,
+   "totalTime": 117534970,
+   "created_at": "2019-12-30 20:22:26",
+   "updated_at": "2020-01-22 15:51:55"
+ },
+ {
+   "id": 893,
+   "charityId": 3,
+   "totalHashes": 60007796,
+   "totalTime": 2301160,
+   "created_at": "2019-12-30 20:23:39",
+   "updated_at": "2020-01-02 20:36:02"
+ },
+ {
+   "id": 894,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2019-12-31 05:32:18",
+   "updated_at": "2019-12-31 05:32:18"
+ },
+ {
+   "id": 895,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-02 06:32:34",
+   "updated_at": "2020-01-02 06:32:34"
+ },
+ {
+   "id": 896,
+   "charityId": 3,
+   "totalHashes": 121707400,
+   "totalTime": 2405270,
+   "created_at": "2020-01-02 20:37:46",
+   "updated_at": "2020-01-08 18:29:07"
+ },
+ {
+   "id": 897,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-03 05:58:26",
+   "updated_at": "2020-01-03 05:58:26"
+ },
+ {
+   "id": 898,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-03 05:58:29",
+   "updated_at": "2020-01-03 05:58:29"
+ },
+ {
+   "id": 899,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-03 10:22:30",
+   "updated_at": "2020-01-03 10:22:30"
+ },
+ {
+   "id": 900,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-04 18:29:20",
+   "updated_at": "2020-01-04 18:29:20"
+ },
+ {
+   "id": 901,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-06 13:37:03",
+   "updated_at": "2020-01-06 13:37:03"
+ },
+ {
+   "id": 902,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-08 08:13:51",
+   "updated_at": "2020-01-08 08:13:51"
+ },
+ {
+   "id": 903,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-08 08:13:52",
+   "updated_at": "2020-01-08 08:13:52"
+ },
+ {
+   "id": 904,
+   "charityId": 3,
+   "totalHashes": 263155657,
+   "totalTime": 24471490,
+   "created_at": "2020-01-08 19:55:20",
+   "updated_at": "2020-01-22 15:51:26"
+ },
+ {
+   "id": 905,
+   "charityId": 3,
+   "totalHashes": 15414948,
+   "totalTime": 1155110,
+   "created_at": "2020-01-09 17:59:27",
+   "updated_at": "2020-01-11 21:14:10"
+ },
+ {
+   "id": 906,
+   "charityId": 3,
+   "totalHashes": 83420341,
+   "totalTime": 27409240,
+   "created_at": "2020-01-09 18:04:04",
+   "updated_at": "2020-01-22 15:51:55"
+ },
+ {
+   "id": 907,
+   "charityId": 3,
+   "totalHashes": 72033967,
+   "totalTime": 39392170,
+   "created_at": "2020-01-09 18:06:42",
+   "updated_at": "2020-01-22 15:51:55"
+ },
+ {
+   "id": 908,
+   "charityId": 3,
+   "totalHashes": 185241593,
+   "totalTime": 30866920,
+   "created_at": "2020-01-09 18:11:06",
+   "updated_at": "2020-01-22 15:51:55"
+ },
+ {
+   "id": 909,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-09 19:15:08",
+   "updated_at": "2020-01-09 19:15:08"
+ },
+ {
+   "id": 910,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-11 13:17:31",
+   "updated_at": "2020-01-11 13:17:31"
+ },
+ {
+   "id": 911,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-11 13:17:33",
+   "updated_at": "2020-01-11 13:17:33"
+ },
+ {
+   "id": 912,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-12 15:54:05",
+   "updated_at": "2020-01-12 15:54:05"
+ },
+ {
+   "id": 913,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-13 20:05:04",
+   "updated_at": "2020-01-13 20:05:04"
+ },
+ {
+   "id": 914,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-13 20:49:13",
+   "updated_at": "2020-01-13 20:49:13"
+ },
+ {
+   "id": 915,
+   "charityId": 3,
+   "totalHashes": 43737582,
+   "totalTime": 10920600,
+   "created_at": "2020-01-13 20:49:24",
+   "updated_at": "2020-01-20 13:12:50"
+ },
+ {
+   "id": 916,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-16 14:49:55",
+   "updated_at": "2020-01-16 14:49:55"
+ },
+ {
+   "id": 917,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-17 00:54:25",
+   "updated_at": "2020-01-17 00:54:25"
+ },
+ {
+   "id": 918,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-17 19:36:25",
+   "updated_at": "2020-01-17 19:36:25"
+ },
+ {
+   "id": 919,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-18 11:00:45",
+   "updated_at": "2020-01-18 11:00:45"
+ },
+ {
+   "id": 920,
+   "charityId": 1,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-18 12:48:55",
+   "updated_at": "2020-01-18 12:48:55"
+ },
+ {
+   "id": 921,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-21 13:16:34",
+   "updated_at": "2020-01-21 13:16:34"
+ },
+ {
+   "id": 922,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-21 17:15:48",
+   "updated_at": "2020-01-21 17:15:48"
+ },
+ {
+   "id": 923,
+   "charityId": 3,
+   "totalHashes": 0,
+   "totalTime": 0,
+   "created_at": "2020-01-22 13:54:33",
+   "updated_at": "2020-01-22 13:54:33"
+ }
+]

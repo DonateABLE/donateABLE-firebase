@@ -1,0 +1,50 @@
+[
+ {
+   "id": 1,
+   "charityId": 1,
+   "faLink": "fas fa-battery-full",
+   "title": "Lifesaver Bracelet Battery",
+   "description": "Cost = $5 - ≈ 500,000,000 Hashes",
+   "comment": "A small battery used in the Lifesaver Bracelet allowing the system to operate every day of the year."
+ },
+ {
+   "id": 2,
+   "charityId": 1,
+   "faLink": "fas fa-hand-holding-heart",
+   "title": "Volunteer Training",
+   "description": "Cost = $100 - ≈ 10,000,000,000 Hashes",
+   "comment": "Responsible for immediate, mobile response to requests from emergency and police services within Guelph and Wellington County."
+ },
+ {
+   "id": 3,
+   "charityId": 1,
+   "faLink": "fas fa-ambulance",
+   "title": "Lifesaver Bracelet",
+   "description": "Cost = $400 - ≈ 40,000,000,000 Hashes",
+   "comment": "A 1 ounce wrist transmitter that sends a radio signal which can be tracked up to a 2 kilometer radius."
+ },
+ {
+   "id": 4,
+   "charityId": 4,
+   "faLink": "fas fa-bone",
+   "title": "Dog Bone",
+   "description": "Cost = $.50 - ≈ 500,000 Hashes",
+   "comment": "A tasty treat that will give your companion genuine joy."
+ },
+ {
+   "id": 5,
+   "charityId": 4,
+   "faLink": "fas fa-shopping-bag",
+   "title": "Bag of Food",
+   "description": "Cost = $40 - ≈ 4,000,000,000 Hashes",
+   "comment": "Providing key nutrients every meal to your furry friend."
+ },
+ {
+   "id": 6,
+   "charityId": 4,
+   "faLink": "fas fa-microchip",
+   "title": "Micro Chip Scanner",
+   "description": "Cost = $80 - ≈ 8,000,000,000 Hashes",
+   "comment": "A scanner used to read pet microchips and help reunite lost pets with their families."
+ }
+]
