@@ -36,16 +36,20 @@
         z-index: -1;
     }
 
-    .buttongroup {
+    .buttonGroup {
         width: 250px;
         display: inline-block;
         
-        .groupelement {
+        .groupElement {
             box-sizing: border-box;
             width: 100%;
             margin-top: 2px;
             text-transform: uppercase;
         }
+    }
+
+    .value {
+        padding-left: 2ch;
     }
 }
 

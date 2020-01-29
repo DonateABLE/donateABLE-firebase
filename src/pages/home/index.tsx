@@ -16,14 +16,18 @@ export default class Home extends Component {
                     <span className={styles.light}>Support local charities in Guelph</span> <br />
                     without opening your wallet
                 </h2>
-                <div className={styles.buttongroup}>
-                    <TextBox className={styles.groupelement}>Currently Donating &nbsp; <b>14</b></TextBox>
-                    <TextBox className={styles.groupelement}>Donations to Date &nbsp; <b>345</b></TextBox>
-                    <TextBox className={styles.groupelement}>
-                        Total Hashes &nbsp; <b>{(13256475).toLocaleString()}</b>
+                <div className={styles.buttonGroup}>
+                    <TextBox className={styles.groupElement}>
+                        Currently Donating <b className={styles.value}>14</b>
                     </TextBox>
-                    <Button className={styles.groupelement} color='white'>Login</Button>
-                    <Button className={styles.groupelement} color='dark'>Sign Up</Button>
+                    <TextBox className={styles.groupElement}>
+                        Donations to Date<b className={styles.value}>345</b>
+                    </TextBox>
+                    <TextBox className={styles.groupElement}>
+                        Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
+                    </TextBox>
+                    <Button className={styles.groupElement} color='white'>Login</Button>
+                    <Button className={styles.groupElement} color='dark'>Sign Up</Button>
                 </div>
             </div>
             <SearchBar />

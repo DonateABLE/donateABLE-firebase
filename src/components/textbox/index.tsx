@@ -10,7 +10,7 @@ interface Props {
 
 const TextBox: FunctionComponent<Props> = ({ color = 'light', size = 'small', className, children }) => (
     <div
-        className={classNames(styles.textbox, styles[color], styles[size], className)}
+        className={classNames(styles.textBox, styles[color], styles[size], className)}
     >
         {children}
     </div>
