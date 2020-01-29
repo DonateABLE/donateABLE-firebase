@@ -119,5 +119,35 @@
                 font-weight: bold;
             }
         }
+
+        .category {
+            display: flex;
+            align-items: center;
+            flex-basis: auto;
+
+            &:not(:first-child) {
+                padding-top: 5px;
+            }
+
+            .iconCircle {
+                background-color: $light-blue;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .title {
+                padding-left: 1ch;
+                white-space: nowrap;
+            }
+        }
     }
 }
