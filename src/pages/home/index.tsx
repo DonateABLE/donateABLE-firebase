@@ -3,22 +3,26 @@ import Content from 'components/content'
 import SearchBar from 'components/search-bar'
 import TextBox from 'components/textbox'
 import Charity from 'orm/charity'
+import CharityType from 'orm/charity-type'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import CharityBox from './charity'
 import styles from './style.scss'
 
 interface State {
     charities: Charity[]
+    charityTypes: CharityType[]
 }
 
 export default class Home extends Component<{}, State> {
     private charityUnsubscribe?: () => void
+    private charityTypeUnsubscribe?: () => void
 
     constructor(props: {}) {
         super(props)
 
         this.state = {
             charities: [],
+            charityTypes: [],
         }
     }
 
@@ -26,10 +30,14 @@ export default class Home extends Component<{}, State> {
         this.charityUnsubscribe = Charity.builder()
             .orderBy('longName')
             .subscribe(c => this.setState({ charities: c }))
+        this.charityTypeUnsubscribe = CharityType.builder()
+            .orderBy('name')
+            .subscribe(c => this.setState({ charityTypes: c }))
     }
 
     public componentWillUnmount(): void {
         this.charityUnsubscribe?.()
+        this.charityTypeUnsubscribe?.()
     }
 
     public render(): ReactNode {
@@ -60,7 +68,13 @@ export default class Home extends Component<{}, State> {
                     Everyone can contribute
                 </h2>
                 <div className={styles.charities}>
-                    {this.state.charities.map((c, i) => <CharityBox key={c.longName + i} charity={c} />)}
+                    {this.state.charities.map((c, i) => (
+                        <CharityBox
+                            key={c.longName + i}
+                            charity={c}
+                            charityTypes={this.state.charityTypes}
+                        />
+                    ))}
                 </div>
             </Content>
         </Fragment>
