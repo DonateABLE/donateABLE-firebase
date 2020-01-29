@@ -1,9 +1,9 @@
 @import '../../variables';
 
-.button {
+.textbox {
     border: none;
-    font-family: inherit;
     font-size: inherit;
+    font-family: inherit;
     padding: 2px 10px;
 
     &.light {
@@ -32,19 +32,5 @@
     &.large {
         padding: 10px 30px;
         font-size: 1.5em;
-    }
-
-    &:hover {
-        &.light {
-            background-color: darken($light-blue, 10);
-        }
-
-        &.dark {
-            background-color: darken($dark-blue, 10);
-        }
-
-        &.white {
-            background-color: darken($white, 10);
-        }
     }
 }
