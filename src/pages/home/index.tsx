@@ -22,8 +22,8 @@ export default class Home extends Component {
                     <TextBox className={styles.groupelement}>
                         Total Hashes &nbsp; <b>{(13256475).toLocaleString()}</b>
                     </TextBox>
-                    <Button className={styles.groupelement} color='white'>LOGIN</Button>
-                    <Button className={styles.groupelement} color='dark'>SIGN UP</Button>
+                    <Button className={styles.groupelement} color='white'>Login</Button>
+                    <Button className={styles.groupelement} color='dark'>Sign Up</Button>
                 </div>
             </div>
             <SearchBar />

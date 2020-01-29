@@ -5,6 +5,7 @@
     text-align: center;
     color: $dark-blue;
     text-transform: uppercase;
+    font-weight: bold;
 
     .light {
         color: $light-blue;
@@ -43,6 +44,7 @@
             box-sizing: border-box;
             width: 100%;
             margin-top: 2px;
+            text-transform: uppercase;
         }
     }
 }
