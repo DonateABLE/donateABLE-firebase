@@ -23,7 +23,9 @@ export default class Home extends Component<{}, State> {
     }
 
     public componentDidMount(): void {
-        this.charityUnsubscribe = Charity.builder().subscribe(c => this.setState({ charities: c }))
+        this.charityUnsubscribe = Charity.builder()
+            .orderBy('longName')
+            .subscribe(c => this.setState({ charities: c }))
     }
 
     public componentWillUnmount(): void {
@@ -52,7 +54,7 @@ export default class Home extends Component<{}, State> {
                     Everyone can contribute
                 </h2>
                 <div className={styles.charities}>
-                    {this.state.charities.map((c, i) => <CharityBox key={c.shortName + i} charity={c} />)}
+                    {this.state.charities.map((c, i) => <CharityBox key={c.longName + i} charity={c} />)}
                 </div>
             </Content>
         </Fragment>

@@ -1,5 +1,5 @@
 import { SolidIconName } from 'components/icon'
-import { firestore } from 'firebase'
+import { firestore } from './firebase'
 import Model from './model'
 
 export default class CharityType extends Model {

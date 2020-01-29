@@ -13,7 +13,7 @@ interface Props {
 const CharityBox: FunctionComponent<Props> = ({ className, charity }) => (
     <div className={classNames(styles.charity, className)}>
         <img className={styles.logo} src={charity.logo} alt={charity.longName + ' logo'} />
-        <div className={styles.name}>{charity.shortName}</div>
+        <div className={styles.name}>{charity.longName}</div>
         <div className={styles.type}><Icon name={charity.type.icon} /></div>
         <div className={styles.currentlyDonating}>Currently Donating: <b>{charity.currentlyDonating}</b></div>
         <div className={styles.donatorsToDate}>Donators to Date: <b>{charity.donatorsToDate}</b></div>
@@ -28,7 +28,7 @@ const CharityBox: FunctionComponent<Props> = ({ className, charity }) => (
                 <Icon name='globe' />
             </button>
         </div>
-        <Link to={`/charity/${charity.shortName}`}>
+        <Link to={`/charity/${charity.longName}`}>
             <div className={styles.donate}>Donate</div>
         </Link>
     </div>

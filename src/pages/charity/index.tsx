@@ -5,16 +5,26 @@ import { Component, createElement, ReactNode } from 'react'
 import { RouteComponentProps, useParams } from 'react-router-dom'
 import styles from './style.scss'
 
+type Props = RouteComponentProps<{ name: string }>
+
 interface State {
     charity?: Charity
 }
 
-export default class CharityPage extends Component<RouteComponentProps<{ name: string }>, State> {
+export default class CharityPage extends Component<Props, State> {
     private cancelCharity?: () => void
+
+    constructor(props: Props) {
+        super(props)
+
+        this.state = {
+            charity: undefined,
+        }
+    }
 
     public componentDidMount(): void {
         this.cancelCharity = Charity.builder()
-            .where('shortName', '==', this.props.match.params.name)
+            .where('longName', '==', this.props.match.params.name)
             .subscribe(c => this.setState({ charity: c[0] }))
     }
 
@@ -31,9 +41,9 @@ export default class CharityPage extends Component<RouteComponentProps<{ name: s
         }
         return <Content>
             <FullWidth className={styles.header}>
-                <img className={styles.logo} src={charity.logo} alt={`${charity.shortName} logo`} />
+                <img className={styles.logo} src={charity.logo} alt={`${charity.longName} logo`} />
                 <div className={styles.info}>
-                    <h2 className={styles.name}>{charity.shortName}</h2>
+                    <h2 className={styles.name}>{charity.longName}</h2>
                     <div className={styles.tagLine}>{charity.tagline}</div>
                     <div>Registered Business Name {charity.registeredBusinessName}</div>
                     <div>Business Number {charity.businessNumber}</div>
