@@ -1,10 +1,12 @@
 @import '../../variables';
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 body {
     margin: 0;
 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .layout {
@@ -15,9 +17,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
 
     .menu {
 

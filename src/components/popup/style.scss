@@ -1,0 +1,45 @@
+@import '../../variables';
+
+.wrapper {
+    position: relative;
+    cursor: pointer;
+
+    .popup {
+        display: none;
+
+
+        &.open {
+            $x-offset: 30px;
+            $point-height: 10px;
+            $color: $dark-blue;
+
+            display: block;
+            position: absolute;
+            background-color: $color;
+            color: $white;
+            top: -$point-height;
+            left: 50%;
+            transform: translate(#{-$x-offset}, -100%);
+            padding: 20px 30px;
+
+            box-shadow: 0 0 5px 5px rgba(black, 0.2);
+            z-index: 10;
+
+            &::after {
+
+                display: block;
+                position: absolute;
+                content: ' ';
+                width: $point-height * sqrt(2);
+                height: $point-height * sqrt(2);
+
+                background: $color;
+
+                transform: translate(-50%, 50%) rotate(45deg);
+
+                left: $x-offset;
+                bottom: 0;
+            }
+        }
+    }
+}

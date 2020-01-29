@@ -1,9 +1,22 @@
 $dark-blue: #26607d;
 $light-blue: #45a6d7;
 $white: #fff;
+$black: #222;
 
 // Breakpoints
 $bp-sm-min: 576px;
 $bp-md-min: 768px;
 $bp-lg-min: 992px;
 $bp-xl-min: 1200px;
+
+@function sqrt($r) {
+    $x0: 1;
+    $x1: $x0;
+
+    @for $i from 1 through 10 {
+        $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+        $x0: $x1;
+    }
+
+    @return $x1;
+}

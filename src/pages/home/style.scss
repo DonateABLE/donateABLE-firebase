@@ -5,6 +5,7 @@
     text-align: center;
     color: $dark-blue;
     text-transform: uppercase;
+    font-weight: bold;
 
     .light {
         color: $light-blue;
@@ -35,15 +36,20 @@
         z-index: -1;
     }
 
-    .buttons {
-        width: 200px;
+    .buttonGroup {
+        width: 250px;
         display: inline-block;
-
-
-        button {
+        
+        .groupElement {
+            box-sizing: border-box;
             width: 100%;
             margin-top: 2px;
+            text-transform: uppercase;
         }
+    }
+
+    .value {
+        padding-left: 2ch;
     }
 }
 
@@ -117,6 +123,36 @@
                 background-color: $dark-blue;
                 font-size: 1.5em;
                 font-weight: bold;
+            }
+        }
+
+        .category {
+            display: flex;
+            align-items: center;
+            flex-basis: auto;
+
+            &:not(:first-child) {
+                padding-top: 5px;
+            }
+
+            .iconCircle {
+                background-color: $light-blue;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .title {
+                padding-left: 1ch;
+                white-space: nowrap;
             }
         }
     }
