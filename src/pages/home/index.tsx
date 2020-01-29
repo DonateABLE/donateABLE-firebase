@@ -2,6 +2,7 @@ import Button from 'components/button'
 import Content from 'components/content'
 import Layout from 'components/layout'
 import SearchBar from 'components/search-bar'
+import TextBox from 'components/textbox'
 import { charities } from 'data'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import Charity from './charity'
@@ -15,12 +16,18 @@ export default class Home extends Component {
                     <span className={styles.light}>Support local charities in Guelph</span> <br />
                     without opening your wallet
                 </h2>
-                <div className={styles.buttons}>
-                    <Button>Currently Donating: <b>14</b></Button>
-                    <Button>Donations to Date <b>345</b></Button>
-                    <Button>Total Hashes <b>{(13256475).toLocaleString()}</b></Button>
-                    <Button color='white'>Login</Button>
-                    <Button color='dark'>Sign Up</Button>
+                <div className={styles.buttonGroup}>
+                    <TextBox className={styles.groupElement}>
+                        Currently Donating <b className={styles.value}>14</b>
+                    </TextBox>
+                    <TextBox className={styles.groupElement}>
+                        Donations to Date<b className={styles.value}>345</b>
+                    </TextBox>
+                    <TextBox className={styles.groupElement}>
+                        Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
+                    </TextBox>
+                    <Button className={styles.groupElement} color='white'>Login</Button>
+                    <Button className={styles.groupElement} color='dark'>Sign Up</Button>
                 </div>
             </div>
             <SearchBar />

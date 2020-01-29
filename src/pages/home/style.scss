@@ -5,6 +5,7 @@
     text-align: center;
     color: $dark-blue;
     text-transform: uppercase;
+    font-weight: bold;
 
     .light {
         color: $light-blue;
@@ -35,15 +36,20 @@
         z-index: -1;
     }
 
-    .buttons {
-        width: 200px;
+    .buttonGroup {
+        width: 250px;
         display: inline-block;
-
-
-        button {
+        
+        .groupElement {
+            box-sizing: border-box;
             width: 100%;
             margin-top: 2px;
+            text-transform: uppercase;
         }
+    }
+
+    .value {
+        padding-left: 2ch;
     }
 }
 
