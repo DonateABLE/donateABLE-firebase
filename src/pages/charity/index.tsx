@@ -45,13 +45,16 @@ export default class Charity extends Component<RouteComponentProps<{ name: strin
     @bind
     private openHelpModal(): void {
         openInfoModal(
-            'Donation Request Not Starting',
+            'Donation Request Not Starting?',
             <Fragment>
-                Be sure to check that donateABLE is whitelisted on any
-                adblockers and that your antivirus programs are not blocking our
-                page. To learn hot to do this please visit our
-                <Link to='/faq'>Frequently Asked Questions</Link> page.
-                <Button>Continue</Button>
+                <p>
+                    Be sure to check that donateABLE is whitelisted on any
+                    adblockers and that your antivirus programs are not blocking
+                    our page. To learn hot to do this please visit
+                    our <Link to='/faq'>Frequently Asked Questions</Link> page.
+                </p>
+
+                <Button fullWidth size='medium'>Continue</Button>
             </Fragment>,
         )
     }

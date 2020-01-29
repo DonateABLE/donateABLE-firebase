@@ -1,3 +1,4 @@
+import Icon from 'components/icon'
 import {
     Component,
     createElement,
@@ -11,7 +12,14 @@ import { findDOMNode, render } from 'react-dom'
 import { BrowserRouterProps, RouteComponentProps } from 'react-router-dom'
 import styles from './style.scss'
 
-export const Modal: FunctionComponent = ({ children }) => <div className={styles.modal}>{children}</div>
+export const Modal: FunctionComponent<{ onCloseClick?: () => void }> = ({ children, onCloseClick }) => (
+    <div className={styles.modal}>
+        {children}
+        <div className={styles.close} onClick={onCloseClick} >
+            <Icon name='times' />
+        </div>
+    </div>
+)
 export const ModalHeader: FunctionComponent = ({ children }) => <h2 className={styles.modalHeader}>{children}</h2>
 export const ModalBody: FunctionComponent = ({ children }) => <p className={styles.modalBody}>{children}</p>
 
@@ -19,8 +27,11 @@ let staticModalController: ModalController | undefined
 
 export interface ModalControl<T> {
     resolve: (value: T | PromiseLike<T>) => void
+    close: () => void
 }
 
+export function openModal(content: (ctl: ModalControl<void>) => ReactElement): Promise<void>
+export function openModal<T>(content: (ctl: ModalControl<T>) => ReactElement, defaultValue?: T): Promise<T>
 export function openModal<T = void>(content: (ctl: ModalControl<T>) => ReactElement, defaultValue?: T): Promise<T> {
     return new Promise<T>(resolve => {
         let wrapper: HTMLDivElement | null = null
@@ -40,7 +51,10 @@ export function openModal<T = void>(content: (ctl: ModalControl<T>) => ReactElem
             }
         }
         modal = <div ref={e => wrapper = e} className={styles.modalWrapper} onClick={modalClose}>
-            {content({ resolve: close })}
+            {content({
+                resolve: close,
+                close: () => close(defaultValue),
+            })}
         </div>
 
         staticModalController?.addModal(modal)
@@ -48,7 +62,7 @@ export function openModal<T = void>(content: (ctl: ModalControl<T>) => ReactElem
 }
 
 export async function openInfoModal(title: ReactNode, body: ReactNode): Promise<void> {
-    return openModal(ctx => <Modal>
+    return openModal(ctx => <Modal onCloseClick={ctx.close}>
         <ModalHeader>
             {title}
         </ModalHeader>
