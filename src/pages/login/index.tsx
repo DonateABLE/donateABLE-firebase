@@ -5,13 +5,21 @@ import TextBox from 'components/textbox'
 import { charities } from 'data'
 import { bind } from 'decko'
 import { Component, createElement, Fragment, ReactNode } from 'react'
+import { StyledFirebaseAuth } from 'react-firebaseui'
 import { Link, RouteComponentProps } from 'react-router-dom'
 import styles from './style.scss'
 
 export default class Login extends Component {
-    /**
-     * render
-     */
+
+    // public uiConfig = {
+    //     signInFlow: 'popup',
+    //     signInSuccessUrl: '/',
+    //     signInOptions: [
+    //         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    //         firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    //     ],
+    // }
+
     public render(): ReactNode {
         return <Fragment>
             <div className={styles.top}>
@@ -32,6 +40,9 @@ export default class Login extends Component {
                         Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
                     </TextBox>
                 </div>
+                <Content>
+                    {/* <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} /> */}
+                </Content>
             </div>
         </Fragment>
     }
