@@ -212,13 +212,12 @@ export default class CharityEdit extends Component<Props, State> {
         if (file) {
             this.setState({ logoURL: URL.createObjectURL(file) })
             const url = `logo/${uuidv4()}`
-            const ref = await storage.child(url).put(file)
+            await storage.child(url).put(file)
+
             const publicURL = await storage.child(url).getDownloadURL()
             this.state.charity.logo = publicURL
 
             this.setState({ logoURL: publicURL })
-            console.log(ref)
-
         }
     }
 }
