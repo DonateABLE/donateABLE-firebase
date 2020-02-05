@@ -1,5 +1,6 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
+import DonationTargets from 'components/donation-targets'
 import { PageLoader } from 'components/loader'
 import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
@@ -63,11 +64,11 @@ export default class CharityPage extends Component<Props, State> {
             </FullWidth>
             <FullWidth className={styles.social} />
             <TabContainer>
+                <Tab title='Donation Targets'>
+                    <DonationTargets charity={charity} />
+                </Tab>
                 <Tab title='Statistics'>
                     <Statistics charity={charity} />
-                </Tab>
-                <Tab title='Donation Targets'>
-                    Targets
                 </Tab>
                 <Tab title='About'>
                     About
