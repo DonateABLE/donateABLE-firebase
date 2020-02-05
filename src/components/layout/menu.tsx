@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom'
 import { classNames } from 'utils'
 import styles from './style.scss'
 
+type Option = {
+    title: string,
+} & ({
+    href: string,
+} | {
+    onClick: () => void,
+})
+
 interface Props {
     open: boolean
     onMenuOpenClick: () => void
