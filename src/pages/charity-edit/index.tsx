@@ -6,15 +6,18 @@ import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind, memoize } from 'decko'
 import Charity from 'orm/charity'
+import { storage } from 'orm/firebase'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode, SyntheticEvent } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
 import { addValue } from 'utils'
+import uuidv4 from 'uuid/v4'
 import styles from './style.scss'
 
 type Props = RouteComponentProps<{ id?: string }>
 
 interface State {
     charity: Charity
+    logoURL?: string
 }
 
 export default class CharityEdit extends Component<Props, State> {
@@ -33,7 +36,12 @@ export default class CharityEdit extends Component<Props, State> {
 
             this.cancelCharity = Charity.subscribe(
                 this.props.match.params.id,
-                c => this.setState({ charity: c }),
+                async c => {
+                    this.setState({
+                        charity: c,
+                        logoURL: c.logo,
+                    })
+                },
             )
         }
     }
@@ -47,7 +55,10 @@ export default class CharityEdit extends Component<Props, State> {
 
         return <Content>
             <FullWidth className={styles.header}>
-                <img className={styles.logo} src={charity.logo} alt={`${charity.longName} logo`} />
+                <label>
+                    <img className={styles.logo} src={this.state.logoURL} alt={`${charity.longName} logo`} />
+                    <input type='file' onChange={this.logoChange} />
+                </label>
                 <div className={styles.info}>
                     <Input
                         white
@@ -191,6 +202,23 @@ export default class CharityEdit extends Component<Props, State> {
         await this.state.charity.save()
         if (this.props.match.params.id !== this.state.charity.id) {
             this.props.history.push(`/charity/${this.state.charity.id}/edit`)
+        }
+    }
+
+    @bind
+    private async logoChange(e: React.ChangeEvent<HTMLInputElement>): Promise<void> {
+        const file = e.currentTarget.files?.[0]
+
+        if (file) {
+            this.setState({ logoURL: URL.createObjectURL(file) })
+            const url = `logo/${uuidv4()}`
+            const ref = await storage.child(url).put(file)
+            const publicURL = await storage.child(url).getDownloadURL()
+            this.state.charity.logo = publicURL
+
+            this.setState({ logoURL: publicURL })
+            console.log(ref)
+
         }
     }
 }
