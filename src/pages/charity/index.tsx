@@ -1,10 +1,12 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
 import { openInfoModal } from 'components/modal'
+import { Tab, TabContainer } from 'components/tabs'
 import { charities } from 'data'
 import { bind } from 'decko'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
+import Statistics from './statistics'
 import styles from './style.scss'
 
 export default class Charity extends Component<RouteComponentProps<{ name: string }>> {
@@ -37,8 +39,17 @@ export default class Charity extends Component<RouteComponentProps<{ name: strin
             <FullWidth className={styles.social}>
                 facebook
             </FullWidth>
-            test
-            <Button onClick={this.openHelpModal}>?</Button>
+            <TabContainer>
+                <Tab title='Statistics'>
+                    <Statistics charity={charity} />
+                </Tab>
+                <Tab title='Donation Targets'>
+                    Targets
+                </Tab>
+                <Tab title='About'>
+                    About
+                </Tab>
+            </TabContainer>
         </Content>
     }
 
