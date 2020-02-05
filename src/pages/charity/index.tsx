@@ -1,16 +1,12 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
 import { openInfoModal } from 'components/modal'
-<<<<<<< HEAD
 import { Tab, TabContainer } from 'components/tabs'
-import { charities } from 'data'
-=======
->>>>>>> add-orm
 import { bind } from 'decko'
 import Charity from 'orm/charity'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
-import Statistics from './statistics'
+import Statistics from '../../components/charity-stats'
 import styles from './style.scss'
 
 type Props = RouteComponentProps<{ name: string }>

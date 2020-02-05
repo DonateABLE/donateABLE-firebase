@@ -9,6 +9,10 @@ body {
     font-size: 14px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .layout {
     $menu-width: 300px;
     $menu-padding: 40px;
