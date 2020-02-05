@@ -1,6 +1,6 @@
 import { bind, memoize } from 'decko'
 import { Children, Component, createElement, ReactElement, ReactNode } from 'react'
-import { classNames } from 'utils'
+import { addArgs, classNames } from 'utils'
 import styles from './style.scss'
 
 interface TabContainerProps {
@@ -32,7 +32,7 @@ export class TabContainer extends Component<TabContainerProps, TabContainerState
                         className={classNames(styles.title, {
                             [styles.active]: this.state.active === i,
                         })}
-                        onClick={this.tabClick(i)}
+                        onClick={addArgs(i, this.tabClick)}
                     >
                         {a.props.title}
                     </div>
@@ -48,9 +48,9 @@ export class TabContainer extends Component<TabContainerProps, TabContainerState
         </div>
     }
 
-    @memoize
-    private tabClick(i: number): () => void {
-        return () => this.setState({ active: i })
+    @bind
+    private tabClick(i: number): void {
+        this.setState({ active: i })
     }
 
     @bind

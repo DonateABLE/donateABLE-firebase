@@ -1,17 +1,47 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
 import { openInfoModal } from 'components/modal'
+<<<<<<< HEAD
 import { Tab, TabContainer } from 'components/tabs'
 import { charities } from 'data'
+=======
+>>>>>>> add-orm
 import { bind } from 'decko'
+import Charity from 'orm/charity'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
 import Statistics from './statistics'
 import styles from './style.scss'
 
-export default class Charity extends Component<RouteComponentProps<{ name: string }>> {
+type Props = RouteComponentProps<{ name: string }>
+
+interface State {
+    charity?: Charity
+}
+
+export default class CharityPage extends Component<Props, State> {
+    private cancelCharity?: () => void
+
+    constructor(props: Props) {
+        super(props)
+
+        this.state = {
+            charity: undefined,
+        }
+    }
+
+    public componentDidMount(): void {
+        this.cancelCharity = Charity.builder()
+            .where('longName', '==', this.props.match.params.name)
+            .subscribe(c => this.setState({ charity: c[0] }))
+    }
+
+    public componentWillUnmount(): void {
+        this.cancelCharity?.()
+    }
+
     public render(): ReactNode {
-        const charity = charities.find(c => c.name === this.props.match.params.name)
+        const charity = this.state.charity
         if (charity === undefined) {
             return <Content>
                 <h2>not found</h2>
@@ -19,10 +49,10 @@ export default class Charity extends Component<RouteComponentProps<{ name: strin
         }
         return <Content>
             <FullWidth className={styles.header}>
-                <img className={styles.logo} src={charity.logo} alt={`${charity.name} logo`} />
+                <img className={styles.logo} src={charity.logo} alt={`${charity.longName} logo`} />
                 <div className={styles.info}>
-                    <h2 className={styles.name}>{charity.name}</h2>
-                    <div className={styles.tagLine}>{charity.tagLine}</div>
+                    <h2 className={styles.name}>{charity.longName}</h2>
+                    <div className={styles.tagLine}>{charity.tagline}</div>
                     <div>Registered Business Name {charity.registeredBusinessName}</div>
                     <div>Business Number {charity.businessNumber}</div>
                 </div>
@@ -50,6 +80,7 @@ export default class Charity extends Component<RouteComponentProps<{ name: strin
                     About
                 </Tab>
             </TabContainer>
+            <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
         </Content>
     }
 

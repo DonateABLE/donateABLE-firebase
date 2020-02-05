@@ -1,22 +1,24 @@
 import Icon from 'components/icon'
 import Popup from 'components/popup'
-import { Charity as CharityData, charityTypes } from 'data'
+import Charity from 'orm/charity'
+import CharityType from 'orm/charity-type'
 import { createElement, FunctionComponent } from 'react'
 import { Link } from 'react-router-dom'
 import { classNames } from 'utils'
 import styles from './style.scss'
 
 interface Props {
-    charity: CharityData
+    charity: Charity
     className?: string
+    charityTypes: CharityType[]
 }
 
-const Charity: FunctionComponent<Props> = ({ className, charity }) => (
+const CharityBox: FunctionComponent<Props> = ({ className, charity, charityTypes }) => (
     <div className={classNames(styles.charity, className)}>
-        <img className={styles.logo} src={charity.logo} alt={charity.name + ' logo'} />
-        <div className={styles.name}>{charity.name}</div>
+        <img className={styles.logo} src={charity.logo} alt={charity.longName + ' logo'} />
+        <div className={styles.name}>{charity.longName}</div>
         <div className={styles.type}>
-            <Popup openButton={<Icon name={charity.icon} />}>
+            <Popup openButton={<Icon name={charity.typeIcon} />}>
                 {charityTypes.map(t => (
                     <div key={t.name} className={styles.category}>
                         <div className={styles.iconCircle}>
@@ -40,10 +42,10 @@ const Charity: FunctionComponent<Props> = ({ className, charity }) => (
                 <Icon name='globe' />
             </button>
         </div>
-        <Link to={`/charity/${charity.name}`}>
+        <Link to={`/charity/${charity.longName}`}>
             <div className={styles.donate}>Donate</div>
         </Link>
     </div>
 )
 
-export default Charity
+export default CharityBox
