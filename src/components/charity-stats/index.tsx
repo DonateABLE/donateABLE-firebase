@@ -1,4 +1,4 @@
-import Loader from 'components/loader'
+import Progress from 'components/progress'
 import Charity from 'orm/charity'
 import { createElement, FunctionComponent } from 'react'
 import styles from './style.scss'
@@ -11,7 +11,7 @@ interface SectionProps {
 
 const Section: FunctionComponent<SectionProps> = props => (
     <div className={styles.section}>
-        <Loader className={styles.loader} value={props.value} max={props.max} />
+        <Progress className={styles.loader} value={props.value} max={props.max} />
         <div className={styles.content}>
             <div className={styles.title}>{props.title}</div>
             <div className={styles.value}>{Intl.NumberFormat('default').format(props.value)}</div>

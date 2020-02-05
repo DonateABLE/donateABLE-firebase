@@ -1,17 +1,30 @@
 @import '../../variables';
 
-.innerCircle {
-    fill: none;
-    stroke: $dark-blue;
+
+.page {
+    $size: 120px;
+    position: fixed;
+    top: calc(50% - #{$size / 2});
+    left: calc(50% - #{$size / 2});
+    width: $size;
+    height: $size;
 }
 
-.outerCircle {
-    fill: none;
-    stroke: $light-blue;
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
+.loader {
+    border: 16px solid $dark-blue;
+    border-top-color: $light-blue;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
 }
 
-.value {
-    stroke: $light-blue;
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

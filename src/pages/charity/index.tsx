@@ -1,5 +1,6 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
+import { PageLoader } from 'components/loader'
 import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind } from 'decko'
@@ -39,9 +40,7 @@ export default class CharityPage extends Component<Props, State> {
     public render(): ReactNode {
         const charity = this.state.charity
         if (charity === undefined) {
-            return <Content>
-                <h2>not found</h2>
-            </Content>
+            return <PageLoader />
         }
         return <Content>
             <FullWidth className={styles.header}>
@@ -62,9 +61,7 @@ export default class CharityPage extends Component<Props, State> {
                     </Button>
                 </div>
             </FullWidth>
-            <FullWidth className={styles.social}>
-                facebook
-            </FullWidth>
+            <FullWidth className={styles.social} />
             <TabContainer>
                 <Tab title='Statistics'>
                     <Statistics charity={charity} />
