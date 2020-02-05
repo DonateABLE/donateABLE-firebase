@@ -70,7 +70,8 @@ export default class Layout extends Component<{}, State> {
                 <div className={styles.content} >
                     <Switch>
                         <Route path='/about' component={About} />
-                        <Route path='/charity/:name/edit' component={CharityEdit} />
+                        <Route path='/charity/create' component={CharityEdit} />
+                        <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
                         <Route path='/' component={Home} />
                     </Switch>

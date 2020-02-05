@@ -11,7 +11,7 @@ import { Link, RouteComponentProps } from 'react-router-dom'
 import { addValue } from 'utils'
 import styles from './style.scss'
 
-type Props = RouteComponentProps<{ name: string }>
+type Props = RouteComponentProps<{ id?: string }>
 
 interface State {
     charity: Charity
@@ -29,13 +29,13 @@ export default class CharityEdit extends Component<Props, State> {
     }
 
     public componentDidMount(): void {
-        this.cancelCharity = Charity.builder()
-            .where('longName', '==', this.props.match.params.name)
-            .subscribe(c => {
-                if (c[0] !== undefined) {
-                    this.setState({ charity: c[0] })
-                }
-            })
+        if (this.props.match.params.id) {
+
+            this.cancelCharity = Charity.subscribe(
+                this.props.match.params.id,
+                c => this.setState({ charity: c }),
+            )
+        }
     }
 
     public componentWillUnmount(): void {
@@ -187,7 +187,10 @@ export default class CharityEdit extends Component<Props, State> {
     }
 
     @bind
-    private save(): void {
-        this.state.charity.save()
+    private async save(): Promise<void> {
+        await this.state.charity.save()
+        if (this.props.match.params.id !== this.state.charity.id) {
+            this.props.history.push(`/charity/${this.state.charity.id}/edit`)
+        }
     }
 }

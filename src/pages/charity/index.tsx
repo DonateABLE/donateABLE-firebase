@@ -65,6 +65,7 @@ export default class CharityPage extends Component<Props, State> {
             </FullWidth>
             test
             <Button onClick={this.openHelpModal}>?</Button>
+            <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
         </Content>
     }
 
