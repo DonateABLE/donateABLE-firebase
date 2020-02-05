@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.stats {
+    .grid {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+        .section {
+            display: flex;
+            align-items: center;
+
+            .loader {
+                margin-right: 2em;
+            }
+
+            .content {
+                .title {
+                    color: $dark-blue;
+                    font-weight: bold;
+                }
+
+                .value {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}

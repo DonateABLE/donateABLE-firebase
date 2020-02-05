@@ -2,6 +2,7 @@ import { ModalController } from 'components/modal'
 import { bind } from 'decko'
 import About from 'pages/about'
 import Charity from 'pages/charity'
+import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
 import Login from 'pages/login'
 import { Component, createElement, ReactNode } from 'react'
@@ -79,6 +80,8 @@ export default class Layout extends Component<{}, State> {
                 <div className={styles.content} >
                     <Switch>
                         <Route path='/about' component={About} />
+                        <Route path='/charity/create' component={CharityEdit} />
+                        <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
                         <Route path='/login' component={Login} />
                         <Route path='/' component={Home} />

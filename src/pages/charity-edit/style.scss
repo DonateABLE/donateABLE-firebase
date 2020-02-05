@@ -1,0 +1,60 @@
+@import '../../variables';
+
+.header {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 150px auto;
+    align-items: center;
+
+    height: 150px;
+
+    background-color: $light-blue;
+    color: $white;
+
+    .logo {
+        width: 100%;
+    }
+
+    .makeDonation {
+        width: 100%;
+    }
+
+    .info {
+        column-count: 2;
+
+        @media only screen and (max-width: $bp-md-min) {
+            column-count: 1;
+        }
+    }
+}
+
+.social {
+    background-color: $dark-blue;
+    color: $white;
+    column-count: 2;
+
+    @media only screen and (max-width: $bp-md-min) {
+        column-count: 1;
+    }
+}
+
+.description {
+    width: 100%;
+    height: 300px;
+    resize: none;
+}
+
+.extraInfo {
+    column-count: 3;
+    column-rule: solid 2px $dark-blue;
+    column-gap: 30px;
+
+
+    @media only screen and (max-width: $bp-md-min) {
+        column-count: 2;
+    }
+
+    @media only screen and (max-width: $bp-sm-min) {
+        column-count: 1;
+    }
+}

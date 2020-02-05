@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.innerCircle {
+    fill: none;
+    stroke: $dark-blue;
+}
+
+.outerCircle {
+    fill: none;
+    stroke: $light-blue;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+.value {
+    stroke: $light-blue;
+}

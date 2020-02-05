@@ -16,6 +16,7 @@
             flex-grow: 1;
             border-bottom: solid $light-blue $bar-height;
             cursor: pointer;
+            padding: 5px;
 
             &.active {
                 position: relative;

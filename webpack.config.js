@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 const paths = {
     src: path.resolve(__dirname, 'src'),
@@ -84,6 +85,9 @@ module.exports = (env, argv) => {
                 filename: (devMode ? '[name].css' : '[name].[hash].css'),
                 chunkFilename: (devMode ? '[id].css' : '[id].[hash].css'),
             }),
+            new webpack.DefinePlugin({
+                __DEVELOPMENT__: devMode,
+            })
         ]
     }
 }
