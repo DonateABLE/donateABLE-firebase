@@ -1,3 +1,4 @@
+import AboutCharity from 'components/about-charity'
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
 import DonationTargets from 'components/donation-targets'
@@ -64,14 +65,14 @@ export default class CharityPage extends Component<Props, State> {
             </FullWidth>
             <FullWidth className={styles.social} />
             <TabContainer>
-                <Tab title='Donation Targets'>
-                    <DonationTargets charity={charity} />
-                </Tab>
                 <Tab title='Statistics'>
                     <Statistics charity={charity} />
                 </Tab>
+                <Tab title='Donation Targets'>
+                    <DonationTargets charity={charity} />
+                </Tab>
                 <Tab title='About'>
-                    About
+                    <AboutCharity charity={charity} />
                 </Tab>
             </TabContainer>
             <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
