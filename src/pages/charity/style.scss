@@ -33,4 +33,28 @@
 .social {
     background-color: $dark-blue;
     color: $white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            font-size: 1.5em;
+            margin-right: 1ch;
+        }
+
+        @media screen and (max-width: $bp-sm-min) {
+            .title {
+                display: none;
+            }
+        }
+    }
 }

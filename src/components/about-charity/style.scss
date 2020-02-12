@@ -1,0 +1,19 @@
+@import '../../variables';
+
+.contact {
+    column-count: 3;
+    column-rule: solid 2px $dark-blue;
+    column-gap: 100px;
+
+    @media only screen and (max-width: $bp-md-min) {
+        column-count: 2;
+    }
+
+    @media only screen and (max-width: $bp-sm-min) {
+        column-count: 1;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}
