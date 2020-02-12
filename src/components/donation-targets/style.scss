@@ -1,0 +1,62 @@
+@import '../../variables';
+
+.stats {
+    .grid {
+        display: grid;
+        grid-gap: 15px;
+
+        @media screen and (min-width: $bp-sm-min) {
+            grid-gap: 30px;
+        }
+
+
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+        .section {
+            display: flex;
+            align-items: center;
+
+            .iconWrapper {
+                margin-right: 5px;
+
+                @media screen and (min-width: $bp-sm-min) {
+                    margin-right: 2em;
+                }
+
+                border-radius: 50%;
+                border: solid 4px $light-blue;
+
+                $size: 100px;
+                width: $size;
+                height: $size;
+                position: relative;
+
+                flex-shrink: 0;
+
+                .icon {
+                    font-size: 45px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $dark-blue;
+                }
+            }
+
+            .content {
+                text-align: center;
+
+                .title {
+                    color: $light-blue;
+                    font-weight: bold;
+                }
+
+                .cost {
+                    text-transform: uppercase;
+                }
+
+                .description {}
+            }
+        }
+    }
+}

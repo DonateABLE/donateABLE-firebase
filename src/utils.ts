@@ -158,3 +158,26 @@ function argsKey(args: unknown[]): string {
 export function range(count: number, start: number = 0): number[] {
     return (new Array(count)).fill(0).map((_, i) => i + start)
 }
+
+const numberFormatter = Intl.NumberFormat('default')
+
+export function formatNumber(num: number): string {
+    return numberFormatter.format(num)
+}
+
+const currencyFormatter = Intl.NumberFormat('default', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+})
+
+export function formatCurrency(num: number): string {
+    return currencyFormatter.format(num)
+}
+
+export function cadToHashes(cad: number): number {
+    return cad * 100_000_000
+}
+export function hashesToCAD(hashes: number): number {
+    return hashes / 100_000_000
+}

@@ -10,7 +10,33 @@
     "websiteUrl": "http://www.vswguelph.on.ca/",
     "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/victim-services-wellington/",
     "siteKey": "totally-the-site-key",
-    "comingSoon": 0
+    "comingSoon": 0,
+    "donationTargets": [
+      {
+        "name": "Lifesaver Bracelet Battery",
+        "cost": 5,
+        "description": "A small battery unit used in the Lifesaver Bracelet allowing the system to operate every dat of the year",
+        "icon": "battery-half"
+      },
+      {
+        "name": "Volunteer Training",
+        "cost": 100,
+        "description": "Responsible for immediate mobile responses to requests from emergency and police services within Wellington County",
+        "icon": "hand-holding-heart"
+      },
+      {
+        "name": "Lifesaver Bracelet",
+        "cost": 400,
+        "description": "A one ounce wrist transmitter that sends a radio signal which an be tracked up to a two kilometer radius",
+        "icon": "ambulance"
+      },
+      {
+        "name": "Personal Tracking Device",
+        "cost": 300,
+        "description": "A safety solution to track high risk victims of violence while at home or in the community 24 hours a day 7 days a week",
+        "icon": "thumbtack"
+      }
+    ]
   },
   {
     "shortName": "",
