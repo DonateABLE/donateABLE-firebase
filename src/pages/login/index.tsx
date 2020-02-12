@@ -1,24 +1,21 @@
-import Button from 'components/button'
-import Content, { FullWidth } from 'components/content'
-import { openInfoModal } from 'components/modal'
+import Content from 'components/content'
 import TextBox from 'components/textbox'
-import { charities } from 'data'
-import { bind } from 'decko'
+import firebase from 'firebase'
 import { Component, createElement, Fragment, ReactNode } from 'react'
-import { StyledFirebaseAuth } from 'react-firebaseui'
-import { Link, RouteComponentProps } from 'react-router-dom'
+import { FirebaseAuth } from 'react-firebaseui'
 import styles from './style.scss'
 
 export default class Login extends Component {
 
-    // public uiConfig = {
-    //     signInFlow: 'popup',
-    //     signInSuccessUrl: '/',
-    //     signInOptions: [
-    //         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    //         firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    //     ],
-    // }
+    public uiConfig = {
+        signInFlow: 'popup',
+        signInSuccessUrl: '/charity',
+        signInOptions: [
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        ],
+    }
 
     public render(): ReactNode {
         return <Fragment>
@@ -40,18 +37,13 @@ export default class Login extends Component {
                         Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
                     </TextBox>
                 </div>
-                <Content>
-                    {/* <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} /> */}
-                </Content>
             </div>
+            <Content className={styles.login}>
+                <h2 className={styles.heading}>
+                    Login or Signup
+                </h2>
+                <FirebaseAuth className={styles.fire} uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
+            </Content>
         </Fragment>
     }
 }
-
-// export default class Login extends Component {
-//     public render(): ReactNode {
-//         return <Content>
-//             <h2>LOGIN PAGE</h2>
-//         </Content>
-//     }
-// }

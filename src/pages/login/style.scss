@@ -54,6 +54,18 @@
     }
 }
 
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+:global(.firebaseui-idp-button) {
+   font-family: Montserrat;
+   height: 60px;
+   width: 300px !important;
+   max-width: 400px !important;
+}
+
 @media screen and (min-width: $bp-sm-min){
     .top{ 
         .buttonGroup {
