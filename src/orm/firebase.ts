@@ -32,6 +32,8 @@ if (__DEVELOPMENT__) {
     })
 }
 
+db.enablePersistence({ synchronizeTabs: true })
+
 export const firestore = db
 
 export const storage = store.ref()

@@ -4,7 +4,7 @@ import styles from './style.scss'
 
 interface Props {
     className?: string
-    color?: 'light' | 'dark' | 'white'
+    color?: 'light' | 'dark' | 'white' | 'danger'
     size?: 'small' | 'medium' | 'large'
     onClick?: () => void
     fullWidth?: boolean

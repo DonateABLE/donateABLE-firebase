@@ -1,14 +1,14 @@
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
-import Input from 'components/form'
-import Icon, { BrandIconName, SolidIconName } from 'components/icon'
-import { openInfoModal } from 'components/modal'
+import { Input, Select, TextArea } from 'components/form'
+import Icon, { BrandIcons, IconName, RegularIcons, SolidIcons } from 'components/icon'
+import { Modal, ModalBody, ModalControl, ModalHeader, openInfoModal, openModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind, memoize } from 'decko'
-import Charity from 'orm/charity'
+import Charity, { DonationTarget } from 'orm/charity'
 import { storage } from 'orm/firebase'
-import { Component, createElement, Fragment, FunctionComponent, ReactNode, SyntheticEvent } from 'react'
-import { Link, RouteComponentProps } from 'react-router-dom'
+import { Component, createElement, FunctionComponent, ReactNode, useState } from 'react'
+import { RouteComponentProps } from 'react-router-dom'
 import { addValue, bindArgs } from 'utils'
 import uuidv4 from 'uuid/v4'
 import styles from './style.scss'
@@ -89,34 +89,74 @@ export default class CharityEdit extends Component<Props, State> {
             <FullWidth className={styles.social}>
                 <Input
                     white
-                    iconBrand='facebook'
                     title='Facebook'
+                    // iconBrand='facebook'
                     value={charity.facebookUrl}
                     onChange={addValue(bindArgs('facebookUrl', this.charityChangeString))}
                 />
                 <Input
                     white
-                    iconBrand='twitter'
                     title='Twitter'
+                    // iconBrand='twitter'
                     value={charity.twitterUrl}
                     onChange={addValue(bindArgs('twitterUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Charity Website'
-                    icon='globe'
+                    // icon='globe'
                     value={charity.websiteUrl}
                     onChange={addValue(bindArgs('websiteUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Canada Helps Link'
-                    icon='money-bill'
+                    // icon='money-bill'
                     value={charity.canadaHelpsUrl}
                     onChange={addValue(bindArgs('canadaHelpsUrl', this.charityChangeString))}
                 />
             </FullWidth>
             <TabContainer>
+                <Tab title='Donation Targets' >
+                    <Button color='dark' onClick={this.targetAdd}>Add</Button>
+                    <div className={styles.donationTargets}>
+                        {charity.donationTargets.map((target, i) => (
+                            <div className={styles.target} key={i}>
+                                <div className={styles.iconWrapper}>
+                                    <Icon className={styles.icon} name={target.icon} />
+                                    <Button
+                                        className={styles.button}
+                                        onClick={bindArgs(i, this.changeIcon)}
+                                    >
+                                        Change Icon
+                                    </Button>
+                                </div>
+
+                                <div>
+                                    <Input
+                                        title='Target Title'
+                                        value={target.name}
+                                        onChange={addValue(bindArgs(i, 'name', this.targetChangeString))}
+                                    />
+                                    <Input
+                                        title='Dollar Amount'
+                                        type='number'
+                                        value={target.cost}
+                                        onChange={addValue(bindArgs(i, 'cost', this.targetChangeNumber))}
+                                    />
+                                    <TextArea
+                                        title='Brief Description'
+                                        value={target.description}
+                                        onChange={addValue(bindArgs(i, 'description', this.targetChangeString))}
+                                    />
+                                </div>
+
+                                <Button color='danger' onClick={bindArgs(i, this.targetDelete)}>Delete</Button>
+                            </div>
+                        ))}
+                    </div>
+
+                </Tab>
                 <Tab title='About Charity'>
                     <h3>About {charity.longName}</h3>
                     <textarea
@@ -170,7 +210,6 @@ export default class CharityEdit extends Component<Props, State> {
                         />
                     </div>
                 </Tab>
-                <Tab title='Donation Targets'>a</Tab>
             </TabContainer>
 
             <Button onClick={this.save}>Save</Button>
@@ -207,5 +246,92 @@ export default class CharityEdit extends Component<Props, State> {
 
             this.setState({ logoURL: publicURL })
         }
+    }
+
+    @bind
+    private targetChangeString(
+        index: number,
+        field: FilterPropertyNames<DonationTarget, string>,
+        value: string,
+    ): void {
+        this.setState(state => {
+            state.charity.donationTargets[index][field] = value as any
+            return { charity: state.charity }
+        })
+    }
+    @bind
+    private targetChangeNumber(
+        index: number,
+        field: FilterPropertyNames<DonationTarget, number>,
+        value: string,
+    ): void {
+        this.setState(state => {
+            state.charity.donationTargets[index][field] = Number(value) as any
+            return { charity: state.charity }
+        })
+    }
+
+    @bind
+    private targetDelete(index: number): void {
+        this.setState(state => {
+            state.charity.donationTargets.splice(index, 1)
+            return { charity: state.charity }
+        })
+    }
+
+    @bind
+    private targetAdd(): void {
+        this.setState(state => {
+            state.charity.donationTargets.push({
+                name: '',
+                cost: 0,
+                description: '',
+                icon: 'question-circle',
+            })
+            return { charity: state.charity }
+        })
+    }
+
+    @bind
+    private async changeIcon(index: number): Promise<void> {
+        const ChangeIcon: FunctionComponent<{ ctl: ModalControl<IconName | undefined> }> = ({ ctl }) => {
+            const [search, changeSearch] = useState('')
+
+            return <Modal className={styles.iconChange} onCloseClick={ctl.close}>
+                <ModalHeader>
+                    Icon
+                </ModalHeader>
+                <ModalBody>
+                    <Input
+                        title='search'
+                        value={search}
+                        onChange={addValue(changeSearch)}
+                    />
+                    <div className={styles.iconList}>
+                        {SolidIcons
+                            .filter(i => i.includes(search))
+                            .slice(0, 12)
+                            .map(name => (
+                                <div
+                                    className={styles.option}
+                                    key={name}
+                                    onClick={bindArgs(name, ctl.resolve)}
+                                >
+                                    <Icon className={styles.icon} name={name} />
+                                    <div className={styles.title}>{name.replace('-', ' ')}</div>
+                                </div>
+                            ))}
+                    </div>
+                </ModalBody>
+            </Modal>
+        }
+        const icon = await openModal<IconName | undefined>(ctl => <ChangeIcon ctl={ctl} />, undefined)
+        if (icon) {
+            this.setState(state => {
+                state.charity.donationTargets[index].icon = icon
+                return { charity: state.charity }
+            })
+        }
+
     }
 }

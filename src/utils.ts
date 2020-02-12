@@ -181,3 +181,31 @@ export function cadToHashes(cad: number): number {
 export function hashesToCAD(hashes: number): number {
     return hashes / 100_000_000
 }
+
+export function binarySearch<T>(array: readonly T[], match: (a: T) => number): number {
+    function recursiveFunction(start: number, end: number): number {
+
+        // Base Condition
+        if (start > end) { return -1 }
+
+        // Find the middle index
+        const mid = Math.floor((start + end) / 2)
+
+        const m = match(array[mid])
+        // Compare mid with given key x
+        if (m === 0) { return mid }
+
+        // If element at mid is greater than x,
+        // search in the left half of mid
+        if (m > 0) {
+            return recursiveFunction(start, mid - 1)
+        } else {
+
+            // If element at mid is smaller than x,
+            // search in the right half of mid
+            return recursiveFunction(mid + 1, end)
+        }
+    }
+
+    return recursiveFunction(0, array.length)
+}

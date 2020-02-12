@@ -66,11 +66,12 @@ export class TabContainer extends Component<TabContainerProps, TabContainerState
 
 interface TabProps {
     title: string
+    className?: string
 }
 
 export class Tab extends Component<TabProps> {
     public render(): ReactNode {
-        return <div className={styles.tab}>
+        return <div className={classNames(styles.tab, this.props.className)}>
             {this.props.children}
         </div>
     }

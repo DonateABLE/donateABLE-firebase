@@ -58,3 +58,73 @@
         column-count: 1;
     }
 }
+
+.donationTargets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 30px;
+
+    .target {
+        display: grid;
+        grid-template-columns: 115px auto;
+        grid-gap: 5px;
+
+        .iconWrapper {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                font-size: 3em;
+                display: block;
+                flex-grow: 1;
+                line-height: 143px;
+                position: relative;
+
+                &::after {
+                    border: solid 4px $light-blue;
+                    content: ' ';
+                    display: block;
+                    width: 1.7em;
+                    height: 1.7em;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.iconChange {
+    .iconList {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+        grid-gap: 5px;
+
+        .option {
+            text-align: center;
+            cursor: pointer;
+
+            .icon {
+                font-size: 3em;
+                height: 1.2em;
+            }
+
+            .title {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
