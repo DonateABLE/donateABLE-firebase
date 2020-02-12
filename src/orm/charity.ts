@@ -2,6 +2,13 @@ import { SolidIconName } from 'components/icon'
 import { firestore } from './firebase'
 import Model from './model'
 
+export interface DonationTarget {
+    name: string
+    cost: number
+    description: string
+    icon: SolidIconName
+}
+
 export default class Charity extends Model {
     public readonly collection = firestore.collection('charity')
 
@@ -82,4 +89,7 @@ export default class Charity extends Model {
 
     @Model.field()
     public officeHourHours: string = ''
+
+    @Model.field()
+    public donationTargets: DonationTarget[] = []
 }

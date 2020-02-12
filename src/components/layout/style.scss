@@ -2,11 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+:global(.light) {
+    color: $light-blue;
+}
+
 body {
     margin: 0;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    color: $dark-blue;
 }
 
 * {
