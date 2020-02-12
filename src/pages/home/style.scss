@@ -39,7 +39,7 @@
     .buttonGroup {
         width: 250px;
         display: inline-block;
-        
+
         .groupElement {
             box-sizing: border-box;
             width: 100%;
@@ -73,7 +73,10 @@
         color: $white;
 
         .logo {
-            width: 50%;
+            width: 100%;
+            height: 150px;
+
+            object-fit: contain;
         }
 
         .name {
