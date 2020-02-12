@@ -18,13 +18,17 @@ firebaseApp.initializeApp(firebaseConfig)
 const db = firebaseApp.firestore()
 const store = firebaseApp.storage()
 
-// ADD THESE LINES
 if (__DEVELOPMENT__) {
     // tslint:disable-next-line: no-console
     console.log('Connecting to emulated firebase services')
     db.settings({
         host: 'localhost:8080',
         ssl: false,
+    })
+
+    import('seed').then(async seed => {
+        await seed.seedCharities()
+        await seed.seedCharityTypes()
     })
 }
 
