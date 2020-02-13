@@ -4,7 +4,8 @@ import SearchBar from 'components/search-bar'
 import TextBox from 'components/textbox'
 import Charity from 'orm/charity'
 import CharityType from 'orm/charity-type'
-import { Component, createElement, Fragment, ReactNode } from 'react'
+import { useQuery } from 'orm/model'
+import { Component, createElement, Fragment, FunctionComponent, ReactNode } from 'react'
 import CharityBox from './charity'
 import styles from './style.scss'
 
@@ -76,7 +77,13 @@ export default class Home extends Component<{}, State> {
                         />
                     ))}
                 </div>
+                <Test />
             </Content>
         </Fragment>
     }
+}
+
+const Test: FunctionComponent = () => {
+    const charities = useQuery(Charity.builder()) ?? []
+    return <div>{charities.length}</div>
 }

@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from 'react'
 
 export interface FieldOptions {
     readonly?: boolean
@@ -202,4 +203,17 @@ export class QueryBuilder<T extends Model> {
     public equal(q: QueryBuilder<T>): boolean {
         return this.query.isEqual(q.query)
     }
+
+    public hash(): string {
+        console.log('make this do something')
+        return ''
+    }
+}
+
+export function useQuery<T extends Model>(q: QueryBuilder<T>): T[] | undefined {
+    const [list, changeList] = useState<T[]>()
+
+    useEffect(() => q.subscribe(changeList), [q.hash()])
+
+    return list
 }
