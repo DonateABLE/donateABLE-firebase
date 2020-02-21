@@ -29,6 +29,8 @@ $toastSpacing: 5px;
         animation-name: fade-in;
         animation-duration: 0.2s;
 
+        @include shadow;
+
         &.hidden {
             animation-name: fade-out;
             animation-duration: 0.2s;
