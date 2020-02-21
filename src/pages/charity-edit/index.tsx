@@ -6,7 +6,7 @@ import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind, memoize } from 'decko'
 import Charity from 'orm/charity'
-import { storage } from 'orm/firebase'
+import { isFirebaseError, storage } from 'orm/firebase'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode, SyntheticEvent } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
 import { addValue, bindArgs } from 'utils'
@@ -187,9 +187,18 @@ export default class CharityEdit extends Component<Props, State> {
 
     @bind
     private async save(): Promise<void> {
-        await this.state.charity.save()
-        if (this.props.match.params.id !== this.state.charity.id) {
-            this.props.history.push(`/charity/${this.state.charity.id}/edit`)
+        try {
+            await this.state.charity.save()
+            if (this.props.match.params.id !== this.state.charity.id) {
+                this.props.history.push(`/charity/${this.state.charity.id}/edit`)
+            }
+        } catch (e) {
+            if (isFirebaseError(e) && e.code === 'permission-denied') {
+                alert('permission error')
+                return
+            }
+
+            throw e
         }
     }
 
