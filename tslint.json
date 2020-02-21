@@ -49,6 +49,13 @@
             true,
             "call-signature"
         ],
-        "max-classes-per-file": false
+        "max-classes-per-file": false,
+        "ban": [
+            true,
+            "alert",
+            [
+                "alert"
+            ]
+        ]
     }
 }
