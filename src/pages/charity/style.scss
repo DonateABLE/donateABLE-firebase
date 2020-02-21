@@ -2,24 +2,43 @@
 
 .header {
     display: grid;
-    grid-gap: 40px;
-    grid-template-columns: 150px 3fr 2fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0;
+    grid-template-columns: 150px auto 280px;
+    grid-template-rows: 150px 0;
+    grid-template-areas: "logo info donate";
     align-items: center;
 
-    height: 150px;
+    // height: 150px;
 
     background-color: $light-blue;
     color: $white;
 
-    .logo {
-        width: 100%;
+    @media screen and (max-width: $bp-sm-min) {
+        grid-column-gap: 10px;
     }
 
-    .makeDonation {
+    @media screen and (max-width: $bp-md-min) {
+        grid-template-columns: 100px auto;
+        grid-template-areas:
+            "logo   info"
+            "donate donate";
+
+        .makeDonation {
+            display: none;
+        }
+    }
+
+    .logo {
+        grid-area: logo;
         width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .info {
+        grid-area: info;
+
         .name {
             margin: 0;
         }
@@ -27,6 +46,25 @@
         .tagLine {
             margin-bottom: 1em;
         }
+    }
+
+    .makeDonation {
+        grid-area: donate;
+        width: 100%;
+    }
+}
+
+.makeDonationLower {
+    display: none;
+
+    @media screen and (max-width: $bp-md-min) {
+        display: block;
+    }
+
+    padding: 10px;
+
+    .button {
+        width: 100%;
     }
 }
 

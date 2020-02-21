@@ -146,6 +146,18 @@ body {
                 left: 100%;
                 top: 0;
                 color: $dark-blue;
+
+                .burger {
+                    background-color: $white;
+                    border-radius: 4px;
+
+                    $padding: 4px;
+                    $border: 2px;
+                    padding: $padding;
+                    margin: -($padding + $border);
+
+                    border: solid $border $dark-blue;
+                }
             }
 
             .btnClose {
