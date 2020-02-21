@@ -1,3 +1,4 @@
+import EventTarget from 'event-target-shim'
 import { DependencyList, SyntheticEvent, useEffect, useRef } from 'react'
 
 export function notUndefined<T>(v: T | undefined): v is T {
@@ -199,27 +200,25 @@ export function useInterval(callback: () => void, delay: number, deps: Dependenc
     }, [delay])
 }
 
-export function useEventListener(
-    target: EventTarget,
-    eventName: string,
-    handler: (e: Event) => void,
-    deps: DependencyList = [],
+export function useEventListener<
+    TEvents extends EventTarget.EventDefinition,
+    TEventAttributes extends EventTarget.EventDefinition,
+    K extends keyof TEvents,
+    >(
+        target: EventTarget<TEvents, TEventAttributes, 'strict'>,
+        eventName: K,
+        handler: (e: TEvents[K]) => void,
+        deps: DependencyList = [],
 ): void {
-    const savedHandler = useRef<(e: Event) => void>()
+    const savedHandler = useRef<(e: TEvents[K]) => void>()
 
     useEffect(() => {
         savedHandler.current = handler
     }, [handler])
 
-    useEffect(
-        () => {
-            const isSupported = target && target.addEventListener
-            if (!isSupported) { return }
-
-            const eventListener = (event: Event) => savedHandler.current?.(event)
-            target.addEventListener(eventName, eventListener)
-            return () => target.removeEventListener(eventName, eventListener)
-        },
-        [eventName, target, ...deps],
-    )
+    useEffect(() => {
+        const eventListener: any = (event: TEvents[K]) => savedHandler.current?.(event)
+        target.addEventListener(eventName, eventListener)
+        return () => target.removeEventListener(eventName, eventListener)
+    }, [eventName, target, ...deps])
 }

@@ -1,8 +1,8 @@
 import Button from 'components/button'
 import { bind } from 'decko'
-// import EventTarget from 'event-target-shim'
-import { createElement, FunctionComponent, useCallback, useEffect, useState } from 'react'
-import { classNames, useEventListener, useInterval } from 'utils'
+import EventTarget from 'event-target-shim'
+import { createElement, FunctionComponent, useCallback, useState } from 'react'
+import { classNames, useEventListener } from 'utils'
 import uuidV4 from 'uuid/v4'
 import styles from './style.scss'
 
@@ -34,19 +34,20 @@ class ToastMessageEvent extends Event {
         this.id = uuidV4()
 
         if (this.ttl > 0) {
-            this.timeoutID = setTimeout(() => this.dismiss(), this.ttl)
+            this.timeoutID = setTimeout(() => {
+                this.dismiss()
+            }, this.ttl)
         }
     }
 
-    @bind
-    public dismiss(): void {
+    public dismiss = (): void => {
         toastEvents.dispatchEvent(new ToastDismissEvent(this.id, true))
         setTimeout(() => {
             toastEvents.dispatchEvent(new ToastDismissEvent(this.id, false))
         }, 200)
     }
 
-    public resetTimer(): void {
+    public resetTimer = (): void => {
         if (this.ttl > 0) {
             if (this.timeoutID) {
                 clearTimeout(this.timeoutID)
@@ -65,37 +66,33 @@ class ToastDismissEvent extends Event {
     }
 }
 
-const toastEvents = new EventTarget()
+const toastEvents = new EventTarget<{ message: ToastMessageEvent, dismiss: ToastDismissEvent }, {}, 'strict'>()
 
 export const SnackBar: FunctionComponent = props => {
     const [toasts, changeToasts] = useState<ToastMessageEvent[]>([])
 
     useEventListener(toastEvents, 'message', e => {
-        if (e instanceof ToastMessageEvent) {
-            const toast = toasts.find(t => t.key === e.key)
-            if (toast) {
-                toast.resetTimer()
-                toast.message = e.message
+        const toast = toasts.find(t => t.key === e.key)
+        if (toast) {
+            toast.resetTimer()
+            toast.message = e.message
 
-                changeToasts([...toasts])
-            } else {
-                changeToasts(toasts.concat([e]))
-            }
+            changeToasts([...toasts])
+        } else {
+            changeToasts(toasts.concat([e]))
         }
     }, [toasts, changeToasts])
 
     useEventListener(toastEvents, 'dismiss', e => {
-        if (e instanceof ToastDismissEvent) {
-            if (e.hide) {
-                changeToasts(toasts.map(t => {
-                    if (t.id === e.id) {
-                        t.hidden = true
-                    }
-                    return t
-                }))
-            } else {
-                changeToasts(toasts.filter(t => t.id !== e.id))
-            }
+        if (e.hide) {
+            changeToasts(toasts.map(t => {
+                if (t.id === e.id) {
+                    t.hidden = true
+                }
+                return t
+            }))
+        } else {
+            changeToasts(toasts.filter(t => t.id !== e.id))
         }
     }, [toasts, changeToasts])
 
