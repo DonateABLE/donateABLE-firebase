@@ -4,12 +4,10 @@ service cloud.firestore {
       return request.auth != null;
     }
     match /charity/{charityID} {
-      allow read;
-
-      allow write: if isSignedIn();
+      allow read, write;
     }
     match /charity-type/{charityID} {
-      allow read;
+      allow read, write;
     }
   }
 }

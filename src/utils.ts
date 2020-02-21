@@ -1,4 +1,4 @@
-import { SyntheticEvent } from 'react'
+import { DependencyList, SyntheticEvent, useEffect, useRef } from 'react'
 
 export function notUndefined<T>(v: T | undefined): v is T {
     return v !== undefined
@@ -180,4 +180,46 @@ export function cadToHashes(cad: number): number {
 }
 export function hashesToCAD(hashes: number): number {
     return hashes / 100_000_000
+}
+
+export function useInterval(callback: () => void, delay: number, deps: DependencyList = []): void {
+    const savedCallback = useRef<() => void>()
+
+    // Remember the latest callback.
+    useEffect(() => {
+        savedCallback.current = callback
+    }, [callback, ...deps])
+
+    // Set up the interval.
+    useEffect(() => {
+        if (delay !== null) {
+            const id = setInterval(() => savedCallback.current?.(), delay)
+            return () => clearInterval(id)
+        }
+    }, [delay])
+}
+
+export function useEventListener(
+    target: EventTarget,
+    eventName: string,
+    handler: (e: Event) => void,
+    deps: DependencyList = [],
+): void {
+    const savedHandler = useRef<(e: Event) => void>()
+
+    useEffect(() => {
+        savedHandler.current = handler
+    }, [handler])
+
+    useEffect(
+        () => {
+            const isSupported = target && target.addEventListener
+            if (!isSupported) { return }
+
+            const eventListener = (event: Event) => savedHandler.current?.(event)
+            target.addEventListener(eventName, eventListener)
+            return () => target.removeEventListener(eventName, eventListener)
+        },
+        [eventName, target, ...deps],
+    )
 }
