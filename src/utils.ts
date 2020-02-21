@@ -42,7 +42,7 @@ const valueCache = new WeakMap<(value: string, e: SyntheticEvent) => void, (e: S
  * addValue allows you to write callbacks using the value of an input, select or
  * text area without needing to get an instance of the dom element.
  *
- * ```jsx
+ * ```tsx
  * import {addValue} from 'utils'
  *
  * const click = (value: string, event: SyntheticEvent) => {
@@ -70,42 +70,57 @@ export function addValue(cb: (value: string, e: SyntheticEvent) => void): (e: Sy
     return ret
 }
 
-const argsCache = new WeakMap<(...args: any[]) => void, Map<string, (e: SyntheticEvent) => void>>()
+const argsCache = new WeakMap<object, Map<string, (...args: any) => void>>()
 
 /**
- * addArgs lets you use callbacks in react components that have extra arguments
+ * The `bindArgs` function takes in some arguments then a function and will
+ * return a function with the first arguments bound to the ones passed in.
  *
- * @param callback a
+ * If you call bindArgs more than once with the same arguments it will return
+ * the same instance of a function.
+ *
+ * ```ts
+ * const foo = (a: string, b: number) => a + ' ' + b
+ *
+ * const bar1 = bindArgs('baz', foo)
+ * // bar1 = (b: number) => 'baz' + ' ' + b
+ *
+ * const bar2 = bindArgs('baz', foo)
+ * // bar1 and bar2 are the same instance of a function
+ * bar1 === bar2
+ * ```
+ *
+ * Typescript won't let you have spread types first but if it did this is would
+ * be the type
+ * ```ts
+ *  function bindArgs<AX extends Array<string | number>, U extends unknown[]>(
+ *     ...args: AX,
+ *     callback: (...args: AX, ...originalArgs: U) => void,
+ * ): (...originalArgs: U) => void
+ * ```
+ *
+ * @param args
+ * @param callback
  */
-export function addArgs<T1, T2, T3>(
-    arg1: T1,
-    arg2: T2,
-    arg3: T3,
-    callback: (
-        arg1: T1,
-        arg2: T2,
-        arg3: T3,
-        e: SyntheticEvent,
-    ) => void,
-): (e: SyntheticEvent) => void
-export function addArgs<T1, T2>(
-    arg1: T1,
-    arg2: T2,
-    callback: (
-        arg1: T1,
-        arg2: T2,
-        e: SyntheticEvent,
-    ) => void,
-): (e: SyntheticEvent) => void
-export function addArgs<T>(arg1: T, callback: (arg1: T, e: SyntheticEvent) => void): (e: SyntheticEvent) => void
-export function addArgs<T>(
-    ...args: Array<T | ((...args: Array<T | SyntheticEvent>) => void)>
-): (e: SyntheticEvent) => void {
+// tslint:disable: max-line-length
+export function bindArgs<A0 extends number | string, U extends unknown[]>(arg0: A0, callback: (arg0: A0, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, callback: (arg0: A0, arg1: A1, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, callback: (arg0: A0, arg1: A1, arg2: A2, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, A6 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, A6 extends number | string, A7 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, A6 extends number | string, A7 extends number | string, A8 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, ...originalArgs: U) => void): (...originalArgs: U) => void
+// tslint:enable: max-line-length
+export function bindArgs(...args: unknown[]): (...args: unknown[]) => void {
+    // this function uses unknown types because typescript wont let me use
+    // a spread argument first
 
-    // pop the callback from the arguments, this will remove it from the end
-    const callback: any = args.pop()
+    // remove the callback from the args
+    const callback = args.pop()
     if (typeof callback !== 'function') {
-        throw new Error('the last function must be a callback')
+        throw new Error('the last argument of addArgs must be a function')
     }
 
     // get the map of arguments that get used for the callback or create one
@@ -118,9 +133,8 @@ export function addArgs<T>(
     // check for an existing callback with the arguments applied or create it
     let ret = m.get(argsKey(args))
     if (ret === undefined) {
-        ret = e => callback(...args, e)
+        ret = (...childArgs) => callback(...args, ...childArgs)
         m.set(argsKey(args), ret)
-
     }
 
     return ret
@@ -128,4 +142,42 @@ export function addArgs<T>(
 
 function argsKey(args: unknown[]): string {
     return JSON.stringify(args)
+}
+
+// I used the following function to generate the arguments overloads for bindArgs
+
+// function overload(num: number): string {
+//     const generics = range(num).map(i => `A${i} extends number | string`).join(', ')
+//     const args = range(num).map(i => `arg${i}: A${i}`).join(', ')
+//     return `export function bindArgs<${generics}, U extends unknown[]>(`
+//         + `${args}, callback: (${args}, ...originalArgs: U) => void,`
+//         + '): (...originalArgs: U) => void'
+// }
+// console.log(range(10, 1).map(overload).join('\n'))
+
+export function range(count: number, start: number = 0): number[] {
+    return (new Array(count)).fill(0).map((_, i) => i + start)
+}
+
+const numberFormatter = Intl.NumberFormat('default')
+
+export function formatNumber(num: number): string {
+    return numberFormatter.format(num)
+}
+
+const currencyFormatter = Intl.NumberFormat('default', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+})
+
+export function formatCurrency(num: number): string {
+    return currencyFormatter.format(num)
+}
+
+export function cadToHashes(cad: number): number {
+    return cad * 100_000_000
+}
+export function hashesToCAD(hashes: number): number {
+    return hashes / 100_000_000
 }

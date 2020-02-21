@@ -18,7 +18,6 @@ firebaseApp.initializeApp(firebaseConfig)
 const db = firebaseApp.firestore()
 const store = firebaseApp.storage()
 
-// ADD THESE LINES
 if (__DEVELOPMENT__) {
     // tslint:disable-next-line: no-console
     console.log('Connecting to emulated firebase services')
@@ -26,8 +25,21 @@ if (__DEVELOPMENT__) {
         host: 'localhost:8080',
         ssl: false,
     })
+
+    import('seed').then(async seed => {
+        await seed.seedCharities()
+        await seed.seedCharityTypes()
+    })
 }
 
 export const firestore = db
 
 export const storage = store.ref()
+
+export function isFirebaseError(err: unknown): err is firebase.firestore.FirestoreError {
+    return typeof err === 'object'
+        && err != null
+        && 'name' in err && (err as any).name === 'FirebaseError'
+        && 'code' in err
+
+}

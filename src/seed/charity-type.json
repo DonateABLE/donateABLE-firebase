@@ -1,0 +1,26 @@
+[
+    {
+        "name": "International",
+        "icon": "globe-americas"
+    },
+    {
+        "name": "Health",
+        "icon": "briefcase-medical"
+    },
+    {
+        "name": "Environmental",
+        "icon": "leaf"
+    },
+    {
+        "name": "Animal",
+        "icon": "paw"
+    },
+    {
+        "name": "Art & Culture",
+        "icon": "paint-brush"
+    },
+    {
+        "name": "Educational",
+        "icon": "user-graduate"
+    }
+]

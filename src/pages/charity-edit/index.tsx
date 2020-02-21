@@ -6,10 +6,10 @@ import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind, memoize } from 'decko'
 import Charity from 'orm/charity'
-import { storage } from 'orm/firebase'
+import { isFirebaseError, storage } from 'orm/firebase'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode, SyntheticEvent } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
-import { addValue } from 'utils'
+import { addValue, bindArgs } from 'utils'
 import uuidv4 from 'uuid/v4'
 import styles from './style.scss'
 
@@ -64,25 +64,25 @@ export default class CharityEdit extends Component<Props, State> {
                         white
                         title='Charity Name'
                         value={charity.longName}
-                        onChange={this.charityChangeString('longName')}
+                        onChange={addValue(bindArgs('longName', this.charityChangeString))}
                     />
                     <Input
                         white
                         title='Tagline'
                         value={charity.tagline}
-                        onChange={this.charityChangeString('tagline')}
+                        onChange={addValue(bindArgs('tagline', this.charityChangeString))}
                     />
                     <Input
                         white
                         title='Registered Business Name'
                         value={charity.registeredBusinessName}
-                        onChange={this.charityChangeString('registeredBusinessName')}
+                        onChange={addValue(bindArgs('registeredBusinessName', this.charityChangeString))}
                     />
                     <Input
                         white
                         title='Business Number'
                         value={charity.businessNumber}
-                        onChange={this.charityChangeString('businessNumber')}
+                        onChange={addValue(bindArgs('businessNumber', this.charityChangeString))}
                     />
                 </div>
             </FullWidth>
@@ -92,28 +92,28 @@ export default class CharityEdit extends Component<Props, State> {
                     iconBrand='facebook'
                     title='Facebook'
                     value={charity.facebookUrl}
-                    onChange={this.charityChangeString('facebookUrl')}
+                    onChange={addValue(bindArgs('facebookUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     iconBrand='twitter'
                     title='Twitter'
                     value={charity.twitterUrl}
-                    onChange={this.charityChangeString('twitterUrl')}
+                    onChange={addValue(bindArgs('twitterUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Charity Website'
                     icon='globe'
                     value={charity.websiteUrl}
-                    onChange={this.charityChangeString('websiteUrl')}
+                    onChange={addValue(bindArgs('websiteUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Canada Helps Link'
                     icon='money-bill'
                     value={charity.canadaHelpsUrl}
-                    onChange={this.charityChangeString('canadaHelpsUrl')}
+                    onChange={addValue(bindArgs('canadaHelpsUrl', this.charityChangeString))}
                 />
             </FullWidth>
             <TabContainer>
@@ -122,7 +122,7 @@ export default class CharityEdit extends Component<Props, State> {
                     <textarea
                         className={styles.description}
                         value={charity.longDesc}
-                        onChange={this.charityChangeString('longDesc')}
+                        onChange={addValue(bindArgs('longDesc', this.charityChangeString))}
                     />
                     <h3>Contact {charity.longName}</h3>
 
@@ -130,43 +130,43 @@ export default class CharityEdit extends Component<Props, State> {
                         <Input
                             title='Street Address'
                             value={charity.address}
-                            onChange={this.charityChangeString('address')}
+                            onChange={addValue(bindArgs('address', this.charityChangeString))}
                         />
                         <Input
                             title='City, Province'
                             value={charity.cityProvince}
-                            onChange={this.charityChangeString('cityProvince')}
+                            onChange={addValue(bindArgs('cityProvince', this.charityChangeString))}
                         />
                         <Input
                             title='Postal Code'
                             value={charity.postalCode}
-                            onChange={this.charityChangeString('postalCode')}
+                            onChange={addValue(bindArgs('postalCode', this.charityChangeString))}
                         />
                         <Input
                             title='Phone'
                             value={charity.phone}
-                            onChange={this.charityChangeString('phone')}
+                            onChange={addValue(bindArgs('phone', this.charityChangeString))}
                         />
                         <Input
                             title='Fax'
                             value={charity.fax}
-                            onChange={this.charityChangeString('fax')}
+                            onChange={addValue(bindArgs('fax', this.charityChangeString))}
                         />
                         <Input
                             title='Email'
                             value={charity.email}
-                            onChange={this.charityChangeString('email')}
+                            onChange={addValue(bindArgs('email', this.charityChangeString))}
                         />
                         <h4>Office Hours</h4>
                         <Input
                             title='Days'
                             value={charity.officeHourDays}
-                            onChange={this.charityChangeString('officeHourDays')}
+                            onChange={addValue(bindArgs('officeHourDays', this.charityChangeString))}
                         />
                         <Input
                             title='Hours'
                             value={charity.officeHourHours}
-                            onChange={this.charityChangeString('officeHourHours')}
+                            onChange={addValue(bindArgs('officeHourHours', this.charityChangeString))}
                         />
                     </div>
                 </Tab>
@@ -177,31 +177,28 @@ export default class CharityEdit extends Component<Props, State> {
         </Content>
     }
 
-    @memoize
-    private charityChangeString(field: FilterPropertyNames<Charity, string>): (e: SyntheticEvent) => void {
-        return addValue(value => {
-            this.setState(state => {
-                state.charity[field] = value as any
-                return { charity: state.charity }
-            })
-        })
-    }
-
-    @memoize
-    private charityChangeNumber(field: FilterPropertyNames<Charity, number>): (e: SyntheticEvent) => void {
-        return addValue(value => {
-            this.setState(state => {
-                state.charity[field] = Number(value)
-                return { charity: state.charity }
-            })
+    @bind
+    private charityChangeString(field: FilterPropertyNames<Charity, string>, value: string): void {
+        this.setState(state => {
+            state.charity[field] = value as any
+            return { charity: state.charity }
         })
     }
 
     @bind
     private async save(): Promise<void> {
-        await this.state.charity.save()
-        if (this.props.match.params.id !== this.state.charity.id) {
-            this.props.history.push(`/charity/${this.state.charity.id}/edit`)
+        try {
+            await this.state.charity.save()
+            if (this.props.match.params.id !== this.state.charity.id) {
+                this.props.history.push(`/charity/${this.state.charity.id}/edit`)
+            }
+        } catch (e) {
+            if (isFirebaseError(e) && e.code === 'permission-denied') {
+                alert('permission error')
+                return
+            }
+
+            throw e
         }
     }
 

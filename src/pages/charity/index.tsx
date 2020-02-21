@@ -1,6 +1,8 @@
+import AboutCharity from 'components/about-charity'
 import Button from 'components/button'
 import Content, { FullWidth } from 'components/content'
 import DonationTargets from 'components/donation-targets'
+import Icon from 'components/icon'
 import { PageLoader } from 'components/loader'
 import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
@@ -53,25 +55,40 @@ export default class CharityPage extends Component<Props, State> {
                     <div>Business Number {charity.businessNumber}</div>
                 </div>
                 <div>
-                    <Button
-                        className={styles.makeDonation}
-                        color='dark'
-                        size='medium'
-                    >
-                        Make a Monetary Donation
-                    </Button>
+                    <a href={charity.canadaHelpsUrl} target='_blank'>
+                        <Button
+                            className={styles.makeDonation}
+                            color='dark'
+                            size='medium'
+                        >
+                            Make a Monetary Donation <Icon name='external-link-alt' />
+                        </Button>
+                    </a>
                 </div>
             </FullWidth>
-            <FullWidth className={styles.social} />
+            <FullWidth className={styles.social} >
+                <div className={styles.link}>
+                    <Icon className={styles.icon} brand name='facebook-f' />
+                    <span className={styles.title}>Share on Facebook</span>
+                </div>
+                <div className={styles.link}>
+                    <Icon className={styles.icon} brand name='twitter' />
+                    <span className={styles.title}>Share on twitter</span>
+                </div>
+                <div className={styles.link}>
+                    <Icon className={styles.icon} name='globe' />
+                    <span className={styles.title}>Visit charity website</span>
+                </div>
+            </FullWidth>
             <TabContainer>
-                <Tab title='Donation Targets'>
-                    <DonationTargets charity={charity} />
-                </Tab>
                 <Tab title='Statistics'>
                     <Statistics charity={charity} />
                 </Tab>
+                <Tab title='Donation Targets'>
+                    <DonationTargets charity={charity} />
+                </Tab>
                 <Tab title='About'>
-                    About
+                    <AboutCharity charity={charity} />
                 </Tab>
             </TabContainer>
             <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
