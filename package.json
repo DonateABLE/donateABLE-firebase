@@ -44,7 +44,6 @@
         "@fortawesome/fontawesome-free": "^5.12.0",
         "decko": "^1.2.0",
         "firebase": "^7.7.0",
-        "firebaseui": "^4.4.0",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-firebaseui": "^4.1.0",

@@ -4,7 +4,7 @@ import About from 'pages/about'
 import Charity from 'pages/charity'
 import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
-import Login from 'pages/login'
+import Login from 'pages/home/login'
 import { Component, createElement, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
 import {
@@ -61,11 +61,6 @@ export default class Layout extends Component<{}, State> {
                             href: '/how_it_works',
                             title: 'How it Works',
                         },
-
-                        // {
-                        //     onClick: {},
-                        //     title: 'Take a Tour',
-                        // },
                     ]}
                     ref={e => this.menu = findDOMNode(e)}
                 />

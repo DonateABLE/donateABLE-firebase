@@ -5,6 +5,7 @@ import TextBox from 'components/textbox'
 import Charity from 'orm/charity'
 import CharityType from 'orm/charity-type'
 import { Component, createElement, Fragment, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import CharityBox from './charity'
 import styles from './style.scss'
 
@@ -57,8 +58,10 @@ export default class Home extends Component<{}, State> {
                     <TextBox className={styles.groupElement}>
                         Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
                     </TextBox>
-                    <Button className={styles.groupElement} color='white'>Login</Button>
-                    <Button className={styles.groupElement} color='dark'>Sign Up</Button>
+                    <Link to='/login'>
+                        <Button className={styles.groupElement} color='white'>Login</Button>
+                        <Button className={styles.groupElement} color='dark'>Sign Up</Button>
+                    </Link>
                 </div>
             </div>
             <SearchBar />

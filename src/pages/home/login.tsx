@@ -26,14 +26,14 @@ export default class Login extends Component {
                     </span> <br />
                     and keep track of your donations
                 </h2>
-                <div className={styles.buttonGroup}>
-                    <TextBox className={styles.groupElement}>
+                <div className={styles.loginButtonGroup}>
+                    <TextBox className={styles.loginGroupElement}>
                         Currently Donating <b className={styles.value}>14</b>
                     </TextBox>
-                    <TextBox className={styles.groupElement}>
+                    <TextBox className={styles.loginGroupElement}>
                         Donations to Date<b className={styles.value}>345</b>
                     </TextBox>
-                    <TextBox className={styles.groupElement}>
+                    <TextBox className={styles.loginGroupElement}>
                         Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
                     </TextBox>
                 </div>
