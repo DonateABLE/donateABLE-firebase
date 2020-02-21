@@ -6,6 +6,7 @@ import Charity from 'orm/charity'
 import CharityType from 'orm/charity-type'
 import { useQuery } from 'orm/model'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode } from 'react'
+import { formatNumber } from 'utils'
 import CharityBox from './charity'
 import styles from './style.scss'
 
@@ -27,7 +28,7 @@ const Home: FunctionComponent = () => {
                     Donations to Date<b className={styles.value}>345</b>
                 </TextBox>
                 <TextBox className={styles.groupElement}>
-                    Total Hashes <b className={styles.value}>{(13256475).toLocaleString()}</b>
+                    Total Hashes <b className={styles.value}>{formatNumber(13_256_475)}</b>
                 </TextBox>
                 <Button className={styles.groupElement} color='white'>Login</Button>
                 <Button className={styles.groupElement} color='dark'>Sign Up</Button>
