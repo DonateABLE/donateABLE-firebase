@@ -1,8 +1,10 @@
 import Charity from 'orm/charity'
 import CharityType from 'orm/charity-type'
 import Model, { StaticModel } from 'orm/model'
+import User from 'orm/user'
 import charityTypes from './charity-type.json'
 import charities from './charity.json'
+import users from './user.json'
 
 async function seed(items: any[], model: StaticModel<Model>): Promise<void> {
     if ((await (model as any).builder().limit(1).get()).length > 0) {
@@ -26,4 +28,7 @@ export async function seedCharities(): Promise<void> {
 
 export async function seedCharityTypes(): Promise<void> {
     await seed(charityTypes, CharityType)
+}
+export async function seedUser(): Promise<void> {
+    await seed(users, User)
 }

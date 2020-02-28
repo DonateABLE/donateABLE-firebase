@@ -29,6 +29,7 @@ if (__DEVELOPMENT__) {
     import('seed').then(async seed => {
         await seed.seedCharities()
         await seed.seedCharityTypes()
+        await seed.seedUser()
     })
 }
 
