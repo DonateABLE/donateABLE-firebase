@@ -17,4 +17,9 @@
         width: 100%;
         border: solid 1px rgba($darker-blue, 0.4);
     }
+
+    textarea {
+        resize: none;
+        height: 5em;
+    }
 }

@@ -26,6 +26,11 @@
         color: $light-blue;
     }
 
+    &.danger {
+        background-color: $danger;
+        color: $white;
+    }
+
     &.clear {
         background-color: unset;
 
@@ -80,6 +85,10 @@
 
         &.white {
             background-color: darken($white, 10);
+        }
+
+        &.danger {
+            background-color: darken($danger, 10);
         }
     }
 }

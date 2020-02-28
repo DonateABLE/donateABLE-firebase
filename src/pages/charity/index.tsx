@@ -68,11 +68,11 @@ export default class CharityPage extends Component<Props, State> {
             </FullWidth>
             <FullWidth className={styles.social} >
                 <div className={styles.link}>
-                    <Icon className={styles.icon} brand name='facebook-f' />
+                    <Icon className={styles.icon} name='facebook-f' />
                     <span className={styles.title}>Share on Facebook</span>
                 </div>
                 <div className={styles.link}>
-                    <Icon className={styles.icon} brand name='twitter' />
+                    <Icon className={styles.icon} name='twitter' />
                     <span className={styles.title}>Share on twitter</span>
                 </div>
                 <div className={styles.link}>
