@@ -4,8 +4,6 @@ import styles from './style.scss'
 
 export interface FormElementProps<T = never> {
     title: string
-    // icon?: string
-    // iconBrand?: string
     value: string | number
     onChange: (e: ChangeEvent<T>) => void
     white?: boolean

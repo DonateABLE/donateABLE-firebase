@@ -90,28 +90,24 @@ export default class CharityEdit extends Component<Props, State> {
                 <Input
                     white
                     title='Facebook'
-                    // iconBrand='facebook'
                     value={charity.facebookUrl}
                     onChange={addValue(bindArgs('facebookUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Twitter'
-                    // iconBrand='twitter'
                     value={charity.twitterUrl}
                     onChange={addValue(bindArgs('twitterUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Charity Website'
-                    // icon='globe'
                     value={charity.websiteUrl}
                     onChange={addValue(bindArgs('websiteUrl', this.charityChangeString))}
                 />
                 <Input
                     white
                     title='Canada Helps Link'
-                    // icon='money-bill'
                     value={charity.canadaHelpsUrl}
                     onChange={addValue(bindArgs('canadaHelpsUrl', this.charityChangeString))}
                 />
