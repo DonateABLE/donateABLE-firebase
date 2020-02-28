@@ -31,6 +31,36 @@
         color: $white;
     }
 
+    &.clear {
+        background-color: unset;
+
+        &.light {
+            color: $light-blue;
+        }
+
+        &.dark {
+            color: $dark-blue;
+        }
+
+        &.white {
+            color: $white;
+        }
+
+        &:hover {
+            &.light {
+                background-color: rgba($light-blue, 0.2);
+            }
+
+            &.dark {
+                background-color: rgba($dark-blue, 0.2);
+            }
+
+            &.white {
+                background-color: rgba($white, 0.2);
+            }
+        }
+    }
+
     &.small {
         padding: 2px 10px;
     }

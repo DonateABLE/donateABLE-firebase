@@ -3,6 +3,7 @@ import Content, { FullWidth } from 'components/content'
 import { Input, Select, TextArea } from 'components/form'
 import Icon, { BrandIcons, IconName, RegularIcons, SolidIcons } from 'components/icon'
 import { Modal, ModalBody, ModalControl, ModalHeader, openInfoModal, openModal } from 'components/modal'
+import { showToast } from 'components/snack-bar'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind, memoize } from 'decko'
 import Charity, { DonationTarget } from 'orm/charity'
@@ -227,6 +228,7 @@ export default class CharityEdit extends Component<Props, State> {
             if (this.props.match.params.id !== this.state.charity.id) {
                 this.props.history.push(`/charity/${this.state.charity.id}/edit`)
             }
+            showToast('Charity saved', { key: 'save-charity' })
         } catch (e) {
             if (isFirebaseError(e) && e.code === 'permission-denied') {
                 alert('permission error')

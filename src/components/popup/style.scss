@@ -22,7 +22,7 @@
             transform: translate(#{-$x-offset}, -100%);
             padding: 20px 30px;
 
-            box-shadow: 0 0 5px 5px rgba(black, 0.2);
+            @include shadow;
             z-index: 10;
 
             &::after {
