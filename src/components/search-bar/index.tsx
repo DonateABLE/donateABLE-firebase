@@ -66,7 +66,7 @@ export default class SearchBar extends Component<{}, State> {
                         </div>
                     ))}
                 </div>
-            </Content>
+            </FullWidth>
         </div>
     }
 
