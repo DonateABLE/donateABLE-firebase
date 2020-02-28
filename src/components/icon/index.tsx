@@ -17,11 +17,14 @@ export default function Icon({ name, className }: Props): JSX.Element {
     const solid = binarySearch(SolidIcons, v => v.localeCompare(name)) !== -1
     const regular = !solid && binarySearch(RegularIcons, v => v.localeCompare(name)) !== -1
     const brand = !solid && !regular && binarySearch(BrandIcons, v => v.localeCompare(name)) !== -1
+    const normal = !solid && !regular && !brand
+
     return <i
         className={classNames(`fa-${name}`, className, {
             fas: solid,
             far: regular,
             fab: brand,
+            fa: normal,
         })}
     />
 }

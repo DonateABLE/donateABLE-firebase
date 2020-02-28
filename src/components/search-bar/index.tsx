@@ -1,4 +1,4 @@
-import Content from 'components/content'
+import Content, { FullWidth } from 'components/content'
 import Icon from 'components/icon'
 import { bind } from 'decko'
 import CharityType from 'orm/charity-type'
@@ -46,7 +46,7 @@ export default class SearchBar extends Component<{}, State> {
                     </label>
                 </Content>
             </div>
-            <Content
+            <FullWidth
                 className={classNames(styles.popup, {
                     [styles.show]: this.state.open,
                 })}
