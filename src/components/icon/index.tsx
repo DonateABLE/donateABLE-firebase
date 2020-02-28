@@ -1597,7 +1597,6 @@ export const RegularIconList = [
     'window-restore',
 ] as const
 
-
 export const SolidIcons = new Set(SolidIconList)
 export const BrandIcons = new Set(BrandIconList)
 export const RegularIcons = new Set(RegularIconList)

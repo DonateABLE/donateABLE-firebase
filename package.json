@@ -4,7 +4,7 @@
   "description": "DonateABLE",
   "scripts": {
     "build": "webpack --mode production",
-    "watch": "webpack --watch --display=minimal",
+    "watch": "webpack --watch --display=minimal --progress",
     "emulate": "firebase emulators:start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

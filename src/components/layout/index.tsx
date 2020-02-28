@@ -5,6 +5,7 @@ import About from 'pages/about'
 import Charity from 'pages/charity'
 import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
+import UserEdit from 'pages/user'
 import { Component, createElement, createRef, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
 import {
@@ -16,7 +17,6 @@ import {
 import { classNames, clickedOn } from 'utils'
 import Menu from './menu'
 import styles from './style.scss'
-import UserEdit from 'pages/user'
 
 interface State {
     menuOpen: boolean

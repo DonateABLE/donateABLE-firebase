@@ -31,6 +31,9 @@ export default class User extends Model {
     @Model.field()
     public portrait: string = noUser
 
+    @Model.field()
+    public getEmails: boolean = false
+
     public get fullName(): string {
         return this.firstName + ' ' + this.lastName
     }

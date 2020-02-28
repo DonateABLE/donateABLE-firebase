@@ -1,5 +1,5 @@
 import EventTarget from 'event-target-shim'
-import { DependencyList, SyntheticEvent, useEffect, useRef } from 'react'
+import { DependencyList, SyntheticEvent, useCallback, useEffect, useRef, useState } from 'react'
 
 export function notUndefined<T>(v: T | undefined): v is T {
     return v !== undefined
@@ -249,4 +249,10 @@ export function useEventListener<
         target.addEventListener(eventName, eventListener)
         return () => target.removeEventListener(eventName, eventListener)
     }, [eventName, target, ...deps])
+}
+
+// create your forceUpdate hook
+export function useForceUpdate(): () => void {
+    const [, setValue] = useState(0)
+    return useCallback(() => setValue(value => ++value), [setValue])
 }

@@ -9,6 +9,7 @@ import styles from './style.scss'
 interface Props {
     image: string
     imageAlt: string
+    imageRound?: boolean
     title: string
     subtitle: string
     buttonTitle: string
@@ -18,7 +19,11 @@ interface Props {
 const Header: FunctionComponent<Props> = props => {
     return <Fragment>
         <FullWidth className={styles.header}>
-            <img className={styles.logo} src={props.image} alt={props.imageAlt} />
+            <img
+                className={classNames(styles.logo, { [styles.round]: props.imageRound })}
+                src={props.image}
+                alt={props.imageAlt}
+            />
             <div className={styles.info}>
                 <h2 className={styles.name}>{props.title}</h2>
                 <div className={styles.tagLine}>{props.subtitle}</div>
