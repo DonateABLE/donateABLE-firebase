@@ -6,7 +6,8 @@ interface Props {
     className?: string
     color?: 'light' | 'dark' | 'white'
     size?: 'small' | 'medium' | 'large'
-    onClick?: () => void
+    clear?: boolean
+    onClick?: (e: React.MouseEvent) => void
     fullWidth?: boolean
 }
 
@@ -17,7 +18,10 @@ const Button: FunctionComponent<Props> = props => (
             styles[props.color ?? 'light'],
             styles[props.size ?? 'small'],
             props.className,
-            { [styles.fullWidth]: props.fullWidth },
+            {
+                [styles.fullWidth]: props.fullWidth,
+                [styles.clear]: props.clear,
+            },
         )}
         onClick={props.onClick}
     >

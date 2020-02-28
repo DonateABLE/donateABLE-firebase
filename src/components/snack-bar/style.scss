@@ -1,0 +1,70 @@
+@import "../../variables";
+
+$toastSpacing: 5px;
+
+.snackBar {
+    $padding: 10px;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    position: fixed;
+    bottom: $padding;
+    right: $padding;
+
+    width: 344px;
+
+    @media screen and (max-width: $bp-sm-min) {
+        width: unset;
+        left: $padding;
+    }
+
+    .toast {
+        background-color: $darker-blue;
+        color: $white;
+        width: 100%;
+        padding: 16px;
+        margin-top: $toastSpacing;
+
+        animation-name: fade-in;
+        animation-duration: 0.2s;
+
+        @include shadow;
+
+        &.hidden {
+            animation-name: fade-out;
+            animation-duration: 0.2s;
+
+            opacity: 0;
+        }
+
+        .button {
+            float: right;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform-origin: bottom;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: bottom;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

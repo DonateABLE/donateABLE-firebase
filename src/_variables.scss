@@ -1,7 +1,7 @@
-$dark-blue: #26607d;
-$light-blue: #45a6d7;
-$white: #fff;
-$black: #222;
+$darker-blue: hsl(200, 25, 25);
+$dark-blue: hsl(200, 53, 32);
+$light-blue: hsl(200, 65, 56);
+$white: rgba(#fff, 0.9);
 
 // Breakpoints
 $bp-sm-min: 576px;
@@ -19,4 +19,8 @@ $bp-xl-min: 1200px;
     }
 
     @return $x1;
+}
+
+@mixin shadow {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
