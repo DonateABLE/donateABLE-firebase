@@ -23,11 +23,11 @@ async function sendMail({ to, subject, body }: Message) {
     })
 }
 
-export const helloWorld = functions.https.onRequest(async (request, response) => {
+export const testMail = functions.https.onRequest(async (request, response) => {
     await sendMail({
-        to: "adambibby00@gmail.com",
+        to: request.query.to,
         subject: "new message",
         body: "a new message body",
     })
-    response.send(JSON.stringify(config));
+    response.send('')
 });
