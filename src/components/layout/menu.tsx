@@ -1,4 +1,3 @@
-import noUser from 'assets/user.svg'
 import Icon from 'components/icon'
 import { useUser } from 'orm/user'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode, RefObject } from 'react'
@@ -56,7 +55,7 @@ const Menu: FunctionComponent<Props> = props => {
                 >
                     <img
                         className={styles.portrait}
-                        src={user.portrait ?? noUser}
+                        src={user.portrait}
                         alt='user portrait'
                     />
                     <h3 className={styles.userName}>{user.fullName}</h3>

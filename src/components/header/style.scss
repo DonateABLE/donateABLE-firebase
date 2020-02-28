@@ -1,0 +1,96 @@
+@import '../../variables';
+
+.header {
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 0;
+    grid-template-columns: 150px auto 280px;
+    grid-template-rows: 150px 0;
+    grid-template-areas: "logo info donate";
+    align-items: center;
+
+    // height: 150px;
+
+    background-color: $light-blue;
+    color: $white;
+
+    @media screen and (max-width: $bp-sm-min) {
+        grid-column-gap: 10px;
+    }
+
+    @media screen and (max-width: $bp-md-min) {
+        grid-template-columns: 100px auto;
+        grid-template-areas:
+            "logo   info"
+            "donate donate";
+
+        .makeDonation {
+            display: none;
+        }
+    }
+
+    .logo {
+        grid-area: logo;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .info {
+        grid-area: info;
+
+        .name {
+            margin: 0;
+        }
+
+        .tagLine {
+            margin-bottom: 1em;
+        }
+    }
+
+    .makeDonation {
+        grid-area: donate;
+        width: 100%;
+    }
+}
+
+.makeDonationLower {
+    display: none;
+
+    @media screen and (max-width: $bp-md-min) {
+        display: block;
+    }
+
+    margin: 10px;
+
+    width: calc(100% - 20px);
+}
+
+.social {
+    background-color: $dark-blue;
+    color: $white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            font-size: 1.5em;
+            margin-right: 1ch;
+        }
+
+        @media screen and (max-width: $bp-sm-min) {
+            .title {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import noUser from 'assets/user.svg'
 import { IconName } from 'components/icon'
 import { firestore } from './firebase'
 import Model, { useQuery } from './model'
@@ -28,7 +29,7 @@ export default class User extends Model {
     public email: string = ''
 
     @Model.field()
-    public portrait: string | undefined
+    public portrait: string = noUser
 
     public get fullName(): string {
         return this.firstName + ' ' + this.lastName

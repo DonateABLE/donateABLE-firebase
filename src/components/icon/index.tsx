@@ -14,9 +14,9 @@ interface Props {
  */
 export default function Icon({ name, className }: Props): JSX.Element {
 
-    const solid = binarySearch(SolidIcons, v => v.localeCompare(name)) !== -1
-    const regular = !solid && binarySearch(RegularIcons, v => v.localeCompare(name)) !== -1
-    const brand = !solid && !regular && binarySearch(BrandIcons, v => v.localeCompare(name)) !== -1
+    const solid = SolidIcons.has(name as any)
+    const regular = !solid && RegularIcons.has(name as any)
+    const brand = !solid && !regular && BrandIcons.has(name as any)
     const normal = !solid && !regular && !brand
 
     return <i
@@ -31,11 +31,11 @@ export default function Icon({ name, className }: Props): JSX.Element {
 
 export type IconName = SolidIconName | BrandIconName | RegularIconName
 
-type SolidIconName = typeof SolidIcons[number]
-type BrandIconName = typeof BrandIcons[number]
-type RegularIconName = typeof RegularIcons[number]
+type SolidIconName = typeof SolidIconList[number]
+type BrandIconName = typeof BrandIconList[number]
+type RegularIconName = typeof RegularIconList[number]
 
-export const SolidIcons = [
+export const SolidIconList = [
     'ad',
     'address-book',
     'address-card',
@@ -1002,7 +1002,7 @@ export const SolidIcons = [
     'yin-yang',
 ] as const
 
-export const BrandIcons = [
+export const BrandIconList = [
     '500px',
     'accessible-icon',
     'accusoft',
@@ -1443,7 +1443,7 @@ export const BrandIcons = [
     'zhihu',
 ] as const
 
-export const RegularIcons = [
+export const RegularIconList = [
     'address-book',
     'address-card',
     'angry',
@@ -1596,3 +1596,8 @@ export const RegularIcons = [
     'window-minimize',
     'window-restore',
 ] as const
+
+
+export const SolidIcons = new Set(SolidIconList)
+export const BrandIcons = new Set(BrandIconList)
+export const RegularIcons = new Set(RegularIconList)

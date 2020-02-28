@@ -315,7 +315,7 @@ export default class CharityEdit extends Component<Props, State> {
                         onChange={addValue(changeSearch)}
                     />
                     <div className={styles.iconList}>
-                        {SolidIcons
+                        {Array.from(SolidIcons)
                             .filter(i => i.includes(search))
                             .slice(0, 12)
                             .map(name => (

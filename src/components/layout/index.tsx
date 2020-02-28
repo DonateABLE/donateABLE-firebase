@@ -16,6 +16,7 @@ import {
 import { classNames, clickedOn } from 'utils'
 import Menu from './menu'
 import styles from './style.scss'
+import UserEdit from 'pages/user'
 
 interface State {
     menuOpen: boolean
@@ -71,6 +72,7 @@ export default class Layout extends Component<{}, State> {
                 <div className={styles.content} >
                     <Switch>
                         <Route path='/about' component={About} />
+                        <Route path='/user' component={UserEdit} />
                         <Route path='/charity/create' component={CharityEdit} />
                         <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
