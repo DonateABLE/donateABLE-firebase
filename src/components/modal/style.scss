@@ -1,5 +1,7 @@
 @import '../../variables';
 
+$width: 500px;
+
 .modalWrapper {
     position: fixed;
     height: 100vh;
@@ -13,7 +15,7 @@
     .modal {
         position: absolute;
         background: $white;
-        width: 500px;
+        width: $width;
         max-width: calc(100vw - 15px);
 
         top: 50%;
@@ -30,9 +32,18 @@
             position: absolute;
             top: 1em;
             right: 1em;
-            color: rgba($black, 0.4);
+            color: rgba($darker-blue, 0.4);
             cursor: pointer;
             font-size: 1.5em;
+        }
+
+        @media screen and (max-width: $width) {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transform: none;
+            max-width: 100vw;
         }
     }
 }

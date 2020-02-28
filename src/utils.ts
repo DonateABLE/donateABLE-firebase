@@ -1,4 +1,5 @@
-import { SyntheticEvent } from 'react'
+import EventTarget from 'event-target-shim'
+import { DependencyList, SyntheticEvent, useEffect, useRef } from 'react'
 
 export function notUndefined<T>(v: T | undefined): v is T {
     return v !== undefined
@@ -180,4 +181,72 @@ export function cadToHashes(cad: number): number {
 }
 export function hashesToCAD(hashes: number): number {
     return hashes / 100_000_000
+}
+
+export function binarySearch<T>(array: readonly T[], match: (a: T) => number): number {
+    function recursiveFunction(start: number, end: number): number {
+
+        // Base Condition
+        if (start > end) { return -1 }
+
+        // Find the middle index
+        const mid = Math.floor((start + end) / 2)
+
+        const m = match(array[mid])
+        // Compare mid with given key x
+        if (m === 0) { return mid }
+
+        // If element at mid is greater than x,
+        // search in the left half of mid
+        if (m > 0) {
+            return recursiveFunction(start, mid - 1)
+        } else {
+
+            // If element at mid is smaller than x,
+            // search in the right half of mid
+            return recursiveFunction(mid + 1, end)
+        }
+    }
+
+    return recursiveFunction(0, array.length)
+}
+
+export function useInterval(callback: () => void, delay: number, deps: DependencyList = []): void {
+    const savedCallback = useRef<() => void>()
+
+    // Remember the latest callback.
+    useEffect(() => {
+        savedCallback.current = callback
+    }, [callback, ...deps])
+
+    // Set up the interval.
+    useEffect(() => {
+        if (delay !== null) {
+            const id = setInterval(() => savedCallback.current?.(), delay)
+            return () => clearInterval(id)
+        }
+    }, [delay])
+}
+
+export function useEventListener<
+    TEvents extends EventTarget.EventDefinition,
+    TEventAttributes extends EventTarget.EventDefinition,
+    K extends keyof TEvents,
+    >(
+        target: EventTarget<TEvents, TEventAttributes, 'strict'>,
+        eventName: K,
+        handler: (e: TEvents[K]) => void,
+        deps: DependencyList = [],
+): void {
+    const savedHandler = useRef<(e: TEvents[K]) => void>()
+
+    useEffect(() => {
+        savedHandler.current = handler
+    }, [handler])
+
+    useEffect(() => {
+        const eventListener: any = (event: TEvents[K]) => savedHandler.current?.(event)
+        target.addEventListener(eventName, eventListener)
+        return () => target.removeEventListener(eventName, eventListener)
+    }, [eventName, target, ...deps])
 }

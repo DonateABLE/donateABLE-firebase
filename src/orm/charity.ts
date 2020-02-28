@@ -1,4 +1,4 @@
-import { SolidIconName } from 'components/icon'
+import { IconName } from 'components/icon'
 import { firestore } from 'fb'
 import Model from './model'
 
@@ -6,7 +6,7 @@ export interface DonationTarget {
     name: string
     cost: number
     description: string
-    icon: SolidIconName
+    icon: IconName
 }
 
 export default class Charity extends Model {
@@ -58,7 +58,7 @@ export default class Charity extends Model {
     public typeName: string = ''
 
     @Model.field()
-    public typeIcon: SolidIconName = 'question-circle'
+    public typeIcon: IconName = 'question-circle'
 
     @Model.field()
     public registeredBusinessName: string = ''

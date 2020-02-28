@@ -65,7 +65,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        box-shadow: 1px 1px 5px rgba(#000, 0.3);
+        @include shadow;
 
         margin: 0 15px;
 
@@ -107,7 +107,7 @@
         .social {
             background-color: $light-blue;
             width: calc(100% + 10px);
-            box-shadow: 1px 1px 5px rgba(#000, 0.3);
+            @include shadow;
 
             .icon {
                 padding: 0 5px;
