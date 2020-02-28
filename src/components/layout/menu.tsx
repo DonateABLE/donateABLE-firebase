@@ -23,7 +23,7 @@ export default class Menu extends Component<Props> {
                 className={styles.btnOpen}
                 onClick={this.props.onMenuOpenClick}
             >
-                <Icon name='bars' />
+                <Icon name='bars' className={styles.burger} />
             </button>
             <button
                 className={styles.btnClose}
