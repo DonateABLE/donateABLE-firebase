@@ -1,5 +1,5 @@
 import { SolidIconName } from 'components/icon'
-import { firestore } from './firebase'
+import { firestore } from 'fb'
 import Model from './model'
 
 export interface DonationTarget {
