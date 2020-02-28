@@ -1,4 +1,5 @@
-import { SyntheticEvent } from 'react'
+import EventTarget from 'event-target-shim'
+import { DependencyList, SyntheticEvent, useEffect, useRef } from 'react'
 
 export function notUndefined<T>(v: T | undefined): v is T {
     return v !== undefined
@@ -208,4 +209,44 @@ export function binarySearch<T>(array: readonly T[], match: (a: T) => number): n
     }
 
     return recursiveFunction(0, array.length)
+}
+
+export function useInterval(callback: () => void, delay: number, deps: DependencyList = []): void {
+    const savedCallback = useRef<() => void>()
+
+    // Remember the latest callback.
+    useEffect(() => {
+        savedCallback.current = callback
+    }, [callback, ...deps])
+
+    // Set up the interval.
+    useEffect(() => {
+        if (delay !== null) {
+            const id = setInterval(() => savedCallback.current?.(), delay)
+            return () => clearInterval(id)
+        }
+    }, [delay])
+}
+
+export function useEventListener<
+    TEvents extends EventTarget.EventDefinition,
+    TEventAttributes extends EventTarget.EventDefinition,
+    K extends keyof TEvents,
+    >(
+        target: EventTarget<TEvents, TEventAttributes, 'strict'>,
+        eventName: K,
+        handler: (e: TEvents[K]) => void,
+        deps: DependencyList = [],
+): void {
+    const savedHandler = useRef<(e: TEvents[K]) => void>()
+
+    useEffect(() => {
+        savedHandler.current = handler
+    }, [handler])
+
+    useEffect(() => {
+        const eventListener: any = (event: TEvents[K]) => savedHandler.current?.(event)
+        target.addEventListener(eventName, eventListener)
+        return () => target.removeEventListener(eventName, eventListener)
+    }, [eventName, target, ...deps])
 }
