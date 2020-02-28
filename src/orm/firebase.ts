@@ -37,3 +37,11 @@ db.enablePersistence({ synchronizeTabs: true })
 export const firestore = db
 
 export const storage = store.ref()
+
+export function isFirebaseError(err: unknown): err is firebase.firestore.FirestoreError {
+    return typeof err === 'object'
+        && err != null
+        && 'name' in err && (err as any).name === 'FirebaseError'
+        && 'code' in err
+
+}
