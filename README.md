@@ -1,7 +1,9 @@
-# donateABLE-firebase
+# DonateABLE
 DonateABLE is a site for users to sign up for an account and using their device to mine cryptocurrency for a charity of their choosing. No need to make a financial donation, just leave your device running to make an impact in your community!
 
 DonateABLE is built using TypeScript, React, SASS and Firebase.
+
+See the project live [here](https://donateable.ca)
 
 ## Installation
 Clone the repository
@@ -41,3 +43,4 @@ Awesome! You can make changes and see them live at: `http://localhost:5000`
 * `/src/components` - Contains all of the React components that can be reused across all of the pages (i.e. Buttons, Modals, Forms)
 * `/src/orm` - Contains the ORM wrapper around Firebase, the structure for data used in the web app, and the model
 * `/src/pages` - Contains the individual pages 
+

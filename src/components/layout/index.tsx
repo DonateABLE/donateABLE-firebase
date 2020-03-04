@@ -1,4 +1,5 @@
 import { ModalController } from 'components/modal'
+import { SnackBar } from 'components/snack-bar'
 import { bind } from 'decko'
 import About from 'pages/about'
 import Charity from 'pages/charity'
@@ -94,6 +95,7 @@ export default class Layout extends Component<{}, State> {
             <Switch>
                 <Route path='/' component={ModalController} />
             </Switch>
+            <SnackBar />
         </Router>
     }
 

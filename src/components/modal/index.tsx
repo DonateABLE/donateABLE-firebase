@@ -10,18 +10,20 @@ import {
 } from 'react'
 import { findDOMNode, render } from 'react-dom'
 import { BrowserRouterProps, RouteComponentProps } from 'react-router-dom'
+import { classNames } from 'utils'
 import styles from './style.scss'
 
-export const Modal: FunctionComponent<{ onCloseClick?: () => void }> = ({ children, onCloseClick }) => (
-    <div className={styles.modal}>
-        {children}
-        <div className={styles.close} onClick={onCloseClick} >
-            <Icon name='times' />
+export const Modal: FunctionComponent<{ onCloseClick: () => void, className?: string }> =
+    ({ children, onCloseClick, className }) => (
+        <div className={classNames(styles.modal, className)}>
+            {children}
+            <div className={styles.close} onClick={onCloseClick} >
+                <Icon name='times' />
+            </div>
         </div>
-    </div>
-)
+    )
 export const ModalHeader: FunctionComponent = ({ children }) => <h2 className={styles.modalHeader}>{children}</h2>
-export const ModalBody: FunctionComponent = ({ children }) => <p className={styles.modalBody}>{children}</p>
+export const ModalBody: FunctionComponent = ({ children }) => <div className={styles.modalBody}>{children}</div>
 
 let staticModalController: ModalController | undefined
 
@@ -31,7 +33,7 @@ export interface ModalControl<T> {
 }
 
 export function openModal(content: (ctl: ModalControl<void>) => ReactElement): Promise<void>
-export function openModal<T>(content: (ctl: ModalControl<T>) => ReactElement, defaultValue?: T): Promise<T>
+export function openModal<T>(content: (ctl: ModalControl<T>) => ReactElement, defaultValue: T): Promise<T>
 export function openModal<T = void>(content: (ctl: ModalControl<T>) => ReactElement, defaultValue?: T): Promise<T> {
     return new Promise<T>(resolve => {
         let wrapper: HTMLDivElement | null = null
@@ -85,6 +87,11 @@ export class ModalController extends Component<RouteComponentProps, { modals: Re
         staticModalController = this
     }
     public render(): ReactNode {
+        if (this.state.modals.length === 0) {
+            document.body.style.overflow = 'auto'
+        } else {
+            document.body.style.overflow = 'hidden'
+        }
         return this.state.modals.map((v, i) => <Fragment key={i}>{v}</Fragment>)
     }
 

@@ -33,10 +33,10 @@ const CharityBox: FunctionComponent<Props> = ({ className, charity, charityTypes
         <div className={styles.donatorsToDate}>Donators to Date: <b>{charity.donatorsToDate}</b></div>
         <div className={styles.social}>
             <button className={styles.icon}>
-                <Icon brand name='facebook-f' />
+                <Icon name='facebook-f' />
             </button>
             <button className={styles.icon}>
-                <Icon brand name='twitter' />
+                <Icon name='twitter' />
             </button>
             <button className={styles.icon}>
                 <Icon name='globe' />
