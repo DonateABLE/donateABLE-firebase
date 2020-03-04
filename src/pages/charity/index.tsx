@@ -12,6 +12,7 @@ import { Component, createElement, Fragment, ReactNode } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
 import {
     FacebookShareButton,
+    TwitterShareButton,
 } from 'react-share'
 import Statistics from '../../components/charity-stats'
 import styles from './style.scss'
@@ -35,7 +36,7 @@ export default class CharityPage extends Component<Props, State> {
 
     public componentDidMount(): void {
         this.cancelCharity = Charity.builder()
-            .where('longName', '==', this.props.match.params.name)
+            .where('longName', '==', this.props.match.params.name.replace(/_/g, ' '))
             .subscribe(c => this.setState({ charity: c[0] }))
     }
 
@@ -70,20 +71,28 @@ export default class CharityPage extends Component<Props, State> {
                 </div>
             </FullWidth>
             <FullWidth className={styles.social} >
-                <FacebookShareButton url={location.href} >
-                    <div className={styles.link}>
-                        <Icon className={styles.icon} name='facebook-f' />
-                        <span className={styles.title}>Share on Facebook</span>
-                    </div>
+                <FacebookShareButton
+                    quote='Donate to Stuff'
+                    url={location.href}
+                    hashtag='DonateABLE'
+                    className={styles.link}
+                >
+                    <Icon className={styles.icon} name='facebook-f' />
+                    <span className={styles.title}>Share on Facebook</span>
                 </FacebookShareButton>
-                <div className={styles.link}>
+                <TwitterShareButton
+                    title='Donate to Stuff'
+                    url={location.href}
+                    hashtags={['DonateABLE']}
+                    className={styles.link}
+                >
                     <Icon className={styles.icon} name='twitter' />
-                    <span className={styles.title}>Share on twitter</span>
-                </div>
-                <div className={styles.link}>
+                    <span className={styles.title}>Share on Twitter</span>
+                </TwitterShareButton>
+                <a href={charity.websiteUrl} target='_blank' className={styles.link}>
                     <Icon className={styles.icon} name='globe' />
                     <span className={styles.title}>Visit charity website</span>
-                </div>
+                </a>
             </FullWidth>
 
             <div className={styles.makeDonationLower}>
@@ -110,7 +119,7 @@ export default class CharityPage extends Component<Props, State> {
                 </Tab>
             </TabContainer>
             <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
-        </Content>
+        </Content >
     }
 
     @bind

@@ -42,7 +42,7 @@ const CharityBox: FunctionComponent<Props> = ({ className, charity, charityTypes
                 <Icon name='globe' />
             </button>
         </div>
-        <Link to={`/charity/${charity.longName}`}>
+        <Link to={`/charity/${charity.longName.replace(/ /g, '_')}`}>
             <div className={styles.donate}>Donate</div>
         </Link>
     </div>

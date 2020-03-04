@@ -79,10 +79,18 @@
     padding-top: 5px;
     padding-bottom: 5px;
 
+
     .link {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        color: inherit;
+        text-decoration: none;
+
+        &:focus {
+            outline: none;
+        }
 
         .icon {
             font-size: 1.5em;
