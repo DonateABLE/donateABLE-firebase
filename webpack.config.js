@@ -59,6 +59,13 @@ module.exports = (env, argv) => {
                         },
                     },
                 },
+                {
+                    test: /lang\/index\.json?$/,
+                    exclude: /node_modules/,
+                    loader: [
+                        './loaders/glob-loader.js',
+                    ],
+                },
             ],
         },
         output: {
@@ -68,7 +75,7 @@ module.exports = (env, argv) => {
             publicPath: '/',
         },
         resolve: {
-            extensions: ['.tsx', '.ts', '.js', '.scss'],
+            extensions: ['.tsx', '.ts', '.js', '.scss', '.json'],
             modules: [
                 'node_modules',
                 paths.src,

@@ -2,3 +2,4 @@ node_modules
 dist
 firestore-debug.log
 firebase-debug.log
+src/lang/lang.d.ts
