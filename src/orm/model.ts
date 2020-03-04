@@ -1,3 +1,4 @@
+import { useCallback, useEffect, useState } from 'react'
 
 export interface FieldOptions {
     readonly?: boolean
@@ -147,10 +148,12 @@ export class QueryBuilder<T extends Model> {
 
     private readonly staticModel: StaticModel<T>
     private readonly query: firebase.firestore.Query
+    private readonly key: Set<string>
 
     constructor(staticModel: StaticModel<T>, query: firebase.firestore.Query) {
         this.staticModel = staticModel
         this.query = query
+        this.key = new Set<string>()
     }
 
     public where<K extends keyof T>(
@@ -158,16 +161,19 @@ export class QueryBuilder<T extends Model> {
         opStr: firebase.firestore.WhereFilterOp,
         value: T[K],
     ): QueryBuilder<T> {
+        this.key.add(`where ${JSON.stringify(fieldPath)} ${opStr} ${JSON.stringify(value)}`)
         return new QueryBuilder(this.staticModel, this.query.where(fieldPath as string, opStr, value))
     }
 
     public orderBy(
         fieldPath: keyof T,
-        directionStr?: firebase.firestore.OrderByDirection,
+        directionStr: firebase.firestore.OrderByDirection = 'asc',
     ): QueryBuilder<T> {
+        this.key.add(`orderBy ${JSON.stringify(fieldPath)} ${directionStr}`)
         return new QueryBuilder(this.staticModel, this.query.orderBy(fieldPath as string, directionStr))
     }
     public limit(limit: number): QueryBuilder<T> {
+        this.key.add(`limit ${limit}`)
         return new QueryBuilder(this.staticModel, this.query.limit(limit))
     }
 
@@ -202,4 +208,16 @@ export class QueryBuilder<T extends Model> {
     public equal(q: QueryBuilder<T>): boolean {
         return this.query.isEqual(q.query)
     }
+
+    public hash(): string {
+        return Array.from(this.key).sort().join(' ')
+    }
+}
+
+export function useQuery<T extends Model>(q: QueryBuilder<T>): T[] | undefined {
+    const [list, changeList] = useState<T[]>()
+
+    useEffect(() => q.subscribe(changeList), [q.hash()])
+
+    return list
 }
