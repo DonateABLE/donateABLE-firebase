@@ -60,7 +60,6 @@
             text-transform: uppercase;
         }
     }
-
     .value {
         padding-left: 2ch;
     }
@@ -69,6 +68,14 @@
 .login {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    .signOutButton {
+        min-width: 250px;
+        max-width: 350px;
+        width: 100%;
+        text-transform: uppercase;
+    }
 }
 
 :global(.firebaseui-idp-button) {
@@ -77,6 +84,22 @@
     width: 60vw !important;
     min-width: 192px !important;
     max-width: 320px !important;
+ }
+
+ :global(.mdl-button--raised.mdl-button--colored) {
+     background: $dark-blue !important;
+ }
+
+ :global(.firebaseui-title) {
+     color: $dark-blue !important;
+ }
+
+ :global(.firebaseui-textfield.mdl-textfield .firebaseui-label::after) {
+    background-color: $dark-blue !important;
+ }
+
+ :global(.firebaseui-link) {
+     color: $light-blue !important;
  }
 
 .charities {
