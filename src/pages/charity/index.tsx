@@ -10,6 +10,9 @@ import { bind } from 'decko'
 import Charity from 'orm/charity'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
+import {
+    FacebookShareButton,
+} from 'react-share'
 import Statistics from '../../components/charity-stats'
 import styles from './style.scss'
 
@@ -67,10 +70,12 @@ export default class CharityPage extends Component<Props, State> {
                 </div>
             </FullWidth>
             <FullWidth className={styles.social} >
-                <div className={styles.link}>
-                    <Icon className={styles.icon} name='facebook-f' />
-                    <span className={styles.title}>Share on Facebook</span>
-                </div>
+                <FacebookShareButton url={location.href} >
+                    <div className={styles.link}>
+                        <Icon className={styles.icon} name='facebook-f' />
+                        <span className={styles.title}>Share on Facebook</span>
+                    </div>
+                </FacebookShareButton>
                 <div className={styles.link}>
                     <Icon className={styles.icon} name='twitter' />
                     <span className={styles.title}>Share on twitter</span>
