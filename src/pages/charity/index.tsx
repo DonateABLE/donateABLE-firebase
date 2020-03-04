@@ -62,7 +62,7 @@ export default class CharityPage extends Component<Props, State> {
                             color='dark'
                             size='medium'
                         >
-                            Make a Monetary Donation <Icon name='external-link-alt' />
+                            {__('charity.make-donation')} <Icon name='external-link-alt' />
                         </Button>
                     </a>
                 </div>
