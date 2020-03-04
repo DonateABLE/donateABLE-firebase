@@ -1,11 +1,12 @@
 @import '../../variables';
 
 .header {
+    $image-size: 150px;
     display: grid;
     grid-column-gap: 40px;
     grid-row-gap: 0;
-    grid-template-columns: 150px auto 280px;
-    grid-template-rows: 150px 0;
+    grid-template-columns: $image-size auto 280px;
+    grid-template-rows: $image-size 0;
     grid-template-areas: "logo info donate";
     align-items: center;
 
@@ -36,9 +37,12 @@
         object-fit: contain;
 
         &.round {
-            clip-path: circle(75px at center);
+            $padding: 8px;
+            padding: $padding;
+            clip-path: circle(#{($image-size / 2) - $padding} at center);
 
             @media screen and (max-width: $bp-md-min) {
+                padding: 0;
                 clip-path: circle(50px at center);
             }
         }

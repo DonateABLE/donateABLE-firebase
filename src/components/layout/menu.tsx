@@ -3,6 +3,7 @@ import { useUser } from 'orm/user'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode, RefObject } from 'react'
 import { Link } from 'react-router-dom'
 import { classNames } from 'utils'
+import noUser from '../../assets/user.svg'
 import styles from './style.scss'
 
 interface Props {
@@ -55,7 +56,7 @@ const Menu: FunctionComponent<Props> = props => {
                 >
                     <img
                         className={styles.portrait}
-                        src={user.portrait}
+                        src={user.portrait ?? noUser}
                         alt='user portrait'
                     />
                     <h3 className={styles.userName}>{user.fullName}</h3>

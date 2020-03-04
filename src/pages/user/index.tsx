@@ -4,9 +4,13 @@ import { Input } from 'components/form'
 import Header from 'components/header'
 import { PageLoader } from 'components/loader'
 import { showToast } from 'components/snack-bar'
+import { imageSelect } from 'image-select'
+import { storage } from 'orm/firebase'
 import User, { useUser } from 'orm/user'
-import { createElement, FunctionComponent, useCallback } from 'react'
-import { addValue, bindArgs, useForceUpdate } from 'utils'
+import { ChangeEvent, createElement, FunctionComponent, useCallback, useRef, useState } from 'react'
+import { addValue, bindArgs, classNames, useForceUpdate } from 'utils'
+import { v4 as uuidv4 } from 'uuid'
+import noUser from '../../assets/user.svg'
 import styles from './style.scss'
 
 const userToastKey = Symbol('user-toast-key')
@@ -29,14 +33,33 @@ const UserEdit: FunctionComponent = props => {
         }
     }, [user])
 
+    const [imageUploading, changeImageUploading] = useState(false)
+    const imageClick = useCallback(async () => {
+        const file = await imageSelect()
+        if (file && user) {
+            user.portrait = URL.createObjectURL(file)
+            changeImageUploading(true)
+
+            const url = `logo/${uuidv4()}`
+            await storage.child(url).put(file)
+
+            const publicURL = await storage.child(url).getDownloadURL()
+            user.portrait = publicURL
+            changeImageUploading(false)
+        }
+    }, [user, changeImageUploading])
     if (!user) {
         return <PageLoader />
     }
     return <Content>
         <Header
-            image={user.portrait}
+            image={user.portrait ?? noUser}
             imageAlt='User portrait'
             imageRound
+            onImageClick={imageClick}
+            imageClassName={classNames({
+                [styles.imageUploading]: imageUploading,
+            })}
 
             title={user.fullName}
             subtitle={user.email}
@@ -44,7 +67,7 @@ const UserEdit: FunctionComponent = props => {
             buttonLocation='/'
         />
         <div className={styles.form}>
-
+            {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
             <Input
                 className={styles.firstName}
                 title='First Name'

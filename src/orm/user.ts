@@ -1,4 +1,3 @@
-import noUser from 'assets/user.svg'
 import { IconName } from 'components/icon'
 import { firestore } from './firebase'
 import Model, { useQuery } from './model'
@@ -13,9 +12,6 @@ export interface DonationTarget {
 export default class User extends Model {
     public readonly collection = firestore.collection('user')
 
-    @Model.field({ readonly: true })
-    public userID: string = ''
-
     @Model.field()
     public firstName: string = ''
 
@@ -29,7 +25,7 @@ export default class User extends Model {
     public email: string = ''
 
     @Model.field()
-    public portrait: string = noUser
+    public portrait: string | undefined
 
     @Model.field()
     public getEmails: boolean = false

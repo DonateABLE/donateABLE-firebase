@@ -10,6 +10,9 @@ interface Props {
     image: string
     imageAlt: string
     imageRound?: boolean
+    onImageClick?: () => void
+    imageClassName?: string
+
     title: string
     subtitle: string
     buttonTitle: string
@@ -20,9 +23,10 @@ const Header: FunctionComponent<Props> = props => {
     return <Fragment>
         <FullWidth className={styles.header}>
             <img
-                className={classNames(styles.logo, { [styles.round]: props.imageRound })}
+                className={classNames(styles.logo, props.imageClassName, { [styles.round]: props.imageRound })}
                 src={props.image}
                 alt={props.imageAlt}
+                onClick={props.onImageClick}
             />
             <div className={styles.info}>
                 <h2 className={styles.name}>{props.title}</h2>
