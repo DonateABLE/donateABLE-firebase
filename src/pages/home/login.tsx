@@ -10,7 +10,7 @@ function useUser(): firebase.User | null  {
     const [userStatus, setUserStatus] = useState<firebase.User | null>(null)
 
     useEffect(() => {
-        return firebase.auth().onAuthStateChanged( function (user) {
+        return firebase.auth().onAuthStateChanged( user => {
             if (user) {
                 setUserStatus(user)
             } else {
