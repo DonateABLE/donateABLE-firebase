@@ -1,6 +1,8 @@
 import * as firebaseApp from 'firebase/app'
+import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/storage'
+import {useEffect, useState} from 'react'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyA1ZO5xqplSR5Tm368c5_tRJLLiU6hcJdA',
@@ -44,4 +46,23 @@ export function isFirebaseError(err: unknown): err is firebase.firestore.Firesto
         && 'name' in err && (err as any).name === 'FirebaseError'
         && 'code' in err
 
+}
+
+export function useUser(): firebase.User | null  {
+    const [userStatus, setUserStatus] = useState<firebase.User | null>(null)
+
+    useEffect(() => {
+        return firebaseApp.auth().onAuthStateChanged( user => {
+            if (user) {
+                setUserStatus(user)
+            } else {
+                setUserStatus(null)
+            }
+        })
+    }, [setUserStatus])
+    return userStatus
+}
+
+export const signOut = () => {
+    firebaseApp.auth().signOut()
 }

@@ -2,28 +2,10 @@ import Button from 'components/button'
 import Content from 'components/content'
 import TextBox from 'components/textbox'
 import firebase from 'firebase'
-import {createElement, Fragment, FunctionComponent, useEffect, useState} from 'react'
+import { signOut, useUser} from 'orm/firebase'
+import {createElement, Fragment, FunctionComponent} from 'react'
 import { FirebaseAuth } from 'react-firebaseui'
 import styles from './style.scss'
-
-function useUser(): firebase.User | null  {
-    const [userStatus, setUserStatus] = useState<firebase.User | null>(null)
-
-    useEffect(() => {
-        return firebase.auth().onAuthStateChanged( user => {
-            if (user) {
-                setUserStatus(user)
-            } else {
-                setUserStatus(null)
-            }
-        })
-    }, [setUserStatus])
-    return userStatus
-}
-
-const signOut = () => {
-    firebase.auth().signOut()
-}
 
 const LoggedIn: FunctionComponent = () => {
     return <Fragment>
