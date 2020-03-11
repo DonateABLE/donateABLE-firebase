@@ -1,10 +1,14 @@
 {
     "social": {
         "facebook": {
-            "title": "Share on Facebook"
+            "title": "Share on Facebook",
+            "message": "I am donating to :charity",
+            "hashtag": "DonateABLE"
         },
         "twitter": {
-            "title": "Share on Twitter"
+            "title": "Share on Twitter",
+            "message": "I am donating to :charity",
+            "hashtag": "DonateABLE"
         },
         "website": {
             "title": "Visit charity website"

@@ -73,9 +73,9 @@ export default class CharityPage extends Component<Props, State> {
             </FullWidth>
             <FullWidth className={styles.social} >
                 <FacebookShareButton
-                    quote={__('charity.social.facebook.quote')}
-                    url={__('charity.social.facebook.url')}
-                    hashtag={__('charity.social.facebook.hashtag')}
+                    url={'https://donateable.ca/' + location.pathname}
+                    quote={__('charity.social.facebook.message', { charity: this.state.charity?.longName ?? '' })}
+                    hashtag={'#' + __('charity.social.facebook.hashtag')}
                     className={styles.link}
                 >
                     <Icon className={styles.icon} name='facebook-f' />
@@ -84,9 +84,9 @@ export default class CharityPage extends Component<Props, State> {
                     </span>
                 </FacebookShareButton>
                 <TwitterShareButton
-                    title='Donate to Stuff'
-                    url={location.href}
-                    hashtags={['DonateABLE']}
+                    url={'https://donateable.ca/' + location.pathname}
+                    title={__('charity.social.twitter.message', { charity: this.state.charity?.longName ?? '' })}
+                    hashtags={[__('charity.social.twitter.hashtag')]}
                     className={styles.link}
                 >
                     <Icon className={styles.icon} name='twitter' />

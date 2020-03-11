@@ -3,7 +3,7 @@ import { createElement, Fragment, FunctionComponent } from 'react'
 
 let language = 'en'
 
-export function __(key: LangKeys): string {
+export function __(key: LangKeys, options: { [key: string]: string } = {}): string {
     let current = langFiles[language]
 
     for (const part of key.split('.')) {
@@ -15,6 +15,11 @@ export function __(key: LangKeys): string {
     if (typeof current !== 'string') {
         return key
     }
+
+    for (const [param, value] of Object.entries(options)) {
+        current = current.replace(new RegExp(':' + param, 'g'), value)
+    }
+
     return current
 }
 
