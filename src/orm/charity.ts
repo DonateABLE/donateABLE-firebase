@@ -92,4 +92,8 @@ export default class Charity extends Model {
 
     @Model.field()
     public donationTargets: DonationTarget[] = []
+
+    public url(): string {
+        return `/charity/${this.longName.replace(/ /g, '_')}`
+    }
 }

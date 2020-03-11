@@ -1,0 +1,14 @@
+{
+    "charity": {
+        "social": {
+            "facebook": {
+                "message": "Check out :charity on DonateABLE",
+                "hashtag": "DonateABLE"
+            },
+            "twitter": {
+                "message": "Check out :charity on DonateABLE",
+                "hashtag": "DonateABLE"
+            }
+        }
+    }
+}

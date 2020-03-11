@@ -110,7 +110,7 @@
             @include shadow;
 
             .icon {
-                padding: 0 5px;
+                padding: 0 5px !important;
                 background: none;
                 border: none;
                 color: $white;
