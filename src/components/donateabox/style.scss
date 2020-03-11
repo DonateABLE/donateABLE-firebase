@@ -1,0 +1,16 @@
+@import '../../variables';
+
+.donateABox {
+    --border: #{$dark-blue};
+    --color: #{$dark-blue};
+
+    .border {
+        stroke: $dark-blue;
+        stroke: var(--border);
+    }
+
+    .char {
+        fill: $light-blue;
+        fill: var(--color);
+    }
+}

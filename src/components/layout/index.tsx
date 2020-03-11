@@ -5,6 +5,7 @@ import About from 'pages/about'
 import Charity from 'pages/charity'
 import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
+import HowItWorks from 'pages/how-it-works'
 import { Component, createElement, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
 import {
@@ -74,6 +75,7 @@ export default class Layout extends Component<{}, State> {
                         <Route path='/charity/create' component={CharityEdit} />
                         <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
+                        <Route path='/how_it_works' component={HowItWorks} />
                         <Route path='/' component={Home} />
                     </Switch>
                 </div>
