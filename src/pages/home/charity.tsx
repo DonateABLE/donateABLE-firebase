@@ -18,7 +18,7 @@ const CharityBox: FunctionComponent<Props> = ({ className, charity, charityTypes
         <img className={styles.logo} src={charity.logo} alt={charity.longName + ' logo'} />
         <div className={styles.name}>{charity.longName}</div>
         <div className={styles.type}>
-            <Popup openButton={<Icon name={charity.typeIcon} />}>
+            <Popup openButton={<Icon name={charity.type?.icon ?? 'question-circle'} />}>
                 {charityTypes.map(t => (
                     <div key={t.name} className={styles.category}>
                         <div className={styles.iconCircle}>

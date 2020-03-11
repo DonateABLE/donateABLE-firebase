@@ -55,10 +55,11 @@ export default class Charity extends Model {
     public donatorsToDate: number = 0
 
     @Model.field()
-    public typeName: string = ''
-
-    @Model.field()
-    public typeIcon: IconName = 'question-circle'
+    public type: {
+        id: string
+        name: string
+        icon: IconName,
+    } | undefined
 
     @Model.field()
     public registeredBusinessName: string = ''

@@ -21,7 +21,7 @@
 
     .popup {
         max-height: 0px;
-        transition: max-height .25s linear, padding .25s linear;        
+        transition: max-height .25s linear, padding .25s linear;
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -61,6 +61,8 @@
                 display: flex;
                 align-items: center;
 
+                cursor: pointer;
+
                 .iconCircle {
                     background-color: $light-blue;
                     width: 40px;
@@ -78,6 +80,12 @@
 
                 .title {
                     padding-left: 1ch;
+                }
+
+                &.active {
+                    .iconCircle {
+                        background-color: $darker-blue;
+                    }
                 }
             }
         }

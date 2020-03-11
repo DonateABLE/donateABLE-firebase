@@ -4,6 +4,7 @@ import { bind } from 'decko'
 import About from 'pages/about'
 import Charity from 'pages/charity'
 import CharityEdit from 'pages/charity-edit'
+import CharitySearch from 'pages/charity-search'
 import Home from 'pages/home'
 import { Component, createElement, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
@@ -71,6 +72,7 @@ export default class Layout extends Component<{}, State> {
                 <div className={styles.content} >
                     <Switch>
                         <Route path='/about' component={About} />
+                        <Route path='/charity/search/:query?' component={CharitySearch} />
                         <Route path='/charity/create' component={CharityEdit} />
                         <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
