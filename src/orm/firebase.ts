@@ -63,6 +63,5 @@ export function useUser(): firebase.User | null  {
     return userStatus
 }
 
-export const signOut = () => {
-    firebaseApp.auth().signOut()
-}
+export const signOut = () => firebaseApp.auth().signOut()
+export const currentUser = firebaseApp.auth().onAuthStateChanged( user => user ? true : false )

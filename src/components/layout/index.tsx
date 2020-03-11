@@ -1,6 +1,7 @@
 import { ModalController } from 'components/modal'
 import { SnackBar } from 'components/snack-bar'
 import { bind } from 'decko'
+import * as firebaseApp from 'firebase/app'
 import About from 'pages/about'
 import Charity from 'pages/charity'
 import CharityEdit from 'pages/charity-edit'
@@ -20,6 +21,7 @@ import styles from './style.scss'
 
 interface State {
     menuOpen: boolean
+    authTitle: string
 }
 
 export default class Layout extends Component<{}, State> {
@@ -31,7 +33,14 @@ export default class Layout extends Component<{}, State> {
 
         this.state = {
             menuOpen: false,
+            authTitle: 'Login & Signup',
         }
+    }
+
+    public componentDidMount = () => {
+        firebaseApp.auth().onAuthStateChanged (user => {
+            user ? this.setState({authTitle: 'Sign Out'}) : this.setState({authTitle: 'Login & Sign Up'})
+        })
     }
 
     public render(): ReactNode {
@@ -56,7 +65,7 @@ export default class Layout extends Component<{}, State> {
                         },
                         {
                             href: '/login',
-                            title: 'Login & SignUp',
+                            title: this.state.authTitle,
                         },
                         {
                             href: '/how_it_works',
