@@ -7,6 +7,7 @@ import { PageLoader } from 'components/loader'
 import { openInfoModal } from 'components/modal'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind } from 'decko'
+import { __, La } from 'lang'
 import Charity from 'orm/charity'
 import { Component, createElement, Fragment, ReactNode } from 'react'
 import { Link, RouteComponentProps } from 'react-router-dom'
@@ -65,20 +66,22 @@ export default class CharityPage extends Component<Props, State> {
                             color='dark'
                             size='medium'
                         >
-                            Make a Monetary Donation <Icon name='external-link-alt' />
+                            {__('charity.make-donation')} <Icon name='external-link-alt' />
                         </Button>
                     </a>
                 </div>
             </FullWidth>
             <FullWidth className={styles.social} >
                 <FacebookShareButton
-                    quote='Donate to Stuff'
-                    url={location.href}
-                    hashtag='DonateABLE'
+                    quote={__('charity.social.facebook.quote')}
+                    url={__('charity.social.facebook.url')}
+                    hashtag={__('charity.social.facebook.hashtag')}
                     className={styles.link}
                 >
                     <Icon className={styles.icon} name='facebook-f' />
-                    <span className={styles.title}>Share on Facebook</span>
+                    <span className={styles.title}>
+                        {__('charity.social.facebook.title')}
+                    </span>
                 </FacebookShareButton>
                 <TwitterShareButton
                     title='Donate to Stuff'
@@ -87,14 +90,17 @@ export default class CharityPage extends Component<Props, State> {
                     className={styles.link}
                 >
                     <Icon className={styles.icon} name='twitter' />
-                    <span className={styles.title}>Share on Twitter</span>
+                    <span className={styles.title}>
+                        {__('charity.social.twitter.title')}
+                    </span>
                 </TwitterShareButton>
                 <a href={charity.websiteUrl} target='_blank' className={styles.link}>
                     <Icon className={styles.icon} name='globe' />
-                    <span className={styles.title}>Visit charity website</span>
+                    <span className={styles.title}>
+                        {__('charity.social.website.title')}
+                    </span>
                 </a>
             </FullWidth>
-
             <div className={styles.makeDonationLower}>
                 <a href={charity.canadaHelpsUrl} target='_blank'>
                     <Button
@@ -102,19 +108,19 @@ export default class CharityPage extends Component<Props, State> {
                         color='dark'
                         size='medium'
                     >
-                        Make a Monetary Donation <Icon name='external-link-alt' />
+                        {__('charity.make-donation')} <Icon name='external-link-alt' />
                     </Button>
                 </a>
             </div>
 
             <TabContainer>
-                <Tab title='Statistics'>
+                <Tab title={__('charity.statistics')}>
                     <Statistics charity={charity} />
                 </Tab>
-                <Tab title='Donation Targets'>
+                <Tab title={__('charity.donation-targets')}>
                     <DonationTargets charity={charity} />
                 </Tab>
-                <Tab title='About'>
+                <Tab title={__('charity.about')}>
                     <AboutCharity charity={charity} />
                 </Tab>
             </TabContainer>
