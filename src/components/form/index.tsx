@@ -9,6 +9,10 @@ export interface FormElementProps<T = never> {
     white?: boolean
 }
 
+/**
+ * `FormElement` should be used to wrap all of the other form components to give
+ * them a constant stile.
+ */
 const FormElement: FunctionComponent<FormElementProps> = props => (
     <div className={classNames(styles.formElement, { [styles.white]: props.white })}>
         <label>
