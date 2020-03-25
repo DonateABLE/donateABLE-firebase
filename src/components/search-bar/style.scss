@@ -1,6 +1,8 @@
 @import '../../variables';
 
 .searchBar {
+    position: relative;
+
     background-color: $dark-blue;
     color: $white;
 
@@ -8,7 +10,7 @@
         display: flex;
         flex-direction: row-reverse;
         text-transform: uppercase;
-        border-bottom: solid $white 2px;
+        border-bottom: solid $surface 2px;
         padding-top: 4px;
         padding-bottom: 4px;
 
@@ -21,12 +23,22 @@
 
     .popup {
         max-height: 0px;
-        transition: max-height .25s linear, padding .25s linear;        
+        transition: max-height .25s linear, padding-top .25s linear, padding-bottom .25s linear;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         padding-top: 0px;
         padding-bottom: 0px;
+
+        position: absolute;
+        background: $dark-blue;
+        width: 100%;
+        left: calc(50vw - #{($bp-lg-min / 2) - 8px});
+        top: 100%;
+
+        @media screen and (max-width: $bp-lg-min) {
+            left: 8px;
+        }
 
 
         &.show {
