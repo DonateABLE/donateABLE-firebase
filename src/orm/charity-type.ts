@@ -1,5 +1,5 @@
 import { IconName } from 'components/icon'
-import { firestore } from './firebase'
+import { firestore } from 'fb'
 import Model from './model'
 
 export default class CharityType extends Model {

@@ -1,9 +1,14 @@
 @import '../../variables';
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
 
 :global(.light) {
     color: $light-blue;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 body {
@@ -11,7 +16,8 @@ body {
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    color: $dark-blue;
+    background-color: $background;
+    color: $on-background;
 }
 
 * {

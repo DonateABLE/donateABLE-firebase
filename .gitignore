@@ -3,3 +3,5 @@ dist
 firestore-debug.log
 firebase-debug.log
 .DS_Store
+functions/.runtimeconfig.json
+

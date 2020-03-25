@@ -7,6 +7,7 @@ import Charity from 'pages/charity'
 import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
 import Login from 'pages/home/login'
+import HowItWorks from 'pages/how-it-works'
 import { Component, createElement, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
 import {
@@ -38,8 +39,8 @@ export default class Layout extends Component<{}, State> {
     }
 
     public componentDidMount = () => {
-        firebaseApp.auth().onAuthStateChanged (user => {
-            user ? this.setState({authTitle: 'Sign Out'}) : this.setState({authTitle: 'Login & Sign Up'})
+        firebaseApp.auth().onAuthStateChanged(user => {
+            user ? this.setState({ authTitle: 'Sign Out' }) : this.setState({ authTitle: 'Login & Sign Up' })
         })
     }
 
@@ -89,6 +90,7 @@ export default class Layout extends Component<{}, State> {
                         <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
                         <Route path='/login' component={Login} />
+                        <Route path='/how_it_works' component={HowItWorks} />
                         <Route path='/' component={Home} />
                     </Switch>
                 </div>

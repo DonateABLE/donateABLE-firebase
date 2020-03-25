@@ -2,7 +2,7 @@ import * as firebaseApp from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/storage'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyA1ZO5xqplSR5Tm368c5_tRJLLiU6hcJdA',
@@ -19,7 +19,7 @@ firebaseApp.initializeApp(firebaseConfig)
 
 const db = firebaseApp.firestore()
 const store = firebaseApp.storage()
-
+let cloudFunctionPrefix = `https://us-central1-${firebaseConfig.projectId}.cloudfunctions.net`
 if (__DEVELOPMENT__) {
     // tslint:disable-next-line: no-console
     console.log('Connecting to emulated firebase services')
@@ -27,6 +27,8 @@ if (__DEVELOPMENT__) {
         host: 'localhost:8080',
         ssl: false,
     })
+
+    cloudFunctionPrefix = 'http://localhost:5001/donateable-42f3d/us-central1'
 
     import('seed').then(async seed => {
         await seed.seedCharities()
@@ -48,11 +50,11 @@ export function isFirebaseError(err: unknown): err is firebase.firestore.Firesto
 
 }
 
-export function useUser(): firebase.User | null  {
+export function useUser(): firebase.User | null {
     const [userStatus, setUserStatus] = useState<firebase.User | null>(null)
 
     useEffect(() => {
-        return firebaseApp.auth().onAuthStateChanged( user => {
+        return firebaseApp.auth().onAuthStateChanged(user => {
             if (user) {
                 setUserStatus(user)
             } else {
@@ -64,4 +66,7 @@ export function useUser(): firebase.User | null  {
 }
 
 export const signOut = () => firebaseApp.auth().signOut()
-export const currentUser = firebaseApp.auth().onAuthStateChanged( user => user ? true : false )
+export const currentUser = firebaseApp.auth().onAuthStateChanged(user => user ? true : false)
+export function cloudFunction(name: string, init?: RequestInit): Promise<Response> {
+    return fetch(cloudFunctionPrefix + '/' + name, init)
+}
