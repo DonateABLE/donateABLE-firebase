@@ -12,11 +12,20 @@ interface ToastAction {
 }
 
 interface ToastOptions {
+    // The text and effect of a button on the toast
     action?: ToastAction
+
+    // time to live, the length of time the toast will be shown on screen
     ttl: number
+
+    // a new toast with the same key as an old toast will replace the old tost
+    // on the screen
     key: string | symbol
 }
-
+/**
+ * The ToastMessageEvent class is used to show new toasts when dispatched to
+ * toastEvents
+ */
 class ToastMessageEvent extends Event {
     public readonly id: string
     public hidden: boolean = false
@@ -57,6 +66,10 @@ class ToastMessageEvent extends Event {
     }
 }
 
+/**
+ * The ToastDismissEvent class is used to hide and then delete the toasts. It
+ * needs to hide fist so the toast has time to animate out.
+ */
 class ToastDismissEvent extends Event {
     constructor(
         public readonly id: string,
@@ -66,11 +79,16 @@ class ToastDismissEvent extends Event {
     }
 }
 
+// toastEvents is the EventTarget that sends the toasts to show to the snack bar
 const toastEvents = new EventTarget<{ message: ToastMessageEvent, dismiss: ToastDismissEvent }, {}, 'strict'>()
 
+/**
+ * SnackBar shows all of the active toasts in the bottom left of the screen
+ */
 export const SnackBar: FunctionComponent = props => {
     const [toasts, changeToasts] = useState<ToastMessageEvent[]>([])
 
+    // when a new toast comes in add it to the toasts list
     useEventListener(toastEvents, 'message', e => {
         const toast = toasts.find(t => t.key === e.key)
         if (toast) {
@@ -83,6 +101,8 @@ export const SnackBar: FunctionComponent = props => {
         }
     }, [toasts, changeToasts])
 
+    // when the toast should be dismissed it will first hide the toast so that
+    // it can animate out, then it will fully remove it
     useEventListener(toastEvents, 'dismiss', e => {
         if (e.hide) {
             changeToasts(toasts.map(t => {
@@ -113,9 +133,6 @@ const Toast: FunctionComponent<{ event: ToastMessageEvent }> = ({ event }) => {
     return <div className={classNames(styles.toast, { [styles.hidden]: event.hidden })} onClick={event.dismiss}>
         {event.message}
 
-        {/* {event.count > 1 &&
-            ' ×' + event.count} */}
-
         {event.action &&
             <Button
                 onClick={clickAction}
@@ -128,6 +145,13 @@ const Toast: FunctionComponent<{ event: ToastMessageEvent }> = ({ event }) => {
     </div>
 }
 
+/**
+ * showToast will add a toast to each `SnackBar` that is being rendered with the
+ * text `message`.
+ *
+ * @param message the text on the toast
+ * @param options additional options for the toast
+ */
 export function showToast(message: string, options: Partial<ToastOptions> = {}): void {
     const { action, ttl = 3000, key = Symbol() } = options
     toastEvents.dispatchEvent(new ToastMessageEvent(message, action, ttl, key))
