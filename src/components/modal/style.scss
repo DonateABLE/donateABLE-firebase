@@ -14,7 +14,8 @@ $width: 500px;
 
     .modal {
         position: absolute;
-        background: $white;
+        background-color: $background;
+        color: $on-background;
         width: $width;
         max-width: calc(100vw - 15px);
 

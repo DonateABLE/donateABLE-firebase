@@ -1,0 +1,17 @@
+{
+    "social": {
+        "facebook": {
+            "title": "Share on Facebook"
+        },
+        "twitter": {
+            "title": "Share on Twitter"
+        },
+        "website": {
+            "title": "Visit charity website"
+        }
+    },
+    "make-donation": "Make a Monetary Donation",
+    "statistics": "Statistics",
+    "donation-targets": "Donation Targets",
+    "about": "About"
+}
