@@ -69,31 +69,30 @@ const SearchBar: FunctionComponent<Props> = props => {
                 <label className={styles.label} htmlFor='search' >
                     Search for charity
                         <Icon name='search' />
-                    </label>
-                </Content>
-            </div>
-            <FullWidth
-                className={classNames(styles.popup, {
-                    [styles.show]: this.state.open,
-                })}
-            >
-                <h3 className={styles.label} >
-                    <label htmlFor='search' >Search by charity name</label>
-                </h3>
-                <input className={styles.input} id='search' type='text' placeholder='Type Charity Name Here...' />
-                <h3 className={styles.label} >Search by charity type</h3>
-                <div className={styles.categories}>
-                    {this.state.charityTypes.map(t => (
-                        <div key={t.name} className={styles.category}>
-                            <div className={styles.iconCircle}>
-                                <Icon className={styles.icon} name={t.icon} />
-                            </div>
-                            <div className={styles.title}>{t.name} Charities</div>
-                        </div>
-                    ))}
-                </div>
-            </FullWidth>
+                </label>
+            </Content>
         </div>
+        <FullWidth
+            className={classNames(styles.popup, {
+                [styles.show]: open,
+            })}
+        >
+            <h3 className={styles.label} >
+                <label htmlFor='search' >Search by charity name</label>
+            </h3>
+            <input className={styles.input} id='search' type='text' placeholder='Type Charity Name Here...' />
+            <h3 className={styles.label} >Search by charity type</h3>
+            <div className={styles.categories}>
+                {charityTypes.map(t => (
+                    <div key={t.name} className={styles.category}>
+                        <div className={styles.iconCircle}>
+                            <Icon className={styles.icon} name={t.icon} />
+                        </div>
+                        <div className={styles.title}>{t.name} Charities</div>
+                    </div>
+                ))}
+            </div>
+        </FullWidth>
         <Content
             className={classNames(styles.popup, {
                 [styles.show]: open,
@@ -135,7 +134,7 @@ const SearchBar: FunctionComponent<Props> = props => {
                 })}
             </div>
         </Content>
-    </div>
+    </div >
 }
 
 export default SearchBar
