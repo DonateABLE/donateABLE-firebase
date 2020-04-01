@@ -1,5 +1,5 @@
 import { IconName } from 'components/icon'
-import { firestore } from './firebase'
+import { firestore } from 'fb'
 import Model, { useQuery } from './model'
 
 export interface DonationTarget {
