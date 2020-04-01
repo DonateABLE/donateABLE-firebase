@@ -2,6 +2,7 @@ import Button from 'components/button'
 import Content from 'components/content'
 import SearchBar, { SearchQuery } from 'components/search-bar'
 import TextBox from 'components/textbox'
+import { useUser } from 'fb'
 import Charity from 'orm/charity'
 import CharityType from 'orm/charity-type'
 import { useQuery } from 'orm/model'
@@ -10,6 +11,23 @@ import { Link } from 'react-router-dom'
 import { formatNumber } from 'utils'
 import CharityBox from './charity'
 import styles from './style.scss'
+
+const LoginButtons: FunctionComponent = () => {
+    if (useUser()) {
+        return <Fragment>
+            <Link to='/login'>
+                <Button className={styles.groupElement} color='dark'>Sign Out</Button>
+            </Link>
+        </Fragment>
+    } else {
+        return <Fragment>
+            <Link to='/login'>
+                <Button className={styles.groupElement} color='white'>Login</Button>
+                <Button className={styles.groupElement} color='dark'>Sign Up</Button>
+            </Link>
+        </Fragment>
+    }
+}
 
 const Home: FunctionComponent = () => {
     const charities = useQuery(Charity.builder().orderBy('longName')) ?? []
@@ -32,10 +50,7 @@ const Home: FunctionComponent = () => {
                 <TextBox className={styles.groupElement}>
                     Total Hashes <b className={styles.value}>{formatNumber(13_256_475)}</b>
                 </TextBox>
-                <Link to='/login'>
-                    <Button className={styles.groupElement} color='white'>Login</Button>
-                    <Button className={styles.groupElement} color='dark'>Sign Up</Button>
-                </Link>
+                <LoginButtons />
             </div>
         </div>
         <SearchBar
