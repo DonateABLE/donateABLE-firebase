@@ -2,6 +2,8 @@
 
 $padding: 8px;
 
+// the content class makes it so that the usable area is never more than
+// `$bp-lg-min` px wide unless the screen is smaller than that
 .content {
     margin: 0 calc(50vw - #{$bp-lg-min / 2});
     padding: $padding;
@@ -15,6 +17,8 @@ $padding: 8px;
     }
 }
 
+// fullWidth adds padding to the edge of each side of the block to extend to the
+// edge of the screen if it is in a content block.
 .fullWidth {
     margin: 0 calc(-1 * (50vw - #{$bp-lg-min / 2 - $padding}));
     padding: 0 calc(50vw - #{$bp-lg-min / 2 - $padding});
