@@ -1,5 +1,5 @@
 import EventTarget from 'event-target-shim'
-import { DependencyList, SyntheticEvent, useEffect, useRef } from 'react'
+import { DependencyList, SyntheticEvent, useCallback, useEffect, useRef, useState } from 'react'
 
 export function notUndefined<T>(v: T | undefined): v is T {
     return v !== undefined
@@ -73,6 +73,8 @@ export function addValue(cb: (value: string, e: SyntheticEvent) => void): (e: Sy
 
 const argsCache = new WeakMap<object, Map<string, (...args: any) => void>>()
 
+type Primitive = number | string | boolean
+
 /**
  * The `bindArgs` function takes in some arguments then a function and will
  * return a function with the first arguments bound to the ones passed in.
@@ -104,15 +106,15 @@ const argsCache = new WeakMap<object, Map<string, (...args: any) => void>>()
  * @param callback
  */
 // tslint:disable: max-line-length
-export function bindArgs<A0 extends number | string, U extends unknown[]>(arg0: A0, callback: (arg0: A0, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, callback: (arg0: A0, arg1: A1, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, callback: (arg0: A0, arg1: A1, arg2: A2, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, A6 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, A6 extends number | string, A7 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends number | string, A1 extends number | string, A2 extends number | string, A3 extends number | string, A4 extends number | string, A5 extends number | string, A6 extends number | string, A7 extends number | string, A8 extends number | string, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, U extends unknown[]>(arg0: A0, callback: (arg0: A0, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, callback: (arg0: A0, arg1: A1, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, callback: (arg0: A0, arg1: A1, arg2: A2, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, A6 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, A6 extends Primitive, A7 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, A6 extends Primitive, A7 extends Primitive, A8 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, ...originalArgs: U) => void): (...originalArgs: U) => void
 // tslint:enable: max-line-length
 export function bindArgs(...args: unknown[]): (...args: unknown[]) => void {
     // this function uses unknown types because typescript wont let me use
@@ -148,7 +150,7 @@ function argsKey(args: unknown[]): string {
 // I used the following function to generate the arguments overloads for bindArgs
 
 // function overload(num: number): string {
-//     const generics = range(num).map(i => `A${i} extends number | string`).join(', ')
+//     const generics = range(num).map(i => `A${i} extends Primitive`).join(', ')
 //     const args = range(num).map(i => `arg${i}: A${i}`).join(', ')
 //     return `export function bindArgs<${generics}, U extends unknown[]>(`
 //         + `${args}, callback: (${args}, ...originalArgs: U) => void,`
@@ -249,4 +251,10 @@ export function useEventListener<
         target.addEventListener(eventName, eventListener)
         return () => target.removeEventListener(eventName, eventListener)
     }, [eventName, target, ...deps])
+}
+
+// create your forceUpdate hook
+export function useForceUpdate(): () => void {
+    const [, setValue] = useState(0)
+    return useCallback(() => setValue(value => ++value), [setValue])
 }

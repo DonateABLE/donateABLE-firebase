@@ -1,21 +1,41 @@
 @import '../../variables';
 
 .formElement {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+
     margin-bottom: 5px;
     color: $dark-blue;
 
-    &.white {
-        color: $white;
-    }
-
     .title {
         font-size: 0.8em;
-        font-weight: bold;
+        color: $darker-blue;
+    }
+
+    &.white {
+        color: $white;
+
+        .title {
+            color: $white;
+        }
     }
 
     .input {
         width: 100%;
-        border: solid 1px rgba($darker-blue, 0.4);
+        border: none;
+        border-bottom: solid 1px $dark-blue;
+        background-color: mix($darker-blue, white, 10%);
+        transition: border-bottom 0.2s, background-color 0.2s, padding-bottom 0.2s;
+        font-size: inherit;
+        padding: 10px;
+
+        &:focus {
+            outline: none;
+            background-color: mix($light-blue, white, 10%);
+            border-bottom: solid 3px $light-blue;
+            padding-bottom: 8px;
+        }
     }
 
     textarea {

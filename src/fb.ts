@@ -2,6 +2,8 @@ import * as firebaseApp from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/storage'
+import { useQuery } from 'orm/model'
+import User from 'orm/user'
 import { useEffect, useState } from 'react'
 
 const firebaseConfig = {
@@ -33,6 +35,7 @@ if (__DEVELOPMENT__) {
     import('seed').then(async seed => {
         await seed.seedCharities()
         await seed.seedCharityTypes()
+        await seed.seedUser()
     })
 }
 
@@ -50,19 +53,31 @@ export function isFirebaseError(err: unknown): err is firebase.firestore.Firesto
 
 }
 
-export function useUser(): firebase.User | null {
-    const [userStatus, setUserStatus] = useState<firebase.User | null>(null)
+export function useUser(): User & { firebaseUser?: firebase.User } | undefined {
+    const [fbUser, setFbUser] = useState<firebase.User | undefined>(undefined)
+    const [user, setUser] = useState<(User & { firebaseUser?: firebase.User }) | undefined>(undefined)
 
     useEffect(() => {
-        return firebaseApp.auth().onAuthStateChanged(user => {
-            if (user) {
-                setUserStatus(user)
-            } else {
-                setUserStatus(null)
-            }
+        return firebaseApp.auth().onAuthStateChanged(u => {
+            setFbUser(u ?? undefined)
         })
-    }, [setUserStatus])
-    return userStatus
+    }, [setFbUser])
+
+    useEffect(() => {
+        if (fbUser === undefined) {
+            return
+        }
+        return User.subscribe(fbUser.uid, u => {
+            setUser(u ?? undefined)
+        })
+    }, [fbUser, setUser])
+
+    if (user === undefined) {
+        return undefined
+    }
+
+    user.firebaseUser = fbUser
+    return user
 }
 
 export const signOut = () => firebaseApp.auth().signOut()

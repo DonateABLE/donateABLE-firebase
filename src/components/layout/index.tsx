@@ -8,7 +8,8 @@ import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
 import Login from 'pages/home/login'
 import HowItWorks from 'pages/how-it-works'
-import { Component, createElement, ReactNode } from 'react'
+import UserEdit from 'pages/user'
+import { Component, createElement, createRef, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
 import {
     BrowserRouter as Router,
@@ -27,7 +28,7 @@ interface State {
 
 export default class Layout extends Component<{}, State> {
 
-    private menu: Element | Text | null = null
+    private menuRef = createRef<HTMLElement>()
 
     constructor(props: {}) {
         super(props)
@@ -73,7 +74,7 @@ export default class Layout extends Component<{}, State> {
                             title: 'How it Works',
                         },
                     ]}
-                    ref={e => this.menu = findDOMNode(e)}
+                    rootRef={this.menuRef}
                 />
                 <header className={styles.header}>
                     <Link to='/'>
@@ -86,6 +87,7 @@ export default class Layout extends Component<{}, State> {
                 <div className={styles.content} >
                     <Switch>
                         <Route path='/about' component={About} />
+                        <Route path='/user' component={UserEdit} />
                         <Route path='/charity/create' component={CharityEdit} />
                         <Route path='/charity/:id/edit' component={CharityEdit} />
                         <Route path='/charity/:name' component={Charity} />
@@ -124,7 +126,7 @@ export default class Layout extends Component<{}, State> {
 
     @bind
     private onBodyClick(e: MouseEvent): void {
-        if (clickedOn(e, this.menu)) {
+        if (clickedOn(e, this.menuRef.current)) {
             return
         }
         this.setState({ menuOpen: false })

@@ -7,6 +7,7 @@ export interface FormElementProps<T = never> {
     value: string | number
     onChange: (e: ChangeEvent<T>) => void
     white?: boolean
+    className?: string
 }
 
 /**
@@ -14,7 +15,7 @@ export interface FormElementProps<T = never> {
  * them a constant stile.
  */
 const FormElement: FunctionComponent<FormElementProps> = props => (
-    <div className={classNames(styles.formElement, { [styles.white]: props.white })}>
+    <div className={classNames(styles.formElement, props.className, { [styles.white]: props.white })}>
         <label>
             <div className={styles.title}>
                 {props.title}

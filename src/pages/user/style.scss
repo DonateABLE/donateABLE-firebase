@@ -1,0 +1,61 @@
+.image {
+    position: relative;
+    border-radius: 50%;
+
+    &.imageUploading {
+        filter: blur(10px);
+    }
+
+    &:hover {
+        &::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(grey, 0.4);
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "Edit";
+            size: 3em;
+            font-weight: bold;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+    }
+}
+
+.form {
+    display: grid;
+
+    grid-template-columns: 1fr 1ft;
+    grid-column-gap: 8px;
+    grid-template-areas:
+        "first last"
+        "email email"
+        "user  user";
+
+    .firstName {
+        grid-area: first;
+    }
+
+    .lastName {
+        grid-area: last;
+    }
+
+    .email {
+        grid-area: email;
+    }
+
+    .user {
+        grid-area: user;
+    }
+}
