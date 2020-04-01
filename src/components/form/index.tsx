@@ -22,7 +22,9 @@ const FormElement: FunctionComponent<FormElementProps> = props => (
 )
 
 interface InputProps extends FormElementProps<HTMLInputElement> {
-    type?: 'text' | 'number'
+    type?:
+        'text' | 'number' | 'password' | 'email' | 'tel' | 'sumbit' |
+        'reset' | 'button' | 'radio' | 'time'
 }
 export const Input: FunctionComponent<InputProps> = props => (
     <FormElement {...props}>

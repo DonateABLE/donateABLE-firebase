@@ -6,10 +6,11 @@ import { Modal, ModalBody, ModalControl, ModalHeader, openInfoModal, openModal }
 import { showToast } from 'components/snack-bar'
 import { Tab, TabContainer } from 'components/tabs'
 import { bind, memoize } from 'decko'
+import { isFirebaseError, storage } from 'fb'
 import Charity, { DonationTarget } from 'orm/charity'
-import { isFirebaseError, storage } from 'orm/firebase'
-import { Component, createElement, FunctionComponent, ReactNode, useState } from 'react'
-import { RouteComponentProps } from 'react-router-dom'
+import CharityType from 'orm/charity-type'
+import { Component, createElement, Fragment, FunctionComponent, ReactNode, SyntheticEvent, useState } from 'react'
+import { Link, RouteComponentProps } from 'react-router-dom'
 import { addValue, bindArgs } from 'utils'
 import uuidv4 from 'uuid/v4'
 import styles from './style.scss'
@@ -19,16 +20,19 @@ type Props = RouteComponentProps<{ id?: string }>
 interface State {
     charity: Charity
     logoURL?: string
+    charityTypes: CharityType[]
 }
 
 export default class CharityEdit extends Component<Props, State> {
     private cancelCharity?: () => void
+    private cancelCharityTypes?: () => void
 
     constructor(props: Props) {
         super(props)
 
         this.state = {
             charity: new Charity(),
+            charityTypes: [],
         }
     }
 
@@ -45,10 +49,15 @@ export default class CharityEdit extends Component<Props, State> {
                 },
             )
         }
+
+        this.cancelCharityTypes = CharityType.builder().subscribe(
+            async cts => this.setState({ charityTypes: cts }),
+        )
     }
 
     public componentWillUnmount(): void {
         this.cancelCharity?.()
+        this.cancelCharityTypes?.()
     }
 
     public render(): ReactNode {
@@ -111,6 +120,24 @@ export default class CharityEdit extends Component<Props, State> {
                     title='Canada Helps Link'
                     value={charity.canadaHelpsUrl}
                     onChange={addValue(bindArgs('canadaHelpsUrl', this.charityChangeString))}
+                />
+                <Select
+                    title='Charity Type'
+                    options={this.state.charityTypes.map(ct => [ct.id ?? '', ct.name])}
+                    value={this.state.charity.type?.id ?? ''}
+                    onChange={addValue((value: string) => {
+                        const type = this.state.charityTypes.find(ct => ct.id === value)
+                        if (type) {
+                            this.state.charity.type = {
+                                id: type.id ?? '',
+                                name: type.name,
+                                icon: type.icon,
+                            }
+                        } else {
+                            this.state.charity.type = undefined
+                        }
+                        this.setState({})
+                    })}
                 />
             </FullWidth>
             <TabContainer>

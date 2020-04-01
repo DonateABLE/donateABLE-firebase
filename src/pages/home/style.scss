@@ -48,10 +48,64 @@
         }
     }
 
+    .loginButtonGroup {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        
+        .loginGroupElement {
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 2px;
+            text-transform: uppercase;
+        }
+    }
     .value {
         padding-left: 2ch;
     }
 }
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .formButton {
+        min-width: 250px;
+        max-width: 320px;
+        width: 100%;
+        margin-top: 3px;
+        text-transform: uppercase;
+    }
+    
+    input {
+        width: 320px !important;
+    }
+}
+
+:global(.firebaseui-idp-button) {
+    font-family: Montserrat !important;
+    height: 60px !important;
+    width: 60vw !important;
+    min-width: 192px !important;
+    max-width: 320px !important;
+ }
+
+ :global(.mdl-button--raised.mdl-button--colored) {
+     background: $dark-blue !important;
+ }
+
+ :global(.firebaseui-title) {
+     color: $dark-blue !important;
+ }
+
+ :global(.firebaseui-textfield.mdl-textfield .firebaseui-label::after) {
+    background-color: $dark-blue !important;
+ }
+
+ :global(.firebaseui-link) {
+     color: $light-blue !important;
+ }
 
 .charities {
     display: grid;
@@ -156,6 +210,25 @@
             .title {
                 padding-left: 1ch;
                 white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $bp-sm-min){
+    .top{ 
+        .loginButtonGroup {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .loginGroupElement {
+                margin-left: 5px;
+                max-width: 300px;
+                max-height: 47px;
+                padding: 5px;
             }
         }
     }

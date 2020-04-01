@@ -6,6 +6,14 @@ import { classNames } from 'utils'
 import noUser from '../../assets/user.svg'
 import styles from './style.scss'
 
+type Option = {
+    title: string,
+} & ({
+    href: string,
+} | {
+    onClick: () => void,
+})
+
 interface Props {
     open: boolean
     onMenuOpenClick: () => void

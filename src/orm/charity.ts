@@ -1,5 +1,5 @@
 import { IconName } from 'components/icon'
-import { firestore } from './firebase'
+import { firestore } from 'fb'
 import Model from './model'
 
 export interface DonationTarget {
@@ -55,10 +55,11 @@ export default class Charity extends Model {
     public donatorsToDate: number = 0
 
     @Model.field()
-    public typeName: string = ''
-
-    @Model.field()
-    public typeIcon: IconName = 'question-circle'
+    public type: {
+        id: string
+        name: string
+        icon: IconName,
+    } | undefined
 
     @Model.field()
     public registeredBusinessName: string = ''

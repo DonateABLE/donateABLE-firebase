@@ -43,3 +43,4 @@ Awesome! You can make changes and see them live at: `http://localhost:5000`
 * `/src/components` - Contains all of the React components that can be reused across all of the pages (i.e. Buttons, Modals, Forms)
 * `/src/orm` - Contains the ORM wrapper around Firebase, the structure for data used in the web app, and the model
 * `/src/pages` - Contains the individual pages 
+
