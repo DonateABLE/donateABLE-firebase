@@ -1,6 +1,8 @@
 import * as firebaseApp from 'firebase/app'
+import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/storage'
+import { useEffect, useState } from 'react'
 
 const firebaseConfig = {
     apiKey: 'AIzaSyA1ZO5xqplSR5Tm368c5_tRJLLiU6hcJdA',
@@ -48,6 +50,23 @@ export function isFirebaseError(err: unknown): err is firebase.firestore.Firesto
 
 }
 
+export function useUser(): firebase.User | null {
+    const [userStatus, setUserStatus] = useState<firebase.User | null>(null)
+
+    useEffect(() => {
+        return firebaseApp.auth().onAuthStateChanged(user => {
+            if (user) {
+                setUserStatus(user)
+            } else {
+                setUserStatus(null)
+            }
+        })
+    }, [setUserStatus])
+    return userStatus
+}
+
+export const signOut = () => firebaseApp.auth().signOut()
+export const currentUser = firebaseApp.auth().onAuthStateChanged(user => user ? true : false)
 export function cloudFunction(name: string, init?: RequestInit): Promise<Response> {
     return fetch(cloudFunctionPrefix + '/' + name, init)
 }
