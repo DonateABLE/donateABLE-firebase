@@ -47,7 +47,7 @@ const About: FunctionComponent = () => {
            </section>
         </div>
          <Link to='/how_it_works'>
-            <Button size='large' className={styles.startDonating}>See How It Works</Button>
+            <Button size='large'>See How It Works</Button>
         </Link>
     </Content>
 }
