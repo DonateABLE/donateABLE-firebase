@@ -1,18 +1,21 @@
 {
     "compilerOptions": {
         "sourceMap": true,
-        "noImplicitAny": true,
         "moduleResolution": "node",
-        "module": "esnext",
-        "target": "es2019",
-        "baseUrl": "./",
+        "module": "ESNext",
+        "target": "es5",
+        "lib": [
+            "DOM",
+            "ES5",
+            "ScriptHost"
+        ],
         "jsx": "react",
         "jsxFactory": "createElement",
         "experimentalDecorators": true,
-        "pretty": true,
         "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true,
         "strict": true,
+        "baseUrl": "./",
         "paths": {
             "*": [
                 "src/*"

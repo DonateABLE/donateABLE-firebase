@@ -6,6 +6,8 @@ type Filter<T, U> = T extends U ? T : never;  // Remove types from T that are no
 
 type FilterPropertyNames<T, U> = { [K in keyof T]: T[K] extends U ? K : never }[keyof T];
 
+// type ReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer U ? U : never
+
 declare module '@ungap/event-target' {
     export = EventTarget
 }

@@ -10,7 +10,6 @@ interface ToastAction {
     title: string
     effect: () => void,
 }
-
 interface ToastOptions {
     // The text and effect of a button on the toast
     action?: ToastAction
@@ -30,7 +29,7 @@ class ToastMessageEvent extends Event {
     public readonly id: string
     public hidden: boolean = false
 
-    private timeoutID?: NodeJS.Timeout
+    private timeoutID?: ReturnType<typeof setTimeout>
 
     constructor(
         public message: string,
