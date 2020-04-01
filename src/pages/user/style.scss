@@ -1,5 +1,36 @@
-.imageUploading {
-    filter: blur(10px);
+.image {
+    position: relative;
+    border-radius: 50%;
+
+    &.imageUploading {
+        filter: blur(10px);
+    }
+
+    &:hover {
+        &::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(grey, 0.4);
+            pointer-events: none;
+        }
+
+        &::after {
+            content: "Edit";
+            size: 3em;
+            font-weight: bold;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+    }
 }
 
 .form {

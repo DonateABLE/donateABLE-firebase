@@ -34,11 +34,3 @@ export default class User extends Model {
         return this.firstName + ' ' + this.lastName
     }
 }
-
-export function useUser(): User | undefined {
-    const user = (useQuery(User.builder().limit(1)) ?? [])[0]
-    if (user === undefined) {
-        return
-    }
-    return user
-}

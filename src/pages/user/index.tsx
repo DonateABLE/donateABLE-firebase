@@ -57,7 +57,7 @@ const UserEdit: FunctionComponent = props => {
             imageAlt='User portrait'
             imageRound
             onImageClick={imageClick}
-            imageClassName={classNames({
+            imageClassName={classNames(styles.image, {
                 [styles.imageUploading]: imageUploading,
             })}
 

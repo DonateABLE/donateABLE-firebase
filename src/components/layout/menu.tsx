@@ -1,5 +1,5 @@
 import Icon from 'components/icon'
-import { useUser } from 'orm/user'
+import { useUser } from 'fb'
 import { Component, createElement, Fragment, FunctionComponent, ReactNode, RefObject } from 'react'
 import { Link } from 'react-router-dom'
 import { classNames } from 'utils'

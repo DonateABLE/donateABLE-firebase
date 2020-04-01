@@ -22,12 +22,13 @@ interface Props {
 const Header: FunctionComponent<Props> = props => {
     return <Fragment>
         <FullWidth className={styles.header}>
-            <img
-                className={classNames(styles.logo, props.imageClassName, { [styles.round]: props.imageRound })}
-                src={props.image}
-                alt={props.imageAlt}
-                onClick={props.onImageClick}
-            />
+            <div className={classNames(styles.logo, props.imageClassName, { [styles.round]: props.imageRound })}>
+                <img
+                    src={props.image}
+                    alt={props.imageAlt}
+                    onClick={props.onImageClick}
+                />
+            </div>
             <div className={styles.info}>
                 <h2 className={styles.name}>{props.title}</h2>
                 <div className={styles.tagLine}>{props.subtitle}</div>
