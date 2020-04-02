@@ -18,6 +18,10 @@
     ],
     "rewrites": [
       {
+        "source": "/makeAdmin",
+        "function": "makeAdmin"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

@@ -21,7 +21,6 @@ firebaseApp.initializeApp(firebaseConfig)
 
 const db = firebaseApp.firestore()
 const store = firebaseApp.storage()
-let cloudFunctionPrefix = `https://us-central1-${firebaseConfig.projectId}.cloudfunctions.net`
 if (__DEVELOPMENT__) {
     // tslint:disable-next-line: no-console
     console.log('Connecting to emulated firebase services')
@@ -29,8 +28,6 @@ if (__DEVELOPMENT__) {
         host: 'localhost:8080',
         ssl: false,
     })
-
-    cloudFunctionPrefix = 'http://localhost:5001/donateable-42f3d/us-central1'
 
     import('seed').then(async seed => {
         await seed.seedCharities()
@@ -82,6 +79,22 @@ export function useUser(): User & { firebaseUser?: firebase.User } | undefined {
 
 export const signOut = () => firebaseApp.auth().signOut()
 export const currentUser = firebaseApp.auth().onAuthStateChanged(user => user ? true : false)
-export function cloudFunction(name: string, init?: RequestInit): Promise<Response> {
-    return fetch(cloudFunctionPrefix + '/' + name, init)
+
+/**
+ * make the given user an admin
+ *
+ * @param user the user to make an admin
+ *
+ * @returns if the user was successfully made into an admin
+ */
+export async function makeAdmin(user: firebase.User): Promise<boolean> {
+    const result = await fetch('/makeAdmin', {
+        method: 'POST',
+        headers: {
+            'CONTENT-TYPE': 'application/json',
+        },
+        body: JSON.stringify({ idToken: await user.getIdToken() }),
+    }).then(r => r.json())
+
+    return result.status === 'success'
 }
