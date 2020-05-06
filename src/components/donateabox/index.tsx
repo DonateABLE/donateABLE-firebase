@@ -2,11 +2,12 @@ import { createElement, FunctionComponent } from 'react'
 import { classNames } from 'utils'
 import styles from './style.scss'
 
-const DonateABox: FunctionComponent<{ char: string, className?: string }> = ({ char, className }) => {
+const DonateABox: FunctionComponent<{ char: string, fontSize: string, className?: string }> =
+({ char, fontSize, className }) => {
     const len = 64
     const serif = 7
     return <svg
-        width='160px'
+        width='200px'
         height='160px'
         viewBox='0 0 160 160'
         className={classNames(styles.donateABox, className)}
@@ -36,7 +37,7 @@ const DonateABox: FunctionComponent<{ char: string, className?: string }> = ({ c
             y='50%'
             dominantBaseline='central'
             textAnchor='middle'
-            fontSize='110'
+            fontSize={fontSize}
             fontFamily='Montserrat'
             fontWeight='800'
         >

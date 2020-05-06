@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DonateABLE/donateABLE-firebase#readme",
   "devDependencies": {
+    "@types/nodemailer": "^6.4.0",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
     "@types/react-image-crop": "^8.1.2",
@@ -46,10 +47,11 @@
     "decko": "^1.2.0",
     "event-target-shim": "^5.0.1",
     "firebase": "^7.7.0",
+    "nodemailer": "^6.4.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-image-crop": "^8.5.0",
     "react-firebaseui": "^4.1.0",
+    "react-image-crop": "^8.6.1",
     "react-router-dom": "^5.1.2",
     "uuid": "^3.4.0"
   }

@@ -13,7 +13,7 @@ const HowItWorks: FunctionComponent = () => {
         </h2>
         <div className={styles.steps}>
             <section>
-                <DonateABox char='1' />
+                <DonateABox char='1' fontSize='110'/>
                 <h3>Select Your Charity</h3>
                 <p>
                     The first step is the easiest, or the hardest depending on how you
@@ -26,7 +26,7 @@ const HowItWorks: FunctionComponent = () => {
             </section>
 
             <section>
-                <DonateABox char='2' />
+                <DonateABox char='2' fontSize='110'/>
                 <h3>Set Your Power</h3>
                 <p>
                     The second step is setting the amount of processing power you would
@@ -38,7 +38,7 @@ const HowItWorks: FunctionComponent = () => {
             </section>
 
             <section>
-                <DonateABox char='3' />
+                <DonateABox char='3' fontSize='110'/>
                 <h3>Start Donating</h3>
                 <p>
                     The third step is the easiest. Now that you have selected your
@@ -50,7 +50,7 @@ const HowItWorks: FunctionComponent = () => {
             </section>
         </div>
         <Link to='/'>
-            <Button size='large' className={styles.startDonating}>Start Donating</Button>
+            <Button size='large'>Start Donating</Button>
         </Link>
     </Content>
 }

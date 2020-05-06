@@ -81,6 +81,11 @@
     input {
         width: 320px !important;
     }
+    
+    .formElement {
+        align-self: center;
+        width: 320px;
+    }
 }
 
 :global(.firebaseui-idp-button) {

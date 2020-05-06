@@ -99,18 +99,22 @@ const LoggedOut: FunctionComponent = () => {
         </h2>
             <h3>Sign in with Email</h3>
             <Input
+                className={styles.formElement}
                 white
                 title='Email Address'
                 value={email}
                 onChange={addValue(setEmail)}
                 type='email'
+                placeholder='Email Address'
             />
             <Input
+                className={styles.formElement}
                 white
                 title='Password'
                 value={password}
                 onChange={addValue(setPassword)}
                 type='password'
+                placeholder='Password'
             />
             <Button className={styles.formButton} onClick={newSignUpEmailPassword}>Submit</Button>
             <Button className={styles.formButton} onClick={passwordReset}>Forgot Your Password?</Button>
