@@ -10,7 +10,7 @@ const About: FunctionComponent = () => {
         <h2><span className='light'>About donateABLE</span></h2>
         <div className={styles.items}>
            <section>
-               <DonateABox char='WHO' fontSize='60'/>
+               <DonateABox char='WHO' fontSize='40'/>
                <h3>is donateABLE?</h3>
                <p>
                     donateABLE is a website designed, developed, and managed by Synergenics,
@@ -23,7 +23,7 @@ const About: FunctionComponent = () => {
            </section>
 
            <section>
-               <DonateABox char='WHAT' fontSize='60'/>
+               <DonateABox char='WHAT' fontSize='35'/>
                <h3>is donateABLE?</h3>
                <p>
                     donateABLE is a website project developed and managed by Synergenics. This solution
@@ -35,7 +35,7 @@ const About: FunctionComponent = () => {
            </section>
 
            <section>
-               <DonateABox char='WHY' fontSize='60' />
+               <DonateABox char='WHY' fontSize='40' />
                <h3>is donateABLE?</h3>
                <p>
                     Synergenics has consistently made an effort, for the past 30 years, to give back to their

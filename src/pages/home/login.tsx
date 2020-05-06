@@ -99,6 +99,7 @@ const LoggedOut: FunctionComponent = () => {
         </h2>
             <h3>Sign in with Email</h3>
             <Input
+                className={styles.formElement}
                 white
                 title='Email Address'
                 value={email}
@@ -106,6 +107,7 @@ const LoggedOut: FunctionComponent = () => {
                 type='email'
             />
             <Input
+                className={styles.formElement}
                 white
                 title='Password'
                 value={password}

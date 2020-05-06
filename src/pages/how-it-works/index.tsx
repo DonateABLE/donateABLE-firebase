@@ -50,7 +50,7 @@ const HowItWorks: FunctionComponent = () => {
             </section>
         </div>
         <Link to='/'>
-            <Button size='large' className={styles.startDonating}>Start Donating</Button>
+            <Button size='large'>Start Donating</Button>
         </Link>
     </Content>
 }
