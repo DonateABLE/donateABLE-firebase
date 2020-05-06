@@ -29,6 +29,8 @@ interface InputProps extends FormElementProps<HTMLInputElement> {
     type?:
         'text' | 'number' | 'password' | 'email' | 'tel' | 'sumbit' |
         'reset' | 'button' | 'radio' | 'time'
+
+    placeholder?: string
 }
 export const Input: FunctionComponent<InputProps> = props => (
     <FormElement {...props}>
@@ -37,6 +39,7 @@ export const Input: FunctionComponent<InputProps> = props => (
             type={props.title ?? 'text'}
             value={props.value}
             onChange={props.onChange}
+            placeholder={props.placeholder}
         />
     </FormElement>
 )

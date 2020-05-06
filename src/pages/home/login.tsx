@@ -105,6 +105,7 @@ const LoggedOut: FunctionComponent = () => {
                 value={email}
                 onChange={addValue(setEmail)}
                 type='email'
+                placeholder='Email Address'
             />
             <Input
                 className={styles.formElement}
@@ -113,6 +114,7 @@ const LoggedOut: FunctionComponent = () => {
                 value={password}
                 onChange={addValue(setPassword)}
                 type='password'
+                placeholder='Password'
             />
             <Button className={styles.formButton} onClick={newSignUpEmailPassword}>Submit</Button>
             <Button className={styles.formButton} onClick={passwordReset}>Forgot Your Password?</Button>
