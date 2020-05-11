@@ -80,8 +80,13 @@ export function useUser(): User & { firebaseUser?: firebase.User } | undefined {
     return user
 }
 
-export const signOut = () => firebaseApp.auth().signOut()
+export const signOut = () => { 
+    firebaseApp.auth().signOut()
+    window.location.reload()
+}
+
 export const currentUser = firebaseApp.auth().onAuthStateChanged(user => user ? true : false)
+
 export function cloudFunction(name: string, init?: RequestInit): Promise<Response> {
     return fetch(cloudFunctionPrefix + '/' + name, init)
 }
