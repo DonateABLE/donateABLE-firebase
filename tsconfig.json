@@ -20,7 +20,10 @@
             "*": [
                 "src/*"
             ]
-        }
+        },
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true
     },
     "exclude": [
         "node_modules",

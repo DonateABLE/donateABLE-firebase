@@ -4,7 +4,7 @@ declare module "lang/index.json" {
         [key: string]: string | number | boolean | null | Lang
     }
 
-    export type LangKeys = "charity.social.facebook.title" | "charity.social.twitter.title" | "charity.social.website.title" | "charity.make-donation" | "charity.statistics" | "charity.donation-targets" | "charity.about" | "charity.donate"
+    export type LangKeys = "charity.social.facebook.title" | "charity.social.twitter.title" | "charity.social.website.title" | "charity.make-donation" | "charity.statistics" | "charity.donation-targets" | "charity.about"
     const langs: Lang
     export default langs;
 }
