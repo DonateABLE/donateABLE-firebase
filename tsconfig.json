@@ -21,7 +21,7 @@
                 "src/*"
             ]
         },
-        "noImplicitAny": true,
+        "noImplicitAny": true, // For Material UI
         "noImplicitThis": true,
         "strictNullChecks": true
     },
