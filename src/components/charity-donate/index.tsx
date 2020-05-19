@@ -41,7 +41,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     // Hook for checking the donation state
     const [donating, setDonating] = useState<boolean>(false)
 
-    donating ? buttonString = 'Stop Donating' : buttonString = 'Start Donating'
+    donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
 
     const startDonating = () => {
         // Cant find Client error is fine, it is from the imported script
@@ -63,9 +63,11 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 <Section value={props.charity.totalHashes} max={1000} title='Total Hashes' />
 
             </div>
-            <p> This is some filler content</p>
-            <Slider value={value} onChange={handleChange} aria-labelledby='continous-slider' />
-            <Button onClick={startDonating}>{buttonString}</Button>
+            <h1 className={styles.sliderValue}>CPU {value}%</h1>
+            <Slider className={styles.MySlider} value={value} onChange={handleChange} aria-labelledby='continous-slider' />
+            <div className={styles.buttons}>
+                <Button className={styles.start} onClick={startDonating}>{buttonString}</Button>
+            </div>
         </div>
     )
 }
