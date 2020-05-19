@@ -53,7 +53,13 @@ export default class Charity extends Model {
 
     @Model.field()
     public donatorsToDate: number = 0
+    
+    @Model.field()
+    public totalHashes: number = 0
 
+    @Model.field()
+    public totalTime: number = 0
+    
     @Model.field()
     public type: {
         id: string

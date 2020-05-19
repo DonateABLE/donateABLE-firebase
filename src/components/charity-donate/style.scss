@@ -1,2 +1,40 @@
 @import '../../variables';
 
+.donate{
+
+    .stats{
+        display: flex;
+        flex-wrap: row;
+        align-items: center;
+        .section {
+            flex-flow: row wrap;
+            align-items: center;
+            margin: auto;
+
+            .loader {
+                margin-right: 2em;
+            }
+
+            .content {
+                .title {
+                    color: $dark-blue;
+                    font-weight: bold;
+                }
+
+                .value {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $bp-sm-min) {
+        flex-direction: row;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
