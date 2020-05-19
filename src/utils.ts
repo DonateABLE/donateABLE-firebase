@@ -260,7 +260,7 @@ export function useForceUpdate(): () => void {
 }
 
 // Hook for Embedding scripts in TSX componentes
-export function useScript(url: string) {
+export function useScript(url: string): void {
     useEffect(() => {
         const script = document.createElement('script')
         script.src = url

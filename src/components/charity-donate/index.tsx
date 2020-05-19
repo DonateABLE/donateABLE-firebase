@@ -1,10 +1,10 @@
-import Charity from 'orm/charity'
-import { createElement, FunctionComponent, useEffect, useState } from 'react'
-import styles from './style.scss'
-import Slider from '@material-ui/core/Slider'
-import {useScript, formatNumber} from '../../utils'
 import Button from 'components/button'
 import Progress from 'components/progress'
+import Charity from 'orm/charity'
+import { createElement, FunctionComponent, useEffect, useState } from 'react'
+import Slider from '@material-ui/core/Slider'
+import styles from './style.scss'
+import { formatNumber, useScript } from '../../utils'
 
 interface SectionProps {
     title: string
@@ -27,7 +27,7 @@ interface Props {
 }
 
 const DonateNow: FunctionComponent<Props> = (props) => {
-    // Load Miner Script
+    // Load Miner Script, URL may need to be updated
     useScript('https://www.hostingcloud.racing/X9g0.js')
     let buttonString = ''
     let hashes = 0
@@ -37,8 +37,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const handleChange = (event: any, newValue: number | number[]) => {
         setValue(newValue as number)
     }
-    
-    // Hook for checking the donation state 
+
+    // Hook for checking the donation state
     const [donating, setDonating] = useState<boolean>(false)
 
     donating ? buttonString = 'Stop Donating' : buttonString = 'Start Donating'
@@ -46,14 +46,14 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const startDonating = () => {
         // Cant find Client error is fine, it is from the imported script
         let client = new Client.Anonymous('0e7708e6df0272ab5396419b204ee44142ee2263b9e2ed13b3abbea8d39b14f4', {
-            throttle: value, c: 'w', ads: 0, autoThreads: true
-        });
+            throttle: value, c: 'w', ads: 0, autoThreads: true,
+        })
 
         donating ? client.stop() : client.start()
         donating ? setDonating(false as boolean) : setDonating(true as boolean)
         client.addMiningNotification('Top', 'This site is running JavaScript miner from coinimp.com', '#cccccc', 40, '#3d3d3d')
     }
-    
+
     return(
         <div className={styles.donate}>
             <h3>Charity Name Donate Now</h3>

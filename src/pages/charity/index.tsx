@@ -103,7 +103,7 @@ export default class CharityPage extends Component<Props, State> {
             <TabContainer>
                  <Tab title={'Donate'}>
                     <DonateNow charity={charity} />
-                </Tab>               
+                </Tab>
                 <Tab title={__('charity.statistics')}>
                     <Statistics charity={charity} />
                 </Tab>
