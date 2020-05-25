@@ -65,7 +65,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             </div>
             <h1 className={styles.sliderValue}>CPU {value}%</h1>
             <Slider className={styles.MySlider} value={value} onChange={handleChange} aria-labelledby='continous-slider' />
-            <div className={styles.buttons}>
+            <div className={styles.button}>
                 <Button className={styles.start} onClick={startDonating}>{buttonString}</Button>
             </div>
         </div>
