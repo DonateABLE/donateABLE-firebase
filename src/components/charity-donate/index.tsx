@@ -5,7 +5,7 @@ import { createElement, FunctionComponent, useEffect, useState } from 'react'
 import Slider from '@material-ui/core/Slider'
 import styles from './style.scss'
 import { formatNumber, useScript } from '../../utils'
-import { PageLoader } from 'components/loader'
+import { PageLoaderChanged } from 'components/loader-nonfixed'
 
 interface SectionProps {
     title: string
@@ -55,8 +55,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         client.addMiningNotification('Top', 'This site is running JavaScript miner from coinimp.com', '#cccccc', 40, '#3d3d3d')
     }
 
-    function Loader() {
-       return donating ? <PageLoader /> : null
+    const Loader: FunctionComponent = props => {
+       return donating ? <PageLoaderChanged /> : null
     }
 
     return(
@@ -66,12 +66,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 <Section value={hashes} max={5} title='Hashing Rate' />
                 <Section value={props.charity.totalTime} max={60} title='Total Time' />
                 <Section value={props.charity.totalHashes} max={1000} title='Total Hashes' />
-
+            </div>
+            <div className={styles.loader}>
+                <Loader />
             </div>
             <h1 className={styles.sliderValue}>CPU {value}%</h1>
-            <Loader className={styles.loader} />
             <Slider className={styles.MySlider} value={value} onChange={handleChange} aria-labelledby='continous-slider' />
-            <div className={styles.button}>
+            <div className={styles.buttons}>
                 <Button className={styles.start} onClick={startDonating}>{buttonString}</Button>
             </div>
         </div>

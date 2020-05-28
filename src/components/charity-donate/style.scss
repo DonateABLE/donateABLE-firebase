@@ -1,31 +1,31 @@
 @import '../../variables';
 
 .donate{
-    
     .stats{
         display: flex;
-        flex-wrap: row;
+        flex-flow: row wrap;
         align-items: center;
+
         .section {
-            flex-flow: row wrap;
-            align-items: center;
             margin: auto;
 
-            .loader {
-                margin-right: 2em;
-            }
-
             .content {
+   
                 .title {
                     color: $dark-blue;
                     font-weight: bold;
                 }
-
                 .value {
                     color: $light-blue;
                 }
             }
         }
+    }
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
     }
 
     .buttons {
