@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.PrivacyPolicy {
+    text-align: center;
+
+    .heading {
+        text-align: center;
+        color: $dark-blue;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

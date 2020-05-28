@@ -8,6 +8,7 @@ import CharityEdit from 'pages/charity-edit'
 import Home from 'pages/home'
 import Login from 'pages/home/login'
 import HowItWorks from 'pages/how-it-works'
+import PrivacyPolicy from 'pages/privacy-policy'
 import UserEdit from 'pages/user'
 import { Component, createElement, createRef, ReactNode } from 'react'
 import { findDOMNode } from 'react-dom'
@@ -62,16 +63,20 @@ export default class Layout extends Component<{}, State> {
                             title: 'Home',
                         },
                         {
-                            href: '/about',
-                            title: 'About',
-                        },
-                        {
                             href: '/login',
                             title: this.state.authTitle,
                         },
                         {
+                            href: '/about',
+                            title: 'About',
+                        },
+                        {
                             href: '/how_it_works',
                             title: 'How it Works',
+                        },
+                        {
+                            href: '/privacy',
+                            title: 'Privacy Policy'
                         },
                     ]}
                     rootRef={this.menuRef}
@@ -93,6 +98,7 @@ export default class Layout extends Component<{}, State> {
                         <Route path='/charity/:name' component={Charity} />
                         <Route path='/login' component={Login} />
                         <Route path='/how_it_works' component={HowItWorks} />
+                        <Route path='/privacy' component={PrivacyPolicy} />
                         <Route path='/' component={Home} />
                     </Switch>
                 </div>
