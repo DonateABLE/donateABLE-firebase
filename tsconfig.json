@@ -23,7 +23,7 @@
         },
         "noImplicitAny": true, // For Material UI
         "noImplicitThis": true,
-        "strictNullChecks": true
+        "strictNullChecks": true 
     },
     "exclude": [
         "node_modules",

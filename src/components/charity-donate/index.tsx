@@ -28,31 +28,48 @@ interface Props {
 }
 
 const DonateNow: FunctionComponent<Props> = (props) => {
-    // Load Miner Script, URL may need to be updated
-    useScript('https://www.hostingcloud.racing/X9g0.js')
-    let buttonString = ''
-    let hashes = 0
 
     // Hook and Handler for tracking Slider value
     const [value, setValue] = useState<number>(30)
     const handleChange = (event: any, newValue: number | number[]) => {
         setValue(newValue as number)
     }
-
+    
     // Hook for checking the donation state
     const [donating, setDonating] = useState<boolean>(false)
 
+    // Load Miner Script, URL may need to be updated
+    useScript('https://www.hostingcloud.racing/X9g0.js')
+    let buttonString = ''
+    let hashingRate = 0
+    let totalHashes = 0
+    
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
 
-    const startDonating = () => {
+    const donate = () => {
         // Cant find Client error is fine, it is from the imported script
+        // BUG might be here if reinit client on miner shutdown
+        console.log("The value from the slider is: " + value )
+        let miningRate = 1 - value / 100
+        console.log("The mining rate is: " + miningRate)
         let client = new Client.Anonymous('0e7708e6df0272ab5396419b204ee44142ee2263b9e2ed13b3abbea8d39b14f4', {
-            throttle: value, c: 'w', ads: 0, autoThreads: true,
+            throttle: miningRate, c: 'w', ads: 0, autoThreads: true,
         })
 
-        donating ? client.stop() : client.start()
-        donating ? setDonating(false as boolean) : setDonating(true as boolean)
-        client.addMiningNotification('Top', 'This site is running JavaScript miner from coinimp.com', '#cccccc', 40, '#3d3d3d')
+        const date = new Date()
+
+        if (donating) {
+            const minerStartTime = date.getTime()
+            client.stop()
+            setDonating(false as boolean)
+        } else {
+
+            client.start()
+            setDonating(true as boolean)
+        }
+
+        // donating ? client.stop() : client.start()
+        // donating ? setDonating(false as boolean) : setDonating(true as boolean)
     }
 
     const Loader: FunctionComponent = props => {
@@ -63,7 +80,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         <div className={styles.donate}>
             <h3>Charity Name Donate Now</h3>
             <div className={styles.stats}>
-                <Section value={hashes} max={5} title='Hashing Rate' />
+                <Section value={hashingRate} max={5} title='Hashing Rate' />
                 <Section value={props.charity.totalTime} max={60} title='Total Time' />
                 <Section value={props.charity.totalHashes} max={1000} title='Total Hashes' />
             </div>
@@ -73,7 +90,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <h1 className={styles.sliderValue}>CPU {value}%</h1>
             <Slider className={styles.MySlider} value={value} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
-                <Button className={styles.start} onClick={startDonating}>{buttonString}</Button>
+                <Button className={styles.start} onClick={donate}>{buttonString}</Button>
             </div>
         </div>
     )
