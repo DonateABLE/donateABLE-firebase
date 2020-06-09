@@ -52,6 +52,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         console.log("The value from the slider is: " + value )
         let miningRate = 1 - value / 100
         console.log("The mining rate is: " + miningRate)
+        console.log("This site key for " + props.charity.longName + " Is " + props.charity.siteKey)
         let client = new Client.Anonymous('0e7708e6df0272ab5396419b204ee44142ee2263b9e2ed13b3abbea8d39b14f4', {
             throttle: miningRate, c: 'w', ads: 0, autoThreads: true,
         })
