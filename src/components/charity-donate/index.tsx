@@ -39,34 +39,35 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [donating, setDonating] = useState<boolean>(false)
 
     // Load Miner Script, URL may need to be updated
-    useScript('https://www.hostingcloud.racing/X9g0.js')
+    async function loadScript()  {
+        useScript('https://www.hostingcloud.racing/X9g0.js')
+        let miningRate = 1 - value / 100
+        let client = await new Client.Anonymous(props.charity.siteKey, {
+            throttle: miningRate, c: 'w', ads: 0, autoThreads: true,
+        })
+    }
+
     let buttonString = ''
     let hashingRate = 0
     let totalHashes = 0
-        
+
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
 
     const donate = () => {
         // Cant find Client error is fine, it is from the imported script
         // BUG might be here if reinit client on miner shutdown
         console.log("The value from the slider is: " + value )
-        let miningRate = 1 - value / 100
-        console.log("The mining rate is: " + miningRate)
-        let client = new Client.Anonymous(props.charity.siteKey, {
-            throttle: miningRate, c: 'w', ads: 0, autoThreads: true,
-        })
-
         const date = new Date()
 
-        if (donating) {
-            const minerStartTime = date.getTime()
-            client.stop()
-            setDonating(false as boolean)
-        } else {
+        // if (donating) {
+        //     const minerStartTime = date.getTime()
+        //     client.stop()
+        //     setDonating(false as boolean)
+        // } else {
 
-            client.start()
-            setDonating(true as boolean)
-        }
+        //     client.start()
+        //     setDonating(true as boolean)
+        // }
 
         // donating ? client.stop() : client.start()
         // donating ? setDonating(false as boolean) : setDonating(true as boolean)
