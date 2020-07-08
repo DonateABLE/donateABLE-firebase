@@ -42,7 +42,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     function loadScript()  {
         useScript('https://www.hostingcloud.racing/X9g0.js')
         let miningRate = 1 - value / 100
-        let client = await new Client.Anonymous(props.charity.siteKey, {
+        let client = new Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, c: 'w', ads: 0, autoThreads: true,
         })
     }
