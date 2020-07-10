@@ -262,7 +262,7 @@ export function useForceUpdate(): () => void {
 // Hook for Embedding scripts in TSX componentes
 export function useScript(url: string): void {
     useEffect(() => {
-        async function loadScript(url: string) {
+        function loadScript(url: string) {
             const script = document.createElement('script')
             script.src = url
             script.async = true

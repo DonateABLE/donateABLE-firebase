@@ -28,7 +28,7 @@ interface Props {
 }
 
 const DonateNow: FunctionComponent<Props> = (props) => {
-
+    useScript('https://www.hostingcloud.racing/X9g0.js')
     // Hook and Handler for tracking Slider value
     const [value, setValue] = useState<number>(30)
     const handleChange = (event: any, newValue: number | number[]) => {
@@ -39,38 +39,75 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [donating, setDonating] = useState<boolean>(false)
 
     // Load Miner Script, URL may need to be updated
-    function loadScript()  {
-        useScript('https://www.hostingcloud.racing/X9g0.js')
+    async function loadScript()  {
         let miningRate = 1 - value / 100
-        let client = new Client.Anonymous(props.charity.siteKey, {
-            throttle: miningRate, c: 'w', ads: 0, autoThreads: true,
+        const client = await new Client.Anonymous(props.charity.siteKey, {
+            throttle: miningRate, // CPU usage of the mine
+            c: 'w', // Coin
+            ads: 0, // Ad Option
+            autoThreads: true, // Adjust multithreading based on availability
         })
+
+        if (donating) {
+            setDonating(false as boolean)
+             await client.stop()
+            // Code to push mining stats to firestore backend
+            console.log("The mining has stopped")
+        } else {
+            setDonating(true as boolean)
+            await client.start()
+            console.log("The mining has started")
+            const date = new Date()
+            var minerStartTime = date.getTime()
+            
+            setInterval(start(client, minerStartTime), 1000)
+        }
+    }
+
+    function start(client:any, date: number): any {
+        console.log("Starting stat tracking")
+        var sessionHashRate = 0 
+        var sessionHashes = 0
+        console.log(donating)
+        if(client.isRunning()) {
+            sessionHashRate = Math.round(client.getHashesPerSecond())
+            sessionHashes = client.getTotalHashes()
+
+            console.log("The hash rate is: " + sessionHashRate + "\nThe total Hashes are: " + sessionHashes) 
+        } 
     }
 
     let buttonString = ''
     let hashingRate = 0
-    let totalHashes = 0
 
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
 
     const donate = () => {
+        useScript('https://www.hostingcloud.racing/X9g0.js')
+        let miningRate = 1 - value / 100
+        let client = new Client.Anonymous(props.charity.siteKey, {
+            throttle: miningRate, // CPU usage of the mine
+            c: 'w', // Coin
+            ads: 0, // Ad Option
+            autoThreads: true, // Adjust multithreading based on availability
+        })
         // Cant find Client error is fine, it is from the imported script
         // BUG might be here if reinit client on miner shutdown
         console.log("The value from the slider is: " + value )
         const date = new Date()
 
-        // if (donating) {
-        //     const minerStartTime = date.getTime()
-        //     client.stop()
-        //     setDonating(false as boolean)
-        // } else {
+        if (donating) {
+            const minerStartTime = date.getTime()
+            client.stop()
+            setDonating(false as boolean)
+        } else {
 
-        //     client.start()
-        //     setDonating(true as boolean)
-        // }
+            client.start()
+            setDonating(true as boolean)
+        }
 
-        // donating ? client.stop() : client.start()
-        // donating ? setDonating(false as boolean) : setDonating(true as boolean)
+        donating ? client.stop() : client.start()
+        donating ? setDonating(false as boolean) : setDonating(true as boolean)
     }
 
     const Loader: FunctionComponent = props => {
@@ -91,7 +128,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <h1 className={styles.sliderValue}>CPU {value}%</h1>
             <Slider className={styles.MySlider} value={value} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
-                <Button className={styles.start} onClick={donate}>{buttonString}</Button>
+                <Button className={styles.start} onClick={loadScript}>{buttonString}</Button>
             </div>
         </div>
     )
