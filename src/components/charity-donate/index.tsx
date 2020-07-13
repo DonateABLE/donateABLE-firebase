@@ -34,7 +34,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const handleChange = (event: any, newValue: number | number[]) => {
         setValue(newValue as number)
     }
-    
+    var minerStartTime = 0
+
     // Hook for checking the donation state
     const [donating, setDonating] = useState<boolean>(false)
 
@@ -48,9 +49,17 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             autoThreads: true, // Adjust multithreading based on availability
         })
 
+        client.on("open", async function() {
+            const date = new Date()
+            minerStartTime = date.getTime()
+
+            // Code to post to firebase backend
+            setInterval(start, 10000, client, minerStartTime)
+        })
+
         if (donating) {
             setDonating(false as boolean)
-             await client.stop()
+            await client.stop()
             // Code to push mining stats to firestore backend
             console.log("The mining has stopped")
         } else {
@@ -58,20 +67,18 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             await client.start()
             console.log("The mining has started")
             const date = new Date()
-            var minerStartTime = date.getTime()
-            
-            setInterval(start(client, minerStartTime), 1000)
+            minerStartTime = date.getTime() // time in ms since Jan 1 1970
         }
     }
 
-    function start(client:any, date: number): any {
+     async function start(client:any, date: number) {
         console.log("Starting stat tracking")
         var sessionHashRate = 0 
         var sessionHashes = 0
-        console.log(donating)
+        console.log(client.isRunning())
         if(client.isRunning()) {
-            sessionHashRate = Math.round(client.getHashesPerSecond())
-            sessionHashes = client.getTotalHashes()
+            sessionHashRate = Math.round(await client.getHashesPerSecond())
+            sessionHashes = await client.getTotalHashes()
 
             console.log("The hash rate is: " + sessionHashRate + "\nThe total Hashes are: " + sessionHashes) 
         } 
