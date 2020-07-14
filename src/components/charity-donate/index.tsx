@@ -27,6 +27,9 @@ interface Props {
     charity: Charity
 }
 
+var trackingStats: any = undefined
+var minerStartTime: number = 0
+
 const DonateNow: FunctionComponent<Props> = (props) => {
     useScript('https://www.hostingcloud.racing/X9g0.js')
     // Hook and Handler for tracking Slider value
@@ -34,10 +37,15 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const handleChange = (event: any, newValue: number | number[]) => {
         setValue(newValue as number)
     }
-    var minerStartTime = 0
 
     // Hook for checking the donation state
     const [donating, setDonating] = useState<boolean>(false)
+    // Hook for Hashing Rate
+    const [hashingRate, setHashingRate] = useState<number>(0)
+
+    let buttonString = ''
+    donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
+
 
     // Load Miner Script, URL may need to be updated
     async function loadScript()  {
@@ -49,75 +57,51 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             autoThreads: true, // Adjust multithreading based on availability
         })
 
-        client.on("open", async function() {
-            const date = new Date()
-            minerStartTime = date.getTime()
-
-            // Code to post to firebase backend
-            setInterval(start, 10000, client, minerStartTime)
-        })
-
         if (donating) {
-            setDonating(false as boolean)
             await client.stop()
+            setDonating(false as boolean)
+            console.log("Before clear the value is " + trackingStats)
+            
+            clearInterval(trackingStats)
+            console.log("After clearing the value is " + trackingStats)
+            trackingStats = null
             // Code to push mining stats to firestore backend
-            console.log("The mining has stopped")
         } else {
             setDonating(true as boolean)
             await client.start()
             console.log("The mining has started")
+
             const date = new Date()
-            minerStartTime = date.getTime() // time in ms since Jan 1 1970
+            minerStartTime = date.getTime()
+
+            trackingStats = setInterval(start, 1000, client, minerStartTime)
+            console.log("The ID for trackingStats is " + trackingStats)
         }
     }
 
-     async function start(client:any, date: number) {
-        console.log("Starting stat tracking")
+
+    // Interval function to be run while mining
+     async function start(client: any, date: number) {
         var sessionHashRate = 0 
         var sessionHashes = 0
-        console.log(client.isRunning())
-        if(client.isRunning()) {
+        var currentThrottle = 0
+        var newThrottle = 0
+
+        console.log("Is the client running: " + client.isRunning())
+
+        if (client.isRunning()) {
             sessionHashRate = Math.round(await client.getHashesPerSecond())
             sessionHashes = await client.getTotalHashes()
+            setHashingRate(sessionHashRate as number)
 
-            console.log("The hash rate is: " + sessionHashRate + "\nThe total Hashes are: " + sessionHashes) 
+            console.log("The hash rate is: " + sessionHashRate +
+                        "\nThe Total Hashes are: " + sessionHashes +
+                        "\nThe current Throttle is " + client.getThrottle()) 
         } 
     }
 
-    let buttonString = ''
-    let hashingRate = 0
 
-    donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
-
-    const donate = () => {
-        useScript('https://www.hostingcloud.racing/X9g0.js')
-        let miningRate = 1 - value / 100
-        let client = new Client.Anonymous(props.charity.siteKey, {
-            throttle: miningRate, // CPU usage of the mine
-            c: 'w', // Coin
-            ads: 0, // Ad Option
-            autoThreads: true, // Adjust multithreading based on availability
-        })
-        // Cant find Client error is fine, it is from the imported script
-        // BUG might be here if reinit client on miner shutdown
-        console.log("The value from the slider is: " + value )
-        const date = new Date()
-
-        if (donating) {
-            const minerStartTime = date.getTime()
-            client.stop()
-            setDonating(false as boolean)
-        } else {
-
-            client.start()
-            setDonating(true as boolean)
-        }
-
-        donating ? client.stop() : client.start()
-        donating ? setDonating(false as boolean) : setDonating(true as boolean)
-    }
-
-    const Loader: FunctionComponent = props => {
+    const Loader: FunctionComponent = () => {
        return donating ? <PageLoaderChanged /> : null
     }
 
