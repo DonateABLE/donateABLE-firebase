@@ -32,6 +32,7 @@ var minerStartTime: number = 0
 
 const DonateNow: FunctionComponent<Props> = (props) => {
     useScript('https://www.hostingcloud.racing/X9g0.js')
+
     // Hook and Handler for tracking Slider value
     const [value, setValue] = useState<number>(30)
     const handleChange = (event: any, newValue: number | number[]) => {
@@ -42,6 +43,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [donating, setDonating] = useState<boolean>(false)
     // Hook for Hashing Rate
     const [hashingRate, setHashingRate] = useState<number>(0)
+    //hook for SessionTime
+    const [sessionTime, setSessionTime] = useState<number>(0)
 
     let buttonString = ''
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
@@ -50,7 +53,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     // Load Miner Script, URL may need to be updated
     async function loadScript()  {
         let miningRate = 1 - value / 100
-        const client = await new Client.Anonymous(props.charity.siteKey, {
+        var client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
             c: 'w', // Coin
             ads: 0, // Ad Option
@@ -60,43 +63,43 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         if (donating) {
             await client.stop()
             setDonating(false as boolean)
-            console.log("Before clear the value is " + trackingStats)
-            
             clearInterval(trackingStats)
-            console.log("After clearing the value is " + trackingStats)
             trackingStats = null
             // Code to push mining stats to firestore backend
         } else {
             setDonating(true as boolean)
-            await client.start()
+            await client.start(Client.FORCE_MULTI_TAB)
             console.log("The mining has started")
+            let doIRun = client.isRunning()
+            console.log("THE VALUE OF DO I RUN IS: " + doIRun)
 
             const date = new Date()
             minerStartTime = date.getTime()
-
             trackingStats = setInterval(start, 1000, client, minerStartTime)
-            console.log("The ID for trackingStats is " + trackingStats)
         }
     }
 
-
     // Interval function to be run while mining
-     async function start(client: any, date: number) {
+     async function start(client: any, startTime: number) {
         var sessionHashRate = 0 
         var sessionHashes = 0
-        var currentThrottle = 0
-        var newThrottle = 0
 
         console.log("Is the client running: " + client.isRunning())
+        console.log("The value of donating is: " + donating)
+
 
         if (client.isRunning()) {
             sessionHashRate = Math.round(await client.getHashesPerSecond())
             sessionHashes = await client.getTotalHashes()
             setHashingRate(sessionHashRate as number)
+            var currentTime = new Date().getTime()
+            currentTime = Math.round((currentTime - startTime) / 1000)
+            setSessionTime(currentTime as number)
+
 
             console.log("The hash rate is: " + sessionHashRate +
                         "\nThe Total Hashes are: " + sessionHashes +
-                        "\nThe current Throttle is " + client.getThrottle()) 
+                        "\nThe current Throttle is " + client.getThrottle())
         } 
     }
 
@@ -110,7 +113,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <h3>Charity Name Donate Now</h3>
             <div className={styles.stats}>
                 <Section value={hashingRate} max={5} title='Hashing Rate' />
-                <Section value={props.charity.totalTime} max={60} title='Total Time' />
+                <Section value={sessionTime} max={500} title='Total Time' />
                 <Section value={props.charity.totalHashes} max={1000} title='Total Hashes' />
             </div>
             <div className={styles.loader}>
