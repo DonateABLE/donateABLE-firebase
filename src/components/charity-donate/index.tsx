@@ -45,6 +45,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [hashingRate, setHashingRate] = useState<number>(0)
     //hook for SessionTime
     const [sessionTime, setSessionTime] = useState<number>(0)
+    // hook for sessionHashes
+    const [sessionHashes, setSessionHashes] = useState<number>(0)
 
     let buttonString = ''
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
@@ -69,10 +71,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         } else {
             setDonating(true as boolean)
             await client.start(Client.FORCE_MULTI_TAB)
-            console.log("The mining has started")
-            let doIRun = client.isRunning()
-            console.log("THE VALUE OF DO I RUN IS: " + doIRun)
-
+            console.log('The mining has started')
+            
             const date = new Date()
             minerStartTime = date.getTime()
             trackingStats = setInterval(start, 1000, client, minerStartTime)
@@ -82,27 +82,24 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     // Interval function to be run while mining
      async function start(client: any, startTime: number) {
         var sessionHashRate = 0 
-        var sessionHashes = 0
 
-        console.log("Is the client running: " + client.isRunning())
-        console.log("The value of donating is: " + donating)
+        console.log('Is the client running: ' + client.isRunning())
 
 
         if (client.isRunning()) {
             sessionHashRate = Math.round(await client.getHashesPerSecond())
-            sessionHashes = await client.getTotalHashes()
             setHashingRate(sessionHashRate as number)
-            var currentTime = new Date().getTime()
+            let currentTotalHashes = await client.getTotalHashes()
+            setSessionHashes(currentTotalHashes as number)
+            let currentTime = new Date().getTime()
             currentTime = Math.round((currentTime - startTime) / 1000)
             setSessionTime(currentTime as number)
 
-
-            console.log("The hash rate is: " + sessionHashRate +
-                        "\nThe Total Hashes are: " + sessionHashes +
-                        "\nThe current Throttle is " + client.getThrottle())
+            console.log('The hash rate is: ' + sessionHashRate +
+                        '\nThe Total Hashes are: ' + sessionHashes +
+                        '\nThe current Throttle is ' + client.getThrottle())
         } 
     }
-
 
     const Loader: FunctionComponent = () => {
        return donating ? <PageLoaderChanged /> : null
@@ -114,7 +111,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <div className={styles.stats}>
                 <Section value={hashingRate} max={5} title='Hashing Rate' />
                 <Section value={sessionTime} max={500} title='Total Time' />
-                <Section value={props.charity.totalHashes} max={1000} title='Total Hashes' />
+                <Section value={sessionHashes} max={15000} title='Total Hashes' />
             </div>
             <div className={styles.loader}>
                 <Loader />
