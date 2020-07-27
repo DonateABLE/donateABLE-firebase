@@ -21,6 +21,7 @@ import {
 import { classNames, clickedOn } from 'utils'
 import Menu from './menu'
 import styles from './style.scss'
+import FAQ from 'pages/faq'
 
 interface State {
     menuOpen: boolean
@@ -78,6 +79,10 @@ export default class Layout extends Component<{}, State> {
                             href: '/privacy',
                             title: 'Privacy Policy'
                         },
+                        {
+                            href: '/faq',
+                            title: 'FAQ'
+                        }
                     ]}
                     rootRef={this.menuRef}
                 />
@@ -99,6 +104,7 @@ export default class Layout extends Component<{}, State> {
                         <Route path='/login' component={Login} />
                         <Route path='/how_it_works' component={HowItWorks} />
                         <Route path='/privacy' component={PrivacyPolicy} />
+                        <Route path='/faq' component={FAQ} /> 
                         <Route path='/' component={Home} />
                     </Switch>
                 </div>

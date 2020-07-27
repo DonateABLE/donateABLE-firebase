@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.faq {
+    text-align: center;
+
+    .link {
+        color: $light-blue;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .responsive {
+        height: auto;
+        width: 100%;
+    }
+}

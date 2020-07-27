@@ -1,0 +1,50 @@
+@import '../../variables';
+
+
+    
+.questions{
+    padding-bottom: 1%;
+    .faqButton{
+        text-align: left;
+        
+    }
+    .icon{
+        margin-right: 1ch;
+        color: red($color: #f10c0c);
+    }
+}
+
+
+.answers{
+    display: flex;
+    
+    transition: background-color 0.5 ease-out;
+    background-color: $dark-blue;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-left: 1em white solid;
+    border-right: 1em white solid;
+
+}
+
+.answersActive {
+    display: flex;
+    background-color: $light-blue;
+    transition-duration: 2s;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-left: 1em white solid;
+    border-right: 1em white solid;
+}
+
+.content{
+    margin: 0;
+    padding: 1em;
+    
+    text-align: left;
+    text-shadow: white;
+
+    color: white;
+    font-size: 12px;
+
+}
