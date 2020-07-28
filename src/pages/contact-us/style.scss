@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.formElement {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.header {
+    text-align: center;
+    color: $dark-blue;
+}
+
+.header1 {
+    text-align: center;
+    color: $light-blue;
+}
