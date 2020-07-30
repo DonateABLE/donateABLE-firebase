@@ -107,9 +107,9 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     return(
         <div className={styles.donate}>
-            <h3>Charity Name Donate Now</h3>
+            <h3>Donate Now</h3>
             <div className={styles.stats}>
-                <Section value={hashingRate} max={5} title='Hashing Rate' />
+                <Section value={hashingRate} max={120} title='Hashing Rate' />
                 <Section value={sessionTime} max={500} title='Total Time' />
                 <Section value={sessionHashes} max={15000} title='Total Hashes' />
             </div>
