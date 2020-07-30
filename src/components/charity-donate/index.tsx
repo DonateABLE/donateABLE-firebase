@@ -34,9 +34,10 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     useScript('https://www.hostingcloud.racing/X9g0.js')
 
     // Hook and Handler for tracking Slider value
-    const [value, setValue] = useState<number>(30)
+    const [cpuValue, setCPUValue] = useState<number>(30)
     const handleChange = (event: any, newValue: number | number[]) => {
-        setValue(newValue as number)
+        setCPUValue(newValue as number)
+        console.log('Hey look the slider value is now: ' + cpuValue)
     }
 
     // Hook for checking the donation state
@@ -54,7 +55,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     // Load Miner Script, URL may need to be updated
     async function loadScript()  {
-        let miningRate = 1 - value / 100
+        let miningRate = 1 - cpuValue / 100
         var client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
             c: 'w', // Coin
@@ -95,9 +96,16 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             currentTime = Math.round((currentTime - startTime) / 1000)
             setSessionTime(currentTime as number)
 
+            //Changing CPU Throttle here
+            let currentThrottle = client.getThrottle()
+            let newThrottle = 1 - cpuValue / 100
+            if (currentThrottle != newThrottle) client.setThrottle(newThrottle)
+        
+
             console.log('The hash rate is: ' + sessionHashRate +
                         '\nThe Total Hashes are: ' + sessionHashes +
-                        '\nThe current Throttle is ' + client.getThrottle())
+                        '\nThe current Throttle is ' + client.getThrottle() + 
+                        '\nThe current cpuValue is ' + cpuValue)
         } 
     }
 
@@ -116,8 +124,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <div className={styles.loader}>
                 <Loader />
             </div>
-            <h1 className={styles.sliderValue}>CPU {value}%</h1>
-            <Slider className={styles.MySlider} value={value} onChange={handleChange} aria-labelledby='continous-slider' />
+            <h1 className={styles.sliderValue}>CPU {cpuValue}%</h1>
+            <Slider className={styles.MySlider} value={cpuValue} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
                 <Button className={styles.start} onClick={loadScript}>{buttonString}</Button>
             </div>
