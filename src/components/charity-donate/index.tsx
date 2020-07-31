@@ -118,10 +118,23 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             'Donation Request Not Starting?',
             <Fragment>
                 <p>
-                    Be sure to check that donateABLE is whitelisted on any
-                    adblockers and that your antivirus programs are not blocking
-                    our page. To learn how to do this please visit
-                    our <Link to='/faq'>Frequently Asked Questions</Link> page.
+                    Be sure to check that donateABLE is whitelisted on any adblockers and that your antivirus programs
+                    are not blocking our page. To learn how to do this please visit our 
+                    <Link to='/faq'>Frequently Asked Questions</Link> page.
+                </p>
+            </Fragment>
+        )
+    }
+
+    function openCPUModal(): void {
+        openInfoModal(
+            'Not Sure How Much to Give?',
+            <Fragment>
+                <p>
+                    The average computer tasks such as web browsing, word processing, and YouTube use less than 30% CPU
+                    in total. The rest of it is unused and can be put towards donatinos. Feel free to experiment
+                    with the amount of CPU you use to donate with, and to turn it up when you are leaing your computer
+                    for a while.
                 </p>
             </Fragment>
         )
@@ -145,12 +158,15 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <h1 className={styles.cpuValue}>
                 CPU {cpuValue}% 
                 <span onClick={openDonationModal}>
-                    <Icon name='question-circle' />
+                    <Icon className={styles.donateIcon} name='question-circle' />
                </span>
             </h1>
             <Slider className={styles.MySlider} value={cpuValue} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
                 <Button className={styles.start} onClick={loadScript}>{buttonString}</Button> 
+                <Button className={styles.give} onClick={openCPUModal}>
+                    <Icon className={styles.icon} name='question' />
+                </Button>
             </div>
         </div>
     )

@@ -22,6 +22,13 @@
         }
     }
 
+    
+        .icon {
+            text-align: center;
+            color: $white;
+        }
+
+
     .loader {
         display: flex;
         justify-content: center;
@@ -35,11 +42,20 @@
         .start {
             background-color: $dark-blue;
             color: $white;
-            width: 100%;
+            width: 90%;
             height: 50px;
             transition-duration: 0.2s;
             &:hover {
                 background-color: $darker-blue;
+            }
+        }
+
+        .give {
+            width: 8%;
+            margin-left: 2%;
+
+            &:hover {
+                background-color: $lighter-blue;
             }
         }
 
@@ -58,7 +74,8 @@
         text-align: center;
         color: $dark-blue;
 
-        .icon {
+        .donateIcon { 
+            color: $light-blue;
             padding-left: 2%;
         }
     }
