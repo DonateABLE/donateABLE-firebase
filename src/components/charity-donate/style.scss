@@ -54,9 +54,13 @@
         color: $dark-blue;
     }
 
-    .sliderValue {
+    .cpuValue {
         text-align: center;
         color: $dark-blue;
+
+        .icon {
+            padding-left: 2%;
+        }
     }
 
     .loading { 

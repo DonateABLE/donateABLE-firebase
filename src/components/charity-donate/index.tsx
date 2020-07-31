@@ -1,11 +1,15 @@
 import Button from 'components/button'
 import Progress from 'components/progress'
 import Charity from 'orm/charity'
-import { createElement, FunctionComponent, useEffect, useState } from 'react'
+import { createElement, FunctionComponent, useEffect, useState, Fragment } from 'react'
 import Slider from '@material-ui/core/Slider'
 import styles from './style.scss'
 import { formatNumber, useScript } from '../../utils'
 import { PageLoaderChanged } from 'components/loader-nonfixed'
+import Icon from 'components/icon'
+import { openInfoModal } from 'components/modal'
+import { Link } from 'react-router-dom'
+import { contextType } from 'react-image-crop'
 
 interface SectionProps {
     title: string
@@ -109,6 +113,20 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         } 
     }
 
+    function openDonationModal():void {
+        openInfoModal(
+            'Donation Request Not Starting?',
+            <Fragment>
+                <p>
+                    Be sure to check that donateABLE is whitelisted on any
+                    adblockers and that your antivirus programs are not blocking
+                    our page. To learn how to do this please visit
+                    our <Link to='/faq'>Frequently Asked Questions</Link> page.
+                </p>
+            </Fragment>
+        )
+    }
+
     const Loader: FunctionComponent = () => {
        return donating ? <PageLoaderChanged /> : null
     }
@@ -124,10 +142,15 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             <div className={styles.loader}>
                 <Loader />
             </div>
-            <h1 className={styles.sliderValue}>CPU {cpuValue}%</h1>
+            <h1 className={styles.cpuValue}>
+                CPU {cpuValue}% 
+                <span onClick={openDonationModal}>
+                    <Icon name='question-circle' />
+               </span>
+            </h1>
             <Slider className={styles.MySlider} value={cpuValue} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
-                <Button className={styles.start} onClick={loadScript}>{buttonString}</Button>
+                <Button className={styles.start} onClick={loadScript}>{buttonString}</Button> 
             </div>
         </div>
     )
