@@ -20,7 +20,7 @@ module.exports = (env, argv) => {
                 {
                     test: /\.tsx?$/,
                     exclude: /node_modules/,
-                    loader: ["ts-loader", "tslint-loader"],
+                    loader: ["ts-loader", "eslint-loader"],
                 },
                 {
                     test: /\.scss$/,
