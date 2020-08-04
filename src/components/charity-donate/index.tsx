@@ -1,7 +1,7 @@
 import Button from 'components/button'
 import Progress from 'components/progress'
 import Charity from 'orm/charity'
-import { createElement, FunctionComponent, useEffect, useState, Fragment } from 'react'
+import { createElement, FunctionComponent, useEffect, useState, Fragment, } from 'react'
 import Slider from '@material-ui/core/Slider'
 import styles from './style.scss'
 import { formatNumber, useScript } from '../../utils'
@@ -44,21 +44,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         console.log('Hey look the slider value is now: ' + cpuValue)
     }
 
-    // Hook for checking the donation state
-    const [donating, setDonating] = useState<boolean>(false)
-    // Hook for Hashing Rate
-    const [hashingRate, setHashingRate] = useState<number>(0)
-    //hook for SessionTime
-    const [sessionTime, setSessionTime] = useState<number>(0)
-    // hook for sessionHashes
-    const [sessionHashes, setSessionHashes] = useState<number>(0)
-
-    let buttonString = ''
-    donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
-
-
-    // Load Miner Script, URL may need to be updated
-    async function loadScript()  {
+     // Load Miner Script, URL may need to be updated
+     async function loadScript(): any {
         let miningRate = 1 - cpuValue / 100
         var client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
@@ -80,16 +67,55 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             
             const date = new Date()
             minerStartTime = date.getTime()
-            trackingStats = setInterval(start, 1000, client, minerStartTime)
+            trackingStats = setInterval(log, 1000)
+        }
+
+        return client;
+    }
+
+    const onButtonClick = async (event: any) => {
+        try {
+            const c = await loadScript();
+            setCl(c);
+            update(c,minerStartTime, cpuValue);
+        } catch (error) {
+            //failed to init client show message to client.
         }
     }
 
+    // Hook for checking the donation state
+    const [donating, setDonating] = useState<boolean>(false)
+    // Hook for Hashing Rate
+    const [hashingRate, setHashingRate] = useState<number>(0)
+    //hook for SessionTime
+    const [sessionTime, setSessionTime] = useState<number>(0)
+    // hook for sessionHashes
+    const [sessionHashes, setSessionHashes] = useState<number>(0)
+
+    // Hook for Client
+    const [cl, setCl] = useState<any>(null);
+    
+    useEffect(() => {
+        //onSliderChange
+        if(cl !== null) {
+            update(cl,minerStartTime, cpuValue);
+        }
+    },[cpuValue]);
+
+    let buttonString = ''
+    donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
+
+    
+    async function log() {
+        console.log(`Logging ${new Date()}`)
+    }
+
+
     // Interval function to be run while mining
-     async function start(client: any, startTime: number) {
+     async function update(client: any, startTime: number, cpuValue: number) {
         var sessionHashRate = 0 
 
         console.log('Is the client running: ' + client.isRunning())
-
 
         if (client.isRunning()) {
             sessionHashRate = Math.round(await client.getHashesPerSecond())
@@ -163,7 +189,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             </h1>
             <Slider className={styles.MySlider} value={cpuValue} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
-                <Button className={styles.start} onClick={loadScript}>{buttonString}</Button> 
+                <Button className={styles.start} onClick={onButtonClick}>{buttonString}</Button> 
                 <Button className={styles.give} onClick={openCPUModal}>
                     <Icon className={styles.icon} name='question' />
                 </Button>
