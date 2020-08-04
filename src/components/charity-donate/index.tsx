@@ -1,7 +1,7 @@
 import Button from 'components/button'
 import Progress from 'components/progress'
 import Charity from 'orm/charity'
-import { createElement, FunctionComponent, useEffect, useState, Fragment } from 'react'
+import { createElement, Fragment, FunctionComponent, useEffect, useState } from 'react'
 import Slider from '@material-ui/core/Slider'
 import styles from './style.scss'
 import { formatNumber, useScript } from '../../utils'
@@ -31,9 +31,9 @@ interface Props {
 }
 
 var trackingStats: any = undefined
-var minerStartTime: number = 0
 
-const DonateNow: FunctionComponent<Props> = (props) => {
+const DonateNow: FunctionComponent<Props> = props => {
+    // Custom hook for bringing in the mining API script
     useScript('https://www.hostingcloud.racing/X9g0.js')
 
     // Hook and Handler for tracking Slider value
@@ -44,8 +44,9 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
      // Load Miner Script, URL may need to be updated
      async function loadScript() {
-        let miningRate = 1 - cpuValue / 100
-        var client = await Client.Anonymous(props.charity.siteKey, {
+        const miningRate = 1 - cpuValue / 100
+        // Ignore Client name space errors, the useScript hook pulls down the client
+        const client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
             c: 'w', // Coin
             ads: 0, // Ad Option
@@ -60,15 +61,15 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             // Code to push mining stats to firestore backend
         } else {
             setDonating(true as boolean)
+            // Ignore Client name space errors
             await client.start(Client.FORCE_MULTI_TAB)
-            console.log('The mining has started')
-            
             const date = new Date()
-            minerStartTime = date.getTime()
+            const minerStartTime = date.getTime()
+
             trackingStats = setInterval(log, 1000, client, minerStartTime)
         }
 
-        return client;
+        return client
     }
 
     const onButtonClick = async (event: any) => {
@@ -77,7 +78,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             setCl(c)
             update(c, cpuValue)
         } catch (error) {
-            //failed to init client show message to client.
+            // Failed to init client show message to client.
             alert('Donation failed to start! Please check your ad block settings.\n\nIf the issue persists it is because too many are mining at this time. Try again later.')
         }
     }
@@ -91,8 +92,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     // Hook for sessionHashes
     const [sessionHashes, setSessionHashes] = useState<number>(0)
     // Hook for Client
-    const [cl, setCl] = useState<any>(null);
-    
+    const [cl, setCl] = useState<any>(null)
+
     useEffect(() => {
         // onSliderChange
         if (cl !== null) {
@@ -103,13 +104,12 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     let buttonString = ''
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
 
-    
     async function log (client: any, startTime: number ) {
         // Firebase posting of User data will go here
-
-        let sessionHashRate = Math.round(await client.getHashesPerSecond())
+        // Update UI elements by setting the hooks
+        const sessionHashRate = Math.round(await client.getHashesPerSecond())
         setHashingRate(sessionHashRate as number)
-        let currentTotalHashes = await client.getTotalHashes()
+        const currentTotalHashes = await client.getTotalHashes()
         setSessionHashes(currentTotalHashes as number)
         let currentTime = new Date().getTime()
         currentTime = Math.round((currentTime - startTime) / 1000)
@@ -119,23 +119,23 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     // Update function for reacting to slider changes
     async function update(client: any, cpuValue: number) {
         if (client.isRunning()) {
-            //Changing CPU Throttle here
-            let currentThrottle = client.getThrottle()
-            let newThrottle = 1 - cpuValue / 100
-            if (currentThrottle != newThrottle) client.setThrottle(newThrottle)
-        } 
+            // Changing CPU Throttle here
+            const currentThrottle = client.getThrottle()
+            const newThrottle = 1 - cpuValue / 100
+            if (currentThrottle !== newThrottle) { client.setThrottle(newThrottle) }
+        }
     }
 
-    function openDonationModal():void {
+    function openDonationModal(): void {
         openInfoModal(
             'Donation Request Not Starting?',
             <Fragment>
                 <p>
                     Be sure to check that donateABLE is whitelisted on any adblockers and that your antivirus programs
-                    are not blocking our page. To learn how to do this please visit our 
-                     <Link to='/faq'> Frequently Asked Questions</Link> page.
+                    are not blocking our page. To learn how to do this please visit our
+                    <Link to='/faq'> Frequently Asked Questions</Link> page.
                 </p>
-            </Fragment>
+            </Fragment>,
         )
     }
 
@@ -149,7 +149,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                     with the amount of CPU you use to donate with, and to turn it up when you are leaing your computer
                     for a while.
                 </p>
-            </Fragment>
+            </Fragment>,
         )
     }
 
@@ -162,14 +162,14 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 <Section value={sessionHashes} max={15000} title='Total Hashes' />
             </div>
             <h1 className={styles.cpuValue}>
-                CPU {cpuValue}% 
+                CPU {cpuValue}%
                 <span onClick={openDonationModal}>
                     <Icon className={styles.donateIcon} name='question-circle' />
                </span>
             </h1>
             <Slider className={styles.MySlider} value={cpuValue} onChange={handleChange} aria-labelledby='continous-slider' />
             <div className={styles.buttons}>
-                <Button className={styles.start} onClick={onButtonClick}>{buttonString}</Button> 
+                <Button className={styles.start} onClick={onButtonClick}>{buttonString}</Button>
                 <Button className={styles.give} onClick={openCPUModal}>
                     <Icon className={styles.icon} name='question' />
                 </Button>
