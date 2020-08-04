@@ -9,7 +9,7 @@
     "socialFeed": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwww.vswguelph.on.ca%2F&tabs=timeline&width=350&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975",
     "websiteUrl": "http://www.vswguelph.on.ca/",
     "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/victim-services-wellington/",
-    "siteKey": "totally-the-site-key",
+    "siteKey": "a9aee989bdb191b8709922e7f52933a97f054cf19696ef2872ce27d7ed323109",
     "comingSoon": 0,
     "donationTargets": [
       {
@@ -48,7 +48,7 @@
     "socialFeed": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FdonateABLE%2F&tabs=timeline&width=400&height=420&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975",
     "websiteUrl": "https://donateable.ca/",
     "canadaHelpsUrl": "",
-    "siteKey": "totally-the-site-key",
+    "siteKey": "8f0a9d558ac5ed43ae2c6ea7ecd945860300f6b01433df955ee4b3f9dbc9fb31",
     "comingSoon": 0
   },
   {
@@ -61,7 +61,7 @@
     "socialFeed": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGuelphHumaneSociety%2F&tabs=timeline&width=400&height=420&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=571839313007975",
     "websiteUrl": "https://guelphhumane.ca/",
     "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/the-guelph-humane-society/",
-    "siteKey": "totally-the-site-key",
+    "siteKey": "0e7708e6df0272ab5396419b204ee44142ee2263b9e2ed13b3abbea8d39b14f4",
     "comingSoon": 1
   }
 ]

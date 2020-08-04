@@ -80,7 +80,7 @@ export function useUser(): User & { firebaseUser?: firebase.User } | undefined {
     return user
 }
 
-export const signOut = () => { 
+export const signOut = () => {
     firebaseApp.auth().signOut()
     window.location.reload()
 }

@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
+    "@material-ui/core": "^4.9.13",
     "decko": "^1.2.0",
     "event-target-shim": "^5.0.1",
     "firebase": "^7.7.0",
@@ -53,6 +54,7 @@
     "react-firebaseui": "^4.1.0",
     "react-image-crop": "^8.6.1",
     "react-router-dom": "^5.1.2",
-    "uuid": "^3.4.0"
+    "uuid": "^3.4.0",
+    "v8-compile-cache": "^2.1.1"
   }
 }

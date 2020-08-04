@@ -1,0 +1,110 @@
+@import '../../variables';
+
+.donate{
+    .stats{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        .section {
+            margin: auto;
+
+            .content {
+   
+                .title {
+                    color: $dark-blue;
+                    font-weight: bold;
+                }
+                .value {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+
+    
+        .icon {
+            text-align: center;
+            color: $white;
+        }
+
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+
+    .buttons {
+        display: flex;
+        flex-flow: row wrap;
+
+        .start {
+            background-color: $dark-blue;
+            color: $white;
+            width: 90%;
+            height: 50px;
+            transition-duration: 0.2s;
+            &:hover {
+                background-color: $darker-blue;
+            }
+        }
+
+        .give {
+            width: 8%;
+            margin-left: 2%;
+
+            &:hover {
+                background-color: $lighter-blue;
+            }
+        }
+
+        .stop {
+            background-color: $white;
+            color: $dark-blue;
+        }
+
+    }
+
+    .MySlider {
+        color: $dark-blue;
+    }
+
+    .cpuValue {
+        text-align: center;
+        color: $dark-blue;
+
+        .donateIcon { 
+            color: $light-blue;
+            padding-left: 2%;
+        }
+    }
+
+    .loading { 
+        padding: 10% 10%;
+    }
+
+    .MuiSlider-thumb {
+        height: 15;
+        width: 15;
+    }
+
+    .MuiSlider-rail {
+        height: 10;
+    }
+
+    .MuiSlider-thumb {
+        height: 10;
+    }
+
+
+    @media screen and (max-width: $bp-sm-min) {
+        flex-direction: row;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}

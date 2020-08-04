@@ -20,7 +20,10 @@
             "*": [
                 "src/*"
             ]
-        }
+        },
+        "noImplicitAny": true, // For Material UI
+        "noImplicitThis": true,
+        "strictNullChecks": true 
     },
     "exclude": [
         "node_modules",

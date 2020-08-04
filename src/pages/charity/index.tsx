@@ -1,5 +1,6 @@
 import AboutCharity from 'components/about-charity'
 import Button from 'components/button'
+import DonateNow from 'components/charity-donate'
 import Content, { FullWidth } from 'components/content'
 import DonationTargets from 'components/donation-targets'
 import Icon from 'components/icon'
@@ -100,6 +101,9 @@ export default class CharityPage extends Component<Props, State> {
             </div>
 
             <TabContainer>
+                 <Tab title={'Donate'}>
+                    <DonateNow charity={charity} />
+                </Tab>
                 <Tab title={__('charity.statistics')}>
                     <Statistics charity={charity} />
                 </Tab>

@@ -258,3 +258,23 @@ export function useForceUpdate(): () => void {
     const [, setValue] = useState(0)
     return useCallback(() => setValue(value => ++value), [setValue])
 }
+
+// Hook for Embedding scripts in TSX componentes
+export function useScript(url: string): void {
+    useEffect(() => {
+        function loadScript(url: string) {
+            const script = document.createElement('script')
+            script.src = url
+            script.async = true
+    
+            document.body.appendChild(script)
+    
+            return () => {
+                document.body.removeChild(script)
+            }
+        }
+        
+        loadScript(url)
+
+    }, [url])
+}
