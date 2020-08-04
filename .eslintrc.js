@@ -11,7 +11,9 @@ module.exports = {
         "prettier/react",
     ],
     rules: {
-        // suppress errors for missing 'import React' in files
+        // suppress errors for missing 'import React' in files, props and ""
         "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react/no-unescaped-entities": "off",
     },
 };

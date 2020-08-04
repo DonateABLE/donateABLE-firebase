@@ -358,7 +358,7 @@ function argsKey(args: unknown[]): string {
 // }
 // console.log(range(10, 1).map(overload).join('\n'))
 
-export function range(count: number, start: number = 0): number[] {
+export function range(count: number, start = 0): number[] {
     return new Array(count).fill(0).map((_, i) => i + start);
 }
 

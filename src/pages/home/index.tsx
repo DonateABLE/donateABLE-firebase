@@ -6,14 +6,7 @@ import { useUser } from "fb";
 import Charity from "orm/charity";
 import CharityType from "orm/charity-type";
 import { useQuery } from "orm/model";
-import {
-    Component,
-    createElement,
-    Fragment,
-    FunctionComponent,
-    ReactNode,
-    useState,
-} from "react";
+import { createElement, Fragment, FunctionComponent, useState } from "react";
 import { Link } from "react-router-dom";
 import { formatNumber } from "utils";
 import CharityBox from "./charity";

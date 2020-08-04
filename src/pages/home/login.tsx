@@ -1,5 +1,5 @@
 import Button from "components/button";
-import Content, { FullWidth } from "components/content";
+import Content from "components/content";
 import { Input } from "components/form";
 import TextBox from "components/textbox";
 import { signOut, useUser } from "fb";

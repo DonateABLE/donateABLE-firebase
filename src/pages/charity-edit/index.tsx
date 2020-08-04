@@ -1,36 +1,28 @@
 import Button from "components/button";
 import Content, { FullWidth } from "components/content";
 import { Input, Select, TextArea } from "components/form";
-import Icon, {
-    BrandIcons,
-    IconName,
-    RegularIcons,
-    SolidIcons,
-} from "components/icon";
+import Icon, { IconName, SolidIcons } from "components/icon";
 import {
     Modal,
     ModalBody,
     ModalControl,
     ModalHeader,
-    openInfoModal,
     openModal,
 } from "components/modal";
 import { showToast } from "components/snack-bar";
 import { Tab, TabContainer } from "components/tabs";
-import { bind, memoize } from "decko";
+import { bind } from "decko";
 import { isFirebaseError, storage } from "fb";
 import Charity, { DonationTarget } from "orm/charity";
 import CharityType from "orm/charity-type";
 import {
     Component,
     createElement,
-    Fragment,
     FunctionComponent,
     ReactNode,
-    SyntheticEvent,
     useState,
 } from "react";
-import { Link, RouteComponentProps } from "react-router-dom";
+import { RouteComponentProps } from "react-router-dom";
 import { addValue, bindArgs } from "utils";
 import uuidv4 from "uuid/v4";
 import styles from "./style.scss";

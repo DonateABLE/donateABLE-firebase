@@ -88,7 +88,7 @@ export function useUser():
     return user;
 }
 
-export const signOut = () => {
+export const signOut = (): void => {
     firebaseApp.auth().signOut();
     window.location.reload();
 };

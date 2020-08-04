@@ -27,7 +27,7 @@ interface ToastOptions {
  */
 class ToastMessageEvent extends Event {
     public readonly id: string;
-    public hidden: boolean = false;
+    public hidden = false;
 
     private timeoutID?: ReturnType<typeof setTimeout>;
 
