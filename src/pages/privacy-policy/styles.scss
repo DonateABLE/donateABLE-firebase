@@ -1,0 +1,23 @@
+@import '../../variables';
+
+
+.heading {
+    text-align: center;
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.PrivacyPolicy {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+
+    .scroll {
+        overflow-y: scroll;
+        height: 95%;
+        width: 75%;
+        text-align: left;
+    }
+}
