@@ -4,11 +4,7 @@
         "moduleResolution": "node",
         "module": "ESNext",
         "target": "es5",
-        "lib": [
-            "DOM",
-            "ES5",
-            "ScriptHost"
-        ],
+        "lib": ["DOM", "ES5", "ScriptHost"],
         "jsx": "react",
         "jsxFactory": "createElement",
         "experimentalDecorators": true,
@@ -17,15 +13,11 @@
         "strict": true,
         "baseUrl": "./",
         "paths": {
-            "*": [
-                "src/*"
-            ]
+            "*": ["src/*"]
         },
         "noImplicitAny": true, // For Material UI
         "noImplicitThis": true,
-        "strictNullChecks": true 
+        "strictNullChecks": true
     },
-    "exclude": [
-        "node_modules",
-    ]
+    "exclude": ["node_modules"]
 }

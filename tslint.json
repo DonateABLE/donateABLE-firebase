@@ -1,35 +1,16 @@
 {
-    "extends": [
-        "tslint:recommended",
-        "tslint-react"
-    ],
+    "extends": ["tslint:recommended", "tslint-react"],
     "rules": {
-        "semicolon": [
-            true,
-            "never"
-        ],
-        "quotemark": [
-            true,
-            "single",
-            "avoid-escape"
-        ],
-        "interface-name": [
-            true,
-            "never-prefix"
-        ],
+        "semicolon": [true, "never"],
+        "quotemark": [true, "single", "avoid-escape"],
+        "interface-name": [true, "never-prefix"],
         "jsx-wrap-multiline": false,
         "jsx-alignment": true,
         "jsx-no-multiline-js": false,
         "jsx-boolean-value": false,
-        "arrow-parens": [
-            true,
-            "ban-single-arg-parens"
-        ],
+        "arrow-parens": [true, "ban-single-arg-parens"],
         "object-literal-sort-keys": false,
-        "object-literal-shorthand": [
-            true,
-            "never"
-        ],
+        "object-literal-shorthand": [true, "never"],
         "space-before-function-paren": [
             true,
             {
@@ -45,17 +26,8 @@
             "allow-leading-underscore"
         ],
         "no-invalid-this": true,
-        "typedef": [
-            true,
-            "call-signature"
-        ],
+        "typedef": [true, "call-signature"],
         "max-classes-per-file": false,
-        "ban": [
-            true,
-            "alert",
-            [
-                "alert"
-            ]
-        ]
+        "ban": [true, "alert", ["alert"]]
     }
 }
