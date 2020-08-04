@@ -6,7 +6,7 @@ export default class CharityType extends Model {
     public readonly collection = firestore.collection("charity-type");
 
     @Model.field()
-    public name: string = "";
+    public name = "";
 
     @Model.field()
     public icon: IconName = "question-circle";

@@ -16,8 +16,8 @@ const DropDown: FunctionComponent<{ title: string; content: any }> = ({
 }) => {
     const [show, setShow] = useState(false);
 
-    const iconPlus: any = "plus-circle";
-    const iconMinus: any = "minus-circle";
+    const iconPlus = "plus-circle";
+    const iconMinus = "minus-circle";
     const [iconSelect, setIcon] = useState<any>(iconPlus);
 
     function clickOutside(ref: any): void {

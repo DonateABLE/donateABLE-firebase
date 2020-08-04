@@ -1,4 +1,3 @@
-import Charity from "orm/charity";
 import { createElement, FunctionComponent } from "react";
 import styles from "./style.scss";
 
