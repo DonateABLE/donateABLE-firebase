@@ -73,7 +73,7 @@ const SearchBar: FunctionComponent<Props> = props => {
             </Content>
         </div>
 
-        {/* Return to the reason for this 
+        {/* Return to the reason for this
 
             <FullWidth
             className={classNames(styles.popup, {
@@ -96,7 +96,7 @@ const SearchBar: FunctionComponent<Props> = props => {
                 ))}
             </div>
         </FullWidth> */}
-        
+
         <   FullWidth
             className={classNames(styles.popup, {
                 [styles.show]: open,
@@ -137,7 +137,7 @@ const SearchBar: FunctionComponent<Props> = props => {
                     </div>
                 })}
             </div>
-         </ FullWidth>
+        </ FullWidth>
     </div >
 }
 

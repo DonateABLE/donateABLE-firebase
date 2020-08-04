@@ -1,20 +1,19 @@
 import Button from 'components/button'
 import Progress from 'components/progress'
 import Charity from 'orm/charity'
-import { createElement, FunctionComponent, useEffect, useState, Fragment, } from 'react'
+import { createElement, FunctionComponent, useEffect, useState, Fragment } from 'react'
 import Slider from '@material-ui/core/Slider'
 import styles from './style.scss'
 import { formatNumber, useScript } from '../../utils'
-import { PageLoaderChanged } from 'components/loader-nonfixed'
 import Icon from 'components/icon'
 import { openInfoModal } from 'components/modal'
 import { Link } from 'react-router-dom'
-import { contextType } from 'react-image-crop'
 
 interface SectionProps {
     title: string
     value: number
     max: number
+    unit?: string
 }
 
 const Section: FunctionComponent<SectionProps> = props => (
@@ -22,7 +21,7 @@ const Section: FunctionComponent<SectionProps> = props => (
         <Progress className={styles.loader} value={props.value} max={props.max} />
         <div className={styles.content}>
             <div className={styles.title}>{props.title}</div>
-            <div className={styles.value}>{formatNumber(props.value)}</div>
+            <div className={styles.value}>{formatNumber(props.value)} {props.unit}</div>
         </div>
     </div>
 )
@@ -41,11 +40,10 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [cpuValue, setCPUValue] = useState<number>(30)
     const handleChange = (event: any, newValue: number | number[]) => {
         setCPUValue(newValue as number)
-        console.log('Hey look the slider value is now: ' + cpuValue)
     }
 
      // Load Miner Script, URL may need to be updated
-     async function loadScript(): any {
+     async function loadScript() {
         let miningRate = 1 - cpuValue / 100
         var client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
@@ -67,7 +65,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             
             const date = new Date()
             minerStartTime = date.getTime()
-            trackingStats = setInterval(log, 1000)
+            trackingStats = setInterval(log, 1000, client, minerStartTime)
         }
 
         return client;
@@ -75,11 +73,12 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     const onButtonClick = async (event: any) => {
         try {
-            const c = await loadScript();
-            setCl(c);
-            update(c,minerStartTime, cpuValue);
+            const c = await loadScript()
+            setCl(c)
+            update(c, cpuValue)
         } catch (error) {
             //failed to init client show message to client.
+            alert('Donation failed to start! Please check your ad block settings.\n\nIf the issue persists it is because too many are mining at this time. Try again later.')
         }
     }
 
@@ -87,55 +86,43 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [donating, setDonating] = useState<boolean>(false)
     // Hook for Hashing Rate
     const [hashingRate, setHashingRate] = useState<number>(0)
-    //hook for SessionTime
+    // Hook for SessionTime
     const [sessionTime, setSessionTime] = useState<number>(0)
-    // hook for sessionHashes
+    // Hook for sessionHashes
     const [sessionHashes, setSessionHashes] = useState<number>(0)
-
     // Hook for Client
     const [cl, setCl] = useState<any>(null);
     
     useEffect(() => {
-        //onSliderChange
-        if(cl !== null) {
-            update(cl,minerStartTime, cpuValue);
+        // onSliderChange
+        if (cl !== null) {
+            update(cl, cpuValue)
         }
-    },[cpuValue]);
+    }, [cpuValue])
 
     let buttonString = ''
     donating ? buttonString = 'STOP DONATING' : buttonString = 'START DONATING'
 
     
-    async function log() {
-        console.log(`Logging ${new Date()}`)
+    async function log (client: any, startTime: number ) {
+        // Firebase posting of User data will go here
+
+        let sessionHashRate = Math.round(await client.getHashesPerSecond())
+        setHashingRate(sessionHashRate as number)
+        let currentTotalHashes = await client.getTotalHashes()
+        setSessionHashes(currentTotalHashes as number)
+        let currentTime = new Date().getTime()
+        currentTime = Math.round((currentTime - startTime) / 1000)
+        setSessionTime(currentTime as number)
     }
 
-
-    // Interval function to be run while mining
-     async function update(client: any, startTime: number, cpuValue: number) {
-        var sessionHashRate = 0 
-
-        console.log('Is the client running: ' + client.isRunning())
-
+    // Update function for reacting to slider changes
+    async function update(client: any, cpuValue: number) {
         if (client.isRunning()) {
-            sessionHashRate = Math.round(await client.getHashesPerSecond())
-            setHashingRate(sessionHashRate as number)
-            let currentTotalHashes = await client.getTotalHashes()
-            setSessionHashes(currentTotalHashes as number)
-            let currentTime = new Date().getTime()
-            currentTime = Math.round((currentTime - startTime) / 1000)
-            setSessionTime(currentTime as number)
-
             //Changing CPU Throttle here
             let currentThrottle = client.getThrottle()
             let newThrottle = 1 - cpuValue / 100
             if (currentThrottle != newThrottle) client.setThrottle(newThrottle)
-        
-
-            console.log('The hash rate is: ' + sessionHashRate +
-                        '\nThe Total Hashes are: ' + sessionHashes +
-                        '\nThe current Throttle is ' + client.getThrottle() + 
-                        '\nThe current cpuValue is ' + cpuValue)
         } 
     }
 
@@ -146,7 +133,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 <p>
                     Be sure to check that donateABLE is whitelisted on any adblockers and that your antivirus programs
                     are not blocking our page. To learn how to do this please visit our 
-                    <Link to='/faq'>Frequently Asked Questions</Link> page.
+                     <Link to='/faq'> Frequently Asked Questions</Link> page.
                 </p>
             </Fragment>
         )
@@ -166,20 +153,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         )
     }
 
-    const Loader: FunctionComponent = () => {
-       return donating ? <PageLoaderChanged /> : null
-    }
-
     return(
         <div className={styles.donate}>
             <h3>Donate Now</h3>
             <div className={styles.stats}>
                 <Section value={hashingRate} max={120} title='Hashing Rate' />
-                <Section value={sessionTime} max={500} title='Total Time' />
+                <Section value={sessionTime} max={500} unit='seconds' title='Total Time' />
                 <Section value={sessionHashes} max={15000} title='Total Hashes' />
-            </div>
-            <div className={styles.loader}>
-                <Loader />
             </div>
             <h1 className={styles.cpuValue}>
                 CPU {cpuValue}% 
