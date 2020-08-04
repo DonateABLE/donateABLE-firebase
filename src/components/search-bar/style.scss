@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .searchBar {
     position: relative;
@@ -23,7 +23,8 @@
 
     .popup {
         max-height: 0px;
-        transition: max-height .25s linear, padding-top .25s linear, padding-bottom .25s linear;
+        transition: max-height 0.25s linear, padding-top 0.25s linear,
+            padding-bottom 0.25s linear;
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -39,7 +40,6 @@
         @media screen and (max-width: $bp-lg-min) {
             left: 8px;
         }
-
 
         &.show {
             max-height: 100vh;

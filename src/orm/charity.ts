@@ -1,102 +1,104 @@
-import { IconName } from 'components/icon'
-import { firestore } from 'fb'
-import Model from './model'
+import { IconName } from "components/icon";
+import { firestore } from "fb";
+import Model from "./model";
 
 export interface DonationTarget {
-    name: string
-    cost: number
-    description: string
-    icon: IconName
+    name: string;
+    cost: number;
+    description: string;
+    icon: IconName;
 }
 
 export default class Charity extends Model {
-    public readonly collection = firestore.collection('charity')
+    public readonly collection = firestore.collection("charity");
 
     @Model.field()
-    public shortName: string = ''
+    public shortName = "";
 
     @Model.field()
-    public longName: string = ''
+    public longName = "";
 
     @Model.field()
-    public logo: string = ''
+    public logo = "";
 
     @Model.field()
-    public shortDesc: string = ''
+    public shortDesc = "";
 
     @Model.field()
-    public longDesc: string = ''
+    public longDesc = "";
 
     @Model.field()
-    public tagline: string = ''
+    public tagline = "";
 
     @Model.field()
-    public facebookUrl: string = ''
+    public facebookUrl = "";
 
     @Model.field()
-    public twitterUrl: string = ''
+    public twitterUrl = "";
 
     @Model.field()
-    public websiteUrl: string = ''
+    public websiteUrl = "";
 
     @Model.field()
-    public canadaHelpsUrl: string = ''
+    public canadaHelpsUrl = "";
 
     @Model.field()
-    public siteKey: string = ''
+    public siteKey = "";
 
     @Model.field()
-    public comingSoon: boolean = false
+    public comingSoon = false;
 
     @Model.field()
-    public currentlyDonating: number = 0
+    public currentlyDonating = 0;
 
     @Model.field()
-    public donatorsToDate: number = 0
+    public donatorsToDate = 0;
 
     @Model.field()
-    public totalHashes: number = 0
+    public totalHashes = 0;
 
     @Model.field()
-    public totalTime: number = 0
+    public totalTime = 0;
 
     @Model.field()
-    public type: {
-        id: string
-        name: string
-        icon: IconName,
-    } | undefined
+    public type:
+        | {
+              id: string;
+              name: string;
+              icon: IconName;
+          }
+        | undefined;
 
     @Model.field()
-    public registeredBusinessName: string = ''
+    public registeredBusinessName = "";
 
     @Model.field()
-    public businessNumber: string = ''
+    public businessNumber = "";
 
     @Model.field()
-    public address: string = ''
+    public address = "";
 
     @Model.field()
-    public cityProvince: string = ''
+    public cityProvince = "";
 
     @Model.field()
-    public postalCode: string = ''
+    public postalCode = "";
 
     @Model.field()
-    public phone: string = ''
+    public phone = "";
 
     @Model.field()
-    public email: string = ''
+    public email = "";
 
     @Model.field()
-    public fax: string = ''
+    public fax = "";
 
     @Model.field()
-    public officeHourDays: string = ''
+    public officeHourDays = "";
 
     @Model.field()
-    public officeHourHours: string = ''
+    public officeHourHours = "";
 
     @Model.field()
-    public donationTargets: DonationTarget[] = []
+    public donationTargets: DonationTarget[] = [];
 }

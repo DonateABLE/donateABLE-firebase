@@ -1,9 +1,8 @@
-@import '../../variables';
+@import "../../variables";
 
 .textBox {
     border: none;
     padding: 2px 10px;
-
 
     &.light {
         background-color: $light-blue;

@@ -1,27 +1,27 @@
-import langFiles, { LangKeys } from 'lang/index.json'
-import { createElement, Fragment, FunctionComponent } from 'react'
+import langFiles, { LangKeys } from "lang/index.json";
+import { createElement, Fragment, FunctionComponent } from "react";
 
-let language = 'en'
+let language = "en";
 
 export function __(key: LangKeys): string {
-    let current = langFiles[language]
+    let current = langFiles[language];
 
-    for (const part of key.split('.')) {
-        if (typeof current !== 'object' || current === null) {
-            return key
+    for (const part of key.split(".")) {
+        if (typeof current !== "object" || current === null) {
+            return key;
         }
-        current = current[part]
+        current = current[part];
     }
-    if (typeof current !== 'string') {
-        return key
+    if (typeof current !== "string") {
+        return key;
     }
-    return current
+    return current;
 }
 
 export function setLanguage(lang: string): void {
-    language = lang
+    language = lang;
 }
 
-export const La: FunctionComponent<{ ng: LangKeys }> = props => {
-    return <Fragment>{__(props.ng)}</Fragment>
-}
+export const La: FunctionComponent<{ ng: LangKeys }> = (props) => {
+    return <Fragment>{__(props.ng)}</Fragment>;
+};

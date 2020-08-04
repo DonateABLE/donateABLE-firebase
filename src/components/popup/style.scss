@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .wrapper {
     position: relative;
@@ -6,7 +6,6 @@
 
     .popup {
         display: none;
-
 
         &.open {
             $x-offset: 30px;
@@ -26,10 +25,9 @@
             z-index: 10;
 
             &::after {
-
                 display: block;
                 position: absolute;
-                content: ' ';
+                content: " ";
                 width: $point-height * sqrt(2);
                 height: $point-height * sqrt(2);
 

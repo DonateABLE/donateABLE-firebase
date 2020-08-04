@@ -1,6 +1,6 @@
-@import '../../variables';
+@import "../../variables";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800&display=swap");
 
 :global(.light) {
     color: $light-blue;
@@ -14,7 +14,7 @@ h2 {
 body {
     margin: 0;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
     background-color: $background;
     color: $on-background;
@@ -38,7 +38,6 @@ a {
     flex-direction: column;
 
     .menu {
-
         position: fixed;
         background: $light-blue;
         color: $white;
@@ -161,7 +160,6 @@ a {
     }
 
     @media screen and (max-width: $bp-sm-min) {
-
         .menu {
             left: -100vw;
             width: 100vw;
@@ -200,6 +198,5 @@ a {
             margin-left: 0 !important;
             margin-top: 40px;
         }
-
     }
 }

@@ -1,43 +1,66 @@
-import EventTarget from 'event-target-shim'
-import { DependencyList, SyntheticEvent, useCallback, useEffect, useRef, useState } from 'react'
+import EventTarget from "event-target-shim";
+import {
+    DependencyList,
+    SyntheticEvent,
+    useCallback,
+    useEffect,
+    useRef,
+    useState,
+} from "react";
 
 export function notUndefined<T>(v: T | undefined): v is T {
-    return v !== undefined
+    return v !== undefined;
 }
 export function notNull<T>(v: T | null): v is T {
-    return v !== null
+    return v !== null;
 }
 export function classNames(
-    ...classes: Array<{ [className: string]: boolean | null | undefined } | string | undefined | null>
+    ...classes: Array<
+        | { [className: string]: boolean | null | undefined }
+        | string
+        | undefined
+        | null
+    >
 ): string {
-    const classList = []
+    const classList = [];
 
     for (const cls of classes.filter(notNull).filter(notUndefined)) {
-        if (typeof cls === 'string') {
-            classList.push(cls)
-        } else if (typeof cls === 'object') {
+        if (typeof cls === "string") {
+            classList.push(cls);
+        } else if (typeof cls === "object") {
             for (const [className, show] of Object.entries(cls)) {
                 if (show) {
-                    classList.push(className)
+                    classList.push(className);
                 }
             }
         }
     }
 
-    return classList.join(' ')
+    return classList.join(" ");
 }
 
-export function clickedOn(e: MouseEvent, element: Element | Text | null): boolean {
+export function clickedOn(
+    e: MouseEvent,
+    element: Element | Text | null
+): boolean {
     if (!(element instanceof HTMLElement)) {
-        return false
+        return false;
     }
 
-    const rect = element.getBoundingClientRect()
+    const rect = element.getBoundingClientRect();
 
-    return rect.top < e.y && rect.bottom > e.y && rect.left < e.x && rect.right > e.x
+    return (
+        rect.top < e.y &&
+        rect.bottom > e.y &&
+        rect.left < e.x &&
+        rect.right > e.x
+    );
 }
 
-const valueCache = new WeakMap<(value: string, e: SyntheticEvent) => void, (e: SyntheticEvent) => void>()
+const valueCache = new WeakMap<
+    (value: string, e: SyntheticEvent) => void,
+    (e: SyntheticEvent) => void
+>();
 
 /**
  * addValue allows you to write callbacks using the value of an input, select or
@@ -54,26 +77,29 @@ const valueCache = new WeakMap<(value: string, e: SyntheticEvent) => void, (e: S
  *
  * @param cb
  */
-export function addValue(cb: (value: string, e: SyntheticEvent) => void): (e: SyntheticEvent) => void {
-    let ret = valueCache.get(cb)
+export function addValue(
+    cb: (value: string, e: SyntheticEvent) => void
+): (e: SyntheticEvent) => void {
+    let ret = valueCache.get(cb);
     if (ret === undefined) {
-        ret = e => {
-            if (e.currentTarget instanceof HTMLInputElement
-                || e.currentTarget instanceof HTMLSelectElement
-                || e.currentTarget instanceof HTMLTextAreaElement
+        ret = (e) => {
+            if (
+                e.currentTarget instanceof HTMLInputElement ||
+                e.currentTarget instanceof HTMLSelectElement ||
+                e.currentTarget instanceof HTMLTextAreaElement
             ) {
-                return cb(e.currentTarget.value, e)
+                return cb(e.currentTarget.value, e);
             }
-            return cb('', e)
-        }
-        valueCache.set(cb, ret)
+            return cb("", e);
+        };
+        valueCache.set(cb, ret);
     }
-    return ret
+    return ret;
 }
 
-const argsCache = new WeakMap<object, Map<string, (...args: any) => void>>()
+const argsCache = new WeakMap<object, Map<string, (...args: any) => void>>();
 
-type Primitive = number | string | boolean
+type Primitive = number | string | boolean;
 
 /**
  * The `bindArgs` function takes in some arguments then a function and will
@@ -106,45 +132,219 @@ type Primitive = number | string | boolean
  * @param callback
  */
 // tslint:disable: max-line-length
-export function bindArgs<A0 extends Primitive, U extends unknown[]>(arg0: A0, callback: (arg0: A0, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, callback: (arg0: A0, arg1: A1, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, callback: (arg0: A0, arg1: A1, arg2: A2, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, A6 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, A6 extends Primitive, A7 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, ...originalArgs: U) => void): (...originalArgs: U) => void
-export function bindArgs<A0 extends Primitive, A1 extends Primitive, A2 extends Primitive, A3 extends Primitive, A4 extends Primitive, A5 extends Primitive, A6 extends Primitive, A7 extends Primitive, A8 extends Primitive, U extends unknown[]>(arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, callback: (arg0: A0, arg1: A1, arg2: A2, arg3: A3, arg4: A4, arg5: A5, arg6: A6, arg7: A7, arg8: A8, ...originalArgs: U) => void): (...originalArgs: U) => void
+export function bindArgs<A0 extends Primitive, U extends unknown[]>(
+    arg0: A0,
+    callback: (arg0: A0, ...originalArgs: U) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    callback: (arg0: A0, arg1: A1, ...originalArgs: U) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    callback: (arg0: A0, arg1: A1, arg2: A2, ...originalArgs: U) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    A3 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    callback: (
+        arg0: A0,
+        arg1: A1,
+        arg2: A2,
+        arg3: A3,
+        ...originalArgs: U
+    ) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    A3 extends Primitive,
+    A4 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    callback: (
+        arg0: A0,
+        arg1: A1,
+        arg2: A2,
+        arg3: A3,
+        arg4: A4,
+        ...originalArgs: U
+    ) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    A3 extends Primitive,
+    A4 extends Primitive,
+    A5 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    callback: (
+        arg0: A0,
+        arg1: A1,
+        arg2: A2,
+        arg3: A3,
+        arg4: A4,
+        arg5: A5,
+        ...originalArgs: U
+    ) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    A3 extends Primitive,
+    A4 extends Primitive,
+    A5 extends Primitive,
+    A6 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    arg6: A6,
+    callback: (
+        arg0: A0,
+        arg1: A1,
+        arg2: A2,
+        arg3: A3,
+        arg4: A4,
+        arg5: A5,
+        arg6: A6,
+        ...originalArgs: U
+    ) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    A3 extends Primitive,
+    A4 extends Primitive,
+    A5 extends Primitive,
+    A6 extends Primitive,
+    A7 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    arg6: A6,
+    arg7: A7,
+    callback: (
+        arg0: A0,
+        arg1: A1,
+        arg2: A2,
+        arg3: A3,
+        arg4: A4,
+        arg5: A5,
+        arg6: A6,
+        arg7: A7,
+        ...originalArgs: U
+    ) => void
+): (...originalArgs: U) => void;
+export function bindArgs<
+    A0 extends Primitive,
+    A1 extends Primitive,
+    A2 extends Primitive,
+    A3 extends Primitive,
+    A4 extends Primitive,
+    A5 extends Primitive,
+    A6 extends Primitive,
+    A7 extends Primitive,
+    A8 extends Primitive,
+    U extends unknown[]
+>(
+    arg0: A0,
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    arg6: A6,
+    arg7: A7,
+    arg8: A8,
+    callback: (
+        arg0: A0,
+        arg1: A1,
+        arg2: A2,
+        arg3: A3,
+        arg4: A4,
+        arg5: A5,
+        arg6: A6,
+        arg7: A7,
+        arg8: A8,
+        ...originalArgs: U
+    ) => void
+): (...originalArgs: U) => void;
 // tslint:enable: max-line-length
 export function bindArgs(...args: unknown[]): (...args: unknown[]) => void {
     // this function uses unknown types because typescript wont let me use
     // a spread argument first
 
     // remove the callback from the args
-    const callback = args.pop()
-    if (typeof callback !== 'function') {
-        throw new Error('the last argument of addArgs must be a function')
+    const callback = args.pop();
+    if (typeof callback !== "function") {
+        throw new Error("the last argument of addArgs must be a function");
     }
 
     // get the map of arguments that get used for the callback or create one
-    let m = argsCache.get(callback)
+    let m = argsCache.get(callback);
     if (m === undefined) {
-        m = new Map()
-        argsCache.set(callback, m)
+        m = new Map();
+        argsCache.set(callback, m);
     }
 
     // check for an existing callback with the arguments applied or create it
-    let ret = m.get(argsKey(args))
+    let ret = m.get(argsKey(args));
     if (ret === undefined) {
-        ret = (...childArgs) => callback(...args, ...childArgs)
-        m.set(argsKey(args), ret)
+        ret = (...childArgs) => callback(...args, ...childArgs);
+        m.set(argsKey(args), ret);
     }
 
-    return ret
+    return ret;
 }
 
 function argsKey(args: unknown[]): string {
-    return JSON.stringify(args)
+    return JSON.stringify(args);
 }
 
 // I used the following function to generate the arguments overloads for bindArgs
@@ -158,123 +358,132 @@ function argsKey(args: unknown[]): string {
 // }
 // console.log(range(10, 1).map(overload).join('\n'))
 
-export function range(count: number, start: number = 0): number[] {
-    return (new Array(count)).fill(0).map((_, i) => i + start)
+export function range(count: number, start = 0): number[] {
+    return new Array(count).fill(0).map((_, i) => i + start);
 }
 
-const numberFormatter = Intl.NumberFormat('default')
+const numberFormatter = Intl.NumberFormat("default");
 
 export function formatNumber(num: number): string {
-    return numberFormatter.format(num)
+    return numberFormatter.format(num);
 }
 
-const currencyFormatter = Intl.NumberFormat('default', {
-    style: 'currency',
-    currency: 'USD',
+const currencyFormatter = Intl.NumberFormat("default", {
+    style: "currency",
+    currency: "USD",
     minimumFractionDigits: 0,
-})
+});
 
 export function formatCurrency(num: number): string {
-    return currencyFormatter.format(num)
+    return currencyFormatter.format(num);
 }
 
 export function cadToHashes(cad: number): number {
-    return cad * 100_000_000
+    return cad * 100_000_000;
 }
 export function hashesToCAD(hashes: number): number {
-    return hashes / 100_000_000
+    return hashes / 100_000_000;
 }
 
-export function binarySearch<T>(array: readonly T[], match: (a: T) => number): number {
+export function binarySearch<T>(
+    array: readonly T[],
+    match: (a: T) => number
+): number {
     function recursiveFunction(start: number, end: number): number {
-
         // Base Condition
-        if (start > end) { return -1 }
+        if (start > end) {
+            return -1;
+        }
 
         // Find the middle index
-        const mid = Math.floor((start + end) / 2)
+        const mid = Math.floor((start + end) / 2);
 
-        const m = match(array[mid])
+        const m = match(array[mid]);
         // Compare mid with given key x
-        if (m === 0) { return mid }
+        if (m === 0) {
+            return mid;
+        }
 
         // If element at mid is greater than x,
         // search in the left half of mid
         if (m > 0) {
-            return recursiveFunction(start, mid - 1)
+            return recursiveFunction(start, mid - 1);
         } else {
-
             // If element at mid is smaller than x,
             // search in the right half of mid
-            return recursiveFunction(mid + 1, end)
+            return recursiveFunction(mid + 1, end);
         }
     }
 
-    return recursiveFunction(0, array.length)
+    return recursiveFunction(0, array.length);
 }
 
-export function useInterval(callback: () => void, delay: number, deps: DependencyList = []): void {
-    const savedCallback = useRef<() => void>()
+export function useInterval(
+    callback: () => void,
+    delay: number,
+    deps: DependencyList = []
+): void {
+    const savedCallback = useRef<() => void>();
 
     // Remember the latest callback.
     useEffect(() => {
-        savedCallback.current = callback
-    }, [callback, ...deps])
+        savedCallback.current = callback;
+    }, [callback, ...deps]);
 
     // Set up the interval.
     useEffect(() => {
         if (delay !== null) {
-            const id = setInterval(() => savedCallback.current?.(), delay)
-            return () => clearInterval(id)
+            const id = setInterval(() => savedCallback.current?.(), delay);
+            return () => clearInterval(id);
         }
-    }, [delay])
+    }, [delay]);
 }
 
 export function useEventListener<
     TEvents extends EventTarget.EventDefinition,
     TEventAttributes extends EventTarget.EventDefinition,
-    K extends keyof TEvents,
-    >(
-        target: EventTarget<TEvents, TEventAttributes, 'strict'>,
-        eventName: K,
-        handler: (e: TEvents[K]) => void,
-        deps: DependencyList = [],
+    K extends keyof TEvents
+>(
+    target: EventTarget<TEvents, TEventAttributes, "strict">,
+    eventName: K,
+    handler: (e: TEvents[K]) => void,
+    deps: DependencyList = []
 ): void {
-    const savedHandler = useRef<(e: TEvents[K]) => void>()
+    const savedHandler = useRef<(e: TEvents[K]) => void>();
 
     useEffect(() => {
-        savedHandler.current = handler
-    }, [handler])
+        savedHandler.current = handler;
+    }, [handler]);
 
     useEffect(() => {
-        const eventListener: any = (event: TEvents[K]) => savedHandler.current?.(event)
-        target.addEventListener(eventName, eventListener)
-        return () => target.removeEventListener(eventName, eventListener)
-    }, [eventName, target, ...deps])
+        const eventListener: any = (event: TEvents[K]) =>
+            savedHandler.current?.(event);
+        target.addEventListener(eventName, eventListener);
+        return () => target.removeEventListener(eventName, eventListener);
+    }, [eventName, target, ...deps]);
 }
 
 // create your forceUpdate hook
 export function useForceUpdate(): () => void {
-    const [, setValue] = useState(0)
-    return useCallback(() => setValue(value => ++value), [setValue])
+    const [, setValue] = useState(0);
+    return useCallback(() => setValue((value) => ++value), [setValue]);
 }
 
 // Hook for Embedding scripts in TSX componentes
 export function useScript(url: string): void {
     useEffect(() => {
         function loadScript(url: string) {
-            const script = document.createElement('script')
-            script.src = url
-            script.async = true
-    
-            document.body.appendChild(script)
-    
-            return () => {
-                document.body.removeChild(script)
-            }
-        }
-        
-        loadScript(url)
+            const script = document.createElement("script");
+            script.src = url;
+            script.async = true;
 
-    }, [url])
+            document.body.appendChild(script);
+
+            return () => {
+                document.body.removeChild(script);
+            };
+        }
+
+        loadScript(url);
+    }, [url]);
 }

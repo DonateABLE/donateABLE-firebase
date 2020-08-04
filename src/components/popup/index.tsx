@@ -1,51 +1,55 @@
-import { bind } from 'decko'
-import { Component, createElement, Fragment, ReactNode } from 'react'
-import { classNames, clickedOn } from 'utils'
-import styles from './style.scss'
+import { bind } from "decko";
+import { Component, createElement, Fragment, ReactNode } from "react";
+import { classNames, clickedOn } from "utils";
+import styles from "./style.scss";
 
 interface Props {
-    openButton: ReactNode
+    openButton: ReactNode;
 }
 
 interface State {
-    open: boolean
+    open: boolean;
 }
 
 export default class Popup extends Component<Props, State> {
-    private popup: HTMLDivElement | null = null
+    private popup: HTMLDivElement | null = null;
 
     constructor(props: Props) {
-        super(props)
+        super(props);
 
         this.state = {
             open: false,
-        }
+        };
     }
 
     public render(): ReactNode {
-        return <span className={styles.wrapper} onClick={this.open}>
-            {this.props.openButton}
-            <div
-                ref={e => this.popup = e}
-                className={classNames(styles.popup, { [styles.open]: this.state.open })}
-            >
-                {this.props.children}
-            </div>
-        </span>
+        return (
+            <span className={styles.wrapper} onClick={this.open}>
+                {this.props.openButton}
+                <div
+                    ref={(e) => (this.popup = e)}
+                    className={classNames(styles.popup, {
+                        [styles.open]: this.state.open,
+                    })}
+                >
+                    {this.props.children}
+                </div>
+            </span>
+        );
     }
 
     @bind
     private open(): void {
-        this.setState({ open: true })
-        document.body.addEventListener('click', this.onBodyClick)
+        this.setState({ open: true });
+        document.body.addEventListener("click", this.onBodyClick);
     }
 
     @bind
     private onBodyClick(e: MouseEvent): void {
         if (clickedOn(e, this.popup)) {
-            return
+            return;
         }
-        this.setState({ open: false })
-        document.body.removeEventListener('click', this.onBodyClick)
+        this.setState({ open: false });
+        document.body.removeEventListener("click", this.onBodyClick);
     }
 }

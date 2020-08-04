@@ -1,133 +1,143 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from "react";
 
 export interface FieldOptions {
-    readonly?: boolean
+    readonly?: boolean;
 }
 
 export interface StaticModel<T extends Model> {
-    options: { [field: string]: FieldOptions | undefined }
-    new(): T
+    options: { [field: string]: FieldOptions | undefined };
+    new (): T;
 }
 
 export default abstract class Model {
-    public static options: { [field: string]: FieldOptions | undefined }
+    public static options: { [field: string]: FieldOptions | undefined };
 
-    public static builder<T extends Model>(this: StaticModel<T>): QueryBuilder<T> {
-        const m = new this()
-        return new QueryBuilder(this, m.collection)
+    public static builder<T extends Model>(
+        this: StaticModel<T>
+    ): QueryBuilder<T> {
+        const m = new this();
+        return new QueryBuilder(this, m.collection);
     }
 
-    public static async find<T extends Model>(this: StaticModel<T>, id: string): Promise<T | null> {
-        const m = new this()
-        const doc = await m.collection.doc(id).get()
+    public static async find<T extends Model>(
+        this: StaticModel<T>,
+        id: string
+    ): Promise<T | null> {
+        const m = new this();
+        const doc = await m.collection.doc(id).get();
         Object.assign(m, {
             ...doc.data(),
             id: doc.id,
-        })
-        m.postSave()
-        return m
+        });
+        m.postSave();
+        return m;
     }
 
     public static subscribe<T extends Model>(
         this: StaticModel<T>,
         id: string,
-        callback: (models: T) => void,
+        callback: (models: T) => void
     ): () => void {
-        return (new this()).collection.doc(id).onSnapshot(doc => {
-            const m = new this()
+        return new this().collection.doc(id).onSnapshot((doc) => {
+            const m = new this();
             Object.assign(m, {
                 ...doc.data(),
                 id: doc.id,
-            })
-            m.postSave()
-            callback(m)
-        })
+            });
+            m.postSave();
+            callback(m);
+        });
     }
 
-    public static field(options: FieldOptions = {}): (type: Model, f: string) => void {
+    public static field(
+        options: FieldOptions = {}
+    ): (type: Model, f: string) => void {
         return (type, f) => {
-            const constructor = type.constructor as StaticModel<Model>
+            const constructor = type.constructor as StaticModel<Model>;
             if (constructor.options === undefined) {
-                constructor.options = {}
+                constructor.options = {};
             }
-            constructor.options[f] = options
+            constructor.options[f] = options;
             return {
                 get: function (this: Model): any {
                     if (this.attributes.hasOwnProperty(f)) {
-                        return this.attributes[f]
+                        return this.attributes[f];
                     }
-                    return this.original[f]
+                    return this.original[f];
                 },
                 set: function (this: Model, value: any): void {
                     if (this.original[f] === value) {
-                        delete this.attributes[f]
+                        delete this.attributes[f];
                     } else {
-                        this.attributes[f] = value
+                        this.attributes[f] = value;
                     }
                 },
-            }
-        }
+            };
+        };
     }
 
-    public readonly id: string | undefined
+    public readonly id: string | undefined;
 
-    public abstract readonly collection: firebase.firestore.CollectionReference
+    public abstract readonly collection: firebase.firestore.CollectionReference;
 
-    private original: { [key: string]: any } = {}
-    private attributes: { [key: string]: any } = {}
+    private original: { [key: string]: any } = {};
+    private attributes: { [key: string]: any } = {};
 
     public async save(): Promise<void> {
-        const saveObject: any = {}
+        const saveObject: any = {};
 
-        this.saving()
+        this.saving();
 
-        for (const key of Object.keys((this.constructor as StaticModel<Model>).options)) {
-            const value = (this as any)[key]
-            const options = (this.constructor as StaticModel<Model>).options[key]
+        for (const key of Object.keys(
+            (this.constructor as StaticModel<Model>).options
+        )) {
+            const value = (this as any)[key];
+            const options = (this.constructor as StaticModel<Model>).options[
+                key
+            ];
             if (value === undefined) {
-                continue
+                continue;
             }
             if (options?.readonly) {
-                continue
+                continue;
             }
-            saveObject[key] = value
+            saveObject[key] = value;
         }
 
         if (this.id === undefined) {
             const docRef = await this.collection.add(saveObject);
-            (this as any).id = docRef.id
+            (this as any).id = docRef.id;
         } else {
-            await this.collection.doc(this.id).set(saveObject, { merge: true })
+            await this.collection.doc(this.id).set(saveObject, { merge: true });
         }
-        this.postSave()
-        this.saved()
+        this.postSave();
+        this.saved();
     }
     public postSave(): void {
         this.original = {
             ...this.original,
             ...this.attributes,
-        }
-        this.attributes = {}
-
+        };
+        this.attributes = {};
     }
     public async delete(): Promise<void> {
-        this.deleting()
+        this.deleting();
         if (this.id === undefined) {
-            return
+            return;
         }
-        await this.collection.doc(this.id).delete()
-        this.deleted()
+        await this.collection.doc(this.id).delete();
+        this.deleted();
     }
 
     public hasChanges(): boolean {
-        return Object.keys(this.attributes).length > 0
+        return Object.keys(this.attributes).length > 0;
     }
 
     public toJSON(): unknown {
         return {
             ...this.original,
             ...this.attributes,
-        }
+        };
     }
 
     protected saving(): void {
@@ -145,79 +155,90 @@ export default abstract class Model {
 }
 
 export class QueryBuilder<T extends Model> {
-
-    private readonly staticModel: StaticModel<T>
-    private readonly query: firebase.firestore.Query
-    private readonly key: Set<string>
+    private readonly staticModel: StaticModel<T>;
+    private readonly query: firebase.firestore.Query;
+    private readonly key: Set<string>;
 
     constructor(staticModel: StaticModel<T>, query: firebase.firestore.Query) {
-        this.staticModel = staticModel
-        this.query = query
-        this.key = new Set<string>()
+        this.staticModel = staticModel;
+        this.query = query;
+        this.key = new Set<string>();
     }
 
     public where<K extends keyof T>(
         fieldPath: K,
         opStr: firebase.firestore.WhereFilterOp,
-        value: T[K],
+        value: T[K]
     ): QueryBuilder<T> {
-        this.key.add(`where ${JSON.stringify(fieldPath)} ${opStr} ${JSON.stringify(value)}`)
-        return new QueryBuilder(this.staticModel, this.query.where(fieldPath as string, opStr, value))
+        this.key.add(
+            `where ${JSON.stringify(fieldPath)} ${opStr} ${JSON.stringify(
+                value
+            )}`
+        );
+        return new QueryBuilder(
+            this.staticModel,
+            this.query.where(fieldPath as string, opStr, value)
+        );
     }
 
     public orderBy(
         fieldPath: keyof T,
-        directionStr: firebase.firestore.OrderByDirection = 'asc',
+        directionStr: firebase.firestore.OrderByDirection = "asc"
     ): QueryBuilder<T> {
-        this.key.add(`orderBy ${JSON.stringify(fieldPath)} ${directionStr}`)
-        return new QueryBuilder(this.staticModel, this.query.orderBy(fieldPath as string, directionStr))
+        this.key.add(`orderBy ${JSON.stringify(fieldPath)} ${directionStr}`);
+        return new QueryBuilder(
+            this.staticModel,
+            this.query.orderBy(fieldPath as string, directionStr)
+        );
     }
     public limit(limit: number): QueryBuilder<T> {
-        this.key.add(`limit ${limit}`)
-        return new QueryBuilder(this.staticModel, this.query.limit(limit))
+        this.key.add(`limit ${limit}`);
+        return new QueryBuilder(this.staticModel, this.query.limit(limit));
     }
 
     public async get(): Promise<T[]> {
-        const ref = await this.query.get()
+        const ref = await this.query.get();
 
-        return ref.docs.map(doc => {
-            const model = new this.staticModel()
+        return ref.docs.map((doc) => {
+            const model = new this.staticModel();
             Object.assign(model, {
                 ...doc.data(),
                 id: doc.id,
-            })
-            model.postSave()
-            return model
-        })
+            });
+            model.postSave();
+            return model;
+        });
     }
 
     public subscribe(callback: (models: T[]) => void): () => void {
-        return this.query.onSnapshot(ref => {
-            callback(ref.docs.map(doc => {
-                const model = new this.staticModel()
-                Object.assign(model, {
-                    ...doc.data(),
-                    id: doc.id,
+        return this.query.onSnapshot((ref) => {
+            callback(
+                ref.docs.map((doc) => {
+                    const model = new this.staticModel();
+                    Object.assign(model, {
+                        ...doc.data(),
+                        id: doc.id,
+                    });
+                    model.postSave();
+                    return model;
                 })
-                model.postSave()
-                return model
-            }))
-        })
+            );
+        });
     }
 
     public equal(q: QueryBuilder<T>): boolean {
-        return this.query.isEqual(q.query)
+        return this.query.isEqual(q.query);
     }
 
     public hash(): string {
-        return Array.from(this.key).sort().join(' ')
+        return Array.from(this.key).sort().join(" ");
     }
 }
 
 export function useQuery<T extends Model>(q: QueryBuilder<T>): T[] | undefined {
-    const [list, changeList] = useState<T[]>()
+    const [list, changeList] = useState<T[]>();
 
-    useEffect(() => q.subscribe(changeList), [q.hash()])
+    useEffect(() => q.subscribe(changeList), [q.hash()]);
 
-    return list
+    return list;
 }

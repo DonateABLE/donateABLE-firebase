@@ -1,36 +1,36 @@
-import { IconName } from 'components/icon'
-import { firestore } from 'fb'
-import Model, { useQuery } from './model'
+import { IconName } from "components/icon";
+import { firestore } from "fb";
+import Model, { useQuery } from "./model";
 
 export interface DonationTarget {
-    name: string
-    cost: number
-    description: string
-    icon: IconName
+    name: string;
+    cost: number;
+    description: string;
+    icon: IconName;
 }
 
 export default class User extends Model {
-    public readonly collection = firestore.collection('user')
+    public readonly collection = firestore.collection("user");
 
     @Model.field()
-    public firstName: string = ''
+    public firstName = "";
 
     @Model.field()
-    public lastName: string = ''
+    public lastName = "";
 
     @Model.field()
-    public user: string = ''
+    public user = "";
 
     @Model.field()
-    public email: string = ''
+    public email = "";
 
     @Model.field()
-    public portrait: string | undefined
+    public portrait: string | undefined;
 
     @Model.field()
-    public getEmails: boolean = false
+    public getEmails = false;
 
     public get fullName(): string {
-        return this.firstName + ' ' + this.lastName
+        return this.firstName + " " + this.lastName;
     }
 }

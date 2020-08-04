@@ -1,7 +1,7 @@
-@import '../../variables';
+@import "../../variables";
 
-.donate{
-    .stats{
+.donate {
+    .stats {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -10,7 +10,6 @@
             margin: auto;
 
             .content {
-   
                 .title {
                     color: $dark-blue;
                     font-weight: bold;
@@ -22,12 +21,10 @@
         }
     }
 
-    
-        .icon {
-            text-align: center;
-            color: $white;
-        }
-
+    .icon {
+        text-align: center;
+        color: $white;
+    }
 
     .loader {
         display: flex;
@@ -63,7 +60,6 @@
             background-color: $white;
             color: $dark-blue;
         }
-
     }
 
     .MySlider {
@@ -74,13 +70,13 @@
         text-align: center;
         color: $dark-blue;
 
-        .donateIcon { 
+        .donateIcon {
             color: $light-blue;
             padding-left: 2%;
         }
     }
 
-    .loading { 
+    .loading {
         padding: 10% 10%;
     }
 
@@ -96,7 +92,6 @@
     .MuiSlider-thumb {
         height: 10;
     }
-
 
     @media screen and (max-width: $bp-sm-min) {
         flex-direction: row;

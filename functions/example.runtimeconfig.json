@@ -1,11 +1,11 @@
 {
-  "email": {
-    "host": "smtp.email.com",
-    "port": 587,
-    "secure": false,
-    "auth": {
-      "user": "email@address.com",
-      "pass": "password"
+    "email": {
+        "host": "smtp.email.com",
+        "port": 587,
+        "secure": false,
+        "auth": {
+            "user": "email@address.com",
+            "pass": "password"
+        }
     }
-  }
 }
