@@ -1,30 +1,25 @@
-@import '../../variables';
+@import "../../variables";
 
-
-    
-.questions{
+.questions {
     padding-bottom: 1%;
-    .faqButton{
+    .faqButton {
         text-align: left;
-        
     }
-    .icon{
+    .icon {
         margin-right: 1ch;
         color: red($color: #f10c0c);
     }
 }
 
-
-.answers{
+.answers {
     display: flex;
-    
+
     transition: background-color 0.5 ease-out;
     background-color: $dark-blue;
     padding-top: 1%;
     padding-bottom: 1%;
     border-left: 1em white solid;
     border-right: 1em white solid;
-
 }
 
 .answersActive {
@@ -37,14 +32,13 @@
     border-right: 1em white solid;
 }
 
-.content{
+.content {
     margin: 0;
     padding: 1em;
-    
+
     text-align: left;
     text-shadow: white;
 
     color: white;
     font-size: 12px;
-
 }

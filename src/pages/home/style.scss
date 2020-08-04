@@ -1,5 +1,4 @@
-@import '../../variables';
-
+@import "../../variables";
 
 .heading {
     text-align: center;
@@ -52,7 +51,7 @@
         width: 250px;
         display: flex;
         flex-direction: column;
-        
+
         .loginGroupElement {
             box-sizing: border-box;
             width: 100%;
@@ -77,11 +76,11 @@
         margin-top: 3px;
         text-transform: uppercase;
     }
-    
+
     input {
         width: 320px !important;
     }
-    
+
     .formElement {
         align-self: center;
         width: 320px;
@@ -94,30 +93,29 @@
     width: 60vw !important;
     min-width: 192px !important;
     max-width: 320px !important;
- }
+}
 
- :global(.mdl-button--raised.mdl-button--colored) {
-     background: $dark-blue !important;
- }
+:global(.mdl-button--raised.mdl-button--colored) {
+    background: $dark-blue !important;
+}
 
- :global(.firebaseui-title) {
-     color: $dark-blue !important;
- }
+:global(.firebaseui-title) {
+    color: $dark-blue !important;
+}
 
- :global(.firebaseui-textfield.mdl-textfield .firebaseui-label::after) {
+:global(.firebaseui-textfield.mdl-textfield .firebaseui-label::after) {
     background-color: $dark-blue !important;
- }
+}
 
- :global(.firebaseui-link) {
-     color: $light-blue !important;
- }
+:global(.firebaseui-link) {
+    color: $light-blue !important;
+}
 
 .charities {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-column-gap: 40px;
     grid-row-gap: 20px;
-
 
     .charity {
         display: flex;
@@ -220,8 +218,8 @@
     }
 }
 
-@media screen and (min-width: $bp-sm-min){
-    .top{ 
+@media screen and (min-width: $bp-sm-min) {
+    .top {
         .loginButtonGroup {
             width: 100%;
             height: 100%;

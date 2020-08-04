@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 $width: 500px;
 
@@ -25,9 +25,11 @@ $width: 500px;
 
         padding: 40px;
 
-        .modalHeader {}
+        .modalHeader {
+        }
 
-        .modalBody {}
+        .modalBody {
+        }
 
         .close {
             position: absolute;

@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .formElement {
     display: inline-block;
@@ -26,7 +26,8 @@
         border: none;
         border-bottom: solid 1px $dark-blue;
         background-color: mix($darker-blue, white, 10%);
-        transition: border-bottom 0.2s, background-color 0.2s, padding-bottom 0.2s;
+        transition: border-bottom 0.2s, background-color 0.2s,
+            padding-bottom 0.2s;
         font-size: inherit;
         padding: 10px;
 

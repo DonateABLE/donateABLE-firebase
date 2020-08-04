@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .header {
     display: grid;
@@ -47,7 +47,6 @@
     column-rule: solid 2px $dark-blue;
     column-gap: 30px;
 
-
     @media only screen and (max-width: $bp-md-min) {
         column-count: 2;
     }
@@ -83,7 +82,7 @@
 
                 &::after {
                     border: solid 4px $light-blue;
-                    content: ' ';
+                    content: " ";
                     display: block;
                     width: 1.7em;
                     height: 1.7em;

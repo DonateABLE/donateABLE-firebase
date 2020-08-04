@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .tabs {
     .titles {
@@ -27,7 +27,7 @@
                 &::after {
                     display: block;
                     position: absolute;
-                    content: ' ';
+                    content: " ";
                     width: $bar-height * 2;
                     height: $bar-height * 2;
 
@@ -43,7 +43,6 @@
                 }
             }
         }
-
     }
 
     .tabContainer {

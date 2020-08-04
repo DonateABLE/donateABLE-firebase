@@ -1,4 +1,4 @@
-@import '../../variables';
+@import "../../variables";
 
 .faq {
     text-align: center;
@@ -15,7 +15,6 @@
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
-        
     }
 
     .row {
@@ -24,7 +23,7 @@
         flex-wrap: wrap;
         width: 100%;
     }
-    
+
     .column {
         display: flex;
         flex-direction: column;

@@ -1,102 +1,104 @@
-import { IconName } from 'components/icon'
-import { firestore } from 'fb'
-import Model from './model'
+import { IconName } from "components/icon";
+import { firestore } from "fb";
+import Model from "./model";
 
 export interface DonationTarget {
-    name: string
-    cost: number
-    description: string
-    icon: IconName
+    name: string;
+    cost: number;
+    description: string;
+    icon: IconName;
 }
 
 export default class Charity extends Model {
-    public readonly collection = firestore.collection('charity')
+    public readonly collection = firestore.collection("charity");
 
     @Model.field()
-    public shortName: string = ''
+    public shortName: string = "";
 
     @Model.field()
-    public longName: string = ''
+    public longName: string = "";
 
     @Model.field()
-    public logo: string = ''
+    public logo: string = "";
 
     @Model.field()
-    public shortDesc: string = ''
+    public shortDesc: string = "";
 
     @Model.field()
-    public longDesc: string = ''
+    public longDesc: string = "";
 
     @Model.field()
-    public tagline: string = ''
+    public tagline: string = "";
 
     @Model.field()
-    public facebookUrl: string = ''
+    public facebookUrl: string = "";
 
     @Model.field()
-    public twitterUrl: string = ''
+    public twitterUrl: string = "";
 
     @Model.field()
-    public websiteUrl: string = ''
+    public websiteUrl: string = "";
 
     @Model.field()
-    public canadaHelpsUrl: string = ''
+    public canadaHelpsUrl: string = "";
 
     @Model.field()
-    public siteKey: string = ''
+    public siteKey: string = "";
 
     @Model.field()
-    public comingSoon: boolean = false
+    public comingSoon: boolean = false;
 
     @Model.field()
-    public currentlyDonating: number = 0
+    public currentlyDonating: number = 0;
 
     @Model.field()
-    public donatorsToDate: number = 0
+    public donatorsToDate: number = 0;
 
     @Model.field()
-    public totalHashes: number = 0
+    public totalHashes: number = 0;
 
     @Model.field()
-    public totalTime: number = 0
+    public totalTime: number = 0;
 
     @Model.field()
-    public type: {
-        id: string
-        name: string
-        icon: IconName,
-    } | undefined
+    public type:
+        | {
+              id: string;
+              name: string;
+              icon: IconName;
+          }
+        | undefined;
 
     @Model.field()
-    public registeredBusinessName: string = ''
+    public registeredBusinessName: string = "";
 
     @Model.field()
-    public businessNumber: string = ''
+    public businessNumber: string = "";
 
     @Model.field()
-    public address: string = ''
+    public address: string = "";
 
     @Model.field()
-    public cityProvince: string = ''
+    public cityProvince: string = "";
 
     @Model.field()
-    public postalCode: string = ''
+    public postalCode: string = "";
 
     @Model.field()
-    public phone: string = ''
+    public phone: string = "";
 
     @Model.field()
-    public email: string = ''
+    public email: string = "";
 
     @Model.field()
-    public fax: string = ''
+    public fax: string = "";
 
     @Model.field()
-    public officeHourDays: string = ''
+    public officeHourDays: string = "";
 
     @Model.field()
-    public officeHourHours: string = ''
+    public officeHourHours: string = "";
 
     @Model.field()
-    public donationTargets: DonationTarget[] = []
+    public donationTargets: DonationTarget[] = [];
 }

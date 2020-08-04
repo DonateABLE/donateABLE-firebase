@@ -1,13 +1,13 @@
-import { IconName } from 'components/icon'
-import { firestore } from 'fb'
-import Model from './model'
+import { IconName } from "components/icon";
+import { firestore } from "fb";
+import Model from "./model";
 
 export default class CharityType extends Model {
-    public readonly collection = firestore.collection('charity-type')
+    public readonly collection = firestore.collection("charity-type");
 
     @Model.field()
-    public name: string = ''
+    public name: string = "";
 
     @Model.field()
-    public icon: IconName = 'question-circle'
+    public icon: IconName = "question-circle";
 }
