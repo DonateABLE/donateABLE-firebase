@@ -487,3 +487,10 @@ export function useScript(url: string): void {
         loadScript(url);
     }, [url]);
 }
+
+export function secondsToString(seconds: number): string {
+    const date = new Date(0);
+    date.setSeconds(seconds);
+    const timeString = date.toISOString().substr(11, 8);
+    return timeString;
+}
