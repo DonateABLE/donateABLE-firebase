@@ -33,6 +33,7 @@ const LoggedOut: FunctionComponent = () => {
         signInFlow: "popup",
         signInSuccessUrl: "/",
         signInOptions: [
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
             firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         ],
@@ -57,7 +58,10 @@ const LoggedOut: FunctionComponent = () => {
                         break;
 
                     default:
-                        existingUserEmailPassword();
+                        alert(
+                            "This user already exists. Please sign in below."
+                        );
+                        //existingUserEmailPassword();
                         break;
                 }
             });
@@ -112,7 +116,7 @@ const LoggedOut: FunctionComponent = () => {
     return (
         <Fragment>
             <h2 className={styles.heading}>Login or Signup</h2>
-            <h3>Sign in with Email</h3>
+            <h4>New Users who wish to use Email, Sign up below.</h4>
             <Input
                 className={styles.formElement}
                 white
@@ -135,11 +139,11 @@ const LoggedOut: FunctionComponent = () => {
                 className={styles.formButton}
                 onClick={newSignUpEmailPassword}
             >
-                Submit
+                Sign me Up!
             </Button>
-            <Button className={styles.formButton} onClick={passwordReset}>
+            {/* <Button className={styles.formButton} onClick={passwordReset}>
                 Forgot Your Password?
-            </Button>
+            </Button> */}
             <FirebaseAuth
                 className={styles.fire}
                 uiConfig={uiConfig}
