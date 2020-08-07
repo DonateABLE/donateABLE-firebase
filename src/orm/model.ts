@@ -151,6 +151,7 @@ export default abstract class Model {
     }
     protected deleted(): void {
         // this should stay empty
+        // alright man it will stay empty
     }
 }
 

@@ -1,6 +1,7 @@
 import Button from "components/button";
 import Progress from "components/progress";
 import Charity from "orm/charity";
+import User from "orm/user";
 import {
     createElement,
     Fragment,
@@ -22,6 +23,13 @@ interface SectionProps {
     unit?: string;
 }
 
+interface UserProps {
+    user: User;
+}
+interface Props {
+    charity: Charity;
+}
+
 const Section: FunctionComponent<SectionProps> = (props) => (
     <div className={styles.section}>
         <Progress
@@ -37,10 +45,6 @@ const Section: FunctionComponent<SectionProps> = (props) => (
         </div>
     </div>
 );
-
-interface Props {
-    charity: Charity;
-}
 
 var trackingStats: any = undefined;
 

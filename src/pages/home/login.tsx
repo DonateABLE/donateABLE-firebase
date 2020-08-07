@@ -59,7 +59,7 @@ const LoggedOut: FunctionComponent = () => {
 
                     default:
                         alert(
-                            "This user already exists. Please sign in below."
+                            "This email already exists. Please sign in below."
                         );
                         //existingUserEmailPassword();
                         break;
