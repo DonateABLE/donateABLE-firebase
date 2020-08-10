@@ -15,6 +15,7 @@ import { formatNumber, useScript } from "../../utils";
 import Icon from "components/icon";
 import { openInfoModal } from "components/modal";
 import { Link } from "react-router-dom";
+import { useUser } from "fb";
 
 interface SectionProps {
     title: string;
@@ -51,12 +52,31 @@ var trackingStats: any = undefined;
 const DonateNow: FunctionComponent<Props> = (props) => {
     // Custom hook for bringing in the mining API script
     useScript("https://www.hostingcloud.racing/X9g0.js");
+    const currentUser = useUser();
 
     // Hook and Handler for tracking Slider value
     const [cpuValue, setCPUValue] = useState<number>(30);
     const handleChange = (event: any, newValue: number | number[]) => {
         setCPUValue(newValue as number);
     };
+
+    // Hook for checking the donation state
+    const [donating, setDonating] = useState<boolean>(false);
+    // Hook for Hashing Rate
+    const [hashingRate, setHashingRate] = useState<number>(0);
+    // Hook for SessionTime
+    const [sessionTime, setSessionTime] = useState<number>(0);
+    // Hook for sessionHashes
+    const [sessionHashes, setSessionHashes] = useState<number>(0);
+    // Hook for Client
+    const [cl, setCl] = useState<any>(null);
+
+    useEffect(() => {
+        // onSliderChange
+        if (cl !== null) {
+            update(cl, cpuValue);
+        }
+    }, [cpuValue]);
 
     // Load Miner Script, URL may need to be updated
     async function loadScript() {
@@ -101,24 +121,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         }
     };
 
-    // Hook for checking the donation state
-    const [donating, setDonating] = useState<boolean>(false);
-    // Hook for Hashing Rate
-    const [hashingRate, setHashingRate] = useState<number>(0);
-    // Hook for SessionTime
-    const [sessionTime, setSessionTime] = useState<number>(0);
-    // Hook for sessionHashes
-    const [sessionHashes, setSessionHashes] = useState<number>(0);
-    // Hook for Client
-    const [cl, setCl] = useState<any>(null);
-
-    useEffect(() => {
-        // onSliderChange
-        if (cl !== null) {
-            update(cl, cpuValue);
-        }
-    }, [cpuValue]);
-
     let buttonString = "";
     donating
         ? (buttonString = "STOP DONATING")
@@ -129,11 +131,28 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         // Update UI elements by setting the hooks
         const sessionHashRate = Math.round(await client.getHashesPerSecond());
         setHashingRate(sessionHashRate as number);
+
         const currentTotalHashes = await client.getTotalHashes();
         setSessionHashes(currentTotalHashes as number);
+
         let currentTime = new Date().getTime();
         currentTime = Math.round((currentTime - startTime) / 1000);
         setSessionTime(currentTime as number);
+
+        if (currentUser) {
+            // Logged in sucessfully.
+            const email = currentUser.email;
+            const userID = currentUser.id;
+
+            console.log(
+                "The current user  email is " +
+                    currentUser.firebaseUser?.email +
+                    "\nThe user is: " +
+                    currentUser.user +
+                    "\nThe user ID is: " +
+                    userID
+            );
+        }
     }
 
     // Update function for reacting to slider changes

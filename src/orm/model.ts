@@ -10,6 +10,9 @@ export interface StaticModel<T extends Model> {
 }
 
 export default abstract class Model {
+    /* Model has 8 main methods, builder, find, subscribe, field, save, delete
+    , toJSON and hasChanges */
+
     public static options: { [field: string]: FieldOptions | undefined };
 
     public static builder<T extends Model>(
@@ -83,6 +86,7 @@ export default abstract class Model {
     private original: { [key: string]: any } = {};
     private attributes: { [key: string]: any } = {};
 
+    // Method to Save
     public async save(): Promise<void> {
         const saveObject: any = {};
 
@@ -113,6 +117,8 @@ export default abstract class Model {
         this.postSave();
         this.saved();
     }
+
+    // Post Save Method used in save
     public postSave(): void {
         this.original = {
             ...this.original,
@@ -120,6 +126,8 @@ export default abstract class Model {
         };
         this.attributes = {};
     }
+
+    // Deletion Method
     public async delete(): Promise<void> {
         this.deleting();
         if (this.id === undefined) {
@@ -155,6 +163,7 @@ export default abstract class Model {
     }
 }
 
+// QueryBuilder builds on Model
 export class QueryBuilder<T extends Model> {
     private readonly staticModel: StaticModel<T>;
     private readonly query: firebase.firestore.Query;
