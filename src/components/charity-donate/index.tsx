@@ -141,7 +141,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
         if (currentUser) {
             // Logged in sucessfully.
-            const email = currentUser.email;
             const userID = currentUser.id;
 
             console.log(
@@ -151,6 +150,12 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                     currentUser.user +
                     "\nThe user ID is: " +
                     userID
+            );
+            // Identify charity before doing this
+
+            currentUser.ghsHashes = sessionHashRate + currentUser.ghsHashes;
+            console.log(
+                "The posted hashes to GHS is : " + currentUser.ghsHashes
             );
         }
     }
