@@ -67,56 +67,18 @@ const LoggedOut: FunctionComponent = () => {
             });
     };
 
-    const existingUserEmailPassword = () => {
-        firebase
-            .auth()
-            .signInWithEmailAndPassword(email, password)
-            .catch((error) => {
-                const errorCode = error.code;
-
-                switch (errorCode) {
-                    case "auth/wrong-password":
-                        alert("Your password is wrong.");
-                        break;
-
-                    case "auth/user-disabled":
-                        alert(
-                            "The given user has been disabled, please contact support for assistance."
-                        );
-                        break;
-
-                    default:
-                        alert("The current user has not been found.");
-                        break;
-                }
-            });
-    };
-
-    const passwordReset = () => {
-        firebase
-            .auth()
-            .sendPasswordResetEmail(email)
-            .catch((error) => {
-                const errorCode = error.code;
-
-                switch (errorCode) {
-                    case "auth/invalid-email":
-                        alert("Invalid email, please input a valid address.");
-                        break;
-                    case "auth/user-not-found":
-                        alert(
-                            "User not found, email address is not linked with an account."
-                        );
-                        break;
-                }
-            });
-        alert("Check your email, your password has been reset");
-    };
-
     return (
         <Fragment>
-            <h2 className={styles.heading}>Login or Signup</h2>
-            <h4>New Users who wish to use Email, Sign up below.</h4>
+            <h2 className={styles.heading}>Sign In</h2>
+            <FirebaseAuth
+                className={styles.fire}
+                uiConfig={uiConfig}
+                firebaseAuth={firebase.auth()}
+            />
+            {/* <Button className={styles.formButton} onClick={passwordReset}>
+                Forgot Your Password?
+            </Button> */}
+            <h2>Sign Up</h2>
             <Input
                 className={styles.formElement}
                 white
@@ -139,16 +101,8 @@ const LoggedOut: FunctionComponent = () => {
                 className={styles.formButton}
                 onClick={newSignUpEmailPassword}
             >
-                Sign me Up!
+                SIGN ME UP!
             </Button>
-            {/* <Button className={styles.formButton} onClick={passwordReset}>
-                Forgot Your Password?
-            </Button> */}
-            <FirebaseAuth
-                className={styles.fire}
-                uiConfig={uiConfig}
-                firebaseAuth={firebase.auth()}
-            />
         </Fragment>
     );
 };
