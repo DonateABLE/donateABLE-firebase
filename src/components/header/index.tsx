@@ -88,9 +88,5 @@ const HeaderButton: FunctionComponent<{ href: string; className: string }> = (
     if (internalLink) {
         return <Link to={props.href}>{btn}</Link>;
     }
-    return (
-        <a href={props.href} target="_blank">
-            {btn}
-        </a>
-    );
+    return <a href={props.href}>{btn}</a>;
 };
