@@ -1,74 +1,68 @@
 import Button from "components/button";
 import Icon from "components/icon";
-import {
-    createElement,
-    FunctionComponent,
-    useEffect,
-    useRef,
-    useState,
-} from "react";
+import { createElement, FunctionComponent, useEffect, useState } from "react";
 import styles from "./style.scss";
-import { __ } from "lang";
 
 const DropDown: FunctionComponent<{ title: string; content: any }> = ({
     title,
     content,
 }) => {
+    //hooks and functions to update hooks
     const [show, setShow] = useState(false);
+
+    const handleShow = () => {
+        show ? setShow(false) : setShow(true);
+    };
 
     const iconPlus = "plus-circle";
     const iconMinus = "minus-circle";
     const [iconSelect, setIcon] = useState<any>(iconPlus);
 
-    function clickOutside(ref: any): void {
-        useEffect(() => {
-            const handleClickOutside = (event: any) => {
-                if (ref.current && !ref.current.contains(event.target)) {
-                    setShow(false);
-                } else {
-                    show ? setShow(false) : setShow(true);
-                }
-            };
-
-            document.addEventListener("mousedown", handleClickOutside);
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside);
-            };
-        }, [ref, show]);
-
-        useEffect(() => {
-            handleIcon();
-        }, [show]);
-    }
-
-    const wrapperRef = useRef(null);
-    clickOutside(wrapperRef);
-
     const handleIcon = () => {
         show ? setIcon(iconMinus as any) : setIcon(iconPlus as any);
     };
 
-    return (
-        <div ref={wrapperRef} className={styles.questions}>
-            <Button
-                className={styles.faqButton}
-                fullWidth
-                color="light"
-                size="medium"
-            >
-                {
-                    <div>
-                        <Icon className={styles.icon} name={iconSelect} />
-                        <b>{title}</b>
-                    </div>
-                }
-            </Button>
+    const [animateState, setAnimateState] = useState<any>(
+        styles.transitionStart
+    );
 
-            {show ? (
-                <div className={show ? styles.answersActive : styles.answer}>
-                    <div className={styles.content}>{content}</div>
-                </div>
-            ) : null}
+    const handleAnimate = () => {
+        show
+            ? setAnimateState(styles.transitionEnd as any)
+            : setAnimateState(styles.transitionStart as any);
+    };
+
+    useEffect(() => {
+        handleAnimate();
+        handleIcon();
+    }, [show]);
+
+    const answer = show ? (
+        <div className={styles.answersActive}>
+            <div className={styles.content}>{content}</div>
+        </div>
+    ) : null;
+
+    return (
+        <div className={styles.questions}>
+            <div className={styles.buttonBorder}>
+                <Button
+                    className={styles.faqButton}
+                    fullWidth
+                    color="light"
+                    size="medium"
+                    onClick={handleShow}
+                >
+                    {
+                        <div>
+                            <Icon className={styles.icon} name={iconSelect} />
+                            <b>{title}</b>
+                        </div>
+                    }
+                </Button>
+            </div>
+
+            <div className={animateState}>{answer}</div>
         </div>
     );
 };

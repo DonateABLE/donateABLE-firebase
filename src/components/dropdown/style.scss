@@ -2,34 +2,22 @@
 
 .questions {
     padding-bottom: 1%;
+    .buttonBorder {
+        border-color: $dark-blue;
+        border-width: 50px;
+    }
     .faqButton {
         text-align: left;
     }
     .icon {
         margin-right: 1ch;
-        color: red($color: #f10c0c);
     }
 }
 
-.answers {
-    display: flex;
-
-    transition: background-color 0.5 ease-out;
-    background-color: $dark-blue;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-left: 1em white solid;
-    border-right: 1em white solid;
-}
-
 .answersActive {
-    display: flex;
-    background-color: $light-blue;
-    transition-duration: 2s;
+    width: 10000px;
     padding-top: 1%;
     padding-bottom: 1%;
-    border-left: 1em white solid;
-    border-right: 1em white solid;
 }
 
 .content {
@@ -41,4 +29,24 @@
 
     color: white;
     font-size: 12px;
+}
+
+.transitionStart {
+    display: flex;
+    background-color: white;
+    opacity: 0%;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.transitionEnd {
+    display: flex;
+    opacity: 100%;
+    background-color: rgb(65, 149, 190);
+    border-left: 1em white solid;
+    border-right: 1em white solid;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 }
