@@ -19,6 +19,7 @@ import { addValue, bindArgs, classNames, useForceUpdate } from "utils";
 import { v4 as uuidv4 } from "uuid";
 import noUser from "../../assets/user.svg";
 import styles from "./style.scss";
+import { TabContainer, Tab } from "components/tabs";
 
 const userToastKey = Symbol("user-toast-key");
 
@@ -74,42 +75,52 @@ const UserEdit: FunctionComponent = (props) => {
                 imageClassName={classNames(styles.image, {
                     [styles.imageUploading]: imageUploading,
                 })}
-                title={user.fullName}
-                subtitle={user.email}
+                title={"Luke Pritchard"} //{user.fullName}
+                subtitle={"lp@lukepritchard.ca"} //{user.email}
                 buttonTitle="Start Donating"
                 buttonLocation="/"
             />
-            <div className={styles.form}>
-                {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
-                <Input
-                    className={styles.firstName}
-                    title="First Name"
-                    value={user.firstName}
-                    onChange={addValue(bindArgs("firstName", changeUser))}
-                />
+            <TabContainer>
+                <Tab title={"Account Settings"}>
+                    <div className={styles.form}>
+                        {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
+                        <Input
+                            className={styles.firstName}
+                            title="First Name"
+                            value={user.firstName}
+                            onChange={addValue(
+                                bindArgs("firstName", changeUser)
+                            )}
+                        />
 
-                <Input
-                    className={styles.lastName}
-                    title="Last Name"
-                    value={user.lastName}
-                    onChange={addValue(bindArgs("lastName", changeUser))}
-                />
+                        <Input
+                            className={styles.lastName}
+                            title="Last Name"
+                            value={user.lastName}
+                            onChange={addValue(
+                                bindArgs("lastName", changeUser)
+                            )}
+                        />
 
-                <Input
-                    className={styles.email}
-                    title="Email Address"
-                    value={user.email}
-                    onChange={addValue(bindArgs("email", changeUser))}
-                />
+                        <Input
+                            className={styles.email}
+                            title="Email Address"
+                            value={user.email}
+                            onChange={addValue(bindArgs("email", changeUser))}
+                        />
 
-                <Input
-                    className={styles.user}
-                    title="Username"
-                    value={user.user}
-                    onChange={addValue(bindArgs("user", changeUser))}
-                />
-            </div>
-            <Button onClick={save}>Save</Button>
+                        <Input
+                            className={styles.user}
+                            title="Username"
+                            value={user.user}
+                            onChange={addValue(bindArgs("user", changeUser))}
+                        />
+                    </div>
+                    <Button onClick={save}>Save</Button>
+                </Tab>
+                <Tab title={"Top Charities"}></Tab>
+                <Tab title={"Your Statistics"}></Tab>
+            </TabContainer>
         </Content>
     );
 };
