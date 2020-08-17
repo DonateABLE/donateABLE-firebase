@@ -14,6 +14,7 @@ import {
     useCallback,
     useRef,
     useState,
+    useEffect,
 } from "react";
 import { addValue, bindArgs, classNames, useForceUpdate } from "utils";
 import { v4 as uuidv4 } from "uuid";
@@ -21,10 +22,16 @@ import noUser from "../../assets/user.svg";
 import styles from "./style.scss";
 import { TabContainer, Tab } from "components/tabs";
 import UserStatistics from "components/user-stats";
+import UserCharityRank from "components/user-charity";
+import Charity from "orm/charity";
+import { analytics } from "firebase";
+import { useQuery } from "orm/model";
 
 const userToastKey = Symbol("user-toast-key");
 
 const UserEdit: FunctionComponent = (props) => {
+    const charities = useQuery(Charity.builder().orderBy("longName")) ?? [];
+
     const user = useUser();
 
     const forceUpdate = useForceUpdate();
@@ -120,10 +127,14 @@ const UserEdit: FunctionComponent = (props) => {
                     </div>
                     <Button onClick={save}>Save</Button>
                 </Tab>
-                <Tab title={"Top Charities"}></Tab>
-                <Tab title={"Your Statistics"}>
-                    <UserStatistics user={user} />
+                <Tab title={"Top Charities"}>
+                    <div className={styles.topCharities}>
+                        <UserCharityRank rank={1} charity={charities[0]} />
+                        <UserCharityRank rank={2} charity={charities[1]} />
+                        <UserCharityRank rank={3} charity={charities[2]} />
+                    </div>
                 </Tab>
+                <Tab title={"Your Statistics"}></Tab>
             </TabContainer>
         </Content>
     );
