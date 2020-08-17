@@ -20,6 +20,7 @@ import { v4 as uuidv4 } from "uuid";
 import noUser from "../../assets/user.svg";
 import styles from "./style.scss";
 import { TabContainer, Tab } from "components/tabs";
+import UserStatistics from "components/user-stats";
 
 const userToastKey = Symbol("user-toast-key");
 
@@ -119,7 +120,9 @@ const UserEdit: FunctionComponent = (props) => {
                     <Button onClick={save}>Save</Button>
                 </Tab>
                 <Tab title={"Top Charities"}></Tab>
-                <Tab title={"Your Statistics"}></Tab>
+                <Tab title={"Your Statistics"}>
+                    <UserStatistics user={user} />
+                </Tab>
             </TabContainer>
         </Content>
     );
