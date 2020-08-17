@@ -25,6 +25,9 @@ interface ToastOptions {
  * The ToastMessageEvent class is used to show new toasts when dispatched to
  * toastEvents
  */
+
+// Cannot Extend Event as per https://github.com/Microsoft/TypeScript/issues/5069#issuecomment-145139205
+// Refactor this
 class ToastMessageEvent extends Event {
     public readonly id: string;
     public hidden = false;

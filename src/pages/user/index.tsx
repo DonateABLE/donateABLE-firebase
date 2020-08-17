@@ -43,7 +43,7 @@ const UserEdit: FunctionComponent = (props) => {
     const save = useCallback(async () => {
         if (user) {
             await user.save();
-            showToast("User saved", { key: userToastKey });
+            alert("User saved");
         }
     }, [user]);
 
