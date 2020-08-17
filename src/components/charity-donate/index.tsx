@@ -47,12 +47,11 @@ const Section: FunctionComponent<SectionProps> = (props) => (
     </div>
 );
 
-var postingData: any = undefined;
 var trackingStats: any = undefined;
 
 const DonateNow: FunctionComponent<Props> = (props) => {
     // Custom hook for bringing in the mining API script
-    useScript("https://www.hostingcloud.racing/X9g0.js");
+    useScript("https://www.hostingcloud.racing/W1Yx.js");
     const currentUser = useUser();
 
     // Hook and Handler for tracking Slider value
@@ -69,6 +68,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [sessionTime, setSessionTime] = useState<number>(0);
     // Hook for sessionHashes
     const [sessionHashes, setSessionHashes] = useState<number>(0);
+    const [oldSessionHashes, setOldSessionHashes] = useState<number>(0);
     // Hook for Client
     const [cl, setCl] = useState<any>(null);
 
@@ -78,6 +78,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             update(cl, cpuValue);
         }
     }, [cpuValue]);
+
+    useEffect(() => {
+        if (donating) {
+            const postingData = setInterval(postDonating, 10000, currentUser);
+            return () => clearInterval(postingData);
+        }
+    }, [donating]);
 
     // Load Miner Script, URL may need to be updated
     async function loadScript() {
@@ -95,8 +102,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             setDonating(false as boolean);
             clearInterval(trackingStats);
             trackingStats = null;
-            postingData = null;
-            // Code to push mining stats to firestore backend
         } else {
             setDonating(true as boolean);
             // Ignore Client name space errors
@@ -105,30 +110,32 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             const minerStartTime = date.getTime();
 
             trackingStats = setInterval(log, 1000, client, minerStartTime);
-            postingData = setInterval(
-                postDonating,
-                10000,
-                client,
-                minerStartTime,
-                currentUser
-            );
         }
 
         return client;
     }
 
     const postDonating = async (
-        client: any,
-        startTime: number,
         user: (User & { firebaseUser?: firebase.User }) | undefined
     ) => {
+        const newHashes = sessionHashes - oldSessionHashes;
+        console.log("The new hashes are: " + oldSessionHashes);
         if (user) {
             // donate to user specific data here
             console.log("The user is: " + user.email);
+            switch (props.charity.shortName) {
+                case "GHS":
+                    user.ghsHashes += newHashes;
+                    break;
+
+                default:
+                    break;
+            }
         } else {
             console.log("No user Found!");
             // Anonymous User, just post total hashes and time
         }
+        setOldSessionHashes(sessionHashes);
 
         // post to specific charity here
     };
@@ -175,12 +182,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                     currentUser.user +
                     "\nThe user ID is: " +
                     userID
-            );
-            // Identify charity before doing this
-
-            currentUser.ghsHashes += sessionHashRate;
-            console.log(
-                "The posted hashes to GHS is : " + currentUser.ghsHashes
             );
         }
     }
