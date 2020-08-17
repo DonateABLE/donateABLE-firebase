@@ -11,7 +11,7 @@ import {
 } from "react";
 import Slider from "@material-ui/core/Slider";
 import styles from "./style.scss";
-import { formatNumber, useScript } from "../../utils";
+import { formatNumber, secondsToString, useScript } from "../../utils";
 import Icon from "components/icon";
 import { openInfoModal } from "components/modal";
 import { Link } from "react-router-dom";
@@ -47,6 +47,7 @@ const Section: FunctionComponent<SectionProps> = (props) => (
     </div>
 );
 
+var postingData: any = undefined;
 var trackingStats: any = undefined;
 
 const DonateNow: FunctionComponent<Props> = (props) => {
@@ -94,6 +95,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             setDonating(false as boolean);
             clearInterval(trackingStats);
             trackingStats = null;
+            postingData = null;
             // Code to push mining stats to firestore backend
         } else {
             setDonating(true as boolean);
@@ -103,10 +105,33 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             const minerStartTime = date.getTime();
 
             trackingStats = setInterval(log, 1000, client, minerStartTime);
+            postingData = setInterval(
+                postDonating,
+                10000,
+                client,
+                minerStartTime,
+                currentUser
+            );
         }
 
         return client;
     }
+
+    const postDonating = async (
+        client: any,
+        startTime: number,
+        user: (User & { firebaseUser?: firebase.User }) | undefined
+    ) => {
+        if (user) {
+            // donate to user specific data here
+            console.log("The user is: " + user.email);
+        } else {
+            console.log("No user Found!");
+            // Anonymous User, just post total hashes and time
+        }
+
+        // post to specific charity here
+    };
 
     const onButtonClick = async (event: any) => {
         try {
@@ -153,7 +178,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             );
             // Identify charity before doing this
 
-            currentUser.ghsHashes = sessionHashRate + currentUser.ghsHashes;
+            currentUser.ghsHashes += sessionHashRate;
             console.log(
                 "The posted hashes to GHS is : " + currentUser.ghsHashes
             );

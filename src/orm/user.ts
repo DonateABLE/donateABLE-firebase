@@ -36,7 +36,7 @@ export default class User extends Model {
     public ghsHashes = 0;
 
     @Model.field()
-    public wsvHashes = 0;
+    public vswHashes = 0;
 
     @Model.field()
     public donateableHashes = 0;
@@ -49,7 +49,7 @@ export default class User extends Model {
     public ghsTime = "";
 
     @Model.field()
-    public wsvTime = "";
+    public vswTime = "";
 
     @Model.field()
     public donateableTime = "";
