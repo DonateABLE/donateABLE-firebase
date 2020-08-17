@@ -3,6 +3,7 @@ import User from "orm/user";
 import { createElement, FunctionComponent } from "react";
 import { formatNumber } from "utils";
 import styles from "./style.scss";
+import { userPostStats } from "fb";
 
 interface SectionProps {
     title: string;
@@ -40,7 +41,7 @@ const UserStatistics: FunctionComponent<Props> = (props) => (
             <Section
                 value={props.user.totalCharities}
                 max={3}
-                title="Total Charities Donated To"
+                title="Total Charities"
             />
             <Section value={1000} max={3} title="Total Time Donated" />
         </div>

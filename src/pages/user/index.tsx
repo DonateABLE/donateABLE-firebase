@@ -61,6 +61,7 @@ const UserEdit: FunctionComponent = (props) => {
             const publicURL = await storage.child(url).getDownloadURL();
             user.portrait = publicURL;
             changeImageUploading(false);
+            await user.save();
         }
     }, [user, changeImageUploading]);
     if (!user) {
@@ -76,8 +77,8 @@ const UserEdit: FunctionComponent = (props) => {
                 imageClassName={classNames(styles.image, {
                     [styles.imageUploading]: imageUploading,
                 })}
-                title={"Luke Pritchard"} //{user.fullName}
-                subtitle={"lp@lukepritchard.ca"} //{user.email}
+                title={user.fullName} //{user.fullName}
+                subtitle={user.email} //{user.email}
                 buttonTitle="Start Donating"
                 buttonLocation="/"
             />
