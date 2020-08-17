@@ -1,0 +1,10 @@
+@import "../../variables";
+
+.outerCircle {
+    fill: none;
+    stroke: $dark-blue;
+}
+
+.value {
+    stroke: $light-blue;
+}
