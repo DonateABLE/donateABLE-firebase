@@ -46,16 +46,16 @@ export default class User extends Model {
 
     // Time
     @Model.field()
-    public ghsTime = "";
+    public ghsTime = 0;
 
     @Model.field()
-    public vswTime = "";
+    public vswTime = 0;
 
     @Model.field()
-    public donateableTime = "";
+    public donateableTime = 0;
 
     @Model.field()
-    public totalTime = "";
+    public totalTime = 0;
 
     @Model.field()
     public totalCharities = 0;

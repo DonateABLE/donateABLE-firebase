@@ -134,7 +134,9 @@ const UserEdit: FunctionComponent = (props) => {
                         <UserCharityRank rank={3} charity={charities[2]} />
                     </div>
                 </Tab>
-                <Tab title={"Your Statistics"}></Tab>
+                <Tab title={"Your Statistics"}>
+                    <UserStatistics user={user} />
+                </Tab>
             </TabContainer>
         </Content>
     );

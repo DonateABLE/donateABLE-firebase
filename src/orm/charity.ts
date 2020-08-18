@@ -58,7 +58,7 @@ export default class Charity extends Model {
     public totalHashes = 0;
 
     @Model.field()
-    public totalTime = 0;
+    public totalTime = 0; // Time is stored in increments of 10 seconds
 
     @Model.field()
     public type:

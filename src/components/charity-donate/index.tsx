@@ -85,7 +85,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         if (cl !== null && donating) {
             const postingData = setInterval(
                 postDonating,
-                9500,
+                9600,
                 currentUser,
                 cl
             );
@@ -109,8 +109,21 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             setDonating(false as boolean);
             clearInterval(trackingStats);
             trackingStats = null;
+
             const leftOverHashes = sessionHashes - hashesPosted;
-            console.log("The remaining session hashes are: " + leftOverHashes);
+            const leftOverTime = sessionTime % 10;
+            props.charity.totalHashes += leftOverHashes;
+            props.charity.totalTime += leftOverTime;
+            props.charity.save();
+
+            setHashesPosted(0 as number);
+
+            console.log(
+                "The remaining session hashes are: " +
+                    leftOverHashes +
+                    "\nThe remaining time is " +
+                    leftOverTime
+            );
         } else {
             setDonating(true as boolean);
             // Ignore Client name space errors
@@ -138,19 +151,26 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         );
         if (user) {
             // donate to user specific data here
-            console.log("The user is: " + user.email);
             switch (props.charity.shortName) {
                 case "GHS":
                     user.ghsHashes += newHashes;
                     break;
-
-                default:
+                case "DBL":
+                    user.donateableHashes += newHashes;
                     break;
+                case "VSW":
+                    user.vswHashes += newHashes;
             }
-        } else {
-            // Anonymous User, just post total hashes and time
+            user.totalHashes += newHashes;
+            user.totalTime += 10; // Add 10 seconds
+            user.save();
         }
-        // post to specific charity here
+        props.charity.totalHashes += newHashes;
+        props.charity.totalTime += 10; // add 10 Seconds
+        console.log(
+            "The time that is being saved is: " + props.charity.totalTime
+        );
+        props.charity.save();
     };
 
     const onButtonClick = async (event: any) => {
