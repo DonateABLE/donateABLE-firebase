@@ -58,11 +58,13 @@ export default class CharityPage extends Component<Props, State> {
                     <div className={styles.info}>
                         <h2 className={styles.name}>{charity.longName}</h2>
                         <div className={styles.tagLine}>{charity.tagline}</div>
-                        <div>
+                        <div className={styles.businessDescription}>
                             Registered Business Name{" "}
                             {charity.registeredBusinessName}
                         </div>
-                        <div>Business Number {charity.businessNumber}</div>
+                        <div className={styles.businessDescription}>
+                            Business Number {charity.businessNumber}
+                        </div>
                     </div>
                     <div>
                         <a href={charity.canadaHelpsUrl}>
@@ -115,21 +117,33 @@ export default class CharityPage extends Component<Props, State> {
                         </Button>
                     </a>
                 </div>
-
-                <TabContainer>
-                    <Tab title={"Donate"}>
-                        <DonateNow charity={charity} />
-                    </Tab>
-                    <Tab title={__("charity.statistics")}>
-                        <Statistics charity={charity} />
-                    </Tab>
-                    <Tab title={__("charity.donation-targets")}>
-                        <DonationTargets charity={charity} />
-                    </Tab>
-                    <Tab title={__("charity.about")}>
-                        <AboutCharity charity={charity} />
-                    </Tab>
-                </TabContainer>
+                <div className={styles.tabBar}>
+                    `
+                    <TabContainer>
+                        <Tab className={styles.tabSelect} title={"Donate Now"}>
+                            <DonateNow charity={charity} />
+                        </Tab>
+                        <Tab
+                            className={styles.tabSelect}
+                            title={__("charity.statistics")}
+                        >
+                            <Statistics charity={charity} />
+                        </Tab>
+                        <Tab
+                            className={styles.tabSelect}
+                            title={__("charity.donation-targets")}
+                        >
+                            <DonationTargets charity={charity} />
+                        </Tab>
+                        <Tab
+                            className={styles.tabSelect}
+                            title={__("charity.about")}
+                        >
+                            <AboutCharity charity={charity} />
+                        </Tab>
+                    </TabContainer>
+                    `
+                </div>
                 <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
             </Content>
         );

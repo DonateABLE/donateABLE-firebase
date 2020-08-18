@@ -10,13 +10,22 @@ import Login from "pages/home/login";
 import HowItWorks from "pages/how-it-works";
 import PrivacyPolicy from "pages/privacy-policy";
 import UserEdit from "pages/user";
-import { Component, createElement, createRef, ReactNode } from "react";
+import {
+    Component,
+    createElement,
+    createRef,
+    ReactNode,
+    FunctionComponent,
+    Fragment,
+} from "react";
 import { findDOMNode } from "react-dom";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import { classNames, clickedOn } from "utils";
 import Menu from "./menu";
 import styles from "./style.scss";
 import FAQ from "pages/faq";
+import { useUser } from "fb";
+import Button from "components/button";
 
 interface State {
     menuOpen: boolean;
@@ -114,6 +123,7 @@ export default class Layout extends Component<{}, State> {
                             <Route path="/" component={Home} />
                         </Switch>
                     </div>
+
                     <footer className={styles.footer}>
                         <span className={styles.poweredBy}>Powered By</span>
                         <img

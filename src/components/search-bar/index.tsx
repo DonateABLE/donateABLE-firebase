@@ -85,7 +85,7 @@ const SearchBar: FunctionComponent<Props> = (props) => {
             <div className={styles.bar} onClick={onBarClick}>
                 <Content noPadding>
                     <label className={styles.label} htmlFor="search">
-                        Search for charity
+                        Search for charity &nbsp;
                         <Icon name="search" />
                     </label>
                 </Content>
@@ -131,7 +131,7 @@ const SearchBar: FunctionComponent<Props> = (props) => {
                     value={props.value.search}
                     onChange={addValue(setSearch)}
                 />
-                <h3 className={styles.label}>Search by charity type</h3>
+                <h3 className={styles.label}>Search by category</h3>
                 <div className={styles.categories}>
                     {charityTypes.map((t) => {
                         let click: () => void;

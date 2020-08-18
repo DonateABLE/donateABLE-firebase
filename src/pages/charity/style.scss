@@ -53,6 +53,10 @@
         grid-area: donate;
         width: 100%;
     }
+    .businessDescription {
+        font-size: 0.85em;
+        font-weight: 600;
+    }
 }
 
 .makeDonationLower {
@@ -76,8 +80,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     .link {
         display: flex;
@@ -86,10 +90,12 @@
 
         a {
             color: $white;
+            font-size: 0.9em;
+            font-weight: 600;
         }
 
         .icon {
-            font-size: 1.5em;
+            font-size: 1.3em;
             margin-right: 1ch;
         }
 
@@ -98,5 +104,15 @@
                 display: none;
             }
         }
+    }
+}
+
+.tabBar {
+    margin-top: 1em;
+
+    .tabSelect {
+        font-size: 0.9em;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
     }
 }

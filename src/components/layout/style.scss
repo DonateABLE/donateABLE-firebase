@@ -123,6 +123,23 @@ a {
         flex-grow: 1;
     }
 
+    .buttonGroup {
+        width: 350px;
+        display: inline-block;
+
+        .groupElement {
+            width: 100%;
+            font-size: 0.9em;
+            margin-top: 2px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
     .footer {
         background-color: $dark-blue;
         text-align: center;

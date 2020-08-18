@@ -59,13 +59,15 @@ const Home: FunctionComponent = () => {
                 </h2>
                 <div className={styles.buttonGroup}>
                     <TextBox className={styles.groupElement}>
-                        Currently Donating <b className={styles.value}>14</b>
+                        Currently Donating
+                        <span className={styles.value}>14</span>
                     </TextBox>
                     <TextBox className={styles.groupElement}>
-                        Donations to Date<b className={styles.value}>345</b>
+                        Donations to Date
+                        <span className={styles.value}>345</span>
                     </TextBox>
                     <TextBox className={styles.groupElement}>
-                        Total Hashes{" "}
+                        Total Hashes{""}
                         <b className={styles.value}>
                             {formatNumber(13_256_475)}
                         </b>
