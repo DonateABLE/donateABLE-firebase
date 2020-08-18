@@ -11,7 +11,7 @@ import {
 } from "react";
 import Slider from "@material-ui/core/Slider";
 import styles from "./style.scss";
-import { formatNumber, secondsToString, useScript } from "../../utils";
+import { formatNumber, useScript } from "../../utils";
 import Icon from "components/icon";
 import { openInfoModal } from "components/modal";
 import { Link } from "react-router-dom";
@@ -68,7 +68,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     const [sessionTime, setSessionTime] = useState<number>(0);
     // Hook for sessionHashes
     const [sessionHashes, setSessionHashes] = useState<number>(0);
-    const [oldSessionHashes, setOldSessionHashes] = useState<number>(0);
+    // Hook for the hashes that have been put into the DB
+    const [hashesPosted, setHashesPosted] = useState<number>(0);
     // Hook for Client
     const [cl, setCl] = useState<any>(null);
 
@@ -80,11 +81,17 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     }, [cpuValue]);
 
     useEffect(() => {
-        if (donating) {
-            const postingData = setInterval(postDonating, 10000, currentUser);
+        // Post data to firebase backend
+        if (cl !== null && donating) {
+            const postingData = setInterval(
+                postDonating,
+                9500,
+                currentUser,
+                cl
+            );
             return () => clearInterval(postingData);
         }
-    }, [donating]);
+    }, [donating, cl, hashesPosted]);
 
     // Load Miner Script, URL may need to be updated
     async function loadScript() {
@@ -102,6 +109,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             setDonating(false as boolean);
             clearInterval(trackingStats);
             trackingStats = null;
+            const leftOverHashes = sessionHashes - hashesPosted;
+            console.log("The remaining session hashes are: " + leftOverHashes);
         } else {
             setDonating(true as boolean);
             // Ignore Client name space errors
@@ -116,10 +125,17 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     }
 
     const postDonating = async (
-        user: (User & { firebaseUser?: firebase.User }) | undefined
+        user: (User & { firebaseUser?: firebase.User }) | undefined,
+        client: any
     ) => {
-        const newHashes = sessionHashes - oldSessionHashes;
-        console.log("The new hashes are: " + oldSessionHashes);
+        const currentHashes = await client.getTotalHashes();
+        const newHashes = currentHashes - hashesPosted;
+        console.log(
+            "The new hashes are: " +
+                newHashes +
+                "\nhashesPosted are: " +
+                hashesPosted
+        );
         if (user) {
             // donate to user specific data here
             console.log("The user is: " + user.email);
@@ -132,11 +148,8 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                     break;
             }
         } else {
-            console.log("No user Found!");
             // Anonymous User, just post total hashes and time
         }
-        setOldSessionHashes(sessionHashes);
-
         // post to specific charity here
     };
 
@@ -170,19 +183,9 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         let currentTime = new Date().getTime();
         currentTime = Math.round((currentTime - startTime) / 1000);
         setSessionTime(currentTime as number);
-
-        if (currentUser) {
-            // Logged in sucessfully.
-            const userID = currentUser.id;
-
-            console.log(
-                "The current user  email is " +
-                    currentUser.firebaseUser?.email +
-                    "\nThe user is: " +
-                    currentUser.user +
-                    "\nThe user ID is: " +
-                    userID
-            );
+        if (currentTime > 0 && currentTime % 10 === 0) {
+            // every 10 Seconds
+            setHashesPosted(currentTotalHashes);
         }
     }
 
