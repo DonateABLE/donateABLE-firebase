@@ -125,13 +125,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             }
 
             setHashesPosted(0 as number);
-
-            console.log(
-                "The remaining session hashes are: " +
-                    leftOverHashes +
-                    "\nThe remaining time is " +
-                    leftOverTime
-            );
         } else {
             setDonating(true as boolean);
             // Ignore Client name space errors
@@ -161,12 +154,21 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             // donate to user specific data here
             switch (props.charity.shortName) {
                 case "GHS":
+                    if (user.ghsHashes === 0) {
+                        user.totalCharities += 1;
+                    }
                     user.ghsHashes += newHashes;
                     break;
                 case "DBL":
+                    if (user.donateableHashes === 0) {
+                        user.totalCharities += 1;
+                    }
                     user.donateableHashes += newHashes;
                     break;
                 case "VSW":
+                    if (user.vswHashes === 0) {
+                        user.totalCharities += 1;
+                    }
                     user.vswHashes += newHashes;
             }
             user.totalHashes += newHashes;
