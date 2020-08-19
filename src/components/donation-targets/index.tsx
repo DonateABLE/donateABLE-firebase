@@ -1,5 +1,5 @@
 import Icon from "components/icon";
-import Progress from "components/progress";
+import { Progress } from "components/progress";
 import Charity, { DonationTarget } from "orm/charity";
 import { createElement, FunctionComponent } from "react";
 import { cadToHashes, formatCurrency, formatNumber } from "utils";
