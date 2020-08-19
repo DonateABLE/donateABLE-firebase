@@ -14,15 +14,24 @@ import {
     useCallback,
     useRef,
     useState,
+    useEffect,
 } from "react";
 import { addValue, bindArgs, classNames, useForceUpdate } from "utils";
 import { v4 as uuidv4 } from "uuid";
 import noUser from "../../assets/user.svg";
 import styles from "./style.scss";
+import { TabContainer, Tab } from "components/tabs";
+import UserStatistics from "components/user-stats";
+import UserCharityRank from "components/user-charity";
+import Charity from "orm/charity";
+import { analytics } from "firebase";
+import { useQuery } from "orm/model";
 
 const userToastKey = Symbol("user-toast-key");
 
 const UserEdit: FunctionComponent = (props) => {
+    const charities = useQuery(Charity.builder().orderBy("longName")) ?? [];
+
     const user = useUser();
 
     const forceUpdate = useForceUpdate();
@@ -42,7 +51,7 @@ const UserEdit: FunctionComponent = (props) => {
     const save = useCallback(async () => {
         if (user) {
             await user.save();
-            showToast("User saved", { key: userToastKey });
+            alert("User saved");
         }
     }, [user]);
 
@@ -59,6 +68,7 @@ const UserEdit: FunctionComponent = (props) => {
             const publicURL = await storage.child(url).getDownloadURL();
             user.portrait = publicURL;
             changeImageUploading(false);
+            await user.save();
         }
     }, [user, changeImageUploading]);
     if (!user) {
@@ -74,42 +84,60 @@ const UserEdit: FunctionComponent = (props) => {
                 imageClassName={classNames(styles.image, {
                     [styles.imageUploading]: imageUploading,
                 })}
-                title={user.fullName}
-                subtitle={user.email}
+                title={user.fullName} //{user.fullName}
+                subtitle={user.email} //{user.email}
                 buttonTitle="Start Donating"
                 buttonLocation="/"
             />
-            <div className={styles.form}>
-                {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
-                <Input
-                    className={styles.firstName}
-                    title="First Name"
-                    value={user.firstName}
-                    onChange={addValue(bindArgs("firstName", changeUser))}
-                />
+            <TabContainer>
+                <Tab title={"Account Settings"}>
+                    <div className={styles.form}>
+                        {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
+                        <Input
+                            className={styles.firstName}
+                            title="First Name"
+                            value={user.firstName}
+                            onChange={addValue(
+                                bindArgs("firstName", changeUser)
+                            )}
+                        />
 
-                <Input
-                    className={styles.lastName}
-                    title="Last Name"
-                    value={user.lastName}
-                    onChange={addValue(bindArgs("lastName", changeUser))}
-                />
+                        <Input
+                            className={styles.lastName}
+                            title="Last Name"
+                            value={user.lastName}
+                            onChange={addValue(
+                                bindArgs("lastName", changeUser)
+                            )}
+                        />
 
-                <Input
-                    className={styles.email}
-                    title="Email Address"
-                    value={user.email}
-                    onChange={addValue(bindArgs("email", changeUser))}
-                />
+                        <Input
+                            className={styles.email}
+                            title="Email Address"
+                            value={user.email}
+                            onChange={addValue(bindArgs("email", changeUser))}
+                        />
 
-                <Input
-                    className={styles.user}
-                    title="Username"
-                    value={user.user}
-                    onChange={addValue(bindArgs("user", changeUser))}
-                />
-            </div>
-            <Button onClick={save}>Save</Button>
+                        <Input
+                            className={styles.user}
+                            title="Username"
+                            value={user.user}
+                            onChange={addValue(bindArgs("user", changeUser))}
+                        />
+                    </div>
+                    <Button onClick={save}>Save</Button>
+                </Tab>
+                <Tab title={"Top Charities"}>
+                    <div className={styles.topCharities}>
+                        <UserCharityRank rank={1} charity={charities[0]} />
+                        <UserCharityRank rank={2} charity={charities[1]} />
+                        <UserCharityRank rank={3} charity={charities[2]} />
+                    </div>
+                </Tab>
+                <Tab title={"Your Statistics"}>
+                    <UserStatistics user={user} />
+                </Tab>
+            </TabContainer>
         </Content>
     );
 };

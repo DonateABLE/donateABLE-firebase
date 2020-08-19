@@ -65,7 +65,7 @@ export default class CharityPage extends Component<Props, State> {
                         <div>Business Number {charity.businessNumber}</div>
                     </div>
                     <div>
-                        <a href={charity.canadaHelpsUrl} target="_blank">
+                        <a href={charity.canadaHelpsUrl}>
                             <Button
                                 className={styles.makeDonation}
                                 color="dark"
@@ -79,26 +79,32 @@ export default class CharityPage extends Component<Props, State> {
                 </FullWidth>
                 <FullWidth className={styles.social}>
                     <div className={styles.link}>
-                        <Icon className={styles.icon} name="facebook-f" />
-                        <span className={styles.title}>
-                            {__("charity.social.facebook.title")}
-                        </span>
+                        <a href={charity.facebookUrl}>
+                            <Icon className={styles.icon} name="facebook-f" />
+                            <span className={styles.title}>
+                                {__("charity.social.facebook.title")}
+                            </span>
+                        </a>
                     </div>
                     <div className={styles.link}>
-                        <Icon className={styles.icon} name="twitter" />
-                        <span className={styles.title}>
-                            {__("charity.social.twitter.title")}
-                        </span>
+                        <a href={charity.twitterUrl}>
+                            <Icon className={styles.icon} name="twitter" />
+                            <span className={styles.title}>
+                                {__("charity.social.twitter.title")}
+                            </span>
+                        </a>
                     </div>
                     <div className={styles.link}>
-                        <Icon className={styles.icon} name="globe" />
-                        <span className={styles.title}>
-                            {__("charity.social.website.title")}
-                        </span>
+                        <a href={charity.websiteUrl}>
+                            <Icon className={styles.icon} name="globe" />
+                            <span className={styles.title}>
+                                {__("charity.social.website.title")}
+                            </span>
+                        </a>
                     </div>
                 </FullWidth>
                 <div className={styles.makeDonationLower}>
-                    <a href={charity.canadaHelpsUrl} target="_blank">
+                    <a href={charity.canadaHelpsUrl}>
                         <Button
                             className={styles.button}
                             color="dark"

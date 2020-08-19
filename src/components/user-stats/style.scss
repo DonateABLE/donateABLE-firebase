@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.stats {
+    .grid {
+        display: flex;
+        align-content: center;
+        // grid-gap: 15px;
+        // grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        flex-flow: row nowrap;
+        align-items: center;
+
+        @media screen and (max-width: $bp-sm-min) {
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+
+        .section {
+            margin: 0.5em;
+            flex-grow: 1;
+
+            .loader {
+                margin-right: 1em;
+            }
+
+            .content {
+                .title {
+                    color: $dark-blue;
+                    font-weight: bold;
+                }
+
+                .value {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}

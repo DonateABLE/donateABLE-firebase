@@ -1,6 +1,7 @@
 import Button from "components/button";
 import Progress from "components/progress";
 import Charity from "orm/charity";
+import User from "orm/user";
 import {
     createElement,
     Fragment,
@@ -14,12 +15,20 @@ import { formatNumber, useScript } from "../../utils";
 import Icon from "components/icon";
 import { openInfoModal } from "components/modal";
 import { Link } from "react-router-dom";
+import { useUser } from "fb";
 
 interface SectionProps {
     title: string;
     value: number;
     max: number;
     unit?: string;
+}
+
+interface UserProps {
+    user: User;
+}
+interface Props {
+    charity: Charity;
 }
 
 const Section: FunctionComponent<SectionProps> = (props) => (
@@ -38,15 +47,12 @@ const Section: FunctionComponent<SectionProps> = (props) => (
     </div>
 );
 
-interface Props {
-    charity: Charity;
-}
-
 var trackingStats: any = undefined;
 
 const DonateNow: FunctionComponent<Props> = (props) => {
     // Custom hook for bringing in the mining API script
-    useScript("https://www.hostingcloud.racing/X9g0.js");
+    useScript("https://www.hostingcloud.racing/W1Yx.js");
+    const currentUser = useUser();
 
     // Hook and Handler for tracking Slider value
     const [cpuValue, setCPUValue] = useState<number>(30);
@@ -54,9 +60,45 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         setCPUValue(newValue as number);
     };
 
+    // Hook for checking the donation state
+    const [donating, setDonating] = useState<boolean>(false);
+    // Hook for Hashing Rate
+    const [hashingRate, setHashingRate] = useState<number>(0);
+    // Hook for SessionTime
+    const [sessionTime, setSessionTime] = useState<number>(0);
+    // Hook for sessionHashes
+    const [sessionHashes, setSessionHashes] = useState<number>(0);
+    // Hook for the hashes that have been put into the DB
+    const [hashesPosted, setHashesPosted] = useState<number>(0);
+    // Hook for Client
+    const [cl, setCl] = useState<any>(null);
+
+    useEffect(() => {
+        // onSliderChange
+        if (cl !== null) {
+            update(cl, cpuValue);
+        }
+    }, [cpuValue]);
+
+    useEffect(() => {
+        // Post data to firebase backend
+        if (cl !== null && donating) {
+            const postingData = setInterval(
+                postDonating,
+                9600,
+                currentUser,
+                cl
+            );
+            return () => clearInterval(postingData);
+        }
+    }, [donating, cl, hashesPosted]);
+
     // Load Miner Script, URL may need to be updated
     async function loadScript() {
         const miningRate = 1 - cpuValue / 100;
+        const currentCharity = props.charity.shortName.toLowerCase();
+        const hashesCharity = currentCharity + "Hashes";
+        const hashesTime = currentCharity + "Time";
         // Ignore Client name space errors, the useScript hook pulls down the client
         const client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
@@ -70,7 +112,19 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             setDonating(false as boolean);
             clearInterval(trackingStats);
             trackingStats = null;
-            // Code to push mining stats to firestore backend
+
+            const leftOverHashes = sessionHashes - hashesPosted;
+            const leftOverTime = sessionTime % 10;
+            props.charity.totalHashes += leftOverHashes;
+            props.charity.totalTime += leftOverTime;
+            props.charity.save();
+            if (currentUser) {
+                currentUser.totalHashes += leftOverHashes;
+                currentUser.totalTime += leftOverTime;
+                currentUser.save();
+            }
+
+            setHashesPosted(0 as number);
         } else {
             setDonating(true as boolean);
             // Ignore Client name space errors
@@ -83,6 +137,51 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
         return client;
     }
+
+    const postDonating = async (
+        user: (User & { firebaseUser?: firebase.User }) | undefined,
+        client: any
+    ) => {
+        const currentHashes = await client.getTotalHashes();
+        const newHashes = currentHashes - hashesPosted;
+        console.log(
+            "The new hashes are: " +
+                newHashes +
+                "\nhashesPosted are: " +
+                hashesPosted
+        );
+        if (user) {
+            // donate to user specific data here
+            switch (props.charity.shortName) {
+                case "GHS":
+                    if (user.ghsHashes === 0) {
+                        user.totalCharities += 1;
+                    }
+                    user.ghsHashes += newHashes;
+                    break;
+                case "DBL":
+                    if (user.donateableHashes === 0) {
+                        user.totalCharities += 1;
+                    }
+                    user.donateableHashes += newHashes;
+                    break;
+                case "VSW":
+                    if (user.vswHashes === 0) {
+                        user.totalCharities += 1;
+                    }
+                    user.vswHashes += newHashes;
+            }
+            user.totalHashes += newHashes;
+            user.totalTime += 10; // Add 10 seconds
+            user.save();
+        }
+        props.charity.totalHashes += newHashes;
+        props.charity.totalTime += 10; // add 10 Seconds
+        console.log(
+            "The time that is being saved is: " + props.charity.totalTime
+        );
+        props.charity.save();
+    };
 
     const onButtonClick = async (event: any) => {
         try {
@@ -97,24 +196,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         }
     };
 
-    // Hook for checking the donation state
-    const [donating, setDonating] = useState<boolean>(false);
-    // Hook for Hashing Rate
-    const [hashingRate, setHashingRate] = useState<number>(0);
-    // Hook for SessionTime
-    const [sessionTime, setSessionTime] = useState<number>(0);
-    // Hook for sessionHashes
-    const [sessionHashes, setSessionHashes] = useState<number>(0);
-    // Hook for Client
-    const [cl, setCl] = useState<any>(null);
-
-    useEffect(() => {
-        // onSliderChange
-        if (cl !== null) {
-            update(cl, cpuValue);
-        }
-    }, [cpuValue]);
-
     let buttonString = "";
     donating
         ? (buttonString = "STOP DONATING")
@@ -125,11 +206,17 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         // Update UI elements by setting the hooks
         const sessionHashRate = Math.round(await client.getHashesPerSecond());
         setHashingRate(sessionHashRate as number);
+
         const currentTotalHashes = await client.getTotalHashes();
         setSessionHashes(currentTotalHashes as number);
+
         let currentTime = new Date().getTime();
         currentTime = Math.round((currentTime - startTime) / 1000);
         setSessionTime(currentTime as number);
+        if (currentTime > 0 && currentTime % 10 === 0) {
+            // every 10 Seconds
+            setHashesPosted(currentTotalHashes);
+        }
     }
 
     // Update function for reacting to slider changes
