@@ -114,14 +114,16 @@ export default class Layout extends Component<{}, State> {
                             <Route path="/" component={Home} />
                         </Switch>
                     </div>
-                    <footer className={styles.footer}>
-                        <span className={styles.poweredBy}>Powered By</span>
-                        <img
-                            className={styles.logo}
-                            src="https://donateable.ca/img/logo/Synergenics-Logo-2008-White.png"
-                            alt="Synergenics logo"
-                        />
-                    </footer>
+                    <a href="https://synergenics.ca">
+                        <footer className={styles.footer}>
+                            <span className={styles.poweredBy}>Powered By</span>
+                            <img
+                                className={styles.logo}
+                                src="https://donateable.ca/img/logo/Synergenics-Logo-2008-White.png"
+                                alt="Synergenics logo"
+                            />
+                        </footer>
+                    </a>
                 </div>
                 <Switch>
                     <Route path="/" component={ModalController} />
