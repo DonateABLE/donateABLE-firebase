@@ -1,5 +1,5 @@
 import Button from "components/button";
-import Progress from "components/progress";
+import { Progress } from "components/progress";
 import Charity from "orm/charity";
 import User from "orm/user";
 import {
@@ -24,9 +24,6 @@ interface SectionProps {
     unit?: string;
 }
 
-interface UserProps {
-    user: User;
-}
 interface Props {
     charity: Charity;
 }

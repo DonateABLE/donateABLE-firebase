@@ -1,4 +1,4 @@
-import Progress from "components/progress";
+import { TimeProgress, Progress } from "components/progress";
 import User from "orm/user";
 import { createElement, FunctionComponent } from "react";
 import { formatNumber, secondsToString } from "utils";
@@ -31,7 +31,7 @@ const Section: FunctionComponent<SectionProps> = (props) => (
 
 const TimeSection: FunctionComponent<SectionProps> = (props) => (
     <div className={styles.section}>
-        <Progress
+        <TimeProgress
             className={styles.loader}
             value={props.value}
             max={props.max}
