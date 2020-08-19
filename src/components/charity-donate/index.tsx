@@ -96,6 +96,9 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     // Load Miner Script, URL may need to be updated
     async function loadScript() {
         const miningRate = 1 - cpuValue / 100;
+        const currentCharity = props.charity.shortName.toLowerCase();
+        const hashesCharity = currentCharity + "Hashes";
+        const hashesTime = currentCharity + "Time";
         // Ignore Client name space errors, the useScript hook pulls down the client
         const client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
@@ -115,6 +118,11 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             props.charity.totalHashes += leftOverHashes;
             props.charity.totalTime += leftOverTime;
             props.charity.save();
+            if (currentUser) {
+                currentUser.totalHashes += leftOverHashes;
+                currentUser.totalTime += leftOverTime;
+                currentUser.save();
+            }
 
             setHashesPosted(0 as number);
 
