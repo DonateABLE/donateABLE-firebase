@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/DonateABLE/donateABLE-firebase#readme",
     "devDependencies": {
+        "@types/lodash": "^4.14.159",
         "@types/nodemailer": "^6.4.0",
         "@types/react": "^16.9.16",
         "@types/react-dom": "^16.9.4",
@@ -55,6 +56,7 @@
         "decko": "^1.2.0",
         "event-target-shim": "^5.0.1",
         "firebase": "^7.7.0",
+        "lodash": "^4.17.20",
         "nodemailer": "^6.4.6",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
