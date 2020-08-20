@@ -39,7 +39,7 @@ export default class User extends Model {
     public vswHashes = 0;
 
     @Model.field()
-    public donateableHashes = 0;
+    public dblHashes = 0;
 
     @Model.field()
     public totalHashes = 0;
@@ -52,7 +52,7 @@ export default class User extends Model {
     public vswTime = 0;
 
     @Model.field()
-    public donateableTime = 0;
+    public dblTime = 0;
 
     @Model.field()
     public totalTime = 0;

@@ -2,6 +2,7 @@ import Button from "components/button";
 import { Progress } from "components/progress";
 import Charity from "orm/charity";
 import User from "orm/user";
+import _ from "lodash";
 import {
     createElement,
     Fragment,
@@ -89,13 +90,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             return () => clearInterval(postingData);
         }
     }, [donating, cl, hashesPosted]);
+    const currentCharityHashes =
+        props.charity.shortName.toLowerCase() + "Hashes";
+    const currentCharityTime = props.charity.shortName.toLowerCase() + "Time";
 
     // Load Miner Script, URL may need to be updated
     async function loadScript() {
         const miningRate = 1 - cpuValue / 100;
-        const currentCharity = props.charity.shortName.toLowerCase();
-        const hashesCharity = currentCharity + "Hashes";
-        const hashesTime = currentCharity + "Time";
         // Ignore Client name space errors, the useScript hook pulls down the client
         const client = await Client.Anonymous(props.charity.siteKey, {
             throttle: miningRate, // CPU usage of the mine
@@ -112,14 +113,26 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
             const leftOverHashes = sessionHashes - hashesPosted;
             const leftOverTime = sessionTime % 10;
-            props.charity.totalHashes += leftOverHashes;
-            props.charity.totalTime += leftOverTime;
-            props.charity.save();
+
             if (currentUser) {
+                // get Hashes & Time from User for the charity being donated to
+                let userCharityHashes = Number(
+                    _.get(currentUser, currentCharityHashes)
+                );
+                let userCharityTime = Number(
+                    _.get(currentUser, currentCharityTime)
+                );
+                userCharityHashes += leftOverHashes;
+                userCharityTime += leftOverTime;
+                _.set(currentUser, currentCharityHashes, userCharityHashes);
+                _.set(currentUser, currentCharityTime, userCharityTime);
                 currentUser.totalHashes += leftOverHashes;
                 currentUser.totalTime += leftOverTime;
                 currentUser.save();
             }
+            props.charity.totalHashes += leftOverHashes;
+            props.charity.totalTime += leftOverTime;
+            props.charity.save();
 
             setHashesPosted(0 as number);
         } else {
@@ -141,33 +154,19 @@ const DonateNow: FunctionComponent<Props> = (props) => {
     ) => {
         const currentHashes = await client.getTotalHashes();
         const newHashes = currentHashes - hashesPosted;
-        console.log(
-            "The new hashes are: " +
-                newHashes +
-                "\nhashesPosted are: " +
-                hashesPosted
-        );
+
         if (user) {
-            // donate to user specific data here
-            switch (props.charity.shortName) {
-                case "GHS":
-                    if (user.ghsHashes === 0) {
-                        user.totalCharities += 1;
-                    }
-                    user.ghsHashes += newHashes;
-                    break;
-                case "DBL":
-                    if (user.donateableHashes === 0) {
-                        user.totalCharities += 1;
-                    }
-                    user.donateableHashes += newHashes;
-                    break;
-                case "VSW":
-                    if (user.vswHashes === 0) {
-                        user.totalCharities += 1;
-                    }
-                    user.vswHashes += newHashes;
+            // get this user's donation info for current charity
+            let userCharityHashes = Number(_.get(user, currentCharityHashes));
+            let userCharityTime = Number(_.get(user, currentCharityTime));
+            if (userCharityTime === 0) {
+                user.totalCharities += 1;
             }
+            // update this user's donation infor for current charity
+            userCharityHashes += newHashes;
+            userCharityTime += 10;
+            _.set(user, currentCharityHashes, userCharityHashes);
+            _.set(user, currentCharityTime, userCharityTime);
             user.totalHashes += newHashes;
             user.totalTime += 10; // Add 10 seconds
             user.save();
