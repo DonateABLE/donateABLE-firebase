@@ -35,7 +35,7 @@
 
 .form {
     display: grid;
-
+    margin-top: 2.5em;
     grid-template-columns: 1fr 1ft;
     grid-column-gap: 8px;
     grid-template-areas:
@@ -63,4 +63,9 @@
 .topCharities {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2.5em;
+}
+
+.tabBar {
+    margin-top: 1em;
 }

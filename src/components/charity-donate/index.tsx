@@ -113,7 +113,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 currentUser
             );
         }
-
         return client;
     }
 
