@@ -1,6 +1,10 @@
 @import "../../variables";
 
 .stats {
+    margin-top: 2.5em;
+    .statsHeader {
+        color: $light-blue;
+    }
     .grid {
         display: grid;
         grid-gap: 15px;

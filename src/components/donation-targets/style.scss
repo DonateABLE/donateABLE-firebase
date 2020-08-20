@@ -1,6 +1,7 @@
 @import "../../variables";
 
 .stats {
+    margin-top: 2.5em;
     .grid {
         display: grid;
         grid-gap: 15px;
@@ -52,9 +53,6 @@
 
                 .cost {
                     text-transform: uppercase;
-                }
-
-                .description {
                 }
             }
         }

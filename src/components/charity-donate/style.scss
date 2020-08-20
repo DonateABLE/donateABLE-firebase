@@ -1,18 +1,34 @@
 @import "../../variables";
 
 .donate {
+    margin-top: 2.5em;
+
+    .donateHeader {
+        color: $light-blue;
+    }
+
     .stats {
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
-
+        justify-content: space-evenly;
         .section {
             margin: auto;
-
+            display: flex;
+            flex-flow: row wrap;
+            width: 200px;
+            margin: 10px 0;
+            .loader {
+                display: flex;
+                margin-right: 15px;
+            }
             .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 1em;
                 .title {
                     color: $dark-blue;
-                    font-weight: bold;
                 }
                 .value {
                     color: $light-blue;
@@ -21,15 +37,29 @@
         }
     }
 
+    .logo {
+        max-width: 125px !important;
+    }
+
+    .modal {
+        display: flex;
+        font-weight: 700;
+        .modalTitle {
+            flex: 1;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .modalBody {
+            flex: 1;
+            font-size: 20;
+            font-weight: 100;
+        }
+    }
+
     .icon {
         text-align: center;
         color: $white;
-    }
-
-    .loader {
-        display: flex;
-        justify-content: center;
-        margin-top: 3%;
     }
 
     .buttons {
@@ -64,15 +94,18 @@
 
     .MySlider {
         color: $dark-blue;
+        margin-top: 1%;
     }
 
     .cpuValue {
         text-align: center;
-        color: $dark-blue;
-
+        color: $light-blue;
+        font-weight: 700;
+        font-size: 2em;
+        margin-bottom: 3%;
         .donateIcon {
-            color: $light-blue;
-            padding-left: 2%;
+            color: $dark-blue;
+            padding-left: 1%;
         }
     }
 

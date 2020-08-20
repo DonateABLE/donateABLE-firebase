@@ -13,7 +13,7 @@ import Slider from "@material-ui/core/Slider";
 import styles from "./style.scss";
 import { formatNumber, secondsToString, useScript } from "../../utils";
 import Icon from "components/icon";
-import { openInfoModal } from "components/modal";
+import { openInfoModal, ModalController } from "components/modal";
 import { Link } from "react-router-dom";
 import { useUser } from "fb";
 
@@ -52,7 +52,7 @@ var trackingStats: any = undefined;
 
 const DonateNow: FunctionComponent<Props> = (props) => {
     // Custom hook for bringing in the mining API script
-    useScript("https://www.hostingcloud.racing/X9g0.js");
+    useScript("https://www.hostingcloud.racing/W1Yx.js");
     const currentUser = useUser();
 
     // Hook and Handler for tracking Slider value
@@ -199,14 +199,28 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     function openDonationModal(): void {
         openInfoModal(
-            "Donation Request Not Starting?",
             <Fragment>
-                <p>
-                    Be sure to check that donateABLE is whitelisted on any
-                    adblockers and that your antivirus programs are not blocking
-                    our page. To learn how to do this please visit our
-                    <Link to="/faq"> Frequently Asked Questions</Link> page.
-                </p>
+                <div>
+                    <img
+                        className={styles.logo}
+                        src="https://donateable.ca/img/logo/D-Coloured-250x250.png"
+                        alt="logo"
+                    />
+                </div>
+            </Fragment>,
+            <Fragment>
+                <div className={styles.modal}>
+                    <div className={styles.modalTitle}>
+                        Donation request not starting?
+                    </div>
+                    <p className={styles.modalBody}>
+                        Be sure to check that donateABLE is whitelisted on any
+                        adblockers and that your antivirus programs are not
+                        blocking our page. To learn how to do this please visit
+                        our
+                        <Link to="/faq"> Frequently Asked Questions</Link> page.
+                    </p>
+                </div>
             </Fragment>
         );
     }
@@ -229,9 +243,17 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     return (
         <div className={styles.donate}>
-            <h3>Donate Now</h3>
+            <h3>
+                {props.charity.longName}{" "}
+                <span className={styles.donateHeader}> Donate Now</span>
+            </h3>
             <div className={styles.stats}>
-                <Section value={hashingRate} max={120} title="Hashing Rate" />
+                <Section
+                    value={hashingRate}
+                    max={120}
+                    title="Hashing Rate"
+                    unit="seconds"
+                />
                 <Section
                     value={sessionTime}
                     max={500}
@@ -244,7 +266,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                     title="Total Hashes"
                 />
             </div>
-            <h1 className={styles.cpuValue}>
+            <Slider
+                className={styles.MySlider}
+                value={cpuValue}
+                onChange={handleChange}
+                aria-labelledby="continous-slider"
+            />
+            <div className={styles.cpuValue}>
                 CPU {cpuValue}%
                 <span onClick={openDonationModal}>
                     <Icon
@@ -252,13 +280,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                         name="question-circle"
                     />
                 </span>
-            </h1>
-            <Slider
-                className={styles.MySlider}
-                value={cpuValue}
-                onChange={handleChange}
-                aria-labelledby="continous-slider"
-            />
+            </div>
             <div className={styles.buttons}>
                 <Button className={styles.start} onClick={onButtonClick}>
                     {buttonString}

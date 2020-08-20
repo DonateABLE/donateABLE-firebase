@@ -118,7 +118,6 @@ export default class CharityPage extends Component<Props, State> {
                     </a>
                 </div>
                 <div className={styles.tabBar}>
-                    `
                     <TabContainer>
                         <Tab className={styles.tabSelect} title={"Donate Now"}>
                             <DonateNow charity={charity} />

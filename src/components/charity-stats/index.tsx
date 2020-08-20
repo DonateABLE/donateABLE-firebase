@@ -29,7 +29,10 @@ interface Props {
 }
 const Statistics: FunctionComponent<Props> = (props) => (
     <div className={styles.stats}>
-        <h3>{props.charity.longName} Statistics</h3>
+        <h3>
+            {props.charity.longName}
+            <span className={styles.statsHeader}> Statistics</span>
+        </h3>
         <div className={styles.grid}>
             <Section
                 value={props.charity.currentlyDonating}
