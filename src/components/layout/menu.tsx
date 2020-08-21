@@ -55,7 +55,7 @@ const Menu: FunctionComponent<Props> = (props) => {
                 <Link to="/" onClick={props.onMenuCloseClick}>
                     <img
                         className={styles.logo}
-                        src="https://donateable.ca/img/logo/D-Coloured-250x250.png"
+                        src={require("assets/img/logo/d-coloured.png").default}
                         alt="logo"
                     />
                 </Link>

@@ -95,7 +95,10 @@ export default class Layout extends Component<{}, State> {
                     <header className={styles.header}>
                         <Link to="/">
                             <img
-                                src="https://donateable.ca/img/logo/donateABLE-long-colour-250.png"
+                                src={
+                                    require("assets/img/logo/donateABLE-long-colour-250.png")
+                                        .default
+                                }
                                 alt="donateABLE logo"
                             />
                         </Link>
@@ -128,7 +131,10 @@ export default class Layout extends Component<{}, State> {
                             <span className={styles.poweredBy}>Powered By</span>
                             <img
                                 className={styles.logo}
-                                src="https://donateable.ca/img/logo/Synergenics-Logo-2008-White.png"
+                                src={
+                                    require("assets/img/logo/Synergenics-Logo-2008-White.png")
+                                        .default
+                                }
                                 alt="Synergenics logo"
                             />
                         </footer>

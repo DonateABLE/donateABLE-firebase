@@ -234,7 +234,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 <div>
                     <img
                         className={styles.logo}
-                        src="https://donateable.ca/img/logo/D-Coloured-250x250.png"
+                        src={require("assets/img/logo/d-coloured.png").default}
                         alt="logo"
                     />
                 </div>
