@@ -12,6 +12,15 @@
         "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/victim-services-wellington/",
         "siteKey": "a9aee989bdb191b8709922e7f52933a97f054cf19696ef2872ce27d7ed323109",
         "comingSoon": 0,
+        "registeredBusinessName": "Victim Services Wellington",
+        "businessNumber": "891472763RR0001",
+        "address": "15 Wyndham Street South",
+        "cityProvince": "Guelph, ON",
+        "postalCode": "N1H4C6",
+        "phone": "(519) 824-1212 ext 7304",
+        "email": "victim@vswguelph.on.ca",
+        "officeHourDays": "Monday to Friday",
+        "officeHourHours": "9:00AM to 5:00PM",
         "donationTargets": [
             {
                 "name": "Lifesaver Bracelet Battery",
@@ -51,29 +60,38 @@
         "canadaHelpsUrl": "",
         "siteKey": "8f0a9d558ac5ed43ae2c6ea7ecd945860300f6b01433df955ee4b3f9dbc9fb31",
         "comingSoon": 0,
+        "registeredBusinessName": "DonateABLE",
+        "businessNumber": "N/A",
+        "address": "47 Lewis Road",
+        "cityProvince": "Guelph, ON",
+        "postalCode": "N1H1E9",
+        "phone": "(519) 763-7756",
+        "email": "administration@synergenics.ca",
+        "officeHourDays": "Monday to Friday",
+        "officeHourHours": "8:30AM to 5:30PM",
         "donationTargets": [
             {
-                "name": "Lifesaver Bracelet Battery",
+                "name": "Small Donation Target",
                 "cost": 5,
-                "description": "A small battery unit used in the Lifesaver Bracelet allowing the system to operate every dat of the year",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "battery-half"
             },
             {
-                "name": "Volunteer Training",
+                "name": "Medium Donation Target",
                 "cost": 100,
-                "description": "Responsible for immediate mobile responses to requests from emergency and police services within Wellington County",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "hand-holding-heart"
             },
             {
-                "name": "Lifesaver Bracelet",
+                "name": "Huge Donation Target",
                 "cost": 400,
-                "description": "A one ounce wrist transmitter that sends a radio signal which an be tracked up to a two kilometer radius",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "ambulance"
             },
             {
-                "name": "Personal Tracking Device",
+                "name": "Big Donation Target",
                 "cost": 300,
-                "description": "A safety solution to track high risk victims of violence while at home or in the community 24 hours a day 7 days a week",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "thumbtack"
             }
         ]
@@ -91,29 +109,39 @@
         "canadaHelpsUrl": "https://www.canadahelps.org/en/charities/the-guelph-humane-society/",
         "siteKey": "0e7708e6df0272ab5396419b204ee44142ee2263b9e2ed13b3abbea8d39b14f4",
         "comingSoon": 1,
+        "registeredBusinessName": "Guelph Humane Society",
+        "businessNumber": "N/A",
+        "address": "500 Wellington St, W.",
+        "cityProvince": "Guelph, ON",
+        "postalCode": "N1H6L3",
+        "phone": "(519) 824-3091",
+        "email": "info@guelphhumane.ca",
+        "fax": "519-824-3075",
+        "officeHourDays": "Monday to Friday, Saturday to Sunday",
+        "officeHourHours": "9:00AM to 5:00PM, 10:00AM to 4:00PM",
         "donationTargets": [
             {
-                "name": "Lifesaver Bracelet Battery",
+                "name": "Small Donation Target",
                 "cost": 5,
-                "description": "A small battery unit used in the Lifesaver Bracelet allowing the system to operate every dat of the year",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "battery-half"
             },
             {
-                "name": "Volunteer Training",
+                "name": "Medium Donation Target",
                 "cost": 100,
-                "description": "Responsible for immediate mobile responses to requests from emergency and police services within Wellington County",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "hand-holding-heart"
             },
             {
-                "name": "Lifesaver Bracelet",
+                "name": "Huge Donation Target",
                 "cost": 400,
-                "description": "A one ounce wrist transmitter that sends a radio signal which an be tracked up to a two kilometer radius",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "ambulance"
             },
             {
-                "name": "Personal Tracking Device",
+                "name": "Big Donation Target",
                 "cost": 300,
-                "description": "A safety solution to track high risk victims of violence while at home or in the community 24 hours a day 7 days a week",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
                 "icon": "thumbtack"
             }
         ]
