@@ -103,7 +103,3 @@ export function cloudFunction(
 ): Promise<Response> {
     return fetch(cloudFunctionPrefix + "/" + name, init);
 }
-
-export function userPostStats(user: any) {
-    console.log("User Posting Stats is starting!");
-}
