@@ -39,23 +39,23 @@ export default class User extends Model {
     public vswHashes = 0;
 
     @Model.field()
-    public donateableHashes = 0;
+    public dblHashes = 0;
 
     @Model.field()
     public totalHashes = 0;
 
     // Time
     @Model.field()
-    public ghsTime = "";
+    public ghsTime = 0;
 
     @Model.field()
-    public vswTime = "";
+    public vswTime = 0;
 
     @Model.field()
-    public donateableTime = "";
+    public dblTime = 0;
 
     @Model.field()
-    public totalTime = "";
+    public totalTime = 0;
 
     @Model.field()
     public totalCharities = 0;

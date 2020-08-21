@@ -31,10 +31,9 @@ const userToastKey = Symbol("user-toast-key");
 
 const UserEdit: FunctionComponent = (props) => {
     const charities = useQuery(Charity.builder().orderBy("longName")) ?? [];
-
     const user = useUser();
-
     const forceUpdate = useForceUpdate();
+
     const changeUser = useCallback(
         (
             field: Diff<FilterPropertyNames<User, string>, "fullName">,
@@ -56,6 +55,7 @@ const UserEdit: FunctionComponent = (props) => {
     }, [user]);
 
     const [imageUploading, changeImageUploading] = useState(false);
+
     const imageClick = useCallback(async () => {
         const file = await imageSelect();
         if (file && user) {
@@ -139,7 +139,9 @@ const UserEdit: FunctionComponent = (props) => {
                             <UserCharityRank rank={3} charity={charities[2]} />
                         </div>
                     </Tab>
-                    <Tab title={"Your Statistics"}></Tab>
+                    <Tab title={"Your Statistics"}>
+                        <UserStatistics user={user} />
+                    </Tab>
                 </TabContainer>
             </div>
         </Content>

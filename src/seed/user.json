@@ -5,11 +5,11 @@
         "email": "jsmith@example.com",
         "ghsHashes": 0,
         "vswHashes": 0,
-        "donateableHashes": 0,
+        "dblHashes": 0,
         "totalHashes": 0,
-        "ghsTime": "00:00:00",
-        "wsvTime": "00:00:00",
-        "donateableTime": "00:00:00",
-        "totalTime": "00:00:00"
+        "ghsTime": 0,
+        "wsvTime": 0,
+        "dblTime": 0,
+        "totalTime": 0
     }
 ]

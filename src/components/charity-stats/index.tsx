@@ -1,4 +1,4 @@
-import Progress from "components/progress";
+import { Progress } from "components/progress";
 import Charity from "orm/charity";
 import { createElement, FunctionComponent } from "react";
 import { formatNumber } from "utils";

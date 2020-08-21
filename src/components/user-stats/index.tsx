@@ -1,7 +1,7 @@
-import Progress from "components/progress";
+import { TimeProgress, Progress } from "components/progress";
 import User from "orm/user";
 import { createElement, FunctionComponent } from "react";
-import { formatNumber } from "utils";
+import { formatNumber, secondsToString } from "utils";
 import styles from "./style.scss";
 import { userPostStats } from "fb";
 
@@ -29,6 +29,20 @@ const Section: FunctionComponent<SectionProps> = (props) => (
     </div>
 );
 
+const TimeSection: FunctionComponent<SectionProps> = (props) => (
+    <div className={styles.section}>
+        <TimeProgress
+            className={styles.loader}
+            value={props.value}
+            max={props.max}
+        />
+        <div className={styles.content}>
+            <div className={styles.title}>{props.title}</div>
+            <div className={styles.value}>{secondsToString(props.value)}</div>
+        </div>
+    </div>
+);
+
 const UserStatistics: FunctionComponent<Props> = (props) => (
     <div className={styles.stats}>
         <h3>{props.user.fullName}'s Statistics</h3>
@@ -43,7 +57,11 @@ const UserStatistics: FunctionComponent<Props> = (props) => (
                 max={3}
                 title="Total Charities"
             />
-            <Section value={1000} max={3} title="Total Time Donated" />
+            <TimeSection
+                value={props.user.totalTime}
+                max={3}
+                title="Total Time Donated"
+            />
         </div>
     </div>
 );
