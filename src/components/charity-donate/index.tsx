@@ -129,7 +129,10 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 currentUser.totalHashes += leftOverHashes;
                 currentUser.totalTime += leftOverTime;
                 currentUser.save();
+            } else {
+                props.charity.donatorsToDate += 1;
             }
+            props.charity.currentlyDonating -= 1;
             props.charity.totalHashes += leftOverHashes;
             props.charity.totalTime += leftOverTime;
             props.charity.save();
@@ -141,6 +144,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             await client.start(Client.FORCE_MULTI_TAB);
             const date = new Date();
             const minerStartTime = date.getTime();
+            props.charity.currentlyDonating += 1;
 
             trackingStats = setInterval(log, 1000, client, minerStartTime);
         }
@@ -160,6 +164,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             let userCharityTime = Number(_.get(user, currentCharityTime));
             if (userCharityTime === 0) {
                 user.totalCharities += 1;
+                props.charity.donatorsToDate += 1;
             }
             // update this user's donation infor for current charity
             userCharityHashes += newHashes;

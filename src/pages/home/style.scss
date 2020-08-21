@@ -62,6 +62,10 @@
             width: 100%;
             margin-top: 2px;
             text-transform: uppercase;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
     }
     .value {
@@ -241,7 +245,10 @@
                 margin-left: 5px;
                 max-width: 300px;
                 max-height: 47px;
-                padding: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-weight: 600;
+                text-transform: uppercase;
             }
         }
     }

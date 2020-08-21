@@ -3,7 +3,6 @@ import User from "orm/user";
 import { createElement, FunctionComponent } from "react";
 import { formatNumber, secondsToString } from "utils";
 import styles from "./style.scss";
-import { userPostStats } from "fb";
 
 interface SectionProps {
     title: string;

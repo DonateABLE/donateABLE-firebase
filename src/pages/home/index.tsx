@@ -47,6 +47,22 @@ const Home: FunctionComponent = () => {
         charityTypes: [],
     });
 
+    const sumHashes =
+        (charities[0]?.totalHashes +
+            charities[1]?.totalHashes +
+            charities[2]?.totalHashes) |
+        0;
+    const sumCurrentlyDonating =
+        (charities[0]?.currentlyDonating +
+            charities[1]?.currentlyDonating +
+            charities[2]?.currentlyDonating) |
+        0;
+    const sumDonatorsToDate =
+        (charities[0]?.donatorsToDate +
+            charities[1]?.donatorsToDate +
+            charities[2]?.donatorsToDate) |
+        0;
+
     return (
         <Fragment>
             <div className={styles.top}>
@@ -60,17 +76,19 @@ const Home: FunctionComponent = () => {
                 <div className={styles.buttonGroup}>
                     <TextBox className={styles.groupElement}>
                         Currently Donating
-                        <span className={styles.value}>14</span>
+                        <span className={styles.value}>
+                            {sumCurrentlyDonating.toString()}
+                        </span>
                     </TextBox>
                     <TextBox className={styles.groupElement}>
                         Donations to Date
-                        <span className={styles.value}>345</span>
+                        <span className={styles.value}>
+                            {sumDonatorsToDate.toString()}
+                        </span>
                     </TextBox>
                     <TextBox className={styles.groupElement}>
                         Total Hashes{""}
-                        <b className={styles.value}>
-                            {formatNumber(13_256_475)}
-                        </b>
+                        <b className={styles.value}>{sumHashes.toString()}</b>
                     </TextBox>
                     <LoginButtons />
                 </div>
