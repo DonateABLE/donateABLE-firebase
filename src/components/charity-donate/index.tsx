@@ -172,9 +172,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         }
         props.charity.totalHashes += newHashes;
         props.charity.totalTime += 10; // add 10 Seconds
-        console.log(
-            "The time that is being saved is: " + props.charity.totalTime
-        );
         props.charity.save();
     };
 

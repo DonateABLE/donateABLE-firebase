@@ -95,12 +95,14 @@ a {
 
             li {
                 border-top: solid 1px $white;
+                margin: auto;
 
                 &:last-child {
                     border-bottom: solid 1px $white;
                 }
 
-                padding: 4px;
+                padding-top: 6%;
+                padding-bottom: 6%;
                 text-transform: uppercase;
 
                 .link {
