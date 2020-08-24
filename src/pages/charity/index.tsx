@@ -10,7 +10,17 @@ import { Tab, TabContainer } from "components/tabs";
 import { bind } from "decko";
 import { __, La } from "lang";
 import Charity from "orm/charity";
-import { Component, createElement, Fragment, ReactNode } from "react";
+import User from "orm/user";
+import { useUser } from "fb";
+import {
+    Component,
+    createElement,
+    Fragment,
+    FunctionComponent,
+    ReactNode,
+    useState,
+    useEffect,
+} from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
 import Statistics from "../../components/charity-stats";
 import styles from "./style.scss";
@@ -18,6 +28,10 @@ import styles from "./style.scss";
 type Props = RouteComponentProps<{ name: string }>;
 
 interface State {
+    charity?: Charity;
+}
+
+interface EditProps {
     charity?: Charity;
 }
 
@@ -143,7 +157,7 @@ export default class CharityPage extends Component<Props, State> {
                     </TabContainer>
                     `
                 </div>
-                <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
+                <Edit charity={charity} />
             </Content>
         );
     }
@@ -167,3 +181,22 @@ export default class CharityPage extends Component<Props, State> {
         );
     }
 }
+
+const Edit: FunctionComponent<EditProps> = (props) => {
+    const currentUser = useUser();
+    const [userEmail, setUserEmail] = useState<string>("");
+
+    useEffect(() => {
+        if (currentUser?.firebaseUser?.email) {
+            setUserEmail(currentUser?.firebaseUser?.email as string);
+        } else {
+            setUserEmail("" as string);
+        }
+    }, [currentUser, userEmail]);
+
+    if (userEmail === ("lp@lukepritchard.ca" || "rmacrae@synergenics.ca")) {
+        return <Link to={`/charity/${props.charity?.id}/edit`}>Edit</Link>;
+    } else {
+        return null;
+    }
+};
