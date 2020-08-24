@@ -60,6 +60,12 @@
     }
 }
 
+.button {
+    padding: 10px 30px !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 .topCharities {
     display: flex;
     flex-wrap: wrap;

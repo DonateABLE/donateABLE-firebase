@@ -130,7 +130,13 @@ const UserEdit: FunctionComponent = (props) => {
                                 )}
                             />
                         </div>
-                        <Button onClick={save}>Save</Button>
+                        <Button
+                            className={styles.button}
+                            fullWidth
+                            onClick={save}
+                        >
+                            Save
+                        </Button>
                     </Tab>
                     <Tab title={"Top Charities"}>
                         <div className={styles.topCharities}>

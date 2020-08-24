@@ -69,6 +69,8 @@
     .makeDonation {
         grid-area: donate;
         width: 100%;
+        text-transform: uppercase;
+        font-weight: 600;
     }
 }
 
@@ -80,6 +82,8 @@
     }
 
     margin: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
 
     width: calc(100% - 20px);
 }
