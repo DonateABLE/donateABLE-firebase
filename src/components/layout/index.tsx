@@ -96,6 +96,7 @@ export default class Layout extends Component<{}, State> {
                         <Link to="/">
                             <img
                                 src={
+                                    // eslint-disable-next-line @typescript-eslint/no-var-requires
                                     require("assets/img/logo/donateABLE-long-colour-250.png")
                                         .default
                                 }
@@ -132,6 +133,7 @@ export default class Layout extends Component<{}, State> {
                             <img
                                 className={styles.logo}
                                 src={
+                                    // eslint-disable-next-line @typescript-eslint/no-var-requires
                                     require("assets/img/logo/Synergenics-Logo-2008-White.png")
                                         .default
                                 }

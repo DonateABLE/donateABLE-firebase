@@ -234,6 +234,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 <div>
                     <img
                         className={styles.logo}
+                        // eslint-disable-next-line @typescript-eslint/no-var-requires
                         src={require("assets/img/logo/d-coloured.png").default}
                         alt="logo"
                     />
