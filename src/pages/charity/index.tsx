@@ -10,7 +10,17 @@ import { Tab, TabContainer } from "components/tabs";
 import { bind } from "decko";
 import { __, La } from "lang";
 import Charity from "orm/charity";
-import { Component, createElement, Fragment, ReactNode } from "react";
+import User from "orm/user";
+import { useUser } from "fb";
+import {
+    Component,
+    createElement,
+    Fragment,
+    FunctionComponent,
+    ReactNode,
+    useState,
+    useEffect,
+} from "react";
 import { Link, RouteComponentProps } from "react-router-dom";
 import Statistics from "../../components/charity-stats";
 import styles from "./style.scss";
@@ -18,6 +28,10 @@ import styles from "./style.scss";
 type Props = RouteComponentProps<{ name: string }>;
 
 interface State {
+    charity?: Charity;
+}
+
+interface EditProps {
     charity?: Charity;
 }
 
@@ -58,11 +72,13 @@ export default class CharityPage extends Component<Props, State> {
                     <div className={styles.info}>
                         <h2 className={styles.name}>{charity.longName}</h2>
                         <div className={styles.tagLine}>{charity.tagline}</div>
-                        <div>
+                        <div className={styles.businessDescription}>
                             Registered Business Name{" "}
                             {charity.registeredBusinessName}
                         </div>
-                        <div>Business Number {charity.businessNumber}</div>
+                        <div className={styles.businessDescription}>
+                            Business Number {charity.businessNumber}
+                        </div>
                     </div>
                     <div>
                         <a href={charity.canadaHelpsUrl}>
@@ -115,22 +131,33 @@ export default class CharityPage extends Component<Props, State> {
                         </Button>
                     </a>
                 </div>
-
-                <TabContainer>
-                    <Tab title={"Donate"}>
-                        <DonateNow charity={charity} />
-                    </Tab>
-                    <Tab title={__("charity.statistics")}>
-                        <Statistics charity={charity} />
-                    </Tab>
-                    <Tab title={__("charity.donation-targets")}>
-                        <DonationTargets charity={charity} />
-                    </Tab>
-                    <Tab title={__("charity.about")}>
-                        <AboutCharity charity={charity} />
-                    </Tab>
-                </TabContainer>
-                <Link to={`/charity/${this.state.charity?.id}/edit`}>Edit</Link>
+                <div className={styles.tabBar}>
+                    <TabContainer>
+                        <Tab className={styles.tabSelect} title={"Donate Now"}>
+                            <DonateNow charity={charity} />
+                        </Tab>
+                        <Tab
+                            className={styles.tabSelect}
+                            title={__("charity.statistics")}
+                        >
+                            <Statistics charity={charity} />
+                        </Tab>
+                        <Tab
+                            className={styles.tabSelect}
+                            title={__("charity.donation-targets")}
+                        >
+                            <DonationTargets charity={charity} />
+                        </Tab>
+                        <Tab
+                            className={styles.tabSelect}
+                            title={__("charity.about")}
+                        >
+                            <AboutCharity charity={charity} />
+                        </Tab>
+                    </TabContainer>
+                    `
+                </div>
+                <Edit charity={charity} />
             </Content>
         );
     }
@@ -154,3 +181,22 @@ export default class CharityPage extends Component<Props, State> {
         );
     }
 }
+
+const Edit: FunctionComponent<EditProps> = (props) => {
+    const currentUser = useUser();
+    const [userEmail, setUserEmail] = useState<string>("");
+
+    useEffect(() => {
+        if (currentUser?.firebaseUser?.email) {
+            setUserEmail(currentUser?.firebaseUser?.email as string);
+        } else {
+            setUserEmail("" as string);
+        }
+    }, [currentUser, userEmail]);
+
+    if (userEmail === ("lp@lukepritchard.ca" || "rmacrae@synergenics.ca")) {
+        return <Link to={`/charity/${props.charity?.id}/edit`}>Edit</Link>;
+    } else {
+        return null;
+    }
+};

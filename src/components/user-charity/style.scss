@@ -8,6 +8,9 @@
     margin-right: 8px;
     justify-content: space-between;
     .rank {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         flex: 1;
         margin-top: 10px;
         margin-right: 5px;

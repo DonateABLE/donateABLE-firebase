@@ -14,7 +14,7 @@ import Slider from "@material-ui/core/Slider";
 import styles from "./style.scss";
 import { formatNumber, useScript } from "../../utils";
 import Icon from "components/icon";
-import { openInfoModal } from "components/modal";
+import { openInfoModal, ModalController } from "components/modal";
 import { Link } from "react-router-dom";
 import { useUser } from "fb";
 
@@ -77,6 +77,28 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             update(cl, cpuValue);
         }
     }, [cpuValue]);
+
+    // useEffect(() => {
+    //     if (donating && cl) {
+    //         props.charity.currentlyDonating += Number(donating);
+    //         console.log(
+    //             "Currently donating going up by " +
+    //                 Number(donating) +
+    //                 "\nvalue is " +
+    //                 props.charity.currentlyDonating
+    //         );
+    //         props.charity.save();
+    //     } else {
+    //         props.charity.currentlyDonating -= 1;
+    //         console.log(
+    //             "Currently donating going down by " +
+    //                 Number(donating) +
+    //                 "\nvalue is " +
+    //                 props.charity.currentlyDonating
+    //         );
+    //         props.charity.save();
+    //     }
+    // }, [donating]);
 
     useEffect(() => {
         // Post data to firebase backend
@@ -144,7 +166,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
             trackingStats = setInterval(log, 1000, client, minerStartTime);
         }
-
         return client;
     }
 
@@ -161,6 +182,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             let userCharityTime = Number(_.get(user, currentCharityTime));
             if (userCharityTime === 0) {
                 user.totalCharities += 1;
+                props.charity.donatorsToDate += 1;
             }
             // update this user's donation infor for current charity
             userCharityHashes += newHashes;
@@ -173,9 +195,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         }
         props.charity.totalHashes += newHashes;
         props.charity.totalTime += 10; // add 10 Seconds
-        console.log(
-            "The time that is being saved is: " + props.charity.totalTime
-        );
         props.charity.save();
     };
 
@@ -229,14 +248,29 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     function openDonationModal(): void {
         openInfoModal(
-            "Donation Request Not Starting?",
             <Fragment>
-                <p>
-                    Be sure to check that donateABLE is whitelisted on any
-                    adblockers and that your antivirus programs are not blocking
-                    our page. To learn how to do this please visit our
-                    <Link to="/faq"> Frequently Asked Questions</Link> page.
-                </p>
+                <div>
+                    <img
+                        className={styles.logo}
+                        // eslint-disable-next-line @typescript-eslint/no-var-requires
+                        src={require("assets/img/logo/d-coloured.png").default}
+                        alt="logo"
+                    />
+                </div>
+            </Fragment>,
+            <Fragment>
+                <div className={styles.modal}>
+                    <div className={styles.modalTitle}>
+                        Donation request not starting?
+                    </div>
+                    <p className={styles.modalBody}>
+                        Be sure to check that donateABLE is whitelisted on any
+                        adblockers and that your antivirus programs are not
+                        blocking our page. To learn how to do this please visit
+                        our
+                        <Link to="/faq"> Frequently Asked Questions</Link> page.
+                    </p>
+                </div>
             </Fragment>
         );
     }
@@ -259,9 +293,17 @@ const DonateNow: FunctionComponent<Props> = (props) => {
 
     return (
         <div className={styles.donate}>
-            <h3>Donate Now</h3>
+            <h3>
+                {props.charity.longName}{" "}
+                <span className={styles.donateHeader}> Donate Now</span>
+            </h3>
             <div className={styles.stats}>
-                <Section value={hashingRate} max={120} title="Hashing Rate" />
+                <Section
+                    value={hashingRate}
+                    max={120}
+                    title="Hashing Rate"
+                    unit="seconds"
+                />
                 <Section
                     value={sessionTime}
                     max={500}
@@ -274,7 +316,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                     title="Total Hashes"
                 />
             </div>
-            <h1 className={styles.cpuValue}>
+            <Slider
+                className={styles.MySlider}
+                value={cpuValue}
+                onChange={handleChange}
+                aria-labelledby="continous-slider"
+            />
+            <div className={styles.cpuValue}>
                 CPU {cpuValue}%
                 <span onClick={openDonationModal}>
                     <Icon
@@ -282,13 +330,7 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                         name="question-circle"
                     />
                 </span>
-            </h1>
-            <Slider
-                className={styles.MySlider}
-                value={cpuValue}
-                onChange={handleChange}
-                aria-labelledby="continous-slider"
-            />
+            </div>
             <div className={styles.buttons}>
                 <Button className={styles.start} onClick={onButtonClick}>
                     {buttonString}

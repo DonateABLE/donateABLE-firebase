@@ -4,6 +4,7 @@ import "firebase/firestore";
 import "firebase/storage";
 import { useQuery } from "orm/model";
 import User from "orm/user";
+import Charity from "orm/charity";
 import { useEffect, useState } from "react";
 
 const firebaseConfig = {
@@ -104,6 +105,24 @@ export function cloudFunction(
     return fetch(cloudFunctionPrefix + "/" + name, init);
 }
 
-export function userPostStats(user: any) {
-    console.log("User Posting Stats is starting!");
+export function totalCharityStats(): any {
+    const charities = useQuery(Charity.builder().orderBy("totalHashes")) ?? [];
+    const sumHashes =
+        (charities[0]?.totalHashes +
+            charities[1]?.totalHashes +
+            charities[2]?.totalHashes) |
+        0;
+    const sumCurrentlyDonating =
+        (charities[0]?.currentlyDonating +
+            charities[1]?.currentlyDonating +
+            charities[2]?.currentlyDonating) |
+        0;
+    const sumDonatorsToDate =
+        (charities[0]?.donatorsToDate +
+            charities[1]?.donatorsToDate +
+            charities[2]?.donatorsToDate) |
+        0;
+
+    const charityTotals = [sumCurrentlyDonating, sumDonatorsToDate, sumHashes];
+    return charityTotals;
 }

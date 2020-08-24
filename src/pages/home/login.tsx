@@ -2,12 +2,12 @@ import Button from "components/button";
 import Content from "components/content";
 import { Input } from "components/form";
 import TextBox from "components/textbox";
-import { signOut, useUser } from "fb";
+import { signOut, useUser, totalCharityStats } from "fb";
 import firebase from "firebase";
 import { createElement, Fragment, FunctionComponent, useState } from "react";
 import { FirebaseAuth } from "react-firebaseui";
 import styles from "./style.scss";
-import { addValue } from "utils";
+import { addValue, humanNumber } from "utils";
 
 const LoggedIn: FunctionComponent = () => {
     return (
@@ -31,11 +31,10 @@ const LoggedOut: FunctionComponent = () => {
 
     const uiConfig = {
         signInFlow: "popup",
-        signInSuccessUrl: "/",
+        signInSuccessUrl: "/user",
         signInOptions: [
             firebase.auth.EmailAuthProvider.PROVIDER_ID,
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         ],
     };
 
@@ -109,6 +108,7 @@ const LoggedOut: FunctionComponent = () => {
 
 export const Login: FunctionComponent = () => {
     const userStatus = useUser();
+    const totalStats = totalCharityStats();
 
     return (
         <Fragment>
@@ -122,15 +122,17 @@ export const Login: FunctionComponent = () => {
                 </h2>
                 <div className={styles.loginButtonGroup}>
                     <TextBox className={styles.loginGroupElement}>
-                        Currently Donating <b className={styles.value}>14</b>
+                        Currently Donating{" "}
+                        <b className={styles.value}>{totalStats[0]}</b>
                     </TextBox>
                     <TextBox className={styles.loginGroupElement}>
-                        Donations to Date<b className={styles.value}>345</b>
+                        Donations to Date
+                        <b className={styles.value}>{totalStats[1]}</b>
                     </TextBox>
                     <TextBox className={styles.loginGroupElement}>
                         Total Hashes{" "}
                         <b className={styles.value}>
-                            {(13256475).toLocaleString()}
+                            {humanNumber(Number(totalStats[2]))}
                         </b>
                     </TextBox>
                 </div>

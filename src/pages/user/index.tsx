@@ -89,55 +89,67 @@ const UserEdit: FunctionComponent = (props) => {
                 buttonTitle="Start Donating"
                 buttonLocation="/"
             />
-            <TabContainer>
-                <Tab title={"Account Settings"}>
-                    <div className={styles.form}>
-                        {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
-                        <Input
-                            className={styles.firstName}
-                            title="First Name"
-                            value={user.firstName}
-                            onChange={addValue(
-                                bindArgs("firstName", changeUser)
-                            )}
-                        />
+            <div className={styles.tabBar}>
+                <TabContainer>
+                    <Tab title={"Account Settings"}>
+                        <div className={styles.form}>
+                            {/* <input ref={fileRef} type='file' onChange={imageChange} /> */}
+                            <Input
+                                className={styles.firstName}
+                                title="First Name"
+                                value={user.firstName}
+                                onChange={addValue(
+                                    bindArgs("firstName", changeUser)
+                                )}
+                            />
 
-                        <Input
-                            className={styles.lastName}
-                            title="Last Name"
-                            value={user.lastName}
-                            onChange={addValue(
-                                bindArgs("lastName", changeUser)
-                            )}
-                        />
+                            <Input
+                                className={styles.lastName}
+                                title="Last Name"
+                                value={user.lastName}
+                                onChange={addValue(
+                                    bindArgs("lastName", changeUser)
+                                )}
+                            />
 
-                        <Input
-                            className={styles.email}
-                            title="Email Address"
-                            value={user.email}
-                            onChange={addValue(bindArgs("email", changeUser))}
-                        />
+                            <Input
+                                className={styles.email}
+                                title="Email Address"
+                                value={user.email}
+                                onChange={addValue(
+                                    bindArgs("email", changeUser)
+                                )}
+                            />
 
-                        <Input
-                            className={styles.user}
-                            title="Username"
-                            value={user.user}
-                            onChange={addValue(bindArgs("user", changeUser))}
-                        />
-                    </div>
-                    <Button onClick={save}>Save</Button>
-                </Tab>
-                <Tab title={"Top Charities"}>
-                    <div className={styles.topCharities}>
-                        <UserCharityRank rank={1} charity={charities[0]} />
-                        <UserCharityRank rank={2} charity={charities[1]} />
-                        <UserCharityRank rank={3} charity={charities[2]} />
-                    </div>
-                </Tab>
-                <Tab title={"Your Statistics"}>
-                    <UserStatistics user={user} />
-                </Tab>
-            </TabContainer>
+                            <Input
+                                className={styles.user}
+                                title="Username"
+                                value={user.user}
+                                onChange={addValue(
+                                    bindArgs("user", changeUser)
+                                )}
+                            />
+                        </div>
+                        <Button
+                            className={styles.button}
+                            fullWidth
+                            onClick={save}
+                        >
+                            Save
+                        </Button>
+                    </Tab>
+                    <Tab title={"Top Charities"}>
+                        <div className={styles.topCharities}>
+                            <UserCharityRank rank={1} charity={charities[0]} />
+                            <UserCharityRank rank={2} charity={charities[1]} />
+                            <UserCharityRank rank={3} charity={charities[2]} />
+                        </div>
+                    </Tab>
+                    <Tab title={"Your Statistics"}>
+                        <UserStatistics user={user} />
+                    </Tab>
+                </TabContainer>
+            </div>
         </Content>
     );
 };

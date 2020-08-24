@@ -10,13 +10,22 @@ import Login from "pages/home/login";
 import HowItWorks from "pages/how-it-works";
 import PrivacyPolicy from "pages/privacy-policy";
 import UserEdit from "pages/user";
-import { Component, createElement, createRef, ReactNode } from "react";
+import {
+    Component,
+    createElement,
+    createRef,
+    ReactNode,
+    FunctionComponent,
+    Fragment,
+} from "react";
 import { findDOMNode } from "react-dom";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import { classNames, clickedOn } from "utils";
 import Menu from "./menu";
 import styles from "./style.scss";
 import FAQ from "pages/faq";
+import { useUser } from "fb";
+import Button from "components/button";
 
 interface State {
     menuOpen: boolean;
@@ -86,7 +95,11 @@ export default class Layout extends Component<{}, State> {
                     <header className={styles.header}>
                         <Link to="/">
                             <img
-                                src="https://donateable.ca/img/logo/donateABLE-long-colour-250.png"
+                                src={
+                                    // eslint-disable-next-line @typescript-eslint/no-var-requires
+                                    require("assets/img/logo/donateABLE-long-colour-250.png")
+                                        .default
+                                }
                                 alt="donateABLE logo"
                             />
                         </Link>
@@ -119,7 +132,11 @@ export default class Layout extends Component<{}, State> {
                             <span className={styles.poweredBy}>Powered By</span>
                             <img
                                 className={styles.logo}
-                                src="https://donateable.ca/img/logo/Synergenics-Logo-2008-White.png"
+                                src={
+                                    // eslint-disable-next-line @typescript-eslint/no-var-requires
+                                    require("assets/img/logo/Synergenics-Logo-2008-White.png")
+                                        .default
+                                }
                                 alt="Synergenics logo"
                             />
                         </footer>

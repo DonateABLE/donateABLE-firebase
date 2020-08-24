@@ -29,11 +29,14 @@ interface Props {
 }
 const Statistics: FunctionComponent<Props> = (props) => (
     <div className={styles.stats}>
-        <h3>{props.charity.longName} Statistics</h3>
+        <h3>
+            {props.charity.longName}
+            <span className={styles.statsHeader}> Statistics</span>
+        </h3>
         <div className={styles.grid}>
             <Section
                 value={props.charity.currentlyDonating}
-                max={5}
+                max={20}
                 title="Currently Donating"
             />
             <Section
@@ -41,7 +44,11 @@ const Statistics: FunctionComponent<Props> = (props) => (
                 max={50}
                 title="Donators to Date"
             />
-            <Section value={62_406_321} max={80_000_000} title="Total Hashes" />
+            <Section
+                value={props.charity.totalHashes}
+                max={80_000_000}
+                title="Total Hashes"
+            />
             <Section value={2} max={3} title="Overall Charity Rank" />
         </div>
     </div>

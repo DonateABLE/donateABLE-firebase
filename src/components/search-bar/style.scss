@@ -11,13 +11,14 @@
         flex-direction: row-reverse;
         text-transform: uppercase;
         border-bottom: solid $surface 2px;
-        padding-top: 4px;
-        padding-bottom: 4px;
+        padding-top: 8px;
+        padding-bottom: 8px;
 
         .label {
             display: flex;
             flex-direction: row;
             align-items: center;
+            font-size: 0.9em;
         }
     }
 
@@ -58,9 +59,13 @@
         .input {
             padding: 6px 15px;
             border: none;
+            margin-bottom: 15px;
 
             &::placeholder {
                 color: $dark-blue;
+                font-size: 0.8em;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
             }
         }
 
@@ -68,6 +73,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
             grid-gap: 15px;
+            margin-bottom: 25px;
+            margin-top: 15px;
 
             .category {
                 display: flex;

@@ -22,7 +22,14 @@ const FAQ: FunctionComponent = () => {
                     content={
                         <div>
                             <ol>
-                                {/* <img src='../src/assets/pauseAdBlock.png' alt="notFound" className='responsive'/> */}
+                                {/* <img
+                                    src={
+                                        require("assets/pauseAdBlock.png")
+                                            .default
+                                    }
+                                    alt="notFound"
+                                    className="responsive"
+                                /> */}
                                 <li>
                                     Select the AdBlock extension at the top of
                                     your browser
