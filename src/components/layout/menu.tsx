@@ -7,11 +7,14 @@ import {
     FunctionComponent,
     ReactNode,
     RefObject,
+    useState,
+    useEffect,
 } from "react";
 import { Link } from "react-router-dom";
 import { classNames } from "utils";
 import noUser from "../../assets/user.svg";
 import styles from "./style.scss";
+import Button from "components/button";
 
 type Option = {
     title: string;
@@ -31,6 +34,39 @@ interface Props {
     options: Array<{ href: string; title: string }>;
     rootRef: RefObject<HTMLElement>;
 }
+
+const Buttons: FunctionComponent<Props> = (props) => {
+    const user = useUser();
+    const [lightText, setLightText] = useState<string>("");
+    const [darkText, setDarkText] = useState<string>("");
+    const lightLink = user ? "/user" : "/login";
+    const darkLink = "/login";
+
+    useEffect(() => {
+        if (user) {
+            setLightText("View Account");
+            setDarkText("Sign Out");
+        } else {
+            setLightText("Login");
+            setDarkText("Sign Up");
+        }
+    }, [user]);
+
+    return (
+        <div>
+            <Link to={lightLink}>
+                <Button fullWidth className={styles.lightbutton}>
+                    {lightText}
+                </Button>
+            </Link>
+            <Link to={darkLink}>
+                <Button fullWidth className={styles.darkbutton}>
+                    {darkText}
+                </Button>
+            </Link>
+        </div>
+    );
+};
 
 const Menu: FunctionComponent<Props> = (props) => {
     const user = useUser();
@@ -87,6 +123,7 @@ const Menu: FunctionComponent<Props> = (props) => {
                     </li>
                 ))}
             </ul>
+            <Buttons />
         </nav>
     );
 };
