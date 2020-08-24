@@ -18,7 +18,6 @@ async function seed(items: any[], model: StaticModel<Model>): Promise<void> {
         const c = new model();
         for (const [key, value] of Object.entries(charity)) {
             (c as any)[key] = value;
-            console.log("\n" + c + "\n" + "key: " + key + ", value: " + value);
         }
         await c.save();
     }

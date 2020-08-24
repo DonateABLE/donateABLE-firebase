@@ -50,6 +50,7 @@ module.exports = (env, argv) => {
                     test: /\.(woff2?|eot|ttf|svg|jpe?g|png|gif)(\?.+)?$/,
                     loader: "file-loader",
                     options: {
+                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
                         name(file) {
                             if (devMode) return "[path][name].[ext]";
                             return "[contenthash].[ext]";
