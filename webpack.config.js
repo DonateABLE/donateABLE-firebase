@@ -47,7 +47,7 @@ module.exports = (env, argv) => {
                     loader: [MiniCssExtractPlugin.loader, "css-loader"],
                 },
                 {
-                    test: /\.(svg|jpe?g|png|gif)(\?.+)?$/,
+                    test: /\.(woff2?|eot|ttf|svg|jpe?g|png|gif)(\?.+)?$/,
                     loader: "file-loader",
                     options: {
                         // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -55,18 +55,6 @@ module.exports = (env, argv) => {
                             if (devMode) return "[path][name].[ext]";
                             return "[contenthash].[ext]";
                         },
-                    },
-                },
-                {
-                    test: /\.(woff2?|eot|ttf|svg)(\?.+)?$/,
-                    loader: "file-loader",
-                    options: {
-                        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                        name(file) {
-                            if (devMode) return "[path][name].[ext]";
-                            return "[contenthash].[ext]";
-                        },
-                        outputPath: "fonts/",
                     },
                 },
                 {
