@@ -22,7 +22,20 @@ module.exports = (env, argv) => {
                 {
                     test: /\.tsx?$/,
                     exclude: /node_modules/,
-                    loader: ["ts-loader", "eslint-loader"],
+                    use: [
+                        {
+                            loader: "ts-loader",
+                            options: {
+                                transpileOnly: true,
+                            },
+                        },
+                        {
+                            loader: "eslint-loader",
+                            options: {
+                                emitWarning: true,
+                            },
+                        },
+                    ]
                 },
                 {
                     test: /\.scss$/,
