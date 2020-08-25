@@ -2,6 +2,7 @@ node_modules
 dist
 firestore-debug.log
 firebase-debug.log
+package-lock.json
 .DS_Store
 functions/.runtimeconfig.json
 .swn
