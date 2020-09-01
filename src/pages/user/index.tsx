@@ -68,6 +68,8 @@ const UserEdit: FunctionComponent = (props) => {
             const publicURL = await storage.child(url).getDownloadURL();
             user.portrait = publicURL;
             changeImageUploading(false);
+            console.log(user.id);
+            console.log(user.firebaseUser?.uid);
             await user.save();
         }
     }, [user, changeImageUploading]);
