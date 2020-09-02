@@ -7,9 +7,14 @@
         "predeploy": [
             "npm --prefix \"$RESOURCE_DIR\" run lint",
             "npm --prefix \"$RESOURCE_DIR\" run build"
-        ]
+        ],
+        "source": "functions"
     },
     "hosting": {
+        "predeploy": [
+            "npm --prefix \"$PROJECT_DIR\" run clean",
+            "npm --prefix \"$PROJECT_DIR\" run build"
+        ],
         "public": "dist",
         "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
         "rewrites": [
@@ -21,16 +26,5 @@
     },
     "storage": {
         "rules": "storage.rules"
-    },
-    "emulators": {
-        "functions": {
-            "port": 5001
-        },
-        "firestore": {
-            "port": 8080
-        },
-        "hosting": {
-            "port": 5000
-        }
     }
 }

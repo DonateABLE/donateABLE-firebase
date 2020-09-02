@@ -117,8 +117,8 @@
         "phone": "(519) 824-3091",
         "email": "info@guelphhumane.ca",
         "fax": "519-824-3075",
-        "officeHourDays": "Monday to Friday, Saturday to Sunday",
-        "officeHourHours": "9:00AM to 5:00PM, 10:00AM to 4:00PM",
+        "officeHourDays": "Monday to Friday\nSaturday to Sunday",
+        "officeHourHours": "9:00AM to 5:00PM\n10:00AM to 4:00PM",
         "donationTargets": [
             {
                 "name": "Small Donation Target",

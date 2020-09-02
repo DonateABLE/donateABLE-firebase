@@ -11,9 +11,6 @@ async function seed(items: any[], model: StaticModel<Model>): Promise<void> {
         return;
     }
 
-    // tslint:disable-next-line: no-console
-    console.log("seeding " + model.name);
-
     for (const charity of items) {
         const c = new model();
         for (const [key, value] of Object.entries(charity)) {

@@ -5,6 +5,8 @@
     "scripts": {
         "build": "webpack --mode production",
         "watch": "webpack --watch --display=minimal --progress",
+        "clean": "rm -rf dist/*",
+        "publish": "firebase deploy",
         "emulate": "firebase emulators:start",
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\""
@@ -45,10 +47,11 @@
         "sass-loader": "^8.0.0",
         "scss-loader": "0.0.1",
         "style-loader": "^1.0.2",
+        "terser-webpack-plugin": "^4.1.0",
         "ts-loader": "^6.2.1",
         "typescript": "^3.7.3",
         "webpack": "^4.41.3",
-        "webpack-cli": "^3.3.10"
+        "webpack-cli": "^3.3.12"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.12.0",
