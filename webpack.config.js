@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
                                 emitWarning: true,
                             },
                         },
-                    ]
+                    ],
                 },
                 {
                     test: /\.scss$/,

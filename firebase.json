@@ -1,48 +1,46 @@
 {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "functions": {
-    "predeploy": [
-      "npm --prefix \"$RESOURCE_DIR\" run lint",
-      "npm --prefix \"$RESOURCE_DIR\" run build"
-    ],
-    "source": "functions"
-  },
-  "hosting": {
-    "predeploy": [
-      "npm --prefix \"$PROJECT_DIR\" run clean",
-      "npm --prefix \"$PROJECT_DIR\" run build"
-    ],
-    "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  },
-  "storage": {
-    "rules": "storage.rules"
-  },
-  "emulators": {
-    "functions": {
-      "port": 5001
-    },
     "firestore": {
-      "port": 8080
+        "rules": "firestore.rules",
+        "indexes": "firestore.indexes.json"
+    },
+    "functions": {
+        "predeploy": [
+            "npm --prefix \"$RESOURCE_DIR\" run lint",
+            "npm --prefix \"$RESOURCE_DIR\" run format",
+            "npm --prefix \"$RESOURCE_DIR\" run build"
+        ],
+        "source": "functions"
     },
     "hosting": {
-      "port": 5000
+        "predeploy": [
+            "npm --prefix \"$PROJECT_DIR\" run clean",
+            "npm --prefix \"$PROJECT_DIR\" run format",
+            "npm --prefix \"$PROJECT_DIR\" run build"
+        ],
+        "public": "dist",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
     },
-    "ui": {
-      "enabled": true
+    "storage": {
+        "rules": "storage.rules"
+    },
+    "emulators": {
+        "functions": {
+            "port": 5001
+        },
+        "firestore": {
+            "port": 8080
+        },
+        "hosting": {
+            "port": 5000
+        },
+        "ui": {
+            "enabled": true
+        }
     }
-  }
 }
