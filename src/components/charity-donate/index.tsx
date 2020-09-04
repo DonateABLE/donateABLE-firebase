@@ -78,28 +78,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         }
     }, [cpuValue]);
 
-    // useEffect(() => {
-    //     if (donating && cl) {
-    //         props.charity.currentlyDonating += Number(donating);
-    //         console.log(
-    //             "Currently donating going up by " +
-    //                 Number(donating) +
-    //                 "\nvalue is " +
-    //                 props.charity.currentlyDonating
-    //         );
-    //         props.charity.save();
-    //     } else {
-    //         props.charity.currentlyDonating -= 1;
-    //         console.log(
-    //             "Currently donating going down by " +
-    //                 Number(donating) +
-    //                 "\nvalue is " +
-    //                 props.charity.currentlyDonating
-    //         );
-    //         props.charity.save();
-    //     }
-    // }, [donating]);
-
     useEffect(() => {
         // Post data to firebase backend
         if (cl !== null && donating) {
@@ -163,6 +141,11 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             await client.start(Client.FORCE_MULTI_TAB);
             const date = new Date();
             const minerStartTime = date.getTime();
+
+            if (!currentUser) {
+                props.charity.donatorsToDate += 1;
+                props.charity.save();
+            }
 
             trackingStats = setInterval(log, 1000, client, minerStartTime);
         }
