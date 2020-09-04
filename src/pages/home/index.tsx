@@ -81,7 +81,7 @@ const Home: FunctionComponent = () => {
                         </span>
                     </TextBox>
                     <TextBox className={styles.groupElement}>
-                        Donations to Date
+                        Donators to Date
                         <span className={styles.value}>
                             {sumDonatorsToDate.toString()}
                         </span>

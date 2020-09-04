@@ -78,28 +78,6 @@ const DonateNow: FunctionComponent<Props> = (props) => {
         }
     }, [cpuValue]);
 
-    // useEffect(() => {
-    //     if (donating && cl) {
-    //         props.charity.currentlyDonating += Number(donating);
-    //         console.log(
-    //             "Currently donating going up by " +
-    //                 Number(donating) +
-    //                 "\nvalue is " +
-    //                 props.charity.currentlyDonating
-    //         );
-    //         props.charity.save();
-    //     } else {
-    //         props.charity.currentlyDonating -= 1;
-    //         console.log(
-    //             "Currently donating going down by " +
-    //                 Number(donating) +
-    //                 "\nvalue is " +
-    //                 props.charity.currentlyDonating
-    //         );
-    //         props.charity.save();
-    //     }
-    // }, [donating]);
-
     useEffect(() => {
         // Post data to firebase backend
         if (cl !== null && donating) {
@@ -164,6 +142,11 @@ const DonateNow: FunctionComponent<Props> = (props) => {
             const date = new Date();
             const minerStartTime = date.getTime();
 
+            if (!currentUser) {
+                props.charity.donatorsToDate += 1;
+                props.charity.save();
+            }
+
             trackingStats = setInterval(log, 1000, client, minerStartTime);
         }
         return client;
@@ -185,11 +168,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 props.charity.donatorsToDate += 1;
             }
             // update this user's donation infor for current charity
-            userCharityHashes += newHashes;
+            if (newHashes > 0) {
+                userCharityHashes += newHashes;
+                _.set(user, currentCharityHashes, userCharityHashes);
+                user.totalHashes += newHashes;
+            }
             userCharityTime += 10;
-            _.set(user, currentCharityHashes, userCharityHashes);
             _.set(user, currentCharityTime, userCharityTime);
-            user.totalHashes += newHashes;
             user.totalTime += 10; // Add 10 seconds
             user.save();
         }

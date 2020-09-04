@@ -126,7 +126,7 @@ export const Login: FunctionComponent = () => {
                         <b className={styles.value}>{totalStats[0]}</b>
                     </TextBox>
                     <TextBox className={styles.loginGroupElement}>
-                        Donations to Date
+                        Donators to Date
                         <b className={styles.value}>{totalStats[1]}</b>
                     </TextBox>
                     <TextBox className={styles.loginGroupElement}>

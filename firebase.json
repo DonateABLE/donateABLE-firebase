@@ -13,6 +13,7 @@
     "hosting": {
         "predeploy": [
             "npm --prefix \"$PROJECT_DIR\" run clean",
+            "npm --prefix \"$PROJECT_DIR\" run format",
             "npm --prefix \"$PROJECT_DIR\" run build"
         ],
         "public": "dist",
@@ -26,5 +27,19 @@
     },
     "storage": {
         "rules": "storage.rules"
+    },
+    "emulators": {
+        "functions": {
+            "port": 5001
+        },
+        "firestore": {
+            "port": 8080
+        },
+        "hosting": {
+            "port": 5000
+        },
+        "ui": {
+            "enabled": true
+        }
     }
 }
