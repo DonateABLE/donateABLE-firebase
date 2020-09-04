@@ -1,4 +1,4 @@
-# DonateABLE
+![Donateable Logo](https://donateable.ca/f3fcaf135f96c198dc18b3debd9fb7be.png)
 
 DonateABLE is a site for users to sign up for an account and using their device to mine cryptocurrency for a charity of their choosing. No need to make a financial donation, just leave your device running to make an impact in your community!
 
