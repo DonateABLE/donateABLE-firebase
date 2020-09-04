@@ -168,11 +168,13 @@ const DonateNow: FunctionComponent<Props> = (props) => {
                 props.charity.donatorsToDate += 1;
             }
             // update this user's donation infor for current charity
-            userCharityHashes += newHashes;
+            if (newHashes > 0) {
+                userCharityHashes += newHashes;
+                _.set(user, currentCharityHashes, userCharityHashes);
+                user.totalHashes += newHashes;
+            }
             userCharityTime += 10;
-            _.set(user, currentCharityHashes, userCharityHashes);
             _.set(user, currentCharityTime, userCharityTime);
-            user.totalHashes += newHashes;
             user.totalTime += 10; // Add 10 seconds
             user.save();
         }

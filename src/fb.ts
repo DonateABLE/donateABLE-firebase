@@ -40,7 +40,8 @@ if (__DEVELOPMENT__) {
     });
 }
 
-db.enablePersistence({ synchronizeTabs: true });
+// Disabling persistence to stop offline caching
+// db.enablePersistence({ synchronizeTabs: true });
 
 export const firestore = db;
 
